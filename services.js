@@ -5,7 +5,7 @@ export default [
       'An EVM-compatible blockchain that supports Token, and dApp, NFT with wallet and Explorer.',
     image: '',
     status: true,
-    youtube: '',
+    youtube: 'https://youtu.be/uGW9LZKa8c0',
   },
   {
     name: 'Launchpad for IDO',
@@ -13,7 +13,7 @@ export default [
       'We will develop your IDO Launchpad, Create tokens, Token sales, Token lock, and Liquidity Lock.',
     image: '',
     status: true,
-    youtube: '',
+    youtube: 'https://youtu.be/GlTIwxUqGKI',
   },
   {
     name: 'Auto-Staking Token and Dashboard Development',
@@ -21,7 +21,7 @@ export default [
       'Auto-Staking Token smart contract and dApp on BSC, AVAX blockchain.',
     image: '',
     status: true,
-    youtube: '',
+    youtube: 'https://youtu.be/sw2qGGsSmo4',
   },
   {
     name: 'Token Presale Dashboard Launch',
@@ -29,7 +29,7 @@ export default [
       'Token Presale - Token, Presale smart contract, and dApp on any EVM blockchain',
     image: '',
     status: true,
-    youtube: '',
+    youtube: 'https://youtu.be/GlTIwxUqGKI',
   },
   {
     name: 'ERC20 Token Development',
@@ -61,6 +61,6 @@ export default [
       'Sports Betting Platform with Soccer, Tennis, Cricket and other games.',
     image: '',
     status: true,
-    youtube: '',
+    youtube: 'https://youtu.be/kakoUaa_FVM',
   },
 ];

@@ -4,7 +4,7 @@ import services from '../services';
 
 export default function Home() {
   const imageLink =
-    'https://ik.imagekit.io/lzgpc48la/pexels-zachary-debottis-1888883_0QooYYSei.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663575148926';
+    'https://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584';
 
   const d = new Date();
   const year = d.getFullYear();
@@ -15,14 +15,35 @@ export default function Home() {
         <title>
           0xDefiDev | Blockchain Development services | Web Development Services
         </title>
+
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+              page_path: window.location.pathname,
+            });
+          `,
+          }}
+        />
       </Head>
 
       <nav>
         <h2 className="logo">0xDefiDev</h2>
         <ul className="menu">
-          <li>Services</li>
           <li>
-            <a href="https://t.me/xdefidev">Contact</a>
+            <a href="#grid-container">Services</a>
+          </li>
+          <li>
+            <a href="https://t.me/xdefidev" className={styles.contact}>
+              Contact
+            </a>
           </li>
         </ul>
       </nav>
@@ -50,14 +71,14 @@ export default function Home() {
           className="arrow-down"
         />
 
-        <div className="grid-container">
+        <div className="grid-container" id="grid-container">
           <div className="services">
             <h1>Services</h1>
           </div>
           <div className={styles.grid}>
             {services.map((item, index) => (
               <a
-                href=""
+                href={item.youtube}
                 className={styles.card}
                 alt={item.description}
                 key={index}
