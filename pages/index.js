@@ -16,6 +16,11 @@ export default function Home() {
           0xDefiDev | Blockchain Development services | Web Development Services
         </title>
 
+        <meta
+          name="description"
+          content="0xDefiDev Blockchain and web development services. Provide leading products of the blockchain market."
+        />
+
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
