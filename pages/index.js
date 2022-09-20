@@ -18,7 +18,7 @@ export default function Home() {
 
         <meta
           name="description"
-          content="0xDefiDev Blockchain and web development services. Provide leading products of the blockchain market."
+          content="0xDefiDev Blockchain and web development services. Looking for a Crypto Dev? we've got you!. Push your crypto project from ground up"
         />
 
         <script
