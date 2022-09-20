@@ -1,0 +1,106 @@
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
+import services from '../services';
+
+export default function Home() {
+  const imageLink =
+    'https://ik.imagekit.io/lzgpc48la/pexels-zachary-debottis-1888883_0QooYYSei.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663575148926';
+
+  const d = new Date();
+  const year = d.getFullYear();
+
+  return (
+    <div>
+      <Head>
+        <title>
+          0xDefiDev | Blockchain Development services | Web Development Services
+        </title>
+      </Head>
+
+      <nav>
+        <h2 className="logo">0xDefiDev</h2>
+        <ul className="menu">
+          <li>Services</li>
+          <li>
+            <a href="https://t.me/xdefidev">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <main className={styles.main}>
+        <div className="header">
+          <div>
+            <h1 className={styles.title}>
+              Web Development and Blockchain <a href="">Services!</a>
+            </h1>
+
+            <p className={styles.description}>
+              We are detail oriented-designers and proficient Web and Blockchain
+              Developers{' '}
+              <code className={styles.code}>
+                <></>
+              </code>
+            </p>
+          </div>
+          <div></div>
+        </div>
+
+        <img
+          src="https://ik.imagekit.io/lzgpc48la/down-arrow_vkeVMp4_k.png?ik-sdk-version=javascript-1.4.3&updatedAt=1663634428959"
+          className="arrow-down"
+        />
+
+        <div className="grid-container">
+          <div className="services">
+            <h1>Services</h1>
+          </div>
+          <div className={styles.grid}>
+            {services.map((item, index) => (
+              <a
+                href=""
+                className={styles.card}
+                alt={item.description}
+                key={index}
+              >
+                <img src={imageLink} />
+                <div>{item.status ? 'active' : 'out'}</div>
+                <h3>{item.name} &rarr;</h3>
+                <p>{item.description}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </main>
+
+      <div className={styles.skill}>
+        <hr></hr>
+        <h2>Technologies</h2>
+        <div>
+          <img src="https://ik.imagekit.io/lzgpc48la/Frame_1__4__9cQ3E44HH.png?ik-sdk-version=javascript-1.4.3&updatedAt=1663647803835" />
+        </div>
+      </div>
+
+      <footer className={styles.footer}>
+        <div>
+          <h2>Get in Touch</h2>
+          <ul className="footer-list">
+            <li>
+              <a href="https://t.me/xdefidev">Telegram</a>
+            </li>
+            <li>
+              <a href="mailto:xdefidev@gmail.com">e-Mail</a>
+            </li>
+            <li>
+              <a href="https://wa.me/+17062289620">Whatsapp</a>
+            </li>
+            <li></li>
+          </ul>
+        </div>
+        <div></div>
+        <div className="content-body">
+          <p>© Copyright 0xDefiDev {year}</p>
+        </div>
+      </footer>
+    </div>
+  );
+}

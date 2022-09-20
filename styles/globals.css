@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: 500;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+nav {
+  display: flex;
+  margin: 0 5rem;
+}
+
+.logo {
+  margin-right: auto;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+li {
+  font-family: 'Poppins', sans-serif;
+}
+
+.menu li a {
+  background-color: #fff;
+  color: #0070f3;
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: solid 1px #0070f3;
+}
+
+.menu li a:hover {
+  background-color: #0070f3;
+  color: #fff;
+}
+
+.header {
+  /* background: url('https://ik.imagekit.io/lzgpc48la/Frame_1__2__76og5TXSU.png?ik-sdk-version=javascript-1.4.3&updatedAt=1663645145941'); */
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-height: 85vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  margin: 0rem 5rem;
+}
+
+.grid-container {
+  margin-top: 4rem;
+}
+
+.arrow-down {
+  width: 1rem;
+  position: relative;
+  animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+  from {
+    top: 0px;
+  }
+  50% {
+    top: 20px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+.services h1 {
+  margin: 0;
+  font-size: 56px;
+  text-align: center;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+  letter-spacing: -1.5px;
+}
+
+.footer-list {
+  display: inline-block;
+}
+
+.content-body {
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+}
