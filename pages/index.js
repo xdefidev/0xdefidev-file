@@ -90,7 +90,7 @@ export default function Home() {
                 alt={item.description}
                 key={index}
               >
-                <img src={imageLink} />
+                <img src={imageLink} alt={item.name} />
                 <div>{item.status ? 'active' : 'out'}</div>
                 <h3>{item.name} &rarr;</h3>
                 <p>{item.description}</p>
