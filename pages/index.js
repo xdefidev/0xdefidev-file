@@ -78,7 +78,7 @@ export default function Home() {
 
         <div className="grid-container" id="grid-container">
           <div className="services">
-            <h1>Services</h1>
+            <h1>Development Services</h1>
           </div>
           <div className={styles.grid}>
             {services.map((item, index) => (

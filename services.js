@@ -1,6 +1,6 @@
 export default [
   {
-    name: 'PoS PoA Blockchain Development',
+    name: 'PoS PoA Blockchain',
     description:
       'An EVM-compatible blockchain that supports Token, and dApp, NFT with wallet and Explorer.',
     image: '',
@@ -16,7 +16,7 @@ export default [
     youtube: 'https://youtu.be/GlTIwxUqGKI',
   },
   {
-    name: 'Auto-Staking Token and Dashboard Development',
+    name: 'Auto-Staking Token and Dashboard',
     description:
       'Auto-Staking Token smart contract and dApp on BSC, AVAX blockchain.',
     image: '',
@@ -32,7 +32,7 @@ export default [
     youtube: 'https://youtu.be/GlTIwxUqGKI',
   },
   {
-    name: 'ERC20 Token Development',
+    name: 'ERC20 Token for ETH, BSC, AVAX, MATIC',
     description:
       'Develop Ethereum Compatible tokens with ERC20 standard and custom tokenomics.',
     image: '',
@@ -40,7 +40,7 @@ export default [
     youtube: '',
   },
   {
-    name: 'Crypto Casino Development',
+    name: 'Crypto Casino',
     description:
       'Online Gaming cryptoturrency casino with multiple games, ERC20 support as you want.',
     image: '',
@@ -56,7 +56,7 @@ export default [
     youtube: '',
   },
   {
-    name: 'Sports Betting Platform Development',
+    name: 'Sports Betting Platform',
     description:
       'Sports Betting Platform with Soccer, Tennis, Cricket and other games.',
     image: '',
