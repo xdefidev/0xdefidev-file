@@ -21,6 +21,8 @@ export default function Home() {
           content="0xDefiDev Blockchain and web development services. Looking for a Crypto Dev? we've got you!. Push your crypto project from ground up"
         />
 
+        <meta http-equiv="content-language" content="en" />
+
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
