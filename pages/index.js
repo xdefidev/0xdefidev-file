@@ -22,6 +22,10 @@ export default function Home() {
         />
 
         <meta http-equiv="content-language" content="en" />
+        <meta
+          name="google-site-verification"
+          content="C7U3VQkY7WQDIkayBFDUf9CmlRoFm-jjUWTGRACRCig"
+        />
 
         <script
           async
