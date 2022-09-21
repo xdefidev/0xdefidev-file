@@ -12,9 +12,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>
-          0xDefiDev | Blockchain Development services | Web Development Services
-        </title>
+        <title>0xDefiDev | Blockchain and Web Development services</title>
 
         <meta
           name="description"
@@ -84,7 +82,7 @@ export default function Home() {
 
         <div className="grid-container" id="grid-container">
           <div className="services">
-            <h1>Development Services</h1>
+            <h2>Development Services</h2>
           </div>
           <div className={styles.grid}>
             {services.map((item, index) => (
