@@ -104,9 +104,12 @@ export default function Home() {
 
       <div className={styles.skill}>
         <hr></hr>
-        <h2>Technologies we use in our Development.</h2>
+        <h2>Tech we use.</h2>
         <div>
-          <img src="https://ik.imagekit.io/lzgpc48la/Frame_1__4__9cQ3E44HH.png?ik-sdk-version=javascript-1.4.3&updatedAt=1663647803835" />
+          <img
+            src="https://ik.imagekit.io/lzgpc48la/Frame_1__4__9cQ3E44HH.png?ik-sdk-version=javascript-1.4.3&updatedAt=1663647803835"
+            alt="tech-we-use-at-xdefidev"
+          />
         </div>
       </div>
 
