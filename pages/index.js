@@ -28,6 +28,7 @@ export default function Home() {
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+          defer
         />
         <script
           dangerouslySetInnerHTML={{
@@ -40,6 +41,7 @@ export default function Home() {
             });
           `,
           }}
+          defer
         />
       </Head>
 
