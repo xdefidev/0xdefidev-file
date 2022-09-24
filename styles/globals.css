@@ -67,6 +67,7 @@ li {
   width: 1rem;
   position: relative;
   animation: mymove 5s infinite;
+  margin: 0 0 30px 0;
 }
 
 @keyframes mymove {
