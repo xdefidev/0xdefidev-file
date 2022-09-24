@@ -59,7 +59,7 @@ li {
   margin: 0rem 5rem;
 }
 
-.grid-container {
+.header .grid-container {
   margin-top: 4rem;
 }
 
@@ -100,4 +100,24 @@ li {
 
 * {
   box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .header {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    /* margin: 0rem 5rem; */
+  }
+
+  .header div:nth-child(2) {
+    display: none;
+  }
+
+  nav {
+    margin: 0 1rem;
+  }
+
+  ul {
+    gap: 8px;
+  }
 }
