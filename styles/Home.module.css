@@ -164,8 +164,9 @@
 
 .skill {
   display: grid;
-  grid-template-columns: auto auto auto;
-  margin: 5rem 25rem;
+  grid-template-columns: 10px auto auto;
+  margin: 5rem auto;
+  padding: 0px 3rem;
 }
 
 .skill hr {
@@ -180,7 +181,7 @@
 
 .skill div {
   width: auto;
-  display: block;
+  display: flex;
 }
 
 .skill div img {
@@ -200,5 +201,9 @@
 
   .skill hr {
     display: none;
+  }
+
+  .skill div img {
+    width: 100%;
   }
 }
