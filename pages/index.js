@@ -92,7 +92,7 @@ export default function Home() {
                 alt={item.description}
                 key={index}
               >
-                <img src={imageLink} alt={item.name} />
+                <img src={imageLink} alt={item.name} width="100%" />
                 <div>{item.status ? 'active' : 'out'}</div>
                 <h3>{item.name} &rarr;</h3>
                 <p>{item.description}</p>
@@ -108,6 +108,7 @@ export default function Home() {
         <div>
           <img
             src="https://ik.imagekit.io/lzgpc48la/Frame_1__4__9cQ3E44HH.png?ik-sdk-version=javascript-1.4.3&updatedAt=1663647803835"
+            width="100"
             alt="tech-we-use-at-xdefidev"
           />
         </div>
