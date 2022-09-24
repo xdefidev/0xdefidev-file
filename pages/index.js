@@ -118,13 +118,22 @@ export default function Home() {
           <h2>Get in Touch</h2>
           <ul className="footer-list">
             <li>
-              <a href="https://t.me/xdefidev">Telegram</a>
+              <a href="https://t.me/xdefidev" alt="message us on telegram">
+                Telegram
+              </a>
             </li>
             <li>
-              <a href="mailto:xdefidev@gmail.com">e-Mail</a>
+              <a
+                href="mailto:xdefidev@gmail.com"
+                alt="mail us xdefidev@gmail.com"
+              >
+                e-Mail
+              </a>
             </li>
             <li>
-              <a href="https://wa.me/+17062289620">Whatsapp</a>
+              <a href="https://wa.me/+17062289620" alt="Text us on whatsapp">
+                Whatsapp
+              </a>
             </li>
             <li></li>
           </ul>
