@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import services from '../services';
+import Navbar from './components/Navbar';
+import services from './services';
+import Link from 'next/link';
 
 export default function Home() {
   const imageLink =
@@ -45,19 +47,7 @@ export default function Home() {
         />
       </Head>
 
-      <nav>
-        <h2 className="logo">0xDefiDev</h2>
-        <ul className="menu">
-          <li>
-            <a href="#grid-container">Services</a>
-          </li>
-          <li>
-            <a href="https://t.me/xdefidev" className={styles.contact}>
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <Navbar />
 
       <main className={styles.main}>
         <div className="header">
@@ -88,17 +78,19 @@ export default function Home() {
           </div>
           <div className={styles.grid}>
             {services.map((item, index) => (
-              <a
-                href={item.youtube}
+              <Link
+                href={`/services/${item.slug}`}
                 className={styles.card}
                 alt={item.description}
                 key={index}
               >
-                <img src={imageLink} alt={item.name} width="100%" />
-                <div>{item.status ? 'active' : 'out'}</div>
-                <h3>{item.name} &rarr;</h3>
-                <p>{item.description}</p>
-              </a>
+                <a className={styles.card}>
+                  <img src={imageLink} alt={item.name} width="100%" />
+                  <div>{item.status ? 'active' : 'out'}</div>
+                  <h3>{item.name} &rarr;</h3>
+                  <p>{item.description}</p>
+                </a>
+              </Link>
             ))}
           </div>
         </div>

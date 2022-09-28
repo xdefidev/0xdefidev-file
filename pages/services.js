@@ -5,7 +5,8 @@ export default [
       'An EVM-compatible blockchain that supports Token, and dApp, NFT with wallet and Explorer.',
     image: '',
     status: true,
-    youtube: 'https://youtu.be/uGW9LZKa8c0',
+    youtube: 'uGW9LZKa8c0',
+    slug: 'pos-poa-blockchain',
   },
   {
     name: 'Launchpad for IDO',
@@ -13,7 +14,8 @@ export default [
       'We will develop your IDO Launchpad, Create tokens, Token sales, Token lock, and Liquidity Lock.',
     image: '',
     status: true,
-    youtube: 'https://youtu.be/GlTIwxUqGKI',
+    youtube: 'GlTIwxUqGKI',
+    slug: 'launchpad-for-ido',
   },
   {
     name: 'Auto-Staking Token and Dashboard',
@@ -21,7 +23,8 @@ export default [
       'Auto-Staking Token smart contract and dApp on BSC, AVAX blockchain.',
     image: '',
     status: true,
-    youtube: 'https://youtu.be/sw2qGGsSmo4',
+    youtube: 'sw2qGGsSmo4',
+    slug: 'auto-staking-token-and-dashboard',
   },
   {
     name: 'Token Presale Dashboard Launch',
@@ -29,7 +32,8 @@ export default [
       'Token Presale - Token, Presale smart contract, and dApp on any EVM blockchain',
     image: '',
     status: true,
-    youtube: 'https://youtu.be/GlTIwxUqGKI',
+    youtube: 'GlTIwxUqGKI',
+    slug: 'token-presale-dashboard-launch',
   },
   {
     name: 'ERC20 Token for ETH, BSC, AVAX, MATIC',
@@ -38,6 +42,7 @@ export default [
     image: '',
     status: true,
     youtube: '',
+    slug: 'erc20-token',
   },
   {
     name: 'Crypto Casino',
@@ -46,6 +51,7 @@ export default [
     image: '',
     status: true,
     youtube: '',
+    slug: 'crypto-casino',
   },
   {
     name: 'AMM DEX Pancakeswap Clone Development',
@@ -54,6 +60,7 @@ export default [
     image: '',
     status: true,
     youtube: '',
+    slug: 'amm-dex-pancakeswap-clone',
   },
   {
     name: 'Sports Betting Platform',
@@ -61,6 +68,7 @@ export default [
       'Sports Betting Platform with Soccer, Tennis, Cricket and other games.',
     image: '',
     status: true,
-    youtube: 'https://youtu.be/kakoUaa_FVM',
+    youtube: 'kakoUaa_FVM',
+    slug: 'sports-betting-platform',
   },
 ];
