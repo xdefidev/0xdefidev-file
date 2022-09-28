@@ -18,8 +18,11 @@ nav {
   margin: 0 5rem;
 }
 
-.logo {
+.home {
   margin-right: auto;
+}
+
+.logo {
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
