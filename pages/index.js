@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import Navbar from './components/Navbar';
 import services from '../services';
 
 export default function Home() {
@@ -45,19 +46,7 @@ export default function Home() {
         />
       </Head>
 
-      <nav>
-        <h2 className="logo">0xDefiDev</h2>
-        <ul className="menu">
-          <li>
-            <a href="#grid-container">Services</a>
-          </li>
-          <li>
-            <a href="https://t.me/xdefidev" className={styles.contact}>
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <Navbar />
 
       <main className={styles.main}>
         <div className="header">
