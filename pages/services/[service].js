@@ -12,6 +12,16 @@ export default function Service() {
       <div className={styles.container}>
         <div className={styles.firstDiv}>
           <img src={imageLink} />
+          <div className={styles.secondDiv}>
+            <h2>Custom Project</h2>
+            <p>
+              Send us a custom request. You can talk about the price and
+              timeline to create a personalized project.
+            </p>
+            <button>Message now</button>
+          </div>
+        </div>
+        <div>
           <h2>Description</h2>
           <p>
             In publishing and graphic design, Lorem ipsum is a placeholder text
@@ -23,14 +33,6 @@ export default function Service() {
             commonly used to demonstrate the visual form of a document or a
             typeface without relying on meaningful content.
           </p>
-        </div>
-        <div className={styles.secondDiv}>
-          <h2>Custom Project</h2>
-          <p>
-            Send us a custom request. You can talk about the price and timeline
-            to create a personalized project.
-          </p>
-          <button>Message now</button>
         </div>
       </div>
     </section>
