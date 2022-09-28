@@ -78,7 +78,7 @@ export default function Home() {
           <div className={styles.grid}>
             {services.map((item, index) => (
               <a
-                href={item.youtube}
+                href={`/services/${item.slug}`}
                 className={styles.card}
                 alt={item.description}
                 key={index}
