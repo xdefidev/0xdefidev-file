@@ -52,10 +52,11 @@ export default function Service({ post }) {
           )}
 
           <div className={styles.secondDiv}>
-            <h2>Custom Project</h2>
+            <h2>Your Custom Project</h2>
             <p>
-              Send us a custom request. You can talk about the price and
-              timeline to create a personalized project.
+              Send us a custom message request. Talk about project,
+              requirements, the price and timeline to create your personalized
+              project.
             </p>
             <a href="t.me/xdefidev">Message now</a>
           </div>
