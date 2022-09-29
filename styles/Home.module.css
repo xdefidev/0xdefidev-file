@@ -185,7 +185,7 @@
 }
 
 .skill div img {
-  width: 80%;
+  width: 100%;
 }
 
 @media (max-width: 600px) {
