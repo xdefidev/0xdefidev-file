@@ -1,6 +1,6 @@
 import Navbar from '../components/Navbar';
 import styles from '/styles/Service.module.css';
-import services from '../services';
+import services from '../api/services';
 import Head from 'next/head';
 
 export async function getStaticPaths() {
@@ -44,7 +44,7 @@ export default function Service({ post }) {
             <iframe
               src={`https://www.youtube.com/embed/${post.youtube}`}
               title="Need a Blockchain Developer? Best......."
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             ></iframe>
           ) : (

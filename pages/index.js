@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Navbar from './components/Navbar';
-import services from './services';
+import services from './api/services';
 import Link from 'next/link';
 
 export default function Home() {
