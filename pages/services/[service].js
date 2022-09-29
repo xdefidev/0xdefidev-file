@@ -3,6 +3,26 @@ import styles from '/styles/Service.module.css';
 import services from '../services';
 import Head from 'next/head';
 
+export async function getStaticPaths() {
+  const paths = await services.map((item) => ({
+    params: { service: item.slug },
+  }));
+
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps({ params }) {
+  const selected = [];
+
+  const select = await services.map(
+    (item) => params.service == item.slug && selected.push(item)
+  );
+
+  const post = await selected[0];
+
+  return { props: { post } };
+}
+
 export default function Service({ post }) {
   const imageLink =
     'https://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584';
@@ -48,24 +68,4 @@ export default function Service({ post }) {
       </div>
     </section>
   );
-}
-
-export async function getStaticPaths() {
-  const paths = services.map((item) => ({
-    params: { service: item.slug },
-  }));
-
-  return { paths, fallback: false };
-}
-
-export async function getStaticProps({ params }) {
-  const selected = [];
-
-  const select = services.map(
-    (item) => params.service == item.slug && selected.push(item)
-  );
-
-  const post = selected[0];
-
-  return { props: { post } };
 }
