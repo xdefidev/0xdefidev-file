@@ -27,6 +27,8 @@ export default function Service({ post }) {
   const imageLink =
     'https://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584';
 
+  console.log(post.p.list);
+
   return (
     <section>
       <Head>
@@ -61,10 +63,18 @@ export default function Service({ post }) {
             <a href="t.me/xdefidev">Message now</a>
           </div>
         </div>
-        <div>
+        <div className={styles.thirdDiv}>
           <h2>Description</h2>
           <p>{post.description}</p>
-          <p></p>
+          {post.p.description}
+          <h3>Features / Benefits</h3>
+          <ul>
+            <li>{post.p.list[1]}</li>
+            <li>{post.p.list[2]}</li>
+            <li>{post.p.list[3]}</li>
+            {/* {post.map((item) => console.log(post))} */}
+            {}
+          </ul>
         </div>
       </div>
     </section>
