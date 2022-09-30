@@ -1,5 +1,5 @@
-import styles from '/styles/Home.module.css';
-import Link from 'next/link';
+import styles from "/styles/Home.module.css";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
@@ -14,7 +14,11 @@ export default function Navbar() {
           <a href="#grid-container">Services</a>
         </li>
         <li>
-          <a href="https://t.me/xdefidev" className={styles.contact}>
+          <a
+            href="https://t.me/xdefidev"
+            className={styles.contact}
+            target="_blank"
+          >
             Contact
           </a>
         </li>

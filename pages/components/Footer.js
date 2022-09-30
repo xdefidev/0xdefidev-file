@@ -10,7 +10,11 @@ export default function Footer() {
         <h2>Get in Touch</h2>
         <ul className="footer-list">
           <li>
-            <a href="https://t.me/xdefidev" alt="message us on telegram">
+            <a
+              href="https://t.me/xdefidev"
+              alt="message us on telegram"
+              target="_blank"
+            >
               Telegram
             </a>
           </li>
@@ -23,7 +27,11 @@ export default function Footer() {
             </a>
           </li>
           <li>
-            <a href="https://wa.me/+17062289620" alt="Text us on whatsapp">
+            <a
+              href="https://wa.me/+17062289620"
+              alt="Text us on whatsapp"
+              target="_blank"
+            >
               Whatsapp
             </a>
           </li>
