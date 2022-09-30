@@ -16,7 +16,7 @@ export default function Home() {
 
         <meta
           name="description"
-          content="0xDefiDev Blockchain and web development services. Looking for a Crypto Dev? we've got you!. Push your crypto project from ground up"
+          content="Looking for Blockchain Developer? we've got you!. Push your crypto project from ground up. Develop website, Smart contracts, Web3 dApps and Web applications. Network of doers with atleast 4 years of experience"
         />
 
         <meta http-equiv="content-language" content="en" />
@@ -55,8 +55,7 @@ export default function Home() {
             </h1>
 
             <p className={styles.description}>
-              We are detail oriented-designers and proficient Web and Blockchain
-              Developers{" "}
+              Let us do all the work for you so you don't have to.{" "}
               <code className={styles.code}>
                 <></>
               </code>
@@ -92,6 +91,13 @@ export default function Home() {
             ))}
           </div>
         </div>
+
+        <p className={styles.description}>
+          We are detail oriented-designers and proficient Web and Blockchain
+          Developers. Design your website, build smart contract and deploy your
+          web application for web and Web3 -{" "}
+          <code className={styles.code}>all in one place</code>
+        </p>
       </main>
 
       <div className={styles.skill}>
