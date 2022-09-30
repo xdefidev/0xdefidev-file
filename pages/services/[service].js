@@ -1,7 +1,8 @@
-import Navbar from '../components/Navbar';
-import styles from '/styles/Service.module.css';
-import services from '../api/services';
-import Head from 'next/head';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import styles from "/styles/Service.module.css";
+import services from "../api/services";
+import Head from "next/head";
 
 export async function getStaticPaths() {
   const paths = await services.map((item) => ({
@@ -25,7 +26,7 @@ export async function getStaticProps({ params }) {
 
 export default function Service({ post }) {
   const imageLink =
-    'https://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584';
+    "https://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584";
 
   console.log(post.p.list);
 
@@ -60,7 +61,7 @@ export default function Service({ post }) {
               requirements, the price and timeline to create your personalized
               project.
             </p>
-            <a href="t.me/xdefidev">Message now</a>
+            <a href="https://t.me/xdefidev">Message now</a>
           </div>
         </div>
         <div className={styles.thirdDiv}>
@@ -77,6 +78,8 @@ export default function Service({ post }) {
           </ul>
         </div>
       </div>
+
+      <Footer />
     </section>
   );
 }
