@@ -1,12 +1,12 @@
 export default [
   {
-    name: "PoS PoA Blockchain",
+    name: "PoS PoA Blockchain Development",
     description:
       "An EVM-compatible blockchain that supports ERC20 Token, and dApp, NFT with wallet and Explorer.",
     image: "",
     status: true,
     youtube: "uGW9LZKa8c0",
-    slug: "pos-poa-blockchain",
+    slug: "pos-poa-blockchain-development",
     p: {
       description:
         "Do you want an expert to build your own blockchain? Do you want people to create Token, dApp, NFT and develop an ecosystem in your own blockchain? which can help to increase your coin value?",
@@ -18,13 +18,13 @@ export default [
     },
   },
   {
-    name: "Launchpad for IDO",
+    name: "IDO Launchpad Development",
     description:
       "We will develop your IDO Launchpad, Create tokens, Token sales, Token lock, and Liquidity Lock.",
     image: "",
     status: true,
     youtube: "GlTIwxUqGKI",
-    slug: "launchpad-for-ido",
+    slug: "ido-launchpad-development",
     p: {
       description: "",
       list: {
@@ -41,7 +41,7 @@ export default [
     image: "",
     status: true,
     youtube: "sw2qGGsSmo4",
-    slug: "auto-staking-token-and-dashboard",
+    slug: "auto-staking-token-and-dashboard-development",
     p: {
       description: "",
       list: {
@@ -58,7 +58,7 @@ export default [
     image: "",
     status: true,
     youtube: "GlTIwxUqGKI",
-    slug: "token-presale-dashboard-launch",
+    slug: "token-presale-dashboard-launch-development",
     p: {
       description: "",
       list: {
@@ -75,7 +75,7 @@ export default [
     image: "",
     status: true,
     youtube: "",
-    slug: "erc20-token",
+    slug: "erc20-token-development",
     p: {
       description: "",
       list: {
@@ -86,13 +86,13 @@ export default [
     },
   },
   {
-    name: "Crypto Casino",
+    name: "Cryptocurrency Casino Development",
     description:
       "Online Gaming cryptoturrency casino with multiple games, ERC20 support as you want.",
     image: "",
     status: true,
     youtube: "",
-    slug: "crypto-casino",
+    slug: "crypto-casino-development",
     p: {
       description: "",
       list: {

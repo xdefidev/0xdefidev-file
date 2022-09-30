@@ -93,7 +93,7 @@ export default function Home() {
         </div>
 
         <p className={styles.description}>
-          We are detail oriented-designers and proficient Web and Blockchain
+          We are detail-oriented designers and proficient Web and Blockchain
           Developers. Design your website, build smart contract and deploy your
           web application for web and Web3 -{" "}
           <code className={styles.code}>all in one place</code>
@@ -106,7 +106,7 @@ export default function Home() {
         <div>
           <img
             src="https://ik.imagekit.io/lzgpc48la/Frame_1__4__9cQ3E44HH.png?ik-sdk-version=javascript-1.4.3&updatedAt=1663647803835"
-            width="100"
+            width="100%"
             alt="tech-we-use-at-xdefidev"
           />
         </div>

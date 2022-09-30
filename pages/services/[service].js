@@ -61,7 +61,9 @@ export default function Service({ post }) {
               requirements, the price and timeline to create your personalized
               project.
             </p>
-            <a href="https://t.me/xdefidev">Message now</a>
+            <a href="https://t.me/xdefidev" alt="contact xdefidev">
+              Message now
+            </a>
           </div>
         </div>
         <div className={styles.thirdDiv}>
