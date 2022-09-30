@@ -182,6 +182,7 @@
 .skill div {
   width: auto;
   display: flex;
+  margin: 0 30%;
 }
 
 .skill div img {
@@ -197,6 +198,10 @@
     grid-template-columns: auto;
     grid-template-rows: auto auto;
     margin: 3rem 2rem;
+  }
+
+  .skill div {
+    margin: 0 0;
   }
 
   .skill hr {
