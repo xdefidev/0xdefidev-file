@@ -1,15 +1,13 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
-import Navbar from './components/Navbar';
-import services from './api/services';
-import Link from 'next/link';
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import services from "./api/services";
+import Link from "next/link";
 
 export default function Home() {
   const imageLink =
-    'https://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584';
-
-  const d = new Date();
-  const year = d.getFullYear();
+    "https://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584";
 
   return (
     <div>
@@ -58,7 +56,7 @@ export default function Home() {
 
             <p className={styles.description}>
               We are detail oriented-designers and proficient Web and Blockchain
-              Developers{' '}
+              Developers{" "}
               <code className={styles.code}>
                 <></>
               </code>
@@ -86,7 +84,7 @@ export default function Home() {
               >
                 <a className={styles.card}>
                   <img src={imageLink} alt={item.name} width="100%" />
-                  <div>{item.status ? 'active' : 'out'}</div>
+                  <div>{item.status ? "active" : "out"}</div>
                   <h3>{item.name} &rarr;</h3>
                   <p>{item.description}</p>
                 </a>
@@ -108,36 +106,7 @@ export default function Home() {
         </div>
       </div>
 
-      <footer className={styles.footer}>
-        <div>
-          <h2>Get in Touch</h2>
-          <ul className="footer-list">
-            <li>
-              <a href="https://t.me/xdefidev" alt="message us on telegram">
-                Telegram
-              </a>
-            </li>
-            <li>
-              <a
-                href="mailto:xdefidev@gmail.com"
-                alt="mail us xdefidev@gmail.com"
-              >
-                e-Mail
-              </a>
-            </li>
-            <li>
-              <a href="https://wa.me/+17062289620" alt="Text us on whatsapp">
-                Whatsapp
-              </a>
-            </li>
-            <li></li>
-          </ul>
-        </div>
-        <div></div>
-        <div className="content-body">
-          <p>© Copyright 0xDefiDev {year}</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
