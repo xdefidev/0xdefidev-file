@@ -184,9 +184,10 @@
   align-items: center;
 }
 
-.skill p {
+.skill>p {
   font-size: 22px;
   font-weight: 800;
+  margin-top: 30px;
 }
 
 .skill div div {

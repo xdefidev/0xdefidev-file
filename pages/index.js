@@ -112,7 +112,7 @@ export default function Home() {
 
       <div className={styles.skill}>
         <h2>Tech we use</h2>
-        <p>Blockchain Technologies</p>
+        <p>Blockchain</p>
         <div>
           <div>
             <Image src={eth} width={60} height={60} />
@@ -129,6 +129,13 @@ export default function Home() {
           <div>
             <Image src={polygon} width={60} height={60} />
             <p>Polygon</p>
+          </div>
+        </div>
+        <p>Blockchain Technologies</p>
+        <div>
+          <div>
+            <Image src={solidity} width={60} height={60} />
+            <p>Solidity</p>
           </div>
         </div>
         <p>Web Development Technologies</p>
@@ -148,10 +155,6 @@ export default function Home() {
           <div>
             <Image src={react} width={60} height={60} />
             <p>React</p>
-          </div>
-          <div>
-            <Image src={solidity} width={60} height={60} />
-            <p>Solidity</p>
           </div>
         </div>
       </div>
