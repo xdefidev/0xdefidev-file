@@ -33,7 +33,7 @@ export default function Service({ post }) {
   return (
     <section>
       <Head>
-        <title>{post.name}</title>
+        <title>{`${post.name} services`}</title>
 
         <meta name="description" content={post.description} />
 
