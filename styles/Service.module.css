@@ -59,7 +59,9 @@
 
   .secondDiv {
     max-width: 200px;
-    height: 400px;
+    height: 500px;
+    letter-spacing: 0px;
+    line-height: 22px;
   }
 }
 
@@ -79,6 +81,6 @@
   }
 
   .secondDiv {
-    height: 75%;
+    height: 80%;
   }
 }
