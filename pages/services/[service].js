@@ -42,6 +42,7 @@ export default function Service({ post }) {
       <Navbar />
 
       <div className={styles.container}>
+        <h1>{post.name}</h1>
         <div className={styles.firstDiv}>
           {post.youtube ? (
             <iframe
