@@ -45,6 +45,10 @@
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
+.footer li {
+  font-size: 13px;
+}
+
 .footer div ul {
   padding: 0px;
   margin: 0px;
