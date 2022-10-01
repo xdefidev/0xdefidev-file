@@ -4,6 +4,16 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import services from "./api/services";
 import Link from "next/link";
+import Image from "next/image";
+import eth from "/public/eth.svg";
+import avax from "/public/avax.svg";
+import polygon from "/public/polygon.svg";
+import bnb from "/public/bnb.svg";
+import next from "/public/next.svg";
+import react from "/public/react.svg";
+import js from "/public/js.svg";
+import html from "/public/html.svg";
+import solidity from "/public/solidity.svg";
 
 export default function Home() {
   const imageLink =
@@ -96,19 +106,53 @@ export default function Home() {
           We are detail-oriented designers and proficient Web and Blockchain
           Developers. Design your website, build smart contract and deploy your
           web application for web and Web3 -{" "}
-          <code className={styles.code}>all in one place</code>
+          <code className={styles.code}>all in one place.</code>
         </p>
       </main>
 
       <div className={styles.skill}>
-        <hr></hr>
-        <h2>Tech we use.</h2>
+        <h2>Tech we use</h2>
+        <p>Blockchain Technologies</p>
         <div>
-          <img
-            src="https://ik.imagekit.io/lzgpc48la/Frame_1__4__9cQ3E44HH.png?ik-sdk-version=javascript-1.4.3&updatedAt=1663647803835"
-            width="100%"
-            alt="tech-we-use-at-xdefidev"
-          />
+          <div>
+            <Image src={eth} width={60} height={60} />
+            <p>Ethereum</p>
+          </div>
+          <div>
+            <Image src={bnb} width={60} height={60} />
+            <p>Binance Smart Chain</p>
+          </div>
+          <div>
+            <Image src={avax} width={60} height={60} />
+            <p>Avalanche</p>
+          </div>
+          <div>
+            <Image src={polygon} width={60} height={60} />
+            <p>Polygon</p>
+          </div>
+        </div>
+        <p>Web Development Technologies</p>
+        <div>
+          <div>
+            <Image src={next} width={60} height={60} />
+            <p>NextJS</p>
+          </div>
+          <div>
+            <Image src={js} width={60} height={60} />
+            <p>Javascript</p>
+          </div>
+          <div>
+            <Image src={html} width={60} height={60} />
+            <p>HTML</p>
+          </div>
+          <div>
+            <Image src={react} width={60} height={60} />
+            <p>React</p>
+          </div>
+          <div>
+            <Image src={solidity} width={60} height={60} />
+            <p>Solidity</p>
+          </div>
         </div>
       </div>
 
