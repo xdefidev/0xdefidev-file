@@ -184,6 +184,11 @@
   align-items: center;
 }
 
+.skill p {
+  font-size: 22px;
+  font-weight: 800;
+}
+
 .skill div div {
   display: flex;
   flex-direction: column;
