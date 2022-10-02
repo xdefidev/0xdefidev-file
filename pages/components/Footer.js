@@ -18,7 +18,7 @@ export default function Footer() {
               alt="message us on telegram"
               target="_blank"
             >
-              <Image src={Telegram} />
+              <Image src={Telegram} alt="telegram" />
               <span>Telegram</span>
             </a>
           </li>
@@ -27,7 +27,7 @@ export default function Footer() {
               href="mailto:xdefidev@gmail.com"
               alt="mail us xdefidev@gmail.com"
             >
-              <Image src={Mail} />
+              <Image src={Mail} alt="email" />
               e-Mail
             </a>
           </li>
@@ -37,7 +37,7 @@ export default function Footer() {
               alt="Text us on whatsapp"
               target="_blank"
             >
-              <Image src={Whatsapp} />
+              <Image src={Whatsapp} alt="whatsapp" />
               Whatsapp
             </a>
           </li>
