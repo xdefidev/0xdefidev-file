@@ -64,7 +64,11 @@ li {
   margin: 0rem 5rem;
 }
 
-.header .grid-container {
+.header>div:nth-child(2) {
+  /* background-color: #000; */
+}
+
+.grid-container {
   margin-top: 4rem;
 }
 

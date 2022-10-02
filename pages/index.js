@@ -14,6 +14,7 @@ import react from "/public/react.svg";
 import js from "/public/js.svg";
 import html from "/public/html.svg";
 import solidity from "/public/solidity.svg";
+import background from "/public/background.svg";
 
 export default function Home() {
   const imageLink =
@@ -71,7 +72,9 @@ export default function Home() {
               </code>
             </p>
           </div>
-          <div></div>
+          <div>
+            <Image src={background} height={700} width={700} />
+          </div>
         </div>
 
         <img
