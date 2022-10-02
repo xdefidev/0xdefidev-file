@@ -94,6 +94,13 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.description2 {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
 .code {
   background: #fafafa;
   border-radius: 5px;

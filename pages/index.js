@@ -102,7 +102,7 @@ export default function Home() {
           </div>
         </div>
 
-        <p className={styles.description}>
+        <p className={styles.description2}>
           We are detail-oriented designers and proficient Web and Blockchain
           Developers. Design your website, build smart contract and deploy your
           web application for web and Web3 -{" "}
