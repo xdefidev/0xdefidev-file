@@ -52,12 +52,19 @@
 .footer div ul {
   padding: 0px;
   margin: 0px;
+  display: flex;
 }
 
 .footer div ul li {
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
-  line-height: 30px;
+
+
+}
+
+.footer a {
+  display: flex;
+  gap: 5px;
 }
 
 .title a {

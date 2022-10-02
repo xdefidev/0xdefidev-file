@@ -1,5 +1,8 @@
 import styles from "/styles/Home.module.css";
-import Link from "next/link";
+import Image from "next/image";
+import Telegram from "/public/telegram.svg";
+import Whatsapp from "/public/whatsapp.svg";
+import Mail from "/public/mail.svg";
 
 export default function Footer() {
   const d = new Date();
@@ -15,7 +18,8 @@ export default function Footer() {
               alt="message us on telegram"
               target="_blank"
             >
-              Telegram
+              <Image src={Telegram} />
+              <span>Telegram</span>
             </a>
           </li>
           <li>
@@ -23,6 +27,7 @@ export default function Footer() {
               href="mailto:xdefidev@gmail.com"
               alt="mail us xdefidev@gmail.com"
             >
+              <Image src={Mail} />
               e-Mail
             </a>
           </li>
@@ -32,6 +37,7 @@ export default function Footer() {
               alt="Text us on whatsapp"
               target="_blank"
             >
+              <Image src={Whatsapp} />
               Whatsapp
             </a>
           </li>
