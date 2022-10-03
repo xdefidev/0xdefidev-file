@@ -67,6 +67,10 @@
   gap: 5px;
 }
 
+.footer a:hover {
+  color: #0070f3;
+}
+
 .title a {
   color: #0070f3;
   background: #fff;

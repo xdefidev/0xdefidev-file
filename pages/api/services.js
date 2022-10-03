@@ -20,7 +20,7 @@ export default [
   {
     name: "IDO Launchpad Development",
     description:
-      "We will develop your IDO Launchpad, Create tokens, Token sales, Token lock, and Liquidity Lock.",
+      "We will develop your IDO Launchpad dashboard, Create tokens, Token sales, Token lock, and Liquidity Lock.",
     image: "",
     status: true,
     youtube: "GlTIwxUqGKI",
