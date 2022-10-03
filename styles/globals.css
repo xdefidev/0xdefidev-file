@@ -40,7 +40,7 @@ li {
   font-family: 'Poppins', sans-serif;
 }
 
-.contact {
+.menu li:nth-child(2) {
   background-color: #fff;
   color: #0070f3;
   padding: 8px 20px;
@@ -48,7 +48,7 @@ li {
   border: solid 1px #0070f3;
 }
 
-.contact:hover {
+.menu li:nth-child(2):hover {
   background-color: #0070f3;
   color: #fff;
 }
