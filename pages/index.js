@@ -36,6 +36,20 @@ export default function Home() {
           content="C7U3VQkY7WQDIkayBFDUf9CmlRoFm-jjUWTGRACRCig"
         />
 
+        <meta property="og:title" content="Xdefidev Crypto Services" />
+
+        <meta
+          property="og:description"
+          content="Need Blockchain Developer? Let's take it out of your hands."
+        />
+
+        <meta property="og:url" content="https://xdefidev.shop" />
+
+        <meta
+          property="og:image"
+          content="https://ik.imagekit.io/lzgpc48la/Yellow_Bright_Business_Idea_Tutorial_Youtube_Thumbnail_n186Tgza0.png?ik-sdk-version=javascript-1.4.3&updatedAt=1665836822605"
+        />
+
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
