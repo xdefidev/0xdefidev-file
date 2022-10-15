@@ -18,7 +18,7 @@ export default [
     },
   },
   {
-    name: "IDO Launchpad Development",
+    name: "IDO Launchpad Development | Pinksale Clone",
     description:
       "We will develop your IDO Launchpad dashboard, Create tokens, Token sales, Token lock, and Liquidity Lock.",
     image: "",
@@ -26,7 +26,8 @@ export default [
     youtube: "GlTIwxUqGKI",
     slug: "ido-launchpad-development",
     p: {
-      description: "",
+      description:
+        "Presale launchpad that allow users to create tokens with unique features including deflationary tokens, create presales, lock tokens, and lock liquidity within a few seconds.",
       list: {
         1: "Automatic contract deployment. ",
         2: "Token maker engine.",
@@ -43,11 +44,12 @@ export default [
     youtube: "sw2qGGsSmo4",
     slug: "auto-staking-token-and-dashboard-development",
     p: {
-      description: "",
+      description:
+        "Auto staking token smart contract with rebase, buy/sell fees, Treasury/Marketing, RFV and more, with Dashoard Dapp to track Rewards/Rebases.",
       list: {
         1: "Token Smart contract with automatic Rebase engine.",
         2: "Dashboard Dapp with calculator, account and token market values.",
-        3: "Custom modern landing page website ",
+        3: "Custom modern landing page website.",
       },
     },
   },
@@ -60,11 +62,12 @@ export default [
     youtube: "GlTIwxUqGKI",
     slug: "token-presale-dashboard-launch-development",
     p: {
-      description: "",
+      description:
+        "This is a POS for any Crypto project, perfect if you want to launch/run a token sale, NFT mint sale. Comes with custom smart contract and Dashboard dApp. ",
       list: {
-        1: "Launch point-of-sale dApp for NFT | PRESALE | STAKING | ICO",
-        2: "Connect Wallet & Mint tokens",
-        3: "Progress Bar",
+        1: "Launch point-of-sale dApp for NFT | PRESALE | STAKING | ICO.",
+        2: "Connect Wallet & Mint tokens.",
+        3: "Progress Bar.",
       },
     },
   },
@@ -77,7 +80,8 @@ export default [
     youtube: "",
     slug: "erc20-token-development",
     p: {
-      description: "",
+      description:
+        "Let us develop your custom token written with solidity and deployed on any EVM-Compatible blockchain. We can provide guide to deploy the smart contract yourself or Transafer ownership.",
       list: {
         1: "Create and issue with ERC20 Token standard",
         2: "Deploy to mainnet and Transfer ownership",
@@ -94,7 +98,8 @@ export default [
     youtube: "",
     slug: "crypto-casino-development",
     p: {
-      description: "",
+      description:
+        "Real Crypto gaming casino with amazing games like Crash, Dice, Roulette, Slots and many more, uses an advanced backedn to ensure safe gameplay and scam free. ",
       list: {
         1: "Online gaming casino with crypto deposits and withdrawal.",
         2: "Provaly Fair tech | Anti cheat.",
@@ -111,7 +116,8 @@ export default [
     youtube: "",
     slug: "amm-dex-pancakeswap-clone",
     p: {
-      description: "",
+      description:
+        "Pancakeswap clone with Swap, Staking pools, and Farm. Comes with full design customization and smart contracts for backend.",
       list: {
         1: "AMM Dex on any EVM network.",
         2: "SWAP, LIQUIDITY, STAKING POOLS and FARM.",
@@ -128,7 +134,8 @@ export default [
     youtube: "kakoUaa_FVM",
     slug: "sports-betting-platform",
     p: {
-      description: "",
+      description:
+        "Sports betting wesite with realtime match add and update. Multiple payment methods. Bookies / Clu holders feature. Nuxtjs and Laravel for backend.",
       list: {
         1: "Single bet and multi bet system",
         2: "Bookies / Club holder and Referral",
