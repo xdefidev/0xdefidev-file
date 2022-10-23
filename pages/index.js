@@ -27,7 +27,7 @@ export default function Home() {
 
         <meta
           name="description"
-          content="Looking for Blockchain Developer? we've got you!. Push your crypto project from ground up. Develop website, Smart contracts, Web3 dApps and Web applications. Network of doers with atleast 4 years of experience"
+          content="Are you looking for Blockchain Developer? we've got you! Push your crypto project from the ground up. Develop website, Smart contracts, Web3 dApps and Web applications. Network of doers with atleast 4 years of experience"
         />
 
         <meta http-equiv="content-language" content="en" />
