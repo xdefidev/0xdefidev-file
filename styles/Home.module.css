@@ -145,6 +145,7 @@
   transition: color 0.45s ease, border-color 0.15s ease;
   position: relative;
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+  cursor: pointer;
 }
 
 .card:hover,
