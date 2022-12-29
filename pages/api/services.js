@@ -5,7 +5,7 @@ export default [
       "An EVM-compatible blockchain that supports ERC20 Token, and dApp, NFT with wallet and Explorer.",
     image: "",
     status: true,
-    youtube: "uGW9LZKa8c0",
+    youtube: "Ynn_hBBORUY",
     slug: "pos-poa-blockchain-development",
     p: {
       description:
@@ -141,6 +141,7 @@ export default [
         2: "Bookies / Club holder and Referral",
         3: "realtime match add, update,  ratio change and match control",
       },
+      list2: [],
     },
   },
 ];
