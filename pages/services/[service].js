@@ -77,11 +77,10 @@ export default function Service({ post }) {
           {post.p.description}
           <h3>Features / Benefits</h3>
           <ul>
-            <li>{post.p.list[1]}</li>
-            <li>{post.p.list[2]}</li>
-            <li>{post.p.list[3]}</li>
-            {/* {post.map((item) => console.log(post))} */}
-            {}
+            {post.p.list.map((item) => (
+              <li>{item}</li>
+            ))}
+            {/* {console.log(post.p.list.length)} */}
           </ul>
         </div>
       </div>

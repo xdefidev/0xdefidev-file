@@ -18,8 +18,8 @@
 }
 
 .footer {
-  background-color: #000;
-  color: #fff;
+  background-color: #212529;
+  color: #e9ecef;
   width: 100%;
   height: 180px;
   border-top: 1px solid #eaeaea;
@@ -73,7 +73,7 @@
 
 .title a {
   color: #0070f3;
-  background: #fff;
+  background: #e9ecef;
   background: -webkit-linear-gradient(125deg, #000, #0070f3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -161,7 +161,7 @@
 }
 
 .card div {
-  background: #fff;
+  background: #e9ecef;
   border-radius: 10px;
   position: absolute;
   padding: 5px 10px;
@@ -197,6 +197,7 @@
   text-align: center;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
+
 }
 
 .skill div {
@@ -223,8 +224,8 @@
 .skill::before {
   content: "";
   height: 5px;
-  width: 60px;
-  background-color: #602be9;
+  width: 90px;
+  background-color: #212529;
   top: 30px;
   justify-self: center;
 }

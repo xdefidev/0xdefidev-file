@@ -8,6 +8,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: 400;
   scroll-behavior: smooth;
+  background-color: #e9ecef;
 }
 
 a {
@@ -40,8 +41,8 @@ li {
   font-family: 'Poppins', sans-serif;
 }
 
-.menu li:nth-child(2) {
-  background-color: #fff;
+.menu li:nth-child(3) {
+  background-color: #e9ecef;
   color: #0070f3;
   padding: 8px 20px;
   border-radius: 8px;
@@ -50,7 +51,7 @@ li {
 
 .menu li:nth-child(2):hover {
   background-color: #0070f3;
-  color: #fff;
+  color: #e9ecef;
 }
 
 .header {
@@ -107,8 +108,8 @@ li {
 }
 
 .content-body {
-  background-color: #000;
-  color: #fff;
+  background-color: #212529;
+  color: #e9ecef;
   justify-content: center;
   font-size: 10px;
 }

@@ -81,9 +81,9 @@ export default function Home() {
 
             <p className={styles.description}>
               Let us do all the work for you so you don't have to.{" "}
-              <code className={styles.code}>
+              {/* <code className={styles.code}>
                 <></>
-              </code>
+              </code> */}
             </p>
           </div>
           <div>
