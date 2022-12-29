@@ -135,5 +135,7 @@ li {
 
   ul {
     padding: 0 10px;
+    gap: 5px;
+    font-size: 13px;
   }
 }
