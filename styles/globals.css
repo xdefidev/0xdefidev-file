@@ -130,10 +130,10 @@ li {
   }
 
   nav {
-    margin: 0 2rem;
+    margin: 0 1rem;
   }
 
   ul {
-    gap: 8px;
+    padding: 0 10px;
   }
 }
