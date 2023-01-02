@@ -10,13 +10,17 @@
 .container {
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
 .container img {
     border-radius: 10px;
     width: 100%;
+}
+
+.container img:hover {
+    border-radius: 0px;
 }
 
 .box {
@@ -30,5 +34,19 @@
 }
 
 .box:hover {
-    border: 1px solid skyblue;
+    border: 1px solid #0070f3;
+}
+
+@media (max-width: 600px) {
+    .container {
+        display: grid;
+
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .body {
+        margin: 0 1rem;
+    }
+
 }

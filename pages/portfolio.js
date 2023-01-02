@@ -30,11 +30,7 @@ export default function Home() {
           {portfolio.map((item) => (
             <a href={item.link}>
               <div className={styles.box}>
-                <img
-                  src="https://ik.imagekit.io/lzgpc48la/Yellow_Bright_Business_Idea_Tutorial_Youtube_Thumbnail_n186Tgza0.png?ik-sdk-version=javascript-1.4.3&updatedAt=1665836822605"
-                  width={300}
-                  height={300}
-                />
+                <img src={item.image} />
                 <h2>{item.name}</h2>
                 <p>{item.description}</p>
               </div>
