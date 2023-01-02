@@ -1,8 +1,9 @@
 export default [
   {
     name: "Pancakeswap Clone",
-    link: "https://ik.imagekit.io/lzgpc48la/scrnli_02_01_2023_12-07-03_u9QCCX70z.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672658107714",
-    image: "https://iili.io/HuSHQpV.md.png",
+    link: "https://stately-empanada-b6c255.netlify.app/",
+    image:
+      "https://ik.imagekit.io/lzgpc48la/scrnli_02_01_2023_12-07-03_u9QCCX70z.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672658107714",
     description:
       "Decentralised excange | Pancakeswap clone with lottery and Prediction games",
   },
