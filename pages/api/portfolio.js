@@ -1,18 +1,20 @@
 export default [
   {
-    name: "pancakeswap",
+    name: "Pancakeswap Clone",
     link: "#",
     image: "",
-    description: "test test",
+    description:
+      "Decentralised excange | Pancakeswap clone with lottery and Prediction games",
   },
   {
-    name: "pancakeswap",
+    name: "AutoStaking Dapp",
     link: "#",
     image: "",
-    description: "test test",
+    description:
+      "Autostaking Dapp with APY calculator and token smart contract with auto rebase",
   },
   {
-    name: "pancakeswap",
+    name: "",
     link: "#",
     image: "",
     description: "test test",

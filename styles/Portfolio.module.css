@@ -1,6 +1,10 @@
 .body {
     margin: 0 5rem;
     padding-top: 50px;
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+        Bitstream Vera Sans Mono, Courier New, monospace;
+    line-height: 1.5;
+    letter-spacing: -1px;
 }
 
 .container {
@@ -23,4 +27,8 @@
     padding: 20px;
     border-radius: 10px;
     opacity: 0.9;
+}
+
+.box:hover {
+    border: 1px solid skyblue;
 }
