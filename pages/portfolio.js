@@ -1,7 +1,10 @@
-import Head from 'next/head';
-import Navbar from './components/Navbar';
+import Head from "next/head";
+import Navbar from "./components/Navbar";
+import styles from "/styles/Portfolio.module.css";
+import portfolio from "./api/portfolio";
 
 export default function Home() {
+  console.log(portfolio);
   return (
     <div>
       <Head>
@@ -22,7 +25,23 @@ export default function Home() {
         />
       </Head>
       <Navbar />
-      <div></div>
+      <div className={styles.body}>
+        <div className={styles.container}>
+          {portfolio.map((item) => (
+            <a href={item.link}>
+              <div className={styles.box}>
+                <img
+                  src="https://ik.imagekit.io/lzgpc48la/Yellow_Bright_Business_Idea_Tutorial_Youtube_Thumbnail_n186Tgza0.png?ik-sdk-version=javascript-1.4.3&updatedAt=1665836822605"
+                  width={300}
+                  height={300}
+                />
+                <h2>{item.name}</h2>
+                <p>{item.description}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

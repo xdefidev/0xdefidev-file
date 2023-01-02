@@ -11,7 +11,7 @@ export default function Navbar() {
       </Link>
       <ul className="menu">
         <li>
-          <a href="/portfolio.js">Portfolio</a>
+          <a href="/portfolio">Portfolio</a>
         </li>
         <li>
           <a href="#grid-container">Services</a>
