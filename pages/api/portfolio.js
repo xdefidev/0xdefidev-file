@@ -15,10 +15,4 @@ export default [
     description:
       "Autostaking Dapp with APY calculator and token smart contract with auto rebase",
   },
-  {
-    name: "",
-    link: "#",
-    image: "",
-    description: "test test",
-  },
 ];
