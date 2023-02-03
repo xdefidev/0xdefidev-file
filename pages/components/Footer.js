@@ -14,7 +14,7 @@ export default function Footer() {
         <ul className="footer-list">
           <li>
             <a
-              href="https://t.me/xdefidev"
+              href="https://t.me/xdefideveloper"
               alt="message us on telegram"
               target="_blank"
             >

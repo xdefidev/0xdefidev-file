@@ -18,7 +18,7 @@ export default function Navbar() {
         </li>
         <li>
           <a
-            href="https://t.me/xdefidev"
+            href="https://t.me/xdefideveloper"
             className={styles.contact}
             target="_blank"
           >

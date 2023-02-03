@@ -63,7 +63,7 @@ export default function Service({ post }) {
               project.
             </p>
             <a
-              href="https://t.me/xdefidev"
+              href="https://t.me/xdefideveloper"
               alt="contact xdefidev"
               target="_blank"
             >
