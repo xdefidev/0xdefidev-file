@@ -30,7 +30,7 @@ export default function Home() {
           {portfolio.map((item) => (
             <a href={item.link} alt={item.description}>
               <div className={styles.box}>
-                <img src={item.image} alt={item.description} />
+                <img src={item.image} alt={item.description} loading="lazy" />
                 <h2>{item.name}</h2>
                 <p>{item.description}</p>
               </div>

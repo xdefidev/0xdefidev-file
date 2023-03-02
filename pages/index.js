@@ -91,7 +91,7 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <Image src={background} height={700} width={700} />
+            <Image src={background} height={700} width={700} loading="lazy" />
           </div>
         </div>
 
@@ -99,6 +99,7 @@ export default function Home() {
           src="https://ik.imagekit.io/lzgpc48la/down-arrow_vkeVMp4_k.png?ik-sdk-version=javascript-1.4.3&updatedAt=1663634428959"
           className="arrow-down"
           alt="cryptocurrency logo header"
+          loading="lazy"
         />
 
         <div className="grid-container" id="grid-container">
@@ -114,7 +115,12 @@ export default function Home() {
                 key={index}
               >
                 <a className={styles.card}>
-                  <img src={imageLink} alt={item.name} width="100%" />
+                  <img
+                    src={imageLink}
+                    alt={item.name}
+                    width="100%"
+                    loading="lazy"
+                  />
                   <div>{item.status ? "active" : "out"}</div>
                   <h3>{item.name} &rarr;</h3>
                   <p>{item.description}</p>
@@ -140,61 +146,61 @@ export default function Home() {
         <p>Blockchain</p>
         <div>
           <div>
-            <Image src={eth} width={60} height={60} />
+            <Image src={eth} width={60} height={60} loading="lazy" />
             <p>Ethereum</p>
           </div>
           <div>
-            <Image src={bnb} width={60} height={60} />
+            <Image src={bnb} width={60} height={60} loading="lazy" />
             <p>Binance Smart Chain</p>
           </div>
           <div>
-            <Image src={avax} width={60} height={60} />
+            <Image src={avax} width={60} height={60} loading="lazy" />
             <p>Avalanche</p>
           </div>
           <div>
-            <Image src={polygon} width={60} height={60} />
+            <Image src={polygon} width={60} height={60} loading="lazy" />
             <p>Polygon</p>
           </div>
           <div>
-            <Image src={fantom} width={60} height={60} />
+            <Image src={fantom} width={60} height={60} loading="lazy" />
             <p>Fantom</p>
           </div>
         </div>
         <p>Blockchain Technologies</p>
         <div>
           <div>
-            <Image src={solidity} width={60} height={60} />
+            <Image src={solidity} width={60} height={60} loading="lazy" />
             <p>Solidity</p>
           </div>
           <div>
-            <Image src={truffle} width={60} height={60} />
+            <Image src={truffle} width={60} height={60} loading="lazy" />
             <p>Truffle</p>
           </div>
           <div>
-            <Image src={hardhat} width={60} height={60} />
+            <Image src={hardhat} width={60} height={60} loading="lazy" />
             <p>Hardhat</p>
           </div>
         </div>
         <p>Web Development Technologies</p>
         <div>
           <div>
-            <Image src={next} width={60} height={60} />
+            <Image src={next} width={60} height={60} loading="lazy" />
             <p>NextJS</p>
           </div>
           <div>
-            <Image src={js} width={60} height={60} />
+            <Image src={js} width={60} height={60} loading="lazy" />
             <p>Javascript</p>
           </div>
           <div>
-            <Image src={html} width={60} height={60} />
+            <Image src={html} width={60} height={60} loading="lazy" />
             <p>HTML</p>
           </div>
           <div>
-            <Image src={react} width={60} height={60} />
+            <Image src={react} width={60} height={60} loading="lazy" />
             <p>React</p>
           </div>
           <div>
-            <Image src={nodejs} width={60} height={60} />
+            <Image src={nodejs} width={60} height={60} loading="lazy" />
             <p>NodeJS</p>
           </div>
         </div>

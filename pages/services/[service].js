@@ -52,7 +52,7 @@ export default function Service({ post }) {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             ></iframe>
           ) : (
-            <img src={imageLink} />
+            <img src={imageLink} loading="lazy" />
           )}
 
           <div className={styles.secondDiv}>
