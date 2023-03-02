@@ -8,10 +8,14 @@ import Image from "next/image";
 import eth from "/public/eth.svg";
 import avax from "/public/avax.svg";
 import polygon from "/public/polygon.svg";
+import fantom from "/public/fantom.svg";
 import bnb from "/public/bnb.svg";
+import truffle from "/public/truffle.svg";
+import hardhat from "/public/hardhat.svg";
 import next from "/public/next.svg";
 import react from "/public/react.svg";
 import js from "/public/js.svg";
+import nodejs from "/public/nodejs.svg";
 import html from "/public/html.svg";
 import solidity from "/public/solidity.svg";
 import background from "/public/background.svg";
@@ -120,9 +124,12 @@ export default function Home() {
         </div>
 
         <p className={styles.description2}>
-          We are detail-oriented designers and proficient Web and Blockchain
-          Developers. Design your website, build smart contract and deploy your
-          web application for web and Web3 -{" "}
+          To make your ideas a reality, are you looking for remote Web and
+          Blockchain developers? Look nowhere else! For both the Web2 and the
+          decentralized Web3, our team specializes in building{" "}
+          <u>custom websites</u>, programming intelligent <u>smart contracts</u>
+          , and deploying cutting-edge <u>decentralized applications</u>. Count
+          on us to offer outstanding results suited to your specific demands. -{" "}
           <code className={styles.code}>all in one place.</code>
         </p>
       </main>
@@ -147,12 +154,24 @@ export default function Home() {
             <Image src={polygon} width={60} height={60} />
             <p>Polygon</p>
           </div>
+          <div>
+            <Image src={fantom} width={60} height={60} />
+            <p>Fantom</p>
+          </div>
         </div>
         <p>Blockchain Technologies</p>
         <div>
           <div>
             <Image src={solidity} width={60} height={60} />
             <p>Solidity</p>
+          </div>
+          <div>
+            <Image src={truffle} width={60} height={60} />
+            <p>Truffle</p>
+          </div>
+          <div>
+            <Image src={hardhat} width={60} height={60} />
+            <p>Hardhat</p>
           </div>
         </div>
         <p>Web Development Technologies</p>
@@ -172,6 +191,10 @@ export default function Home() {
           <div>
             <Image src={react} width={60} height={60} />
             <p>React</p>
+          </div>
+          <div>
+            <Image src={nodejs} width={60} height={60} />
+            <p>NodeJS</p>
           </div>
         </div>
       </div>

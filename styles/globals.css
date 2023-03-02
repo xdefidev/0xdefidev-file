@@ -120,9 +120,12 @@ li {
 
 @media (max-width: 600px) {
   .header {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    /* grid-template-columns: 1fr;
+    grid-template-rows: 1fr; */
     /* margin: 0rem 5rem; */
+    display: flex;
+    flex-direction: column-reverse;
+
   }
 
   .header div:nth-child(3) {
@@ -137,5 +140,9 @@ li {
     padding: 0 10px;
     gap: 5px;
     font-size: 13px;
+  }
+
+  .menu {
+    padding: 0;
   }
 }

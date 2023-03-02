@@ -108,8 +108,8 @@
 
 .description2 {
   text-align: center;
-  line-height: 1.5;
-  font-size: 1.5rem;
+  line-height: 1.7;
+  font-size: 1.3rem;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -204,9 +204,11 @@
 .skill div {
   display: flex;
   gap: 30px;
-  height: 100%;
+  height: auto;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .skill>p {
@@ -217,9 +219,12 @@
 
 .skill div div {
   display: flex;
-  flex-direction: column;
-  gap: 0px;
+  flex-direction: row;
+  gap: 4px;
   font-size: 15px;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
 }
 
 .skill::before {
@@ -234,22 +239,37 @@
 
 @media (max-width: 600px) {
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
+  }
+
+  .skill {
+    padding: 0 1rem;
   }
 
   .skil div {
-    gap: 10px;
+    /* gap: 5px !important; */
+    /* max-width: 600px; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* height: auto; */
   }
 
 
   .skill div div {
-    height: 100px;
+    display: flex;
+    /* grid-template-columns: 40% auto; */
   }
 
   .skill div div p {
-    font-size: 10px;
+    font-size: 12px !important;
+    white-space: nowrap;
   }
 
-
+  .skill div div img {
+    min-width: 30px !important;
+    height: 30px !important;
+    margin-right: 10px;
+  }
 
 }

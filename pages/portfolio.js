@@ -10,11 +10,11 @@ export default function Home() {
       <Head>
         <title>0xDefiDev Portfolio</title>
 
-        <meta property="og:title" content="Xdefidev Dev Portfolio" />
+        <meta property="og:title" content="xdefidev Portfolio" />
 
         <meta
           property="og:description"
-          content="Need Blockchain Developer? View our Portfolio"
+          content="Need Remote Blockchain Developers? View our Portfolio"
         />
 
         <meta property="og:url" content="https://xdefidev.shop" />
@@ -28,7 +28,7 @@ export default function Home() {
       <div className={styles.body}>
         <div className={styles.container}>
           {portfolio.map((item) => (
-            <a href={item.link}>
+            <a href={item.link} alt={item.description}>
               <div className={styles.box}>
                 <img src={item.image} />
                 <h2>{item.name}</h2>
