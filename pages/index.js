@@ -98,6 +98,7 @@ export default function Home() {
         <img
           src="https://ik.imagekit.io/lzgpc48la/down-arrow_vkeVMp4_k.png?ik-sdk-version=javascript-1.4.3&updatedAt=1663634428959"
           className="arrow-down"
+          alt="cryptocurrency logo header"
         />
 
         <div className="grid-container" id="grid-container">
