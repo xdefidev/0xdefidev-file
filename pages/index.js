@@ -206,6 +206,46 @@ export default function Home() {
         </div>
       </div>
 
+      <div className={styles.why}>
+        <h2>Why Hire XdefiDev for your Development Services?</h2>
+
+        <div className>
+          <div>
+            <h3>Cost-Effective and Timely</h3>
+            <p>
+              We work with your budget and strive to provide high-quality
+              services that are affordable and accessible to businesses of all
+              sizes. we coordinate each project to ensure fast deliveries. You
+              can save time and money by outsourcing your projects to our
+              professionals.
+            </p>
+          </div>
+          <div>
+            <h3>Professional Expertise</h3>
+            <p>
+              Our hand picked Developers have the experience to build
+              high-quality, responsive, and user-friendly websites and
+              applications. They understand the latest technologies and design
+              trends and can ensure that your website is up-to-date with the
+              latest features, functionality, and security measures.{" "}
+            </p>
+          </div>
+          <div>
+            <h3>Ongoing Support and Maintenance</h3>
+            <p>
+              We provide ongoing support and maintenance services after the
+              completion of your project. we also ensure long-term success of
+              each projects. However, we want to make it clear that there are
+              certain types of maintenance that may require an additional fee.
+              These types of maintenance may include more complex updates, such
+              as integrating third-party software, performing major upgrades, or
+              implementing custom features that are not included in your
+              original contract.
+            </p>
+          </div>
+        </div>
+      </div>
+
       <Footer />
     </div>
   );

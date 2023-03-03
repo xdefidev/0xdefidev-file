@@ -236,6 +236,31 @@
   justify-self: center;
 }
 
+.why {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+  text-align: center;
+  padding: 0 0 40px 0;
+}
+
+.why div {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.why div div {
+  display: flex;
+  flex-direction: column;
+}
+
+.why div div p {}
+
+
 
 @media (max-width: 600px) {
   .grid {
@@ -270,6 +295,11 @@
     min-width: 30px !important;
     height: 30px !important;
     margin-right: 10px;
+  }
+
+  .why div {
+    display: flex;
+    flex-direction: column;
   }
 
 }
