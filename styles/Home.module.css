@@ -244,6 +244,8 @@
   margin: 0 20px;
   text-align: center;
   padding: 0 0 40px 0;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
 .why div {
@@ -251,6 +253,7 @@
   grid-template-rows: 1fr;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
+
 }
 
 .why div div {
