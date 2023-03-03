@@ -256,6 +256,7 @@
 .why div div {
   display: flex;
   flex-direction: column;
+  text-align: left;
 }
 
 .why div div p {}
