@@ -34,7 +34,7 @@
 }
 
 .box:hover {
-    border: 1px solid #0070f3;
+    border: 1px solid #023e8a;
 }
 
 @media (max-width: 600px) {

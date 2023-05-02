@@ -69,13 +69,13 @@
 }
 
 .footer a:hover {
-  color: #0070f3;
+  color: #023e8a;
 }
 
 .title a {
-  color: #0070f3;
+  color: #023e8a;
   background: #e9ecef;
-  background: -webkit-linear-gradient(125deg, #000, #0070f3);
+  background: -webkit-linear-gradient(125deg, #000, #023e8a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
@@ -152,7 +152,7 @@
 .card:hover,
 .card:focus,
 .card:active {
-  border-color: #0070f3;
+  border-color: #023e8a;
 }
 
 .card img {

@@ -33,7 +33,7 @@ nav {
 ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
   align-items: center;
 }
 
@@ -43,14 +43,14 @@ li {
 
 .menu li:nth-child(3) {
   background-color: #e9ecef;
-  color: #0070f3;
-  padding: 8px 20px;
+  color: #023e8a;
+  padding: 8px 12px;
   border-radius: 8px;
-  border: solid 1px #0070f3;
+  border: solid 1px #023e8a;
 }
 
 .menu li:nth-child(3):hover {
-  background-color: #0070f3;
+  background-color: #023e8a;
   color: #e9ecef;
 }
 
