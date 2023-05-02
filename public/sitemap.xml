@@ -9,52 +9,57 @@
 
 <url>
   <loc>https://xdefidev.shop/</loc>
-  <lastmod>2023-01-13T00:06:02+00:00</lastmod>
+  <lastmod>2023-05-02T22:09:12+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://xdefidev.shop/portfolio</loc>
-  <lastmod>2023-01-13T00:06:02+00:00</lastmod>
+  <lastmod>2023-05-02T22:09:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://xdefidev.shop/services/pos-poa-blockchain-development</loc>
-  <lastmod>2023-01-13T00:06:02+00:00</lastmod>
+  <lastmod>2023-05-02T22:09:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://xdefidev.shop/services/ido-launchpad-development</loc>
-  <lastmod>2023-01-13T00:06:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://xdefidev.shop/services/auto-staking-token-and-dashboard-development</loc>
-  <lastmod>2023-01-13T00:06:02+00:00</lastmod>
+  <loc>https://xdefidev.shop/services/testnet-blockchain-development</loc>
+  <lastmod>2023-05-02T22:09:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://xdefidev.shop/services/token-presale-dashboard-launch-development</loc>
-  <lastmod>2023-01-13T00:06:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://xdefidev.shop/services/erc20-token-development</loc>
-  <lastmod>2023-01-13T00:06:02+00:00</lastmod>
+  <lastmod>2023-05-02T22:09:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://xdefidev.shop/services/crypto-casino-development</loc>
-  <lastmod>2023-01-13T00:06:02+00:00</lastmod>
+  <lastmod>2023-05-02T22:09:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://xdefidev.shop/services/nft-marketplace</loc>
+  <lastmod>2023-05-02T22:09:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://xdefidev.shop/services/auto-staking-token-and-dashboard-development</loc>
+  <lastmod>2023-05-02T22:09:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://xdefidev.shop/services/erc20-token-development</loc>
+  <lastmod>2023-05-02T22:09:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://xdefidev.shop/services/amm-dex-pancakeswap-clone</loc>
-  <lastmod>2023-01-13T00:06:02+00:00</lastmod>
+  <lastmod>2023-05-02T22:09:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://xdefidev.shop/services/sports-betting-platform</loc>
-  <lastmod>2023-01-13T00:06:02+00:00</lastmod>
+  <lastmod>2023-05-02T22:09:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
