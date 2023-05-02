@@ -47,6 +47,7 @@ li {
   padding: 8px 12px;
   border-radius: 8px;
   border: solid 1px #023e8a;
+  cursor: pointer;
 }
 
 .menu li:nth-child(3):hover {
