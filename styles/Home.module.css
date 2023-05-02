@@ -244,25 +244,36 @@
   margin: 0 20px;
   text-align: center;
   padding: 0 0 40px 0;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-family: 'Poppins', sans-serif;
+}
+
+.why h2 {
+  margin-top: 50px;
+  font-size: 30px;
+
 }
 
 .why div {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-gap: 25px;
+
 
 }
 
 .why div div {
   display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align: center;
 }
 
 .why div div p {}
+
+.why div div h3 {
+  margin: 0px 0px !important;
+  font-size: 20px;
+}
 
 
 

@@ -22,79 +22,42 @@ export default [
     },
   },
   {
-    name: "IDO Launchpad Development | Pinksale Clone",
-    description:
-      "We will develop your IDO Launchpad dashboard, Create tokens, Token sales, Token lock, and Liquidity Lock.",
-    image: "",
-    status: true,
-    youtube: "M98xybTnuoY",
-    slug: "ido-launchpad-development",
-    p: {
-      description:
-        "Presale launchpad that allow users to create tokens with unique features including deflationary tokens, create presales, lock tokens, and lock liquidity within a few seconds.",
-      list: [
-        "Automatic contract deployment. ",
-        "Token maker engine.",
-        "Liquidity lock and Token lock.",
-        "Automatic deployments",
-        "Deployment Fees to owners",
-      ],
-    },
-  },
-  {
-    name: "Auto-Staking Token and Dashboard",
-    description:
-      "Auto-Staking Token smart contract and dApp on BSC, ETH, AVAX blockchain.",
-    image: "",
-    status: true,
-    youtube: "sw2qGGsSmo4",
-    slug: "auto-staking-token-and-dashboard-development",
-    p: {
-      description:
-        "Auto staking token smart contract with rebase, buy/sell fees, Treasury/Marketing, RFV and more, with Dashoard Dapp to track Rewards/Rebases.",
-      list: [
-        "Token Smart contract with automatic Rebase engine.",
-        "Dashboard Dapp with calculator, account and token market values.",
-        "Custom modern landing page website.",
-        "High APY",
-        "Liquidity, RFV, Development Fees",
-      ],
-    },
-  },
-  {
-    name: "Token Presale Dashboard Launchpad",
-    description:
-      "Run Presale - Token, Presale smart contract, and dApp on any EVM blockchain",
-    image: "",
-    status: true,
-    youtube: "GlTIwxUqGKI",
-    slug: "token-presale-dashboard-launch-development",
-    p: {
-      description:
-        "This is a POS for any Crypto project, perfect if you want to launch/run a token sale, NFT mint sale. Comes with custom smart contract and Dashboard dApp. ",
-      list: [
-        "Launch point-of-sale dApp for NFT | PRESALE | STAKING | ICO",
-        "Connect Wallet & Mint tokens",
-        "Progress Bar",
-        "Service Includes Token, Presale smart contract, and Dapp ",
-      ],
-    },
-  },
-  {
-    name: "ERC20 Token for ETH, BSC, AVAX, MATIC",
-    description:
-      "Develop Ethereum Compatible tokens with ERC20 standard and custom tokenomics.",
+    name: "Testnet Blockchain Development",
+    description: "An EVM-compatible blockchain testnet with faucet.",
     image: "",
     status: true,
     youtube: "",
-    slug: "erc20-token-development",
+    slug: "testnet-blockchain-development",
     p: {
       description:
-        "Let us develop your custom token written with solidity and deployed on any EVM-Compatible blockchain. We can provide guide to deploy the smart contract yourself or Transafer ownership.",
+        "Do you want an expert to build your own testnet blockchain, explorer with testnet faucet to allow users claim testnet coin?",
       list: [
-        "Create and issue with ERC20 Token standard",
-        "Deploy to mainnet and Transfer ownership",
-        "Verified Contract",
+        "Block Explorer to analyze transactions, blocks, wallet addresses, smart contracts, and other on-chain data.",
+        "Faucet dapp",
+        "Metamask support",
+        "Supports EVM - solidity smart contracts",
+        "Developed with Go, Elixir, go ethereum",
+      ],
+    },
+  },
+  {
+    name: "Launchpad like Pinksale",
+    description:
+      "Secure launchpad protocol like Pinksale with presale list and fairlaunch.",
+    image: "",
+    status: true,
+    youtube: "M98xybTnuoY",
+    slug: "token-presale-dashboard-launch-development",
+    p: {
+      description:
+        "A platform to create, customize, lock, distribute and sell tokens on blockchain that aims to make it easy and affordable for anyone to launch and invest in crypto projects.",
+      list: [
+        "Create Presale & Fairlaunch",
+        "Launchpad List",
+        "Connect Wallet & buy tokens",
+        "Token Locker",
+        "Multi Send",
+        "KYC & Audit",
       ],
     },
   },
@@ -117,6 +80,66 @@ export default [
       ],
     },
   },
+  // {
+  //   name: "IDO Launchpad Development | Pinksale Clone",
+  //   description:
+  //     "We will develop your IDO Launchpad dashboard, Create tokens, Token sales, Token lock, and Liquidity Lock.",
+  //   image: "",
+  //   status: true,
+  //   youtube: "M98xybTnuoY",
+  //   slug: "ido-launchpad-development",
+  //   p: {
+  //     description:
+  //       "Presale launchpad that allow users to create tokens with unique features including deflationary tokens, create presales, lock tokens, and lock liquidity within a few seconds.",
+  //     list: [
+  //       "Automatic contract deployment. ",
+  //       "Token maker engine.",
+  //       "Liquidity lock and Token lock.",
+  //       "Automatic deployments",
+  //       "Deployment Fees to owners",
+  //     ],
+  //   },
+  // },
+  {
+    name: "Auto-Staking Token and Dashboard",
+    description:
+      "Auto-Staking Token smart contract and dApp on BSC, ETH, AVAX blockchain.",
+    image: "",
+    status: true,
+    youtube: "sw2qGGsSmo4",
+    slug: "auto-staking-token-and-dashboard-development",
+    p: {
+      description:
+        "Auto staking token smart contract with rebase, buy/sell fees, Treasury/Marketing, RFV and more, with Dashoard Dapp to track Rewards/Rebases.",
+      list: [
+        "Token Smart contract with automatic Rebase engine.",
+        "Dashboard Dapp with calculator, account and token market values.",
+        "Custom modern landing page website.",
+        "High APY",
+        "Liquidity, RFV, Development Fees",
+      ],
+    },
+  },
+
+  {
+    name: "ERC20 Token for ETH, BSC, AVAX, MATIC",
+    description:
+      "Develop Ethereum Compatible tokens with ERC20 standard and custom tokenomics.",
+    image: "",
+    status: true,
+    youtube: "",
+    slug: "erc20-token-development",
+    p: {
+      description:
+        "Let us develop your custom token written with solidity and deployed on any EVM-Compatible blockchain. We can provide guide to deploy the smart contract yourself or Transafer ownership.",
+      list: [
+        "Create and issue with ERC20 Token standard",
+        "Deploy to mainnet and Transfer ownership",
+        "Verified Contract",
+      ],
+    },
+  },
+
   {
     name: "AMM DEX Pancakeswap Clone Development",
     description:
