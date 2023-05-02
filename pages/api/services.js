@@ -27,7 +27,7 @@ export default [
       "We will develop your IDO Launchpad dashboard, Create tokens, Token sales, Token lock, and Liquidity Lock.",
     image: "",
     status: true,
-    youtube: "GlTIwxUqGKI",
+    youtube: "M98xybTnuoY",
     slug: "ido-launchpad-development",
     p: {
       description:
@@ -104,7 +104,7 @@ export default [
       "Online Gaming cryptoturrency casino with multiple games, ERC20 support as you want.",
     image: "",
     status: true,
-    youtube: "",
+    youtube: "E4fIL4SjEXk",
     slug: "crypto-casino-development",
     p: {
       description:
