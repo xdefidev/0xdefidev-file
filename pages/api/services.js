@@ -181,6 +181,8 @@ export default [
         "SWAP, LIQUIDITY, STAKING POOLS and FARM.",
         "Design customization and hosting setup.",
         "Multi ownership",
+        "Lottery game  and script",
+        "Prediction game and script",
       ],
     },
   },
