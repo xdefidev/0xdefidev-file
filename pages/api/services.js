@@ -18,6 +18,7 @@ export default [
         "Supports EVM - solidity smart contracts",
         "NFTs and GameFi",
         "Developed with Go, Elixir, go ethereum",
+        "Service will include cross-chain bridge",
       ],
     },
   },
@@ -77,6 +78,30 @@ export default [
         "Provably Fair tech | Anti cheat",
         "Crypto games including Dice, crash, roulette, card games, slots and more",
         "cryptocurrency deposit and withdrawals",
+      ],
+    },
+  },
+  {
+    name: "NFT Marketplace Development",
+    description:
+      "Fast, Reliable & Secure NFT Marketplace platform with advanced AI NFT Generation. ",
+    image: "",
+    status: true,
+    youtube: "",
+    slug: "nft-marketplace",
+    p: {
+      description:
+        "Trade all digital collectibles in multiple blockchains. it is 100% decetralised including the database.",
+      list: [
+        "Search NFT",
+        "Connect Wallet",
+        "Multi-Chain support.",
+        "Fast Database",
+        "Advanced AI NFT ART generation",
+        "NFT Staking to earn your own tokens",
+        "NFT Collections",
+        "Total NFTs, Total Collections in the marketplace.",
+        "List NFTs from wallet",
       ],
     },
   },
@@ -141,9 +166,9 @@ export default [
   },
 
   {
-    name: "AMM DEX Pancakeswap Clone Development",
+    name: "Pancakeswap Clone Development",
     description:
-      "Clone Pancakeswap AMM Decentralised Exchange with customization.",
+      "Clone Pancakeswap AMM Decentralised Exchange with customization. Swap, Farm, Prediction and Lottery.",
     image: "",
     status: true,
     youtube: "",
