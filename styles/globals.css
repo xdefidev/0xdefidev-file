@@ -113,6 +113,7 @@ li {
 
 .footer-list {
   display: inline-block;
+  margin: 20px 0px !important;
 }
 
 .content-body {
