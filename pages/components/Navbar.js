@@ -3,13 +3,13 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav>
+    <nav className="my-6">
       <Link href="/">
-        <a className="home">
-          <h2 className="logo">0xDefiDev</h2>
+        <a className="mr-auto flex">
+          <h2 className="text-2xl font-semibold ">XDefiDev</h2>
         </a>
       </Link>
-      <ul className="menu">
+      <ul className="sm:flex hidden">
         <li>
           <a href="/portfolio">Portfolio</a>
         </li>

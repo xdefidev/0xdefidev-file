@@ -77,13 +77,19 @@ export default function Home() {
       <Navbar />
 
       <main className={styles.main}>
-        <div className="header">
-          <div>
-            <h1 className={styles.title}>
-              Web Development and Blockchain <a href="">Services!</a>
+        <div className="grid sm:grid-cols-2 grid-cols-1 ">
+          <div className="mx-4 grid grid-flow-row content-center">
+            <h1 className="text-6xl mb-4 font-semibold antialiased">
+              Web Development and Blockchain{" "}
+              <a
+                href=""
+                className="font-bold text-transparent sm:text-8xl text-7xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"
+              >
+                Services!
+              </a>
             </h1>
 
-            <p className={styles.description}>
+            <p className="text-xl antialiased">
               Let us do all the work for you so you don't have to.{" "}
               {/* <code className={styles.code}>
                 <></>
@@ -102,11 +108,11 @@ export default function Home() {
           loading="lazy"
         />
 
-        <div className="grid-container" id="grid-container">
-          <div className="services">
+        <div className="" id="grid-container">
+          <div className="text-center text-5xl font-semibold antialiased">
             <h2>Development Services</h2>
           </div>
-          <div className={styles.grid}>
+          <div className="grid gap-4 sm:grid-cols-3 grid-cols-1 my-4 sm:mx-5">
             {services.map((item, index) => (
               <Link
                 href={`/services/${item.slug}`}
@@ -121,29 +127,38 @@ export default function Home() {
                     width="100%"
                     loading="lazy"
                   />
-                  <div>{item.status ? "active" : "out"}</div>
-                  <h3>{item.name} &rarr;</h3>
-                  <p>{item.description}</p>
+                  <div className="text-green-800 text-xs antialiased">
+                    {item.status ? "Active" : "out"}
+                  </div>
+                  <h3 className="text-gray-900 font-medium antialiased">
+                    {item.name} &rarr;
+                  </h3>
+                  <p className="font-thin text-xs antialiased">
+                    {item.description}
+                  </p>
                 </a>
               </Link>
             ))}
           </div>
         </div>
 
-        <p className={styles.description2}>
-          To make your ideas a reality, are you looking for remote Web and
-          Blockchain developers? Look nowhere else! For both the Web2 and the
-          decentralized Web3, our team specializes in building{" "}
-          <u>custom websites</u>, programming intelligent <u>smart contracts</u>
-          , and deploying cutting-edge <u>decentralized applications</u>. Count
-          on us to offer outstanding results suited to your specific demands. -{" "}
-          <code className={styles.code}>all in one place.</code>
-        </p>
+        <div className="my-24 mx-4 text-xl sm:px-8 px-4 leading-10 antialiased">
+          <p>
+            To make your ideas a reality, are you looking for remote Web and
+            Blockchain developers? Look nowhere else! For both the Web2 and the
+            decentralized Web3, our team specializes in building{" "}
+            <u>custom websites</u>, programming intelligent{" "}
+            <u>smart contracts</u>, and deploying cutting-edge{" "}
+            <u>decentralized applications</u>. Count on us to offer outstanding
+            results suited to your specific demands. -{" "}
+            <code className={styles.code}>all in one place.</code>
+          </p>
+        </div>
       </main>
 
       <div className={styles.skill}>
-        <h2>Tech we use</h2>
-        <p>Blockchain</p>
+        <h2 className="text-5xl font-semibold antialiased">Technologies</h2>
+        <p className="my-4 !text-2xl antialiased">Blockchain</p>
         <div>
           <div>
             <Image src={eth} width={60} height={60} loading="lazy" />
@@ -166,7 +181,7 @@ export default function Home() {
             <p>Fantom</p>
           </div>
         </div>
-        <p>Blockchain Technologies</p>
+        <p className="my-4 !text-2xl antialiased">Blockchain Technologies</p>
         <div>
           <div>
             <Image src={solidity} width={60} height={60} loading="lazy" />
@@ -181,7 +196,9 @@ export default function Home() {
             <p>Hardhat</p>
           </div>
         </div>
-        <p>Web Development Technologies</p>
+        <p className="my-4 !text-2xl antialiased">
+          Web Development Technologies
+        </p>
         <div>
           <div>
             <Image src={next} width={60} height={60} loading="lazy" />
@@ -206,13 +223,15 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.why}>
-        <h2>Why Hire XdefiDev for your Development Services?</h2>
+      <div>
+        <h2 className="text-4xl font-bold flex justify-center py-4 font-display text-center items-center">
+          Why Hire XdefiDev for your Development Services?
+        </h2>
 
-        <div className>
-          <div>
-            <h3>Cost-Effective and Timely</h3>
-            <p>
+        <div className="grid sm:grid-cols-3 grid-cols-1 px-4 mt-6 mb-24 sm:mx-8 gap-6">
+          <div className="flex-wrap space-y-2">
+            <h2 className="text-2xl font-bold">Cost-Effective and Timely</h2>
+            <p className="italic">
               We work with your budget and strive to provide high-quality
               services that are affordable and accessible to businesses of all
               sizes. we coordinate each project to ensure fast deliveries. You
@@ -220,9 +239,9 @@ export default function Home() {
               professionals.
             </p>
           </div>
-          <div>
-            <h3>Professional Expertise</h3>
-            <p>
+          <div className="flex-wrap space-y-2">
+            <h2 className="text-2xl font-bold">Professional Expertise</h2>
+            <p className="italic">
               Our hand picked Developers have the experience to build
               high-quality, responsive, and user-friendly websites and
               applications. They understand the latest technologies and design
@@ -230,9 +249,11 @@ export default function Home() {
               latest features, functionality, and security measures.{" "}
             </p>
           </div>
-          <div>
-            <h3>Ongoing Support and Maintenance</h3>
-            <p>
+          <div className="flex-wrap space-y-2">
+            <h2 className="text-2xl font-bold">
+              Ongoing Support and Maintenance
+            </h2>
+            <p className="italic">
               We provide ongoing support and maintenance services after the
               completion of your project. we also ensure long-term success of
               each projects. However, we want to make it clear that there are

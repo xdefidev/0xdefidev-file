@@ -11,15 +11,17 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div>
         <h2>Get in Touch</h2>
-        <ul className="footer-list">
+        <ul className="footer-list ">
           <li>
             <a
               href="https://t.me/xdefideveloper"
               alt="message us on telegram"
               target="_blank"
             >
-              <Image src={Telegram} alt="telegram" />
-              <span>Telegram</span>
+              <Image src={Telegram} width={30} height={30} alt="telegram" />
+              <span className="flex text-center justify-center items-center text-sm">
+                Telegram
+              </span>
             </a>
           </li>
           <li>
@@ -27,8 +29,10 @@ export default function Footer() {
               href="mailto:xdefidev@gmail.com"
               alt="mail us xdefidev@gmail.com"
             >
-              <Image src={Mail} alt="email" />
-              e-Mail
+              <Image src={Mail} width={30} height={30} alt="email" />
+              <span className="flex text-center justify-center items-center text-sm">
+                e-Mail
+              </span>
             </a>
           </li>
           <li>
@@ -37,8 +41,10 @@ export default function Footer() {
               alt="Text us on whatsapp"
               target="_blank"
             >
-              <Image src={Whatsapp} alt="whatsapp" />
-              Whatsapp
+              <Image src={Whatsapp} width={30} height={30} alt="whatsapp" />
+              <span className="flex text-center justify-center items-center text-sm">
+                Whatsapp
+              </span>
             </a>
           </li>
           <li></li>
