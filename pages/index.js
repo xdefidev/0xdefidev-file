@@ -225,13 +225,13 @@ export default function Home() {
 
       <div>
         <h2 className="text-4xl font-bold flex justify-center py-4 font-display text-center items-center">
-          Why Hire XdefiDev for your Development Services?
+          Why Hire Us?
         </h2>
 
-        <div className="grid sm:grid-cols-3 grid-cols-1 px-4 mt-6 mb-24 sm:mx-8 gap-6">
+        <div className="grid sm:grid-cols-3 grid-cols-1 px-4 mt-6 mb-24 sm:mx-8 gap-6 antialiased">
           <div className="flex-wrap space-y-2">
             <h2 className="text-2xl font-bold">Cost-Effective and Timely</h2>
-            <p className="italic">
+            <p className="">
               We work with your budget and strive to provide high-quality
               services that are affordable and accessible to businesses of all
               sizes. we coordinate each project to ensure fast deliveries. You
@@ -241,7 +241,7 @@ export default function Home() {
           </div>
           <div className="flex-wrap space-y-2">
             <h2 className="text-2xl font-bold">Professional Expertise</h2>
-            <p className="italic">
+            <p className="">
               Our hand picked Developers have the experience to build
               high-quality, responsive, and user-friendly websites and
               applications. They understand the latest technologies and design
@@ -253,7 +253,7 @@ export default function Home() {
             <h2 className="text-2xl font-bold">
               Ongoing Support and Maintenance
             </h2>
-            <p className="italic">
+            <p className="">
               We provide ongoing support and maintenance services after the
               completion of your project. we also ensure long-term success of
               each projects. However, we want to make it clear that there are
