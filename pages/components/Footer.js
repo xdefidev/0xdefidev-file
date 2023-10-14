@@ -11,7 +11,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div>
         <h2>Get in Touch</h2>
-        <ul className="footer-list ">
+        <ul className="footer-list gap-4">
           <li>
             <a
               href="https://t.me/xdefideveloper"
@@ -31,7 +31,7 @@ export default function Footer() {
             >
               <Image src={Mail} width={30} height={30} alt="email" />
               <span className="flex text-center justify-center items-center text-sm">
-                e-Mail
+                E-Mail
               </span>
             </a>
           </li>

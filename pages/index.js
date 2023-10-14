@@ -77,7 +77,7 @@ export default function Home() {
       <Navbar />
 
       <main className={styles.main}>
-        <div className="grid sm:grid-cols-2 grid-cols-1 ">
+        <div className="grid sm:grid-cols-2 grid-cols-1 pt-4 sm:pt-1">
           <div className="mx-4 grid grid-flow-row content-center">
             <h1 className="text-6xl mb-4 font-semibold antialiased">
               Web Development and Blockchain{" "}
@@ -139,6 +139,57 @@ export default function Home() {
                 </a>
               </Link>
             ))}
+          </div>
+        </div>
+
+        <div className="mt-24">
+          <h2 className="text-5xl font-bold flex justify-center py-4 font-display text-center items-center">
+            Why Hire Us?
+          </h2>
+
+          <p className="sm:mx-24 mx-8 text-center antialiased">
+            Since 2018 the goal of Xdefidev has been to help project starters
+            create innovative solutions in the cryptocurrency space. We have
+            consistently strived to offer expert guidance, technical expertise
+            and feasible solutions to clients looking to innovate!
+          </p>
+
+          <div className="grid sm:grid-cols-3 grid-cols-1 px-4 mt-6 mb-24 sm:mx-8 gap-6 antialiased">
+            <div className="flex-wrap space-y-2 text-center">
+              <h2 className="text-2xl font-bold ">Cost-Effective and Timely</h2>
+              <p className="">
+                We work with your budget and strive to provide high-quality
+                services that are affordable and accessible to businesses of all
+                sizes. we coordinate each project to ensure fast deliveries. You
+                can save time and money by outsourcing your projects to our
+                professionals.
+              </p>
+            </div>
+            <div className="flex-wrap space-y-2 text-center">
+              <h2 className="text-2xl font-bold">Professional Expertise</h2>
+              <p className="">
+                Our hand picked Developers have the experience to build
+                high-quality, responsive, and user-friendly websites and
+                applications. They understand the latest technologies and design
+                trends and can ensure that your website is up-to-date with the
+                latest features, functionality, and security measures.{" "}
+              </p>
+            </div>
+            <div className="flex-wrap space-y-2 text-center">
+              <h2 className="text-2xl font-bold">
+                Ongoing Support and Maintenance
+              </h2>
+              <p className="">
+                We provide ongoing support and maintenance services after the
+                completion of your project. we also ensure long-term success of
+                each projects. However, we want to make it clear that there are
+                certain types of maintenance that may require an additional fee.
+                These types of maintenance may include more complex updates,
+                such as integrating third-party software, performing major
+                upgrades, or implementing custom features that are not included
+                in your original contract.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -219,50 +270,6 @@ export default function Home() {
           <div>
             <Image src={nodejs} width={60} height={60} loading="lazy" />
             <p>NodeJS</p>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <h2 className="text-4xl font-bold flex justify-center py-4 font-display text-center items-center">
-          Why Hire Us?
-        </h2>
-
-        <div className="grid sm:grid-cols-3 grid-cols-1 px-4 mt-6 mb-24 sm:mx-8 gap-6 antialiased">
-          <div className="flex-wrap space-y-2">
-            <h2 className="text-2xl font-bold">Cost-Effective and Timely</h2>
-            <p className="">
-              We work with your budget and strive to provide high-quality
-              services that are affordable and accessible to businesses of all
-              sizes. we coordinate each project to ensure fast deliveries. You
-              can save time and money by outsourcing your projects to our
-              professionals.
-            </p>
-          </div>
-          <div className="flex-wrap space-y-2">
-            <h2 className="text-2xl font-bold">Professional Expertise</h2>
-            <p className="">
-              Our hand picked Developers have the experience to build
-              high-quality, responsive, and user-friendly websites and
-              applications. They understand the latest technologies and design
-              trends and can ensure that your website is up-to-date with the
-              latest features, functionality, and security measures.{" "}
-            </p>
-          </div>
-          <div className="flex-wrap space-y-2">
-            <h2 className="text-2xl font-bold">
-              Ongoing Support and Maintenance
-            </h2>
-            <p className="">
-              We provide ongoing support and maintenance services after the
-              completion of your project. we also ensure long-term success of
-              each projects. However, we want to make it clear that there are
-              certain types of maintenance that may require an additional fee.
-              These types of maintenance may include more complex updates, such
-              as integrating third-party software, performing major upgrades, or
-              implementing custom features that are not included in your
-              original contract.
-            </p>
           </div>
         </div>
       </div>
