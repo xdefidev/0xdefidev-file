@@ -2,7 +2,7 @@ export default [
   {
     name: "PoS PoA Blockchain Development",
     description:
-      "An EVM-compatible blockchain that supports ERC20 Token, and dApp, NFT with wallet and Explorer.",
+      "An EVM blockchain that supports ERC20 Token, and dApp, NFT with wallet and Explorer.",
     image: "",
     status: true,
     youtube: "Ynn_hBBORUY",
@@ -24,7 +24,7 @@ export default [
   },
   {
     name: "Testnet Blockchain Development",
-    description: "An EVM-compatible blockchain testnet with faucet.",
+    description: "An EVM blockchain testnet with faucet.",
     image: "",
     status: true,
     youtube: "",

@@ -18,7 +18,7 @@ import js from "/public/js.svg";
 import nodejs from "/public/nodejs.svg";
 import html from "/public/html.svg";
 import solidity from "/public/solidity.svg";
-import background from "/public/background.svg";
+import background from "/public/background.png";
 
 export default function Home() {
   const imageLink =
@@ -47,7 +47,9 @@ export default function Home() {
           content="Need Blockchain Developer? Let's take it out of your hands."
         />
 
-        <meta property="og:url" content="https://xdefidev.shop" />
+        <meta property="og:url" content="https://xdefidev.com" />
+
+        <link rel="preconnect" href="https://ik.imagekit.io/" />
 
         <meta
           property="og:image"
@@ -78,7 +80,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className="grid sm:grid-cols-2 grid-cols-1 pt-4 sm:pt-1">
-          <div className="mx-4 grid grid-flow-row content-center">
+          <div className="mx-4 grid order-last grid-flow-row content-center">
             <h1 className="text-6xl mb-4 font-semibold antialiased">
               Web Development and Blockchain{" "}
               <a
@@ -89,15 +91,12 @@ export default function Home() {
               </a>
             </h1>
 
-            <p className="text-xl antialiased">
-              Let us do all the work for you so you don't have to.{" "}
-              {/* <code className={styles.code}>
-                <></>
-              </code> */}
+            <p className="text-xl antialiased font-display">
+              Hire Top Vetted Developers for Blockchain, Web and Mobile
             </p>
           </div>
           <div>
-            <Image src={background} height={700} width={700} loading="lazy" />
+            <Image src={background} height={700} width={600} />
           </div>
         </div>
 
@@ -109,10 +108,10 @@ export default function Home() {
         />
 
         <div className="" id="grid-container">
-          <div className="text-center text-5xl font-semibold antialiased">
-            <h2>Development Services</h2>
+          <div className="text-center text-5xl !mb-8 font-semibold antialiased ">
+            <h2>Services</h2>
           </div>
-          <div className="grid gap-4 sm:grid-cols-3 grid-cols-1 my-4 sm:mx-5">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 my-4 sm:mx-5">
             {services.map((item, index) => (
               <Link
                 href={`/services/${item.slug}`}
@@ -127,13 +126,13 @@ export default function Home() {
                     width="100%"
                     loading="lazy"
                   />
-                  <div className="text-green-800 text-xs antialiased">
-                    {item.status ? "Active" : "out"}
+                  <div className="text-black text-xs font-semibold antialiased">
+                    {item.status ? "active" : "out"}
                   </div>
-                  <h3 className="text-gray-900 font-medium antialiased">
+                  <h3 className="text-gray-900 font-medium antialiased text-balance">
                     {item.name} &rarr;
                   </h3>
-                  <p className="font-thin text-xs antialiased">
+                  <p className="font-thin text-xs antialiased text-balance">
                     {item.description}
                   </p>
                 </a>
@@ -147,14 +146,15 @@ export default function Home() {
             Why Hire Us?
           </h2>
 
-          <p className="sm:mx-24 mx-8 text-center antialiased">
-            Since 2018 the goal of Xdefidev has been to help project starters
-            create innovative solutions in the cryptocurrency space. We have
-            consistently strived to offer expert guidance, technical expertise
-            and feasible solutions to clients looking to innovate!
+          <p className="sm:mx-24 mx-8 text-center antialiased text-balance">
+            Since 2018, with over 127 successful projects the goal of Xdefidev
+            has been to help project starters create innovative solutions in the
+            cryptocurrency space. We have consistently strived to offer expert
+            guidance, technical expertise and feasible solutions to clients
+            looking to create and innovate!
           </p>
 
-          <div className="grid sm:grid-cols-3 grid-cols-1 px-4 mt-6 mb-24 sm:mx-8 gap-6 antialiased">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 px-4 mt-6 mb-24 sm:mx-8 gap-6 antialiased">
             <div className="flex-wrap space-y-2 text-center">
               <h2 className="text-2xl font-bold ">Cost-Effective and Timely</h2>
               <p className="">
@@ -182,19 +182,14 @@ export default function Home() {
               <p className="">
                 We provide ongoing support and maintenance services after the
                 completion of your project. we also ensure long-term success of
-                each projects. However, we want to make it clear that there are
-                certain types of maintenance that may require an additional fee.
-                These types of maintenance may include more complex updates,
-                such as integrating third-party software, performing major
-                upgrades, or implementing custom features that are not included
-                in your original contract.
+                each projects.
               </p>
             </div>
           </div>
         </div>
 
         <div className="my-24 mx-4 text-xl sm:px-8 px-4 leading-10 antialiased">
-          <p>
+          <p className="">
             To make your ideas a reality, are you looking for remote Web and
             Blockchain developers? Look nowhere else! For both the Web2 and the
             decentralized Web3, our team specializes in building{" "}
@@ -208,68 +203,66 @@ export default function Home() {
       </main>
 
       <div className={styles.skill}>
-        <h2 className="text-5xl font-semibold antialiased">Technologies</h2>
-        <p className="my-4 !text-2xl antialiased">Blockchain</p>
+        <h2 className="text-5xl font-bold antialiased">Technology</h2>
+        <p className="my-4 !text-2xl antialiased">Blockchains</p>
         <div>
           <div>
             <Image src={eth} width={60} height={60} loading="lazy" />
-            <p>Ethereum</p>
+            {/* <p>Ethereum</p> */}
           </div>
           <div>
             <Image src={bnb} width={60} height={60} loading="lazy" />
-            <p>Binance Smart Chain</p>
+            {/* <p>Binance Smart Chain</p> */}
           </div>
           <div>
             <Image src={avax} width={60} height={60} loading="lazy" />
-            <p>Avalanche</p>
+            {/* <p>Avalanche</p> */}
           </div>
           <div>
             <Image src={polygon} width={60} height={60} loading="lazy" />
-            <p>Polygon</p>
+            {/* <p>Polygon</p> */}
           </div>
           <div>
             <Image src={fantom} width={60} height={60} loading="lazy" />
-            <p>Fantom</p>
+            {/* <p>Fantom</p> */}
           </div>
         </div>
         <p className="my-4 !text-2xl antialiased">Blockchain Technologies</p>
         <div>
           <div>
             <Image src={solidity} width={60} height={60} loading="lazy" />
-            <p>Solidity</p>
+            {/* <p>Solidity</p> */}
           </div>
           <div>
             <Image src={truffle} width={60} height={60} loading="lazy" />
-            <p>Truffle</p>
+            {/* <p>Truffle</p> */}
           </div>
           <div>
             <Image src={hardhat} width={60} height={60} loading="lazy" />
-            <p>Hardhat</p>
+            {/* <p>Hardhat</p> */}
           </div>
         </div>
-        <p className="my-4 !text-2xl antialiased">
-          Web Development Technologies
-        </p>
+        <p className="my-4 !text-2xl antialiased">Web Technologies</p>
         <div>
           <div>
             <Image src={next} width={60} height={60} loading="lazy" />
-            <p>NextJS</p>
+            {/* <p>NextJS</p> */}
           </div>
           <div>
             <Image src={js} width={60} height={60} loading="lazy" />
-            <p>Javascript</p>
+            {/* <p>Javascript</p> */}
           </div>
           <div>
             <Image src={html} width={60} height={60} loading="lazy" />
-            <p>HTML</p>
+            {/* <p>HTML</p> */}
           </div>
           <div>
             <Image src={react} width={60} height={60} loading="lazy" />
-            <p>React</p>
+            {/* <p>React</p> */}
           </div>
           <div>
             <Image src={nodejs} width={60} height={60} loading="lazy" />
-            <p>NodeJS</p>
+            {/* <p>NodeJS</p> */}
           </div>
         </div>
       </div>

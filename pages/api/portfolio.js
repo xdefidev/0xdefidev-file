@@ -31,4 +31,36 @@ export default [
     description:
       "Token Presale website dapp with vesting on the Binance smart chain. ",
   },
+  {
+    name: "IncaSwap",
+    link: "https://app.incaswap.com",
+    image: "",
+    description: "An official Decentralised exchange on a custom blockchain.",
+  },
+  {
+    name: "Coin12pay Blockchain Mainnet",
+    link: "http://coin12pay.com/",
+    image: "",
+    description: "Coin12pay Blockchain for Coin12pay finance ecosystem.",
+  },
+  // {
+  //   name: "Milady Chain",
+  //   link: "https://explorer.miladychain.io",
+  //   image: "",
+  //   description:
+  //     "A custom EVM blockchain (Mainnet and Testnet) with POA consensus algorithm and customised explorer.",
+  // },
+  // {
+  //   name: "Milady Faucet",
+  //   link: "https://faucet.miladychain.io",
+  //   image: "",
+  //   description: "A fully secure Testnet faucet for Milady Chain Testnet",
+  // },
+  {
+    name: "Shiblite NFT Marketplace",
+    link: "https://www.shiblitenft.club/",
+    image: "",
+    description:
+      "NFT marketplace with AI generator, Fast and seamless service.",
+  },
 ];

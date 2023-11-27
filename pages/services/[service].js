@@ -57,7 +57,7 @@ export default function Service({ post }) {
 
           <div className="max-w-max h-full flex flex-col gap-4 antialiased">
             <h2 className="text-2xl">Your Custom Project</h2>
-            <p>
+            <p className="text-balance">
               Send us a custom message request. Talk about project,
               requirements, the price and timeline to create your personalized
               project.
@@ -66,7 +66,7 @@ export default function Service({ post }) {
               href="https://t.me/xdefideveloper"
               alt="contact xdefidev"
               target="_blank"
-              className="px-2 py-1.5 border border-zinc-700 rounded text-center hover:text-white hover:bg-black "
+              className="px-2 animate-pulse py-1.5 border border-zinc-700 rounded text-center hover:text-white hover:bg-black "
             >
               Message now
             </a>
@@ -74,10 +74,10 @@ export default function Service({ post }) {
         </div>
         <div className="antialiased grid gap-4 mb-24 sm:mt-12 -mt-24">
           <h2 className="text-2xl font-medium">Description</h2>
-          <p className="">{post.description}</p>
+          <p className="text-balance">{post.description}</p>
           {post.p.description}
           <h3 className="text-xl">Features / Benefits</h3>
-          <ul className="grid gap-2 list-decimal pl-8">
+          <ul className="grid gap-2 list-decimal pl-8 ">
             {post.p.list.map((item) => (
               <li>{item}</li>
             ))}

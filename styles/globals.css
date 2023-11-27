@@ -81,6 +81,10 @@ li {
   margin-top: 4rem;
 }
 
+.text-balance {
+  text-wrap: balance;
+}
+
 .arrow-down {
   width: 1rem;
   position: relative;
@@ -100,6 +104,15 @@ li {
   to {
     top: 0px;
   }
+}
+
+.bg-img {
+  flex-shrink: 0;
+  background-image: url(/bg.png);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 .services h2 {
