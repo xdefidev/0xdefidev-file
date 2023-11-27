@@ -1,5 +1,26 @@
 export default [
   {
+    name: "Presale Launchpad like Pinksale",
+    description:
+      "Secure launchpad protocol like Pinksale with presale list and fairlaunch.",
+    image: "",
+    status: true,
+    youtube: "M98xybTnuoY",
+    slug: "token-presale-dashboard-launch-development",
+    p: {
+      description:
+        "A platform to create, customize, lock, distribute and sell tokens on blockchain that aims to make it easy and affordable for anyone to launch and invest in crypto projects.",
+      list: [
+        "Create Presale & Fairlaunch",
+        "Launchpad List",
+        "Connect Wallet & buy tokens",
+        "Token Locker",
+        "Multi Send",
+        "KYC & Audit",
+      ],
+    },
+  },
+  {
     name: "PoS PoA Blockchain Development",
     description:
       "An EVM blockchain that supports ERC20 Token, and dApp, NFT with wallet and Explorer.",
@@ -41,27 +62,27 @@ export default [
       ],
     },
   },
-  {
-    name: "Launchpad like Pinksale",
-    description:
-      "Secure launchpad protocol like Pinksale with presale list and fairlaunch.",
-    image: "",
-    status: true,
-    youtube: "M98xybTnuoY",
-    slug: "token-presale-dashboard-launch-development",
-    p: {
-      description:
-        "A platform to create, customize, lock, distribute and sell tokens on blockchain that aims to make it easy and affordable for anyone to launch and invest in crypto projects.",
-      list: [
-        "Create Presale & Fairlaunch",
-        "Launchpad List",
-        "Connect Wallet & buy tokens",
-        "Token Locker",
-        "Multi Send",
-        "KYC & Audit",
-      ],
-    },
-  },
+  // {
+  //   name: "Launchpad like Pinksale",
+  //   description:
+  //     "Secure launchpad protocol like Pinksale with presale list and fairlaunch.",
+  //   image: "",
+  //   status: true,
+  //   youtube: "M98xybTnuoY",
+  //   slug: "token-presale-dashboard-launch-development",
+  //   p: {
+  //     description:
+  //       "A platform to create, customize, lock, distribute and sell tokens on blockchain that aims to make it easy and affordable for anyone to launch and invest in crypto projects.",
+  //     list: [
+  //       "Create Presale & Fairlaunch",
+  //       "Launchpad List",
+  //       "Connect Wallet & buy tokens",
+  //       "Token Locker",
+  //       "Multi Send",
+  //       "KYC & Audit",
+  //     ],
+  //   },
+  // },
   {
     name: "Cryptocurrency Casino Development",
     description:
