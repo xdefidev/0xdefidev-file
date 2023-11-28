@@ -236,10 +236,10 @@ export default [
     p: {
       description:
         "Does your app have the Walletconnet websocket connection error? then you need our services. we will create a solution and if your project needs a more custom solution to force it to work, we will make that happen.",
+      list: [
+        "Fix Walletconnect Websocket/relay issue",
+        "Update your walletconnect to version 2",
+      ],
     },
-    list: [
-      "Fix Walletconnect Websocket/relay issue",
-      "Update your walletconnect to version 2",
-    ],
   },
 ];
