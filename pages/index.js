@@ -103,6 +103,8 @@ export default function Home() {
         <img
           src="https://ik.imagekit.io/lzgpc48la/down-arrow_vkeVMp4_k.png?ik-sdk-version=javascript-1.4.3&updatedAt=1663634428959"
           className="arrow-down"
+          width="100%"
+          height="100%"
           alt="cryptocurrency logo header"
           loading="lazy"
         />
@@ -124,6 +126,7 @@ export default function Home() {
                     src={imageLink}
                     alt={item.name}
                     width="100%"
+                    height="100%"
                     loading="lazy"
                   />
                   <div className="text-black text-xs font-semibold antialiased">
