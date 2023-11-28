@@ -34,13 +34,16 @@ export default [
   {
     name: "IncaSwap",
     link: "https://app.incaswap.com",
-    image: "",
-    description: "An official Decentralised exchange on a custom blockchain.",
+    image:
+      "https://ik.imagekit.io/hp2oyifpf/Screenshot%202023-11-28%20at%2012.28.44.png?updatedAt=1701170938041",
+    description:
+      "An official Decentralised exchange on a custom EVM blockchain.",
   },
   {
     name: "Coin12pay Blockchain Mainnet",
     link: "http://coin12pay.com/",
-    image: "",
+    image:
+      "https://ik.imagekit.io/hp2oyifpf/scrnli_28_11_2023_12-31-32.png?updatedAt=1701171123630",
     description: "Coin12pay Blockchain for Coin12pay finance ecosystem.",
   },
   // {
@@ -59,7 +62,8 @@ export default [
   {
     name: "Shiblite NFT Marketplace",
     link: "https://www.shiblitenft.club/",
-    image: "",
+    image:
+      "https://ik.imagekit.io/hp2oyifpf/scrnli_28_11_2023_12-33-34.png?updatedAt=1701171238689",
     description:
       "NFT marketplace with AI generator, Fast and seamless service.",
   },

@@ -225,4 +225,21 @@ export default [
       ],
     },
   },
+  {
+    name: "Fix WalletConnect Error | update WalletConnect V2",
+    description:
+      "WalletConnect just updated to V2, does your dapp have an error connecting to walletconnect?. Send us a message and let us fix it.",
+    image: "",
+    status: true,
+    youtube: "",
+    slug: "fix-walletconnect-relay-error",
+    p: {
+      description:
+        "Does your app have the Walletconnet websocket connection error? then you need our services. we will create a solution and if your project needs a more custom solution to force it to work, we will make that happen.",
+    },
+    list: [
+      "Fix Walletconnect Websocket/relay issue",
+      "Update your walletconnect to version 2",
+    ],
+  },
 ];
