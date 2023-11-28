@@ -14,6 +14,7 @@ export default function Service() {
     <section>
       <Head>
         <title>{`Xdefidev Services`}</title>
+        <html lang="en" />
 
         <meta
           name="description"

@@ -28,6 +28,7 @@ export default function Home() {
     <div>
       <Head>
         <title>0xDefiDev | Blockchain and Web Development services</title>
+        <html lang="en" />
 
         <meta
           name="description"
@@ -96,7 +97,7 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <Image src={background} height={700} width={600} />
+            <Image src={background} height={700} width={600} alt="background" />
           </div>
         </div>
 

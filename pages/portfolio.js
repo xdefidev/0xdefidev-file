@@ -9,6 +9,7 @@ export default function Home() {
     <div>
       <Head>
         <title>0xDefiDev Portfolio</title>
+        <html lang="en" />
 
         <meta property="og:title" content="xdefidev Portfolio" />
 

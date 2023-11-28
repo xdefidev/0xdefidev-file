@@ -18,7 +18,12 @@ export default function Footer() {
               alt="message us on telegram"
               target="_blank"
             >
-              <Image src={Telegram} width={30} height={30} alt="telegram" />
+              <Image
+                src={Telegram}
+                width={30}
+                height={30}
+                alt="contact us on telegram"
+              />
               <span className="flex text-center justify-center items-center text-sm">
                 Telegram
               </span>
@@ -29,7 +34,7 @@ export default function Footer() {
               href="mailto:xdefidev@gmail.com"
               alt="mail us xdefidev@gmail.com"
             >
-              <Image src={Mail} width={30} height={30} alt="email" />
+              <Image src={Mail} width={30} height={30} alt="send us an email" />
               <span className="flex text-center justify-center items-center text-sm">
                 E-Mail
               </span>
@@ -41,7 +46,12 @@ export default function Footer() {
               alt="Text us on whatsapp"
               target="_blank"
             >
-              <Image src={Whatsapp} width={30} height={30} alt="whatsapp" />
+              <Image
+                src={Whatsapp}
+                width={30}
+                height={30}
+                alt="text us on whatsapp"
+              />
               <span className="flex text-center justify-center items-center text-sm">
                 Whatsapp
               </span>
