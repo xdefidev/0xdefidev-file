@@ -210,61 +210,139 @@ export default function Home() {
         <p className="my-4 !text-2xl antialiased">Blockchains</p>
         <div>
           <div>
-            <Image src={eth} width={60} height={60} loading="lazy" />
+            <Image
+              src={eth}
+              width={60}
+              height={60}
+              loading="lazy"
+              alt="ethereum blockchain"
+            />
             {/* <p>Ethereum</p> */}
           </div>
           <div>
-            <Image src={bnb} width={60} height={60} loading="lazy" />
+            <Image
+              src={bnb}
+              width={60}
+              height={60}
+              loading="lazy"
+              alt="binance smart chain"
+            />
             {/* <p>Binance Smart Chain</p> */}
           </div>
           <div>
-            <Image src={avax} width={60} height={60} loading="lazy" />
+            <Image
+              src={avax}
+              width={60}
+              height={60}
+              loading="lazy"
+              alt="avalanche (AVAX) blockchain"
+            />
             {/* <p>Avalanche</p> */}
           </div>
           <div>
-            <Image src={polygon} width={60} height={60} loading="lazy" />
+            <Image
+              src={polygon}
+              width={60}
+              height={60}
+              loading="lazy"
+              alt="polygon mainnet blockchain"
+            />
             {/* <p>Polygon</p> */}
           </div>
           <div>
-            <Image src={fantom} width={60} height={60} loading="lazy" />
+            <Image
+              src={fantom}
+              width={60}
+              height={60}
+              loading="lazy"
+              alt="fantom blockchain"
+            />
             {/* <p>Fantom</p> */}
           </div>
         </div>
         <p className="my-4 !text-2xl antialiased">Blockchain Technologies</p>
         <div>
           <div>
-            <Image src={solidity} width={60} height={60} loading="lazy" />
+            <Image
+              src={solidity}
+              width={60}
+              height={60}
+              loading="lazy"
+              alt="solidity"
+            />
             {/* <p>Solidity</p> */}
           </div>
           <div>
-            <Image src={truffle} width={60} height={60} loading="lazy" />
+            <Image
+              src={truffle}
+              width={60}
+              height={60}
+              loading="lazy"
+              alt="truffle"
+            />
             {/* <p>Truffle</p> */}
           </div>
           <div>
-            <Image src={hardhat} width={60} height={60} loading="lazy" />
+            <Image
+              src={hardhat}
+              width={60}
+              height={60}
+              loading="lazy"
+              alt="hardhat"
+            />
             {/* <p>Hardhat</p> */}
           </div>
         </div>
         <p className="my-4 !text-2xl antialiased">Web Technologies</p>
         <div>
           <div>
-            <Image src={next} width={60} height={60} loading="lazy" />
+            <Image
+              src={next}
+              width={60}
+              height={60}
+              loading="lazy"
+              alt="nextjs"
+            />
             {/* <p>NextJS</p> */}
           </div>
           <div>
-            <Image src={js} width={60} height={60} loading="lazy" />
+            <Image
+              src={js}
+              width={60}
+              height={60}
+              loading="lazy"
+              alt="javacript"
+            />
             {/* <p>Javascript</p> */}
           </div>
           <div>
-            <Image src={html} width={60} height={60} loading="lazy" />
+            <Image
+              src={html}
+              width={60}
+              height={60}
+              loading="lazy"
+              alt="html"
+            />
             {/* <p>HTML</p> */}
           </div>
           <div>
-            <Image src={react} width={60} height={60} loading="lazy" />
+            <Image
+              src={react}
+              width={60}
+              height={60}
+              loading="lazy"
+              alt="reactJS"
+            />
             {/* <p>React</p> */}
           </div>
           <div>
-            <Image src={nodejs} width={60} height={60} loading="lazy" />
+            <Image
+              src={nodejs}
+              width={60}
+              height={60}
+              loading="lazy"
+              alt="NodeJS"
+            />
             {/* <p>NodeJS</p> */}
           </div>
         </div>
