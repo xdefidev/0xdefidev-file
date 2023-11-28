@@ -11,10 +11,13 @@ export default function Navbar() {
       </Link>
       <ul className="sm:flex hidden">
         <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
           <a href="/portfolio">Portfolio</a>
         </li>
         <li>
-          <a href="#grid-container">Services</a>
+          <a href="/services">Services</a>
         </li>
         <li>
           <a
