@@ -85,7 +85,7 @@ export default function Home() {
             <h1 className="text-6xl mb-4 font-semibold antialiased">
               Web Development and Blockchain{" "}
               <a
-                href=""
+                href="#"
                 className="font-bold text-transparent sm:text-8xl text-7xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"
               >
                 Services!
