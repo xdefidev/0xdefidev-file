@@ -28,7 +28,6 @@ export default function Home() {
     <div>
       <Head>
         <title>0xDefiDev | Blockchain and Web Development services</title>
-        <html lang="en" />
 
         <meta
           name="description"

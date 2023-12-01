@@ -34,7 +34,6 @@ export default function Service({ post }) {
     <section>
       <Head>
         <title>{`${post.name} services`}</title>
-        <html lang="en" />
 
         <meta name="description" content={post.description} />
 
