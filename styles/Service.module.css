@@ -2,7 +2,7 @@
   display: grid;
   grid-template-rows: auto auto;
   margin: 20px 125px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .firstDiv {

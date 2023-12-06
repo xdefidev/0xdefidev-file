@@ -1,8 +1,7 @@
 .body {
     margin: 0 5rem;
     padding-top: 50px;
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-        Bitstream Vera Sans Mono, Courier New, monospace;
+    font-family: 'Josefin Sans', sans-serif;
     line-height: 1.5;
     letter-spacing: -1px;
 }

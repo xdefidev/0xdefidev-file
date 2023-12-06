@@ -79,7 +79,7 @@ export default function Service({ post }) {
           <h3 className="text-xl">Features / Benefits</h3>
           <ul className="grid gap-2 list-decimal pl-8 ">
             {post.p.list.map((item) => (
-              <li>{item}</li>
+              <li className="font-josefin">{item}</li>
             ))}
             {/* {console.log(post.p.list.length)} */}
           </ul>

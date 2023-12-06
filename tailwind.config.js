@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        // display: ["Oswald", ...],
+        josefin: ["var(--font-josefin)"],
       },
     },
   },

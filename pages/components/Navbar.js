@@ -1,46 +1,99 @@
+import { useState } from "react";
+import { HiMenuAlt4 } from "react-icons/hi";
+import { AiOutlineClose } from "react-icons/ai";
 import styles from "/styles/Home.module.css";
 import Link from "next/link";
 
 export default function Navbar() {
+  const [toggleMenu, setToggleMenu] = useState(false);
+
   return (
     <nav className="my-6">
-      <Link href="/">
-        <a className="mr-auto flex">
-          <h2 className="text-2xl font-semibold animate-pulse">XDefiDev</h2>
-        </a>
+      <Link href="/" className="mr-auto flex">
+        <h2 className="text-2xl font-semibold animate-pulse">XDefiDev</h2>
       </Link>
-      <ul className="sm:flex hidden">
+      <ul className="sm:flex hidden ">
         <li>
-          <a href="/">Home</a>
+          <a href="/" className="font-josefin">
+            Home
+          </a>
         </li>
         <li>
-          <a href="/portfolio">Portfolio</a>
+          <a href="/portfolio" className="font-josefin">
+            Portfolio
+          </a>
         </li>
         <li>
-          <a href="/services">Services</a>
+          <a href="/services" className="font-josefin">
+            Services
+          </a>
         </li>
         <li>
           <a
             href="https://t.me/xdefideveloper"
-            className={styles.contact}
+            // className={styles.contact}
             target="_blank"
+            className="font-josefin"
           >
             Contact
           </a>
         </li>
       </ul>
-      <button className="flex sm:hidden">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          width="24"
-          height="24"
-          className="h-10 w-10 fill-jacarta-700"
-        >
-          <path fill="none" d="M0 0h24v24H0z" />
-          <path d="M22 12.999V20a1 1 0 0 1-1 1h-8v-8.001h9zm-11 0V21H3a1 1 0 0 1-1-1v-7.001h9zM11 3v7.999H2V4a1 1 0 0 1 1-1h8zm10 0a1 1 0 0 1 1 1v6.999h-9V3h8z" />
-        </svg>
-      </button>
+
+      <div className="flex relative">
+        {!toggleMenu && (
+          <HiMenuAlt4
+            fontSize={28}
+            className="text-black md:hidden cursor-pointer"
+            onClick={() => setToggleMenu(true)}
+          />
+        )}
+        {/* {toggleMenu && (
+          <AiOutlineClose
+            fontSize={28}
+            className="text-black md:hidden cursor-pointer"
+            onClick={() => setToggleMenu(false)}
+          />
+        )} */}
+        {toggleMenu && (
+          <ul
+            className="z-10 fixed -top-0 -right-2 p-3 w-[40vw] my-2 h-screen shadow-2xl md:hidden list-none
+            flex flex-col justify-start items-end rounded-md blue-glassmorphism text-black animate-slide-in "
+          >
+            <li className="text-xl w-full my-2">
+              <AiOutlineClose onClick={() => setToggleMenu(false)} />
+            </li>
+            <a href="#" target="_blank">
+              <li
+                className={`mx-4 cursor-pointer font-josefin hover:text-[#0462f7]`}
+              >
+                Home
+              </li>
+            </a>
+            <a href="/portfolio" target="_blank">
+              <li
+                className={`mx-4 cursor-pointer font-josefin hover:text-[#0462f7]`}
+              >
+                Portfolio
+              </li>
+            </a>
+            <a href="/services" target="_blank">
+              <li
+                className={`mx-4 cursor-pointer font-josefin hover:text-[#0462f7]`}
+              >
+                Services
+              </li>
+            </a>
+            <a href="https://t.me/xdefideveloper" target="_blank">
+              <li
+                className={`mx-4 cursor-pointer font-josefin hover:text-[#0462f7]`}
+              >
+                Contact
+              </li>
+            </a>
+          </ul>
+        )}
+      </div>
     </nav>
   );
 }

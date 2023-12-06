@@ -121,24 +121,22 @@ export default function Home() {
                 alt={item.description}
                 key={index}
               >
-                <a className={styles.card}>
-                  <img
-                    src={imageLink}
-                    alt={item.name}
-                    width="100%"
-                    height="100%"
-                    loading="lazy"
-                  />
-                  <div className="text-black text-xs font-semibold antialiased">
-                    {item.status ? "active" : "out"}
-                  </div>
-                  <h3 className="text-gray-900 font-medium antialiased text-balance">
-                    {item.name} &rarr;
-                  </h3>
-                  <p className="font-thin text-xs antialiased text-balance">
-                    {item.description}
-                  </p>
-                </a>
+                <img
+                  src={imageLink}
+                  alt={item.name}
+                  width="100%"
+                  height="100%"
+                  loading="lazy"
+                />
+                <div className="text-black text-xs font-semibold antialiased">
+                  {item.status ? "active" : "out"}
+                </div>
+                <h3 className="text-gray-900 font-semibold antialiased text-xl text-balance">
+                  {item.name} &rarr;
+                </h3>
+                <p className="font-base text-xs antialiased text-balance !font-josefin">
+                  {item.description}
+                </p>
               </Link>
             ))}
           </div>

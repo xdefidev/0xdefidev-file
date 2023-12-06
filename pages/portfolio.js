@@ -31,7 +31,7 @@ export default function Home() {
             <a href={item.link} alt={item.description}>
               <div className={styles.box}>
                 <img src={item.image} alt={item.description} loading="lazy" />
-                <h2>{item.name}</h2>
+                <h2 className="!text-xl !font-semibold">{item.name}</h2>
                 <p>{item.description}</p>
               </div>
             </a>

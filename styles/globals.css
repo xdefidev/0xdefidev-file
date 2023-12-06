@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
+
+
 
 
 
@@ -11,11 +16,12 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--font-josefin);
   font-weight: 400;
   scroll-behavior: smooth;
   background-color: #edede9;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -33,8 +39,7 @@ nav {
 }
 
 .logo {
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 ul {
@@ -45,7 +50,7 @@ ul {
 }
 
 li {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .menu li:nth-child(3) {
@@ -119,8 +124,7 @@ li {
   margin: 0;
   font-size: 56px;
   text-align: center;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-family: 'Josefin Sans', sans-serif;
   letter-spacing: -1.5px;
 }
 
