@@ -20,6 +20,9 @@ import html from "/public/html.svg";
 import solidity from "/public/solidity.svg";
 import background from "/public/background.png";
 
+import Telegram from "/public/telegram.svg";
+import Mail from "/public/mail.svg";
+
 export default function Home() {
   const imageLink =
     "https://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584";
@@ -94,6 +97,27 @@ export default function Home() {
             <p className="text-xl antialiased font-display">
               Hire Top Vetted Developers for Blockchain, Web and Mobile
             </p>
+            <div className="flex pt-2 gap-2">
+              <Link
+                href="#"
+                className="border border-slate-950 rounded flex gap-1 py-2 px-4 hover:invert hover:bg-white"
+              >
+                <Image
+                  src={Telegram}
+                  width={20}
+                  height={20}
+                  className="invert "
+                />
+                Telegram
+              </Link>
+              <Link
+                href="#"
+                className="border border-slate-950 rounded flex gap-1 py-2 px-4 hover:invert hover:bg-white"
+              >
+                <Image src={Mail} width={20} height={20} className="invert" />
+                E-mail
+              </Link>
+            </div>
           </div>
           <div>
             <Image src={background} height={700} width={600} alt="background" />
