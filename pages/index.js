@@ -94,7 +94,7 @@ export default function Home() {
               </a>
             </h1>
 
-            <p className="text-xl antialiased font-display">
+            <p className="text-xl antialiased font-display text-balance">
               Hire Top Vetted Developers to help you build on Blockchain, Web and Mobile
             </p>
             <div className="flex pt-2 gap-2">
