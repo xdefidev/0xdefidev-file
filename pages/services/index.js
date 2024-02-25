@@ -48,7 +48,7 @@ export default function Service() {
               <h3 className="text-gray-900 font-semibold antialiased text-balance">
                 {item.name} &rarr;
               </h3>
-              <p className="font-normal text-sm antialiased ">
+              <p className="ffont-base text-xs antialiased text-balance !font-josefin">
                 {item.description}
               </p>
             </Link>
