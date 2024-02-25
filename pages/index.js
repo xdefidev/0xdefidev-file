@@ -85,7 +85,7 @@ export default function Home() {
         <div className="grid sm:grid-cols-2 grid-cols-1 pt-4 sm:pt-1">
           <div className="mx-4 grid order-last grid-flow-row content-center">
             <h1 className="text-6xl mb-4 font-semibold antialiased">
-              Web Development and Blockchain{" "}
+              Web and Blockchain Development {" "}
               <a
                 href="#"
                 className="font-bold text-transparent sm:text-8xl text-7xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"
@@ -95,7 +95,7 @@ export default function Home() {
             </h1>
 
             <p className="text-xl antialiased font-display">
-              Hire Top Vetted Developers for Blockchain, Web and Mobile
+              Hire Top Vetted Developers to help you build on Blockchain, Web and Mobile
             </p>
             <div className="flex pt-2 gap-2">
               <Link
