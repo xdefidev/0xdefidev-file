@@ -1,12 +1,12 @@
 export default [
   {
-    name: "Presale Launchpad like Pinksale",
+    name: "Pinksale Launchpad clone",
     description:
       "Secure launchpad protocol like Pinksale with presale list and fairlaunch.",
     image: "",
     status: true,
     youtube: "M98xybTnuoY",
-    slug: "token-presale-dashboard-launch-development",
+    slug: "pinksale-launchpad-clone",
     p: {
       description:
         "A platform to create, customize, lock, distribute and sell tokens on blockchain that aims to make it easy and affordable for anyone to launch and invest in crypto projects.",
@@ -21,7 +21,27 @@ export default [
     },
   },
   {
-    name: "PoS PoA Blockchain Development",
+    name: "Crypto Sniper Bot on Telegram | Unibot Bananagun Clone ",
+    description: "Fully working sniper bot on telegram with manual and auto trading.",
+    image: "",
+    status: true,
+    youtube:"",
+    slug: "telegram-sniper-bot-clone",
+    p: {
+      description: "We have developed a fully working Sniper bot on telegram. This product allows your users to snipe tokens and trade crypto quickly within the bot.",
+      list: [
+        "Buy & Sell (Limit Orders, Auto Snipe)",
+        "Buy & Sell (Manual)",
+        "Auto Trade",
+        "Create Wallet & Import Wallet",
+        "Liquidity Snipe - Buys Token When Liquidity is added",
+        "Deploy and Setup the bot on your server",
+        "3 Months Free Support"
+      ]
+    }
+  },
+  {
+    name: "PoS PoA EVM Blockchain Development",
     description:
       "An EVM blockchain that supports ERC20 Token, and dApp, NFT with wallet and Explorer.",
     image: "",
@@ -44,7 +64,7 @@ export default [
     },
   },
   {
-    name: "Testnet Blockchain Development",
+    name: "EVM Testnet Blockchain Development",
     description: "An EVM blockchain testnet with faucet.",
     image: "",
     status: true,
@@ -126,6 +146,25 @@ export default [
       ],
     },
   },
+  {
+    name: "Pinksale Lock Dapp Clone",
+    description: "Exact pinksale style lock dapp, with same dynamic features. ",
+    image: "",
+    status: true,
+    youtube:"",
+    slug: "pinksale-lock-dapp-clone",
+    p: {
+      description: "Upon popular request we have developed an exact clone of the pinksale launchpad system, it comes equipped with the same features and can easily customise to your requirements.",
+      list: [
+        "Token Lock",
+        "Liquidity Lock",
+        "Vesting",
+        "Locked Token List",
+        "Locked LP List"
+      ]
+    }
+  },
+  
   // {
   //   name: "IDO Launchpad Development | Pinksale Clone",
   //   description:
@@ -242,4 +281,5 @@ export default [
       ],
     },
   },
+ 
 ];

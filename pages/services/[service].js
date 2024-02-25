@@ -66,7 +66,7 @@ export default function Service({ post }) {
               href="https://t.me/xdefideveloper"
               alt="contact xdefidev"
               target="_blank"
-              className="px-2 animate-pulse py-1.5 border border-zinc-700 rounded text-center hover:text-white hover:bg-black "
+              className="px-2 py-1.5 border border-zinc-700 rounded text-center text-white bg-black hover:text-black hover:bg-transparent"
             >
               Message now
             </a>
