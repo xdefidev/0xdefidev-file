@@ -24,7 +24,7 @@ export default function Service() {
       </Head>
       <Navbar />
 
-      <div className="!my-24" id="grid-container ">
+      <div className="!my-24 " id="grid-container ">
         <div className="text-center text-5xl !mb-8 font-semibold antialiased ">
           <h2>Services</h2>
         </div>
@@ -45,10 +45,10 @@ export default function Service() {
               <div className="text-black text-xs font-semibold antialiased">
                 {item.status ? "active" : "out"}
               </div>
-              <h3 className="text-gray-900 font-medium antialiased text-balance">
+              <h3 className="text-gray-900 font-semibold antialiased text-balance">
                 {item.name} &rarr;
               </h3>
-              <p className="font-thin text-xs antialiased text-balance">
+              <p className="font-normal text-sm antialiased ">
                 {item.description}
               </p>
             </Link>
