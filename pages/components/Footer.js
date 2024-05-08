@@ -65,5 +65,5 @@ export default function Footer() {
         <p>© Copyright 0xDefiDev {year}</p>
       </div>
     </footer>
-  );
+  )
 }

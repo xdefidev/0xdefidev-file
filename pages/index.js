@@ -21,6 +21,7 @@ import solidity from "/public/solidity.svg";
 import background from "/public/background.png";
 
 import Telegram from "/public/telegram.svg";
+import contact from "/public/contact-us-filled-svgrepo-com.svg";
 import Mail from "/public/mail.svg";
 
 export default function Home() {
@@ -99,24 +100,24 @@ export default function Home() {
             </p>
             <div className="flex pt-2 gap-2">
               <Link
-                href="#"
+                href="https://t.me/xdefideveloper"
                 className="border border-slate-950 rounded flex gap-1 py-2 px-4 hover:invert hover:bg-white"
               >
                 <Image
-                  src={Telegram}
+                  src={contact}
                   width={20}
                   height={20}
-                  className="invert "
+                  className=" "
                 />
-                Telegram
+                Contact Us
               </Link>
-              <Link
+              {/* <Link
                 href="#"
                 className="border border-slate-950 rounded flex gap-1 py-2 px-4 hover:invert hover:bg-white"
               >
                 <Image src={Mail} width={20} height={20} className="invert" />
                 E-mail
-              </Link>
+              </Link> */}
             </div>
           </div>
           <div>
@@ -156,7 +157,7 @@ export default function Home() {
                   {item.status ? "active" : "out"}
                 </div>
                 <h3 className="text-gray-900 font-semibold antialiased text-xl text-balance">
-                  {item.name} &rarr;
+                  {item.name}
                 </h3>
                 <p className="font-base text-xs antialiased text-balance !font-josefin">
                   {item.description}
@@ -179,7 +180,7 @@ export default function Home() {
             looking to create and innovate!
           </p>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 px-4 mt-6 mb-24 sm:mx-8 gap-6 antialiased">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 px-4 mt-6 mb-12 sm:mx-8 gap-6 antialiased">
             <div className="flex-wrap space-y-2 text-center">
               <h2 className="text-2xl font-bold ">Cost-Effective and Timely</h2>
               <p className="">
@@ -213,7 +214,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="my-24 mx-4 text-xl sm:px-8 px-4 leading-10 antialiased">
+        <div className="my-12 mx-4 text-xl sm:px-8 px-4 leading-10 antialiased">
           <p className="">
             To make your ideas a reality, are you looking for remote Web and
             Blockchain developers? Look nowhere else! For both the Web2 and the

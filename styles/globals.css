@@ -82,8 +82,8 @@ li {
   /* background-color: #000; */
 }
 
-.grid-container {
-  margin-top: 4rem;
+#grid-container {
+  margin-top: 2rem;
 }
 
 .text-balance {
@@ -170,5 +170,9 @@ li {
 
   .menu {
     padding: 0;
+  }
+
+  .arrow-down {
+    margin-top: 40px;
   }
 }

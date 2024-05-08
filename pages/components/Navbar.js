@@ -57,36 +57,36 @@ export default function Navbar() {
         )} */}
         {toggleMenu && (
           <ul
-            className="z-10 fixed -top-0 -right-2 p-3 w-[40vw] my-2 h-screen shadow-2xl md:hidden list-none
-            flex flex-col justify-start items-end rounded-md blue-glassmorphism text-black animate-slide-in "
+            className="z-10 fixed -top-0 -right-2 p-3 w-[50vw] my-2 h-screen shadow-2xl md:hidden list-none
+            flex flex-col justify-start items-end rounded-md blue-glassmorphism text-black animate-slide-in space-y-4 bg-white"
           >
             <li className="text-xl w-full my-2">
               <AiOutlineClose onClick={() => setToggleMenu(false)} />
             </li>
-            <a href="#" target="_blank">
+            <a href="#" target="_blank" className="w-full">
               <li
-                className={`mx-4 cursor-pointer font-josefin hover:text-[#0462f7]`}
+                className={`mx-4 text-lg cursor-pointer font-josefin hover:text-[#0462f7]`}
               >
                 Home
               </li>
             </a>
-            <a href="/portfolio" target="_blank">
+            <a href="/portfolio" target="_blank" className="w-full">
               <li
-                className={`mx-4 cursor-pointer font-josefin hover:text-[#0462f7]`}
+                className={`mx-4 text-lg cursor-pointer font-josefin hover:text-[#0462f7]`}
               >
                 Portfolio
               </li>
             </a>
-            <a href="/services" target="_blank">
+            <a href="/services" target="_blank" className="w-full">
               <li
-                className={`mx-4 cursor-pointer font-josefin hover:text-[#0462f7]`}
+                className={`mx-4 text-lg cursor-pointer font-josefin hover:text-[#0462f7]`}
               >
                 Services
               </li>
             </a>
-            <a href="https://t.me/xdefideveloper" target="_blank">
+            <a href="https://t.me/xdefideveloper" target="_blank" className="w-full">
               <li
-                className={`mx-4 cursor-pointer font-josefin hover:text-[#0462f7]`}
+                className={`mx-4 text-lg cursor-pointer font-josefin hover:text-[#0462f7]`}
               >
                 Contact
               </li>
