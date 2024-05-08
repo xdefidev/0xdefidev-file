@@ -1,4 +1,5 @@
 import { Josefin_Sans } from "next/font/google";
+import Footer from "./components/Footer"
 import "../styles/globals.css";
 
 const josefin = Josefin_Sans({
@@ -11,6 +12,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <main className={`${josefin.variable} font-josefin`}>
       <Component {...pageProps} />;
+      <Footer />
     </main>
   );
 }

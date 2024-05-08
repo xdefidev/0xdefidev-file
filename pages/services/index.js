@@ -55,7 +55,7 @@ export default function Service() {
           ))}
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </section>
   );
 }

@@ -86,7 +86,7 @@ export default function Service({ post }) {
         </div>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </section>
   );
 }
