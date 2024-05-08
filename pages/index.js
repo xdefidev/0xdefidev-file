@@ -85,7 +85,7 @@ export default function Home() {
       <main className={styles.main}>
         <div className="grid sm:grid-cols-2 grid-cols-1 pt-4 sm:pt-1">
           <div className="mx-4 grid order-last grid-flow-row content-center">
-            <h1 className="text-6xl mb-4 font-semibold antialiased">
+            <h1 className="text-6xl font-semibold antialiased">
               Web and Blockchain Development {" "}
               <a
                 href="#"
@@ -108,6 +108,7 @@ export default function Home() {
                   width={20}
                   height={20}
                   className=" "
+                  alt="contact us"
                 />
                 Contact Us
               </Link>
