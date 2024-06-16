@@ -19,6 +19,12 @@ import nodejs from "/public/nodejs.svg";
 import html from "/public/html.svg";
 import solidity from "/public/solidity.svg";
 import background from "/public/background.png";
+import incaswap from "/public/clients/incaswap.jpeg"
+import trapix from "/public/clients/trapix.jpeg"
+import pattie from "/public/clients/pattie.png"
+import c12 from "/public/clients/c12.jpeg"
+import shine from "/public/clients/shine-blockchain.png"
+
 
 import Telegram from "/public/telegram.svg";
 import contact from "/public/contact-us-filled-svgrepo-com.svg";
@@ -86,7 +92,7 @@ export default function Home() {
         <div className="grid sm:grid-cols-2 grid-cols-1 pt-4 sm:pt-1">
           <div className="mx-4 grid order-last grid-flow-row content-center">
             <h1 className="text-6xl font-semibold antialiased">
-              Web and Blockchain Development {" "}
+              Web and Blockchain Development{" "}
               <a
                 href="#"
                 className="font-bold text-transparent sm:text-8xl text-7xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"
@@ -96,7 +102,8 @@ export default function Home() {
             </h1>
 
             <p className="text-xl antialiased font-display text-balance">
-              Hire Top Vetted Developers to help you build on Blockchain, Web and Mobile
+              Hire Top Vetted Developers to help you build on Blockchain, Web
+              and Mobile
             </p>
             <div className="flex pt-2 gap-2">
               <Link
@@ -174,7 +181,7 @@ export default function Home() {
           </h2>
 
           <p className="sm:mx-24 mx-8 text-center antialiased text-balance">
-            Since 2018, with over 127 successful projects the goal of Xdefidev
+            Since 2018, with over 200 successful projects the goal of Xdefidev
             has been to help project starters create innovative solutions in the
             cryptocurrency space. We have consistently strived to offer expert
             guidance, technical expertise and feasible solutions to clients
@@ -366,6 +373,62 @@ export default function Home() {
               height={60}
               loading="lazy"
               alt="NodeJS"
+            />
+            {/* <p>NodeJS</p> */}
+          </div>
+        </div>
+      </div>
+
+      <div className="items-center flex flex-col justify-center my-4 space-y-4">
+        <h2 className="text-5xl font-bold antialiased">Clients</h2>
+        <div className="grid grid-cols-3 gap-[1px]">
+          <div>
+            <Image
+              src={incaswap}
+              width={100}
+              height={100}
+              loading="lazy"
+              alt="Incaswap"
+            />
+            {/* <p>HTML</p> */}
+          </div>
+          <div>
+            <Image
+              src={trapix}
+              width={100}
+              height={100}
+              loading="lazy"
+              alt="Trapix"
+            />
+            {/* <p>React</p> */}
+          </div>
+          <div>
+            <Image
+              src={pattie}
+              width={100}
+              height={100}
+              loading="lazy"
+              alt="Pattie"
+            />
+            {/* <p>NodeJS</p> */}
+          </div>
+          <div>
+            <Image
+              src={c12}
+              width={100}
+              height={100}
+              loading="lazy"
+              alt="C12"
+            />
+            {/* <p>NodeJS</p> */}
+          </div>
+          <div>
+            <Image
+              src={shine}
+              width={100}
+              height={100}
+              loading="lazy"
+              alt="Shine Blockchain"
             />
             {/* <p>NodeJS</p> */}
           </div>

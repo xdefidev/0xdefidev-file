@@ -287,8 +287,8 @@
     padding: 0 1rem;
   }
 
-  .skil div {
-    /* gap: 5px !important; */
+  .skill div {
+    gap: 5px !important;
     /* max-width: 600px; */
     display: flex;
     flex-direction: row;
