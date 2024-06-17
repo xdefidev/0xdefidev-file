@@ -265,7 +265,7 @@ export default [
     },
   },
   {
-    name: "Fix WalletConnect Error | update WalletConnect V2",
+    name: "Fix WalletConnect Error | Update WalletConnect V2",
     description:
       "WalletConnect just updated to V2, does your dapp have an error connecting to walletconnect?. Send us a message and let us fix it.",
     image: "",
@@ -278,6 +278,26 @@ export default [
       list: [
         "Fix Walletconnect Websocket/relay issue",
         "Update your walletconnect to version 2",
+      ],
+    },
+  },
+  {
+    name: "AI Cryptocurrency Application Development",
+    description:
+      "Develop a solution using artificial intelligence and the blockchain. We integrate seamlessly.",
+    image: "",
+    status: true,
+    youtube: "",
+    slug: "ai-cryptocurrency-application-development",
+    p: {
+      description:
+        "Unlock the future of digital finance with our cutting-edge AI Cryptocurrency Application Development services. We combine the power of artificial intelligence with the robustness of blockchain technology to create innovative, secure, and user-friendly cryptocurrency applications. Whether you are looking to launch a new cryptocurrency, develop a decentralized application (dApp), or enhance your existing crypto solutions, our expert team is here to turn your vision into reality. Embrace the next wave of financial technology with solutions that are designed to be efficient, scalable, and adaptive to the ever-evolving market.",
+      list: [
+        "Integrate AI engines",
+        "Develop and deploy secure and efficient smart contracts",
+        "Build optimized web application and API",
+        "Enhanced Security Protocols",
+        "24/7 Support and Maintenance"
       ],
     },
   },
