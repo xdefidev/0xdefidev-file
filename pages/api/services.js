@@ -80,7 +80,7 @@ export default [
     }
   },
   {
-    name: "PoS PoA EVM Blockchain Development",
+    name: "PoS | PoA EVM Blockchain Development",
     description:
       "An EVM blockchain that supports ERC20 Token, and dApp, NFT with wallet and Explorer.",
     image: "",
