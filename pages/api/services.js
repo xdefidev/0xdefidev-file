@@ -1,5 +1,25 @@
 export default [
   {
+    "name": "Telegram Mini App | Hamster, Tapswap Clone",
+    "description": "A versatile Telegram mini app similar to Hamster and TapSwap, offering quick and seamless access to a variety of features within the Telegram ecosystem.",
+    "image": "",
+    "status": true,
+    "youtube": "",
+    "slug": "telegram-mini-app",
+    "p": {
+      "description": "A powerful mini app for Telegram that integrates multiple functionalities, enabling users to access, use, and manage various services efficiently.",
+      "list": [
+        "Quick access to services",
+        "Seamless integration with Telegram",
+        "User-friendly interface",
+        "Secure transactions",
+        "Multi-functional support",
+        "Regular updates and support",
+        "Referral system"
+      ]
+    }
+  },  
+  {
     name: "Pinksale Launchpad clone",
     description:
       "Secure launchpad protocol like Pinksale with presale list and fairlaunch.",
@@ -20,6 +40,25 @@ export default [
       ],
     },
   },
+  {
+    "name": "Solana Casino Platform",
+    "description": "A cutting-edge casino web platform built on the Solana blockchain, offering fast, secure, and transparent gaming experiences.",
+    "image": "",
+    "status": true,
+    "youtube": "",
+    "slug": "solana-casino-platform",
+    "p": {
+      "description": "Experience the thrill of casino gaming on the Solana blockchain. Our platform provides a wide range of games, secure transactions, and provably fair outcomes.",
+      "list": [
+        "Fast and secure transactions",
+        "Wide range of casino games",
+        "Provably fair gaming",
+        "Transparent and decentralized",
+        "User-friendly interface",
+        "24/7 customer support"
+      ]
+    }
+  },  
   {
     name: "Crypto Sniper Bot on Telegram | Unibot Bananagun Clone ",
     description: "Fully working sniper bot on telegram with manual and auto trading.",
