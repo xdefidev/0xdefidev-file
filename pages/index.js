@@ -54,7 +54,7 @@ export default function Home() {
 
         <meta
           property="og:description"
-          content="Need Blockchain Developer? Let's take it out of your hands."
+          content="Need Web3 Development Services? Let's take it out of your hands."
         />
 
         <meta property="og:url" content="https://xdefidev.com" />
@@ -65,6 +65,16 @@ export default function Home() {
           property="og:image"
           content="https://ik.imagekit.io/lzgpc48la/Yellow_Bright_Business_Idea_Tutorial_Youtube_Thumbnail_n186Tgza0.png?ik-sdk-version=javascript-1.4.3&updatedAt=1665836822605"
         />
+        <meta property="twitter:image" content="https://ik.imagekit.io/lzgpc48la/Yellow_Bright_Business_Idea_Tutorial_Youtube_Thumbnail_n186Tgza0.png?ik-sdk-version=javascript-1.4.3&updatedAt=1665836822605" />
+
+        <meta property="twitter:card" content="https://ik.imagekit.io/lzgpc48la/Yellow_Bright_Business_Idea_Tutorial_Youtube_Thumbnail_n186Tgza0.png?ik-sdk-version=javascript-1.4.3&updatedAt=1665836822605" />
+
+        <meta property="twitter:title" content="Blockchain and Fullstack Development services" />
+
+        <meta property="twitter:description" content="Need Web3 Development Services? Let's take it out of your hands." />
+        
+        
+        <meta property="og:site_name" content="Xdefidev" />
 
         <script
           async
