@@ -31,7 +31,7 @@ export default function Home() {
 
         <meta
           property="twitter:card"
-          content="https://ik.imagekit.io/lzgpc48la/Yellow_Bright_Business_Idea_Tutorial_Youtube_Thumbnail_n186Tgza0.png?ik-sdk-version=javascript-1.4.3&updatedAt=1665836822605"
+          content="summary_large_image"
         />
 
         <meta
