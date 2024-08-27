@@ -4,7 +4,7 @@ export default [
     "description": "A versatile Telegram mini app similar to Hamster and TapSwap, offering quick and seamless access to a variety of features within the Telegram ecosystem.",
     "image": "https://ik.imagekit.io/hp2oyifpf/Dark%20Blue%20Red%20White%20Generic%20News%20General%20News%20YouTube%20Banner.png?updatedAt=1724719432697",
     "status": true,
-    "youtube": "",
+    "youtube": "jnL-70RXVII",
     "slug": "telegram-mini-app",
     "p": {
       "description": "A powerful mini app for Telegram that integrates multiple functionalities, enabling users to access, use, and manage various services efficiently.",
