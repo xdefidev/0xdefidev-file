@@ -249,7 +249,7 @@ export default [
     name: "ERC20 Token for ETH, BSC, AVAX, MATIC",
     description:
       "Develop Ethereum Compatible tokens with ERC20 standard and custom tokenomics.",
-    image: "",
+    image: "https://ik.imagekit.io/hp2oyifpf/Add%20a%20subheading%20(5).png?updatedAt=1724720607333",
     status: true,
     youtube: "",
     slug: "erc20-token-development",
@@ -268,7 +268,7 @@ export default [
     name: "Pancakeswap Clone Development",
     description:
       "Clone Pancakeswap AMM Decentralised Exchange with customization. Swap, Farm, Prediction and Lottery.",
-    image: "https://ik.imagekit.io/hp2oyifpf/Screenshot%202023-11-28%20at%2012.28.44.png?updatedAt=1701170938041",
+    image: "https://ik.imagekit.io/hp2oyifpf/PANCAKESWAP%20CLONE.png?updatedAt=1724720493864",
     status: true,
     youtube: "",
     slug: "amm-dex-pancakeswap-clone",
