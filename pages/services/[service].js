@@ -50,6 +50,7 @@ export default function Service({ post }) {
               title="Need a Blockchain Developer? Best......."
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              className="min-h-[400px]"
             ></iframe>
           ) : (
             <img src={imageLink} loading="lazy" />
