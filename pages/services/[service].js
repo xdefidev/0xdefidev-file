@@ -69,7 +69,7 @@ export default function Service({ post }) {
               target="_blank"
               className="px-2 py-1.5 border border-zinc-700 rounded text-center text-white bg-black hover:text-black hover:bg-transparent"
             >
-              Message now
+              Contact Us
             </a>
           </div>
         </div>
