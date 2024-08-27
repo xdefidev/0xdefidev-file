@@ -268,7 +268,7 @@ export default [
     name: "Pancakeswap Clone Development",
     description:
       "Clone Pancakeswap AMM Decentralised Exchange with customization. Swap, Farm, Prediction and Lottery.",
-    image: "",
+    image: "https://ik.imagekit.io/hp2oyifpf/Screenshot%202023-11-28%20at%2012.28.44.png?updatedAt=1701170938041",
     status: true,
     youtube: "",
     slug: "amm-dex-pancakeswap-clone",
