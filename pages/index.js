@@ -165,7 +165,7 @@ export default function Home() {
                 key={index}
               >
                 <img
-                  src={imageLink}
+                  src={item.image || imageLink}
                   alt={item.name}
                   width="100%"
                   height="100%"

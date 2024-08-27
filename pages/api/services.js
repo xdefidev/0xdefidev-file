@@ -2,7 +2,7 @@ export default [
   {
     "name": "Telegram Mini App | Hamster, Tapswap Clone",
     "description": "A versatile Telegram mini app similar to Hamster and TapSwap, offering quick and seamless access to a variety of features within the Telegram ecosystem.",
-    "image": "",
+    "image": "https://ik.imagekit.io/hp2oyifpf/Dark%20Blue%20Red%20White%20Generic%20News%20General%20News%20YouTube%20Banner.png?updatedAt=1724719432697",
     "status": true,
     "youtube": "",
     "slug": "telegram-mini-app",
@@ -23,7 +23,7 @@ export default [
     name: "Pinksale Launchpad clone",
     description:
       "Secure launchpad protocol like Pinksale with presale list and fairlaunch.",
-    image: "",
+    image: "https://ik.imagekit.io/hp2oyifpf/Copy%20of%20Black%20and%20Yellow%20Dark%20Gamer%20Survival%20YouTube%20Banner.png?updatedAt=1724719521891",
     status: true,
     youtube: "M98xybTnuoY",
     slug: "pinksale-launchpad-clone",
@@ -83,7 +83,7 @@ export default [
     name: "PoS | PoA EVM Blockchain Development",
     description:
       "An EVM blockchain that supports ERC20 Token, and dApp, NFT with wallet and Explorer.",
-    image: "",
+    image: "https://ik.imagekit.io/hp2oyifpf/Layer%202%20blockchain%20(1).png?updatedAt=1724719658061",
     status: true,
     youtube: "Ynn_hBBORUY",
     slug: "pos-poa-blockchain-development",
@@ -105,7 +105,7 @@ export default [
   {
     name: "EVM Testnet Blockchain Development",
     description: "An EVM blockchain testnet with faucet.",
-    image: "",
+    image: "https://ik.imagekit.io/hp2oyifpf/Layer%202%20blockchain%20(1).png?updatedAt=1724719658061",
     status: true,
     youtube: "",
     slug: "testnet-blockchain-development",
@@ -146,7 +146,7 @@ export default [
     name: "Cryptocurrency Casino Development",
     description:
       "Online Gaming cryptoturrency casino with multiple games, ERC20 support as you want.",
-    image: "",
+    image: "https://ik.imagekit.io/hp2oyifpf/create%20crypto%20gamble%20games%20website%20with%20blackjack%20dice%20crash.png?updatedAt=1724719749080",
     status: true,
     youtube: "E4fIL4SjEXk",
     slug: "crypto-casino-development",
@@ -188,7 +188,7 @@ export default [
   {
     name: "Pinksale Lock Dapp Clone",
     description: "Exact pinksale style lock dapp, with same dynamic features. ",
-    image: "",
+    image: "https://ik.imagekit.io/hp2oyifpf/Screenshot%202024-02-25%20at%2020.38.27.png?updatedAt=1708890304246",
     status: true,
     youtube:"",
     slug: "pinksale-lock-dapp-clone",
