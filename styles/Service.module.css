@@ -70,7 +70,7 @@
   .firstDiv {
     grid-template-columns: auto;
     grid-template-rows: auto auto;
-    height: 700px;
+    height: 800px;
   }
 
   .secondDiv {
