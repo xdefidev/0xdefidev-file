@@ -77,7 +77,7 @@ export default function Service({ post }) {
           <h2 className="text-2xl font-medium">Description</h2>
           <p className="text-balance">{post.description}</p>
           {post.p.description}
-          <h3 className="text-xl">Features / Benefits</h3>
+          <h3 className="text-xl">Key Features / Benefits</h3>
           <ul className="grid gap-2 list-decimal pl-8 ">
             {post.p.list.map((item) => (
               <li className="font-josefin">{item}</li>
