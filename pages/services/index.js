@@ -37,7 +37,7 @@ export default function Service() {
               key={index}
             >
               <img
-                src={imageLink}
+                src={item.image || imageLink}
                 alt={item.name}
                 width="100%"
                 loading="lazy"

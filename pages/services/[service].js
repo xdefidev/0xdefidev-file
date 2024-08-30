@@ -53,7 +53,7 @@ export default function Service({ post }) {
               className="min-h-[400px]"
             ></iframe>
           ) : (
-            <img src={imageLink} loading="lazy" />
+            <img src={post.image || imageLink} loading="lazy" />
           )}
 
           <div className="max-w-max h-full flex flex-col gap-4 antialiased">
