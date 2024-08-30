@@ -265,7 +265,7 @@ export default [
   },
 
   {
-    name: "Pancakeswap Clone Development",
+    name: "Decentralised Exchange | Pancakeswap Clone Development",
     description:
       "Clone Pancakeswap AMM Decentralised Exchange with customization. Swap, Farm, Prediction and Lottery.",
     image: "https://ik.imagekit.io/hp2oyifpf/PANCAKESWAP%20CLONE.png?updatedAt=1724720493864",
