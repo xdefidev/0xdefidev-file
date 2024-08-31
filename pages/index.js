@@ -127,7 +127,7 @@ export default function Home() {
                   className=" "
                   alt="contact us"
                 />
-                Connect on Telegram
+                Send Us a Message
               </Link>
               {/* <Link
                 href="#"
@@ -158,30 +158,33 @@ export default function Home() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 my-4 sm:mx-5">
             {services.map((item, index) => (
-              <Link
-                href={`/services/${item.slug}`}
-                className={styles.card}
-                alt={item.description}
-                key={index}
-              >
-                <img
-                  src={item.image || imageLink}
-                  alt={item.name}
-                  width="100%"
-                  height="100%"
-                  loading="lazy"
-                />
-                <div className="text-black text-xs font-semibold antialiased">
-                  {item.status ? "active" : "out"}
-                </div>
-                <h3 className="text-gray-900 font-semibold antialiased text-xl text-balance">
-                  {item.name}
-                </h3>
-                <p className="font-base text-xs antialiased text-balance !font-josefin">
-                  {item.description}
-                </p>
-              </Link>
+              index < 9 && <Link
+              href={`/services/${item.slug}`}
+              className={styles.card}
+              alt={item.description}
+              key={index}
+            >
+              <img
+                src={item.image || imageLink}
+                alt={item.name}
+                width="100%"
+                height="100%"
+                loading="lazy"
+              />
+              <div className="text-black text-xs font-semibold antialiased">
+                {item.status ? "active" : "out"}
+              </div>
+              <h3 className="text-gray-900 font-semibold antialiased text-xl text-balance">
+                {item.name}
+              </h3>
+              <p className="font-base text-xs antialiased text-balance !font-josefin">
+                {item.description}
+              </p>
+            </Link>
             ))}
+          </div>
+          <div className="flex w-full justify-end">
+          <Link href="/services" ><u>See All &rarr;</u></Link>
           </div>
         </div>
 
