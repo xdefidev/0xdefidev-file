@@ -19,7 +19,7 @@ export default function Home() {
 
         <meta name="description" content="Explore our portfolio of innovative blockchain and fullstack development projects. See how we've helped businesses achieve their goals with cutting-edge web and mobile applications. Discover our success stories and find inspiration for your next project." />
 
-        <meta property="og:url" content="https://xdefidev.shop" />
+        <meta property="og:url" content="https://xdefidev.com" />
 
         <meta
           property="og:image"
