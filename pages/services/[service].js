@@ -37,6 +37,11 @@ export default function Service({ post }) {
 
         <meta name="description" content={post.description} />
 
+        <meta
+          property="og:image"
+          content={post.image}
+        />
+
         <meta http-equiv="content-language" content="en" />
       </Head>
       <Navbar />
