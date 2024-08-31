@@ -13,11 +13,11 @@ export default function Service() {
   return (
     <section>
       <Head>
-        <title>{`Xdefidev Services`}</title>
+        <title>{`Services| Expert Blockchain & Fullstack Development Solutions`}</title>
 
         <meta
           name="description"
-          content="check a list of our Hot selling services right now"
+          content="Discover our range of services, from blockchain development to fullstack web and mobile solutions. We offer tailored development, consulting, and implementation services to bring your digital ideas to life. Partner with us to elevate your business with innovative technology"
         />
 
         <meta http-equiv="content-language" content="en" />
@@ -26,7 +26,7 @@ export default function Service() {
 
       <div className="!my-24 " id="grid-container ">
         <div className="text-center text-5xl !mb-8 font-semibold antialiased ">
-          <h2>Services</h2>
+          <h1>Services</h1>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 my-4 sm:mx-5">
           {services.map((item, index) => (

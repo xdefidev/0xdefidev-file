@@ -10,12 +10,14 @@ export default function Home() {
       <Head>
         <title>0xDefiDev Portfolio</title>
 
-        <meta property="og:title" content="xdefidev Portfolio" />
+        <meta property="og:title" content="Portfolio | View our Our Blockchain & Fullstack Development Projects" />
 
         <meta
           property="og:description"
-          content="Need Remote Blockchain Developers? View our Portfolio"
+          content="Explore our portfolio of innovative blockchain and fullstack development projects. See how we've helped businesses achieve their goals with cutting-edge web and mobile applications. Discover our success stories and find inspiration for your next project."
         />
+
+        <meta name="description" content="Explore our portfolio of innovative blockchain and fullstack development projects. See how we've helped businesses achieve their goals with cutting-edge web and mobile applications. Discover our success stories and find inspiration for your next project." />
 
         <meta property="og:url" content="https://xdefidev.shop" />
 
@@ -29,10 +31,7 @@ export default function Home() {
           content="https://ik.imagekit.io/lzgpc48la/Yellow_Bright_Business_Idea_Tutorial_Youtube_Thumbnail_n186Tgza0.png?ik-sdk-version=javascript-1.4.3&updatedAt=1665836822605"
         />
 
-        <meta
-          property="twitter:card"
-          content="summary_large_image"
-        />
+        <meta property="twitter:card" content="summary_large_image" />
 
         <meta
           property="twitter:title"
@@ -47,6 +46,9 @@ export default function Home() {
         <meta property="og:site_name" content="Xdefidev Portfolio" />
       </Head>
       <Navbar />
+      <div className="text-center text-5xl !mb-8 font-semibold antialiased ">
+        <h1>Portfolio</h1>
+      </div>
       <div className={styles.body}>
         <div className={styles.container}>
           {portfolio.map((item) => (
