@@ -19,15 +19,16 @@ export default function Navbar() {
           </a>
         </li>
         <li>
-          <a href="/portfolio" className="font-josefin">
-            Portfolio
-          </a>
-        </li>
-        <li>
           <a href="/services" className="font-josefin">
             Services
           </a>
         </li>
+        <li>
+          <a href="/portfolio" className="font-josefin">
+            Portfolio
+          </a>
+        </li>
+        
         <li>
           <a
             href="https://t.me/xdefideveloper"
@@ -70,18 +71,19 @@ export default function Navbar() {
                 Home
               </li>
             </a>
-            <a href="/portfolio" target="_blank" className="w-full">
-              <li
-                className={`mx-4 text-lg cursor-pointer font-josefin hover:text-[#0462f7]`}
-              >
-                Portfolio
-              </li>
-            </a>
+           
             <a href="/services" target="_blank" className="w-full">
               <li
                 className={`mx-4 text-lg cursor-pointer font-josefin hover:text-[#0462f7]`}
               >
                 Services
+              </li>
+            </a>
+            <a href="/portfolio" target="_blank" className="w-full">
+              <li
+                className={`mx-4 text-lg cursor-pointer font-josefin hover:text-[#0462f7]`}
+              >
+                Portfolio
               </li>
             </a>
             <a href="https://t.me/xdefideveloper" target="_blank" className="w-full">
