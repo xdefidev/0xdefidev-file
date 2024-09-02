@@ -27,6 +27,8 @@ import shine from "/public/clients/shine-blockchain.png"
 
 
 import Telegram from "/public/telegram.svg";
+import Discord from "/public/discord-round-black-icon.png";
+import Whatsapp from "/public/whatsapp-icon.png";
 import contact from "/public/contact-us-filled-svgrepo-com.svg";
 import Mail from "/public/mail.svg";
 
@@ -115,19 +117,44 @@ export default function Home() {
               Hire Top Vetted Developers to help you build on Blockchain, Web
               and Mobile
             </p>
-            <div className="flex pt-2 gap-2">
+            {/* <div></div> */}
+            <div className="flex pt-2 mt-4 gap-2">
+              
               <Link
                 href="https://t.me/xdefideveloper"
-                className="border border-slate-950 rounded flex gap-1 py-2 px-4 hover:invert hover:bg-white"
+                className=" flex gap-1 "
               >
                 <Image
-                  src={contact}
-                  width={20}
-                  height={20}
+                  src={Telegram}
+                  width={30}
+                  height={30}
+                  className="invert "
+                  alt="contact us"
+                />
+              </Link>
+              <Link
+                href="https://discord.com/users/839903148462178315/"
+                className=" flex gap-1 "
+              >
+                <Image
+                  src={Discord}
+                  width={30}
+                  height={30}
                   className=" "
                   alt="contact us"
                 />
-                Send Us a Message
+              </Link>
+              <Link
+                href="https://wa.me/+17062289620"
+                className=" flex gap-1 "
+              >
+                <Image
+                  src={Whatsapp}
+                  width={30}
+                  height={30}
+                  className=" "
+                  alt="contact us"
+                />
               </Link>
               {/* <Link
                 href="#"
