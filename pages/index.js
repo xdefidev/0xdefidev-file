@@ -18,7 +18,7 @@ import js from "/public/js.svg";
 import nodejs from "/public/nodejs.svg";
 import html from "/public/html.svg";
 import solidity from "/public/solidity.svg";
-import background from "/public/background.png";
+import background from "/public/background-illustration.png";
 import incaswap from "/public/clients/incaswap.jpeg"
 import trapix from "/public/clients/trapix.jpeg"
 import pattie from "/public/clients/pattie.png"
