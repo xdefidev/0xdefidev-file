@@ -19,18 +19,20 @@ import nodejs from "/public/nodejs.svg";
 import html from "/public/html.svg";
 import solidity from "/public/solidity.svg";
 import background from "/public/background-illustration.png";
-import incaswap from "/public/clients/incaswap.jpeg"
-import trapix from "/public/clients/trapix.jpeg"
-import pattie from "/public/clients/pattie.png"
-import c12 from "/public/clients/c12.jpeg"
-import shine from "/public/clients/shine-blockchain.png"
-
+import incaswap from "/public/clients/incaswap.jpeg";
+import trapix from "/public/clients/trapix.jpeg";
+import pattie from "/public/clients/pattie.png";
+import c12 from "/public/clients/c12.jpeg";
+import shine from "/public/clients/shine-blockchain.png";
 
 import Telegram from "/public/telegram.svg";
 import Discord from "/public/discord-round-black-icon.png";
 import Whatsapp from "/public/whatsapp2.png";
 import contact from "/public/contact-us-filled-svgrepo-com.svg";
 import Mail from "/public/mail.svg";
+
+import illus2 from "/public/illustration-2.png";
+
 
 export default function Home() {
   const imageLink =
@@ -67,15 +69,23 @@ export default function Home() {
           property="og:image"
           content="https://ik.imagekit.io/lzgpc48la/Yellow_Bright_Business_Idea_Tutorial_Youtube_Thumbnail_n186Tgza0.png?ik-sdk-version=javascript-1.4.3&updatedAt=1665836822605"
         />
-        <meta property="twitter:image" content="https://ik.imagekit.io/lzgpc48la/Yellow_Bright_Business_Idea_Tutorial_Youtube_Thumbnail_n186Tgza0.png?ik-sdk-version=javascript-1.4.3&updatedAt=1665836822605" />
+        <meta
+          property="twitter:image"
+          content="https://ik.imagekit.io/lzgpc48la/Yellow_Bright_Business_Idea_Tutorial_Youtube_Thumbnail_n186Tgza0.png?ik-sdk-version=javascript-1.4.3&updatedAt=1665836822605"
+        />
 
         <meta property="twitter:card" content="summary_large_image" />
 
-        <meta property="twitter:title" content="Blockchain and Fullstack Development services" />
+        <meta
+          property="twitter:title"
+          content="Blockchain and Fullstack Development services"
+        />
 
-        <meta property="twitter:description" content="Need Web3 Development Services? Let's take it out of your hands." />
-        
-        
+        <meta
+          property="twitter:description"
+          content="Need Web3 Development Services? Let's take it out of your hands."
+        />
+
         <meta property="og:site_name" content="Xdefidev" />
 
         <script
@@ -119,11 +129,7 @@ export default function Home() {
             </p>
             {/* <div></div> */}
             <div className="flex pt-2 mt-4 gap-2">
-              
-              <Link
-                href="https://t.me/xdefideveloper"
-                className=" flex gap-1 "
-              >
+              <Link href="https://t.me/xdefideveloper" className=" flex gap-1 ">
                 <Image
                   src={Telegram}
                   width={30}
@@ -144,10 +150,7 @@ export default function Home() {
                   alt="contact us"
                 />
               </Link>
-              <Link
-                href="https://wa.me/+17062289620"
-                className=" flex gap-1 "
-              >
+              <Link href="https://wa.me/+17062289620" className=" flex gap-1 ">
                 <Image
                   src={Whatsapp}
                   width={35}
@@ -184,34 +187,39 @@ export default function Home() {
             <h2>Services</h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 my-4 sm:mx-5">
-            {services.map((item, index) => (
-              index < 9 && <Link
-              href={`/services/${item.slug}`}
-              className={styles.card}
-              alt={item.description}
-              key={index}
-            >
-              <img
-                src={item.image || imageLink}
-                alt={item.name}
-                width="100%"
-                height="100%"
-                loading="lazy"
-              />
-              <div className="text-black text-xs font-semibold antialiased">
-                {item.status ? "active" : "out"}
-              </div>
-              <h3 className="text-gray-900 font-semibold antialiased text-xl text-balance">
-                {item.name}
-              </h3>
-              <p className="font-base text-xs antialiased text-balance !font-josefin">
-                {item.description}
-              </p>
-            </Link>
-            ))}
+            {services.map(
+              (item, index) =>
+                index < 9 && (
+                  <Link
+                    href={`/services/${item.slug}`}
+                    className={styles.card}
+                    alt={item.description}
+                    key={index}
+                  >
+                    <img
+                      src={item.image || imageLink}
+                      alt={item.name}
+                      width="100%"
+                      height="100%"
+                      loading="lazy"
+                    />
+                    <div className="text-black text-xs font-semibold antialiased">
+                      {item.status ? "active" : "out"}
+                    </div>
+                    <h3 className="text-gray-900 font-semibold antialiased text-xl text-balance">
+                      {item.name}
+                    </h3>
+                    <p className="font-base text-xs antialiased text-balance !font-josefin">
+                      {item.description}
+                    </p>
+                  </Link>
+                )
+            )}
           </div>
           <div className="flex w-full justify-end">
-          <Link href="/services" ><u>See All &rarr;</u></Link>
+            <Link href="/services">
+              <u>See All &rarr;</u>
+            </Link>
           </div>
         </div>
 
@@ -262,17 +270,26 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="my-12 mx-4 text-xl sm:px-8 px-4 leading-10 antialiased">
+        <div className="my-12 mx-4 text-xl sm:px-8 px-4 leading-10 antialiased grid sm:grid-cols-2 grid-cols-1 items-center">
           <p className="">
-            To make your ideas a reality, are you looking for remote Web and
-            Blockchain developers? Look nowhere else! For both the Web2 and the
-            decentralized Web3, our team specializes in building{" "}
-            <u>custom websites</u>, programming intelligent{" "}
-            <u>smart contracts</u>, and deploying cutting-edge{" "}
-            <u>decentralized applications</u>. Count on us to offer outstanding
-            results suited to your specific demands. -{" "}
-            <code className={styles.code}>all in one place.</code>
+            Are you searching for remote Web and Blockchain developers to bring
+            your ideas to life? Look no further! Our expert team specializes in
+            crafting <u>custom websites</u>, coding advanced{" "}
+            <u>smart contracts</u>, and launching innovative{" "}
+            <u>decentralized applications</u> for both Web2 and Web3. Trust us
+            to deliver exceptional solutions tailored to your unique needs—all{" "}
+            <code className={styles.code}>in one place.</code>
           </p>
+
+          <div className="w-full">
+          <Image
+                  src={illus2}
+                  width={500}
+                  height={500}
+                  className="w-full h-full"
+                  alt="contact us"
+                />
+          </div>
         </div>
       </main>
 
