@@ -28,7 +28,7 @@ import shine from "/public/clients/shine-blockchain.png"
 
 import Telegram from "/public/telegram.svg";
 import Discord from "/public/discord-round-black-icon.png";
-import Whatsapp from "/public/whatsapp-icon.png";
+import Whatsapp from "/public/whatsapp2.png";
 import contact from "/public/contact-us-filled-svgrepo-com.svg";
 import Mail from "/public/mail.svg";
 
@@ -150,7 +150,7 @@ export default function Home() {
               >
                 <Image
                   src={Whatsapp}
-                  width={30}
+                  width={35}
                   height={30}
                   className=" "
                   alt="contact us"
