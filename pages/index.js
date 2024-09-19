@@ -10,6 +10,7 @@ import avax from "/public/avax.svg";
 import polygon from "/public/polygon.svg";
 import fantom from "/public/fantom.svg";
 import solana from "/public/solana.svg";
+import base from "/public/base.svg";
 import bnb from "/public/bnb.svg";
 import truffle from "/public/truffle.svg";
 import hardhat from "/public/hardhat.svg";
@@ -356,6 +357,17 @@ export default function Home() {
               height={60}
               loading="lazy"
               alt="solana blockchain"
+            />
+            {/* <p>Fantom</p> */}
+          </div>
+
+          <div>
+            <Image
+              src={base}
+              width={60}
+              height={60}
+              loading="lazy"
+              alt="base blockchain"
             />
             {/* <p>Fantom</p> */}
           </div>
