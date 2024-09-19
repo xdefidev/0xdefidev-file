@@ -9,7 +9,7 @@ import eth from "/public/eth.svg";
 import avax from "/public/avax.svg";
 import polygon from "/public/polygon.svg";
 import fantom from "/public/fantom.svg";
-import solana from "/public/solana.png";
+import solana from "/public/solana.svg";
 import bnb from "/public/bnb.svg";
 import truffle from "/public/truffle.svg";
 import hardhat from "/public/hardhat.svg";
