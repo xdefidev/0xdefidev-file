@@ -14,7 +14,7 @@ export default function Navbar() {
       </Link>
       <ul className="sm:flex hidden ">
         <li>
-          <a href="/" className="font-josefin font-semibold">
+          <a href="/" className="font-josefin font-semibold text-[#62646A]">
             Home
           </a>
         </li>
