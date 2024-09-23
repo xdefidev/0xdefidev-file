@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <nav className="my-6">
       <Link href="/" className="mr-auto flex">
-        <h2 className="text-2xl font-semibold text-[##404145]">XDefiDev</h2>
+        <h2 className="text-2xl font-semibold text-[#404145]">XDefiDev</h2>
       </Link>
       <ul className="sm:flex hidden ">
         <li>
