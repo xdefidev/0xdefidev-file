@@ -19,7 +19,7 @@ export default function Navbar() {
           </a>
         </li>
         <li>
-          <a href="/services" className="font-josefin font-semibold flex">
+          <a href="/services" className="font-josefin font-semibold flex items-center gap-1">
             Services{" "}
             <span>
               <svg
