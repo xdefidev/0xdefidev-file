@@ -1,5 +1,25 @@
 export default [
   {
+    "name": "PUMP.fun Clone on EVM and SOLANA",
+    "description": "Pump.Fun Clone development for Ethereum and Solana",
+    "image": "https://ik.imagekit.io/hp2oyifpf/pumpfun-clone.png?updatedAt=1727082514946",
+    "status": true,
+    "youtube": "",
+    "slug": "pump-fun-clone-development",
+    "p": {
+      "description": "We are offering the development of a customized Pump.Fun clone for both Ethereum or Solana, featuring advanced buy/sell functionalities, real-time charts, and enhanced security measures. Our highly customizable architecture allows easy feature upgrades and adjustments. Let us help you create a secure and user-friendly platform.",
+      "list": [
+        "Advanced buy/sell functionalities",
+        "Integrated real-time charts for enhanced user experience",
+        "User-friendly interface",
+        "Secure transactions",
+        "Multi-functional support",
+        "Regular updates and support",
+        "Customization to fit your specific requirements"
+      ]
+    }
+  },  
+  {
     "name": "Telegram Mini App | Hamster, Tapswap Clone",
     "description": "A versatile Telegram mini app similar to Hamster and TapSwap, offering quick and seamless access to a variety of features within the Telegram ecosystem.",
     "image": "https://ik.imagekit.io/hp2oyifpf/Dark%20Blue%20Red%20White%20Generic%20News%20General%20News%20YouTube%20Banner.png?updatedAt=1724719432697",
