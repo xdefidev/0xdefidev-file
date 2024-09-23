@@ -19,7 +19,7 @@ export default function Navbar() {
           </a>
         </li>
         <li>
-          <a href="/services" className="font-josefin font-semibold flex items-center gap-1">
+          <a href="/services" className="font-josefin font-semibold flex items-center gap-1 text-[#62646A]">
             Services{" "}
             <span>
               <svg
@@ -34,7 +34,7 @@ export default function Navbar() {
           </a>
         </li>
         <li>
-          <a href="/portfolio" className="font-josefin font-semibold">
+          <a href="/portfolio" className="font-josefin font-semibold text-[#62646A]">
             Portfolio
           </a>
         </li>
@@ -44,7 +44,7 @@ export default function Navbar() {
             href="https://t.me/xdefideveloper"
             // className={styles.contact}
             target="_blank"
-            className="font-josefin font-semibold"
+            className="font-josefin font-semibold text-[#62646A]"
           >
             Contact
           </a>
