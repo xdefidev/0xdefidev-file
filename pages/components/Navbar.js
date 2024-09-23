@@ -14,17 +14,17 @@ export default function Navbar() {
       </Link>
       <ul className="sm:flex hidden ">
         <li>
-          <a href="/" className="font-josefin">
+          <a href="/" className="font-josefin font-semibold">
             Home
           </a>
         </li>
         <li>
-          <a href="/services" className="font-josefin">
+          <a href="/services" className="font-josefin font-semibold">
             Services
           </a>
         </li>
         <li>
-          <a href="/portfolio" className="font-josefin">
+          <a href="/portfolio" className="font-josefin font-semibold">
             Portfolio
           </a>
         </li>
@@ -34,7 +34,7 @@ export default function Navbar() {
             href="https://t.me/xdefideveloper"
             // className={styles.contact}
             target="_blank"
-            className="font-josefin"
+            className="font-josefin font-semibold"
           >
             Contact
           </a>
@@ -66,7 +66,7 @@ export default function Navbar() {
             </li>
             <a href="#" target="_blank" className="w-full">
               <li
-                className={`mx-4 text-lg cursor-pointer font-josefin hover:text-[#0462f7]`}
+                className={`mx-4 text-lg cursor-pointer font-josefin font-semibold hover:text-[#0462f7]`}
               >
                 Home
               </li>
@@ -74,21 +74,21 @@ export default function Navbar() {
            
             <a href="/services" target="_blank" className="w-full">
               <li
-                className={`mx-4 text-lg cursor-pointer font-josefin hover:text-[#0462f7]`}
+                className={`mx-4 text-lg cursor-pointer font-josefin font-semibold hover:text-[#0462f7]`}
               >
                 Services
               </li>
             </a>
             <a href="/portfolio" target="_blank" className="w-full">
               <li
-                className={`mx-4 text-lg cursor-pointer font-josefin hover:text-[#0462f7]`}
+                className={`mx-4 text-lg cursor-pointer font-josefin font-semibold hover:text-[#0462f7]`}
               >
                 Portfolio
               </li>
             </a>
             <a href="https://t.me/xdefideveloper" target="_blank" className="w-full">
               <li
-                className={`mx-4 text-lg cursor-pointer font-josefin hover:text-[#0462f7]`}
+                className={`mx-4 text-lg cursor-pointer font-josefin font-semibold hover:text-[#0462f7]`}
               >
                 Contact
               </li>
