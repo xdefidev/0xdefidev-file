@@ -231,7 +231,7 @@ export default function Home() {
           </h2>
 
           <p className="sm:mx-24 mx-8 text-center antialiased text-balance">
-            Since 2018, with over 200 successful projects the goal of Xdefidev
+            Since 2018, with 200+ successful projects the goal of Xdefidev
             has been to help project starters create innovative solutions in the
             cryptocurrency space. We have consistently strived to offer expert
             guidance, technical expertise and feasible solutions to clients
