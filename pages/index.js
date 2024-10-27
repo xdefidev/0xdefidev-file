@@ -295,7 +295,8 @@ export default function Home() {
         </div>
       </main>
 
-      <div className={styles.skill}>
+      <div className={`${styles.skill} items-center`}
+      >
         <h2 className="text-5xl font-bold antialiased">Technology</h2>
         <p className="my-4 !text-2xl antialiased">Blockchains</p>
         <div>

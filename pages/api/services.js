@@ -20,7 +20,7 @@ export default [
     }
   },  
   {
-    "name": "Telegram Mini App | Hamster, Tapswap Clone",
+    "name": "Telegram Mini App Development",
     "description": "A versatile Telegram mini app similar to Hamster and TapSwap, offering quick and seamless access to a variety of features within the Telegram ecosystem.",
     "image": "https://ik.imagekit.io/hp2oyifpf/Dark%20Blue%20Red%20White%20Generic%20News%20General%20News%20YouTube%20Banner.png?updatedAt=1724719432697",
     "status": true,
@@ -40,7 +40,7 @@ export default [
     }
   },  
   {
-    name: "Pinksale Launchpad clone",
+    name: "Pinksale presale Launchpad clone",
     description:
       "Secure launchpad protocol like Pinksale with presale list and fairlaunch.",
     image: "https://ik.imagekit.io/hp2oyifpf/Copy%20of%20Black%20and%20Yellow%20Dark%20Gamer%20Survival%20YouTube%20Banner.png?updatedAt=1724719521891",
@@ -80,7 +80,7 @@ export default [
     }
   },  
   {
-    name: "Crypto Sniper Bot on Telegram | Unibot Bananagun Clone ",
+    name: "Telegram Crypto Sniper Bot",
     description: "Fully working sniper bot on telegram with manual and auto trading.",
     image: "",
     status: true,
@@ -100,47 +100,70 @@ export default [
     }
   },
   {
-    name: "PoS | PoA EVM Blockchain Development",
-    description:
-      "An EVM blockchain that supports ERC20 Token, and dApp, NFT with wallet and Explorer.",
-    image: "https://ik.imagekit.io/hp2oyifpf/Layer%202%20blockchain%20(1).png?updatedAt=1724719658061",
-    status: true,
-    youtube: "Ynn_hBBORUY",
-    slug: "pos-poa-blockchain-development",
-    p: {
-      description:
-        "Do you want an expert to build your own blockchain? Do you want people to create Token, dApp, NFT and develop an ecosystem in your own blockchain? which can help to increase your coin value?",
-      list: [
-        "Fork Ethereum, Binance blockchain with consensus algorithm of PoA or PoW or PoS.",
-        "Web Wallet fork of MyEtherWallet.",
-        "Block Explorer to analyze transactions, blocks, wallet addresses, smart contracts, and other on-chain data.",
-        "Metamask support",
-        "Supports EVM - solidity smart contracts",
-        "NFTs and GameFi",
-        "Developed with Go, Elixir, go ethereum",
-        "Service will include cross-chain bridge",
-      ],
-    },
-  },
+    "name": "PoS Blockchain Development",
+    "description":
+      "An efficient and eco-friendly EVM-compatible blockchain with a Proof of Stake (PoS) consensus mechanism. Supports ERC20 tokens, dApps, NFTs, with integrated wallet and explorer functionalities.",
+    "image": "https://ik.imagekit.io/hp2oyifpf/Layer%202%20blockchain%20(1).png?updatedAt=1724719658061",
+    "status": true,
+    "youtube": "Ynn_hBBORUY",
+    "slug": "pos-blockchain-development",
+    "p": {
+      "description":
+        "Are you interested in building a sustainable, energy-efficient blockchain with a Proof of Stake consensus mechanism? Launch your blockchain with support for tokens, dApps, NFTs, and a complete ecosystem to enhance your coin's value and usability.",
+      "list": [
+        "Customized fork of Ethereum or Binance blockchain utilizing a PoS consensus algorithm for high efficiency and security.",
+        "Web wallet support based on MyEtherWallet for secure, user-friendly transactions.",
+        "Block Explorer to track transactions, wallets, blocks, and on-chain data with full transparency.",
+        "Metamask support to enhance accessibility and usability for a wide user base.",
+        "EVM compatibility to deploy and execute Solidity-based smart contracts.",
+        "Support for NFTs, DeFi, and GameFi applications to broaden your ecosystem.",
+        "Developed using secure and scalable technologies like Go, Rust, and Go Ethereum.",
+        "Service includes a cross-chain bridge for interoperability with other blockchain networks."
+      ]
+    }
+  },  
   {
-    name: "EVM Testnet Blockchain Development",
-    description: "An EVM blockchain testnet with faucet.",
-    image: "https://ik.imagekit.io/hp2oyifpf/Layer%202%20blockchain%20(1).png?updatedAt=1724719658061",
-    status: true,
-    youtube: "",
-    slug: "testnet-blockchain-development",
-    p: {
-      description:
-        "Do you want an expert to build your own testnet blockchain, explorer with testnet faucet to allow users claim testnet coin?",
-      list: [
-        "Block Explorer to analyze transactions, blocks, wallet addresses, smart contracts, and other on-chain data.",
-        "Faucet dapp",
-        "Metamask support",
-        "Supports EVM - solidity smart contracts",
-        "Developed with Go, Elixir, go ethereum",
-      ],
-    },
-  },
+    "name": "PoA Blockchain Development",
+    "description":
+      "A scalable, cost-effective EVM-compatible blockchain with a Proof of Authority (PoA) consensus mechanism. Supports ERC20 tokens, dApps, NFTs, with integrated wallet and explorer functionality.",
+    "image": "https://ik.imagekit.io/hp2oyifpf/Layer%202%20blockchain%20(1).png?updatedAt=1724719658061",
+    "status": true,
+    "youtube": "Ynn_hBBORUY",
+    "slug": "poa-blockchain-development",
+    "p": {
+      "description":
+        "Looking to create your own PoA blockchain with the flexibility for users to launch tokens, dApps, NFTs, and build an entire ecosystem? This tailored development can enhance the value and functionality of your coin and blockchain network.",
+      "list": [
+        "Customized fork of Ethereum or Binance blockchain with a PoA consensus algorithm.",
+        "Web wallet setup, forked from MyEtherWallet, to enable secure and seamless transactions.",
+        "Block Explorer setup for transaction analysis, wallet management, smart contract tracking, and on-chain data visibility.",
+        "Metamask compatibility for easy integration and broad accessibility.",
+        "EVM compatibility for deploying Solidity smart contracts.",
+        "Support for NFTs and GameFi applications to expand your blockchain's functionality.",
+        "Developed using robust technologies like Go, Elixir, and Go Ethereum for scalability and security.",
+        "Cross-chain bridge for seamless token transfers and interoperability with other blockchains."
+      ]
+    }
+  },  
+  {
+    "name": "Testnet (EVM) Blockchain Development",
+    "description": "A customizable EVM-compatible testnet blockchain with integrated faucet for seamless testing and development.",
+    "image": "https://ik.imagekit.io/hp2oyifpf/Layer%202%20blockchain%20(1).png?updatedAt=1724719658061",
+    "status": true,
+    "youtube": "",
+    "slug": "testnet-blockchain-development",
+    "p": {
+      "description":
+        "Looking for a dedicated testnet blockchain with explorer and a faucet to allow users to claim testnet tokens? Our EVM Testnet Blockchain Development service equips you with a fully functional test environment for secure and efficient testing of your applications.",
+      "list": [
+        "Block Explorer to monitor transactions, blocks, wallet addresses, smart contracts, and other on-chain data with complete transparency.",
+        "Faucet dApp to distribute testnet tokens and allow developers to test transactions.",
+        "Full Metamask integration for easy user access and seamless transactions.",
+        "Supports EVM-compatible Solidity smart contracts for extensive testing and deployment.",
+        "Built using robust technologies like Go, Elixir, and Go Ethereum for reliable performance."
+      ]
+    }
+  },  
   // {
   //   name: "Launchpad like Pinksale",
   //   description:
@@ -206,7 +229,7 @@ export default [
     },
   },
   {
-    name: "Pinksale Lock Dapp Clone",
+    name: "Pinksale Token and Liquidity Lock Dapp Clone",
     description: "Exact pinksale style lock dapp, with same dynamic features. ",
     image: "https://ik.imagekit.io/hp2oyifpf/Screenshot%202024-02-25%20at%2020.38.27.png?updatedAt=1708890304246",
     status: true,
@@ -266,26 +289,25 @@ export default [
   },
 
   {
-    name: "ERC20 Token for ETH, BSC, AVAX, MATIC",
-    description:
-      "Develop Ethereum Compatible tokens with ERC20 standard and custom tokenomics.",
-    image: "https://ik.imagekit.io/hp2oyifpf/Add%20a%20subheading%20(5).png?updatedAt=1724720607333",
-    status: true,
-    youtube: "",
-    slug: "erc20-token-development",
-    p: {
-      description:
-        "Let us develop your custom token written with solidity and deployed on any EVM-Compatible blockchain. We can provide guide to deploy the smart contract yourself or Transafer ownership.",
-      list: [
-        "Create and issue with ERC20 Token standard",
-        "Deploy to mainnet and Transfer ownership",
-        "Verified Contract",
-      ],
-    },
-  },
-
+    "name": "Crypto Token Development",
+    "description":
+      "Develop custom Ethereum-compatible tokens using the ERC20 standard, with tailored tokenomics to fit your project needs.",
+    "image": "https://ik.imagekit.io/hp2oyifpf/Add%20a%20subheading%20(5).png?updatedAt=1724720607333",
+    "status": true,
+    "youtube": "",
+    "slug": "erc20-token-development",
+    "p": {
+      "description":
+        "Need a custom ERC20 token on an EVM-compatible blockchain? We can develop and deploy your token with Solidity, along with guidance for deploying your smart contract or transferring ownership to you.",
+      "list": [
+        "Create and issue tokens using the ERC20 standard.",
+        "Deploy to the mainnet and transfer contract ownership.",
+        "Provide a verified contract for transparency and trust."
+      ]
+    }
+  },  
   {
-    name: "Decentralised Exchange | Pancakeswap Clone Development",
+    name: "Pancakeswap Clone | DEX Development",
     description:
       "Clone Pancakeswap AMM Decentralised Exchange with customization. Swap, Farm, Prediction and Lottery.",
     image: "https://ik.imagekit.io/hp2oyifpf/PANCAKESWAP%20CLONE.png?updatedAt=1724720493864",
@@ -302,24 +324,6 @@ export default [
         "Multi ownership",
         "Lottery game  and script",
         "Prediction game and script",
-      ],
-    },
-  },
-  {
-    name: "Sports Betting Platform",
-    description:
-      "Sports Betting Platform with Soccer, Tennis, Cricket and other games.",
-    image: "",
-    status: true,
-    youtube: "kakoUaa_FVM",
-    slug: "sports-betting-platform",
-    p: {
-      description:
-        "Sports betting wesite with realtime match add and update. Multiple payment methods. Bookies / Club holders feature. Nuxtjs and Laravel for backend.",
-      list: [
-        "Single bet and multi bet system",
-        "Bookies / Club holder and Referral",
-        "realtime match add, update,  ratio change and match control",
       ],
     },
   },
