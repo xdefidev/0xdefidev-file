@@ -40,7 +40,7 @@ export default [
     }
   },  
   {
-    name: "Pinksale presale Launchpad clone",
+    name: "Pinksale - Presale Launchpad clone",
     description:
       "Secure launchpad protocol like Pinksale with presale list and fairlaunch.",
     image: "https://ik.imagekit.io/hp2oyifpf/Copy%20of%20Black%20and%20Yellow%20Dark%20Gamer%20Survival%20YouTube%20Banner.png?updatedAt=1724719521891",
