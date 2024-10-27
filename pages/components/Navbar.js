@@ -80,7 +80,7 @@ export default function Navbar() {
                   </a>
                 ))}
                 <div className="flex justify-end">
-                <li className="items-end text-sm cursor-pointer"> <a href="/services" alt="Full service page">View All {">>>"}</a></li>
+                <li className="items-end text-sm cursor-pointer underline"> <a href="/services" alt="Full service page">View All {">>>"}</a></li>
                 </div>
                 
               </div>
