@@ -126,8 +126,7 @@ export default function Home() {
             </h1>
 
             <p className="text-xl antialiased font-display text-balance">
-              Hire Top Vetted Developers to help you build on Blockchain, Web
-              and Mobile
+            Build with Confidence, Hire Vetted Experts for Your Blockchain, Web, and Mobile Development Projects
             </p>
             {/* <div></div> */}
             <div className="flex pt-2 mt-4 gap-2">
