@@ -3,6 +3,8 @@ import { HiMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import styles from "/styles/Home.module.css";
 import Link from "next/link";
+import Image from "next/image"
+import Logo from "../../public/logo.png"
 
 import services from "../api/services";
 
@@ -16,7 +18,8 @@ export default function Navbar() {
   return (
     <nav className="my-6">
       <Link href="/" className="mr-auto flex">
-        <h2 className="text-2xl font-semibold text-[#404145]">XDefiDev</h2>
+        {/* <h2 className="text-2xl font-semibold text-[#404145]"></h2> */}
+        <Image src={Logo} alt="logo" width={150} height={100} />
       </Link>
       <ul className="sm:flex hidden ">
         <li>
