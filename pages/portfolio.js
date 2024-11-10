@@ -44,6 +44,12 @@ export default function Home() {
         />
 
         <meta property="og:site_name" content="Xdefidev Portfolio" />
+
+        <link
+          rel="canonical"
+          href="https://xdefidev.com/portfolio"
+          key="canonical"
+        />
       </Head>
       <Navbar />
       <div className="text-center text-5xl !mb-8 font-semibold antialiased ">

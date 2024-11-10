@@ -67,6 +67,12 @@ export default function Home() {
 
         <link rel="preconnect" href="https://ik.imagekit.io/" />
 
+        <link
+          rel="canonical"
+          href="https://xdefidev.com"
+          key="canonical"
+        />
+
         <meta
           property="og:image"
           content="https://ik.imagekit.io/lzgpc48la/Yellow_Bright_Business_Idea_Tutorial_Youtube_Thumbnail_n186Tgza0.png?ik-sdk-version=javascript-1.4.3&updatedAt=1665836822605"

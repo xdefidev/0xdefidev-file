@@ -21,6 +21,12 @@ export default function Service() {
         />
 
         <meta http-equiv="content-language" content="en" />
+
+        <link
+          rel="canonical"
+          href="https://xdefidev.com/services"
+          key="canonical"
+        />
       </Head>
       <Navbar />
 
