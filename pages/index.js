@@ -50,7 +50,8 @@ export default function Home() {
           content="Looking for a skilled Blockchain Developer? We’ve got you covered! Boost your crypto project with our expert team, specializing in website development, smart contracts, Web3 dApps, and web applications."
         />
 
-        <meta http-equiv="content-language" content="en" />
+
+        <meta http-equiv="Content-Language" content="en" />
         <meta
           name="google-site-verification"
           content="C7U3VQkY7WQDIkayBFDUf9CmlRoFm-jjUWTGRACRCig"
