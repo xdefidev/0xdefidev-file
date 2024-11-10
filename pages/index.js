@@ -96,6 +96,10 @@ export default function Home() {
 
         <meta property="og:site_name" content="Xdefidev" />
 
+        <meta name="keywords" content="blockchain development, crypto development, dApps, Web3 applications, smart contracts, Ethereum, Solidity, blockchain technology, decentralized applications, DeFi, NFT development, Web3 development, crypto projects, fullstack blockchain, web development, front-end development, backend development, JavaScript, React, Node.js, smart contract programming, decentralized finance, blockchain consulting, cryptocurrency, blockchain security, blockchain developer, blockchain solutions, blockchain integration, digital wallets, tokenization, blockchain architecture, web application development, custom blockchain solutions, token contracts, smart contract audits, EVM, Web3.js, Truffle, Remix, blockchain frameworks, consensus mechanisms, blockchain nodes, blockchain networks, distributed ledger technology, cross-chain compatibility, blockchain ecosystems, blockchain APIs, dApp frameworks, decentralized finance apps, blockchain protocols, private blockchain development, enterprise blockchain, crypto wallet integration, blockchain scaling, NFT minting, crypto exchange development" />
+
+        <meta name="robots" content="index, follow" />
+
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
