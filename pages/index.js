@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>0xDefiDev | Blockchain and Web Development services</title>
+        <title>xDefiDev | Blockchain and Web Development services</title>
 
         <meta
           name="description"

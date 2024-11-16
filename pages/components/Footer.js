@@ -62,7 +62,7 @@ export default function Footer() {
       </div>
       <div></div>
       <div className="content-body">
-        <p>© Copyright 0xDefiDev {year}</p>
+        <p>© Copyright xDefiDev {year}</p>
       </div>
     </footer>
   )

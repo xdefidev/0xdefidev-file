@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://xdefidev.com
+
+# Sitemaps
+Sitemap: https://xdefidev.com/sitemap.xml

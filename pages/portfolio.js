@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>0xDefiDev Portfolio</title>
+        <title>xDefiDev Portfolio</title>
 
         <meta property="og:title" content="Portfolio | View our Our Blockchain & Fullstack Development Projects" />
 
