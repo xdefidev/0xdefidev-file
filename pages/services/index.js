@@ -13,7 +13,7 @@ export default function Service() {
   return (
     <section>
       <Head>
-        <title>{`Services| Expert Blockchain & Fullstack Development Solutions`}</title>
+        <title>{`Services | Expert Blockchain & Fullstack Development Solutions`}</title>
 
         <meta
           name="description"
