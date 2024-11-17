@@ -33,23 +33,27 @@ export default function Service({ post }) {
   return (
     <section>
       <Head>
-        <title>{`${post.name} services`}</title>
+      <title>{`${post.name} | XDefiDev Services`}</title>
+
+        <meta property="og:title" content={`${post.name} Services`} />
+
+        <meta property="og:description" content={post.description} />
+
+        <meta property="og:image" content={post.image || imageLink} />
+        <meta
+          property="og:url"
+          content={`https://xdefidev.com/services/${post.slug}`}
+        />
 
         <meta name="description" content={post.description} />
-
-        <meta
-          property="og:image"
-          content={post.image}
-        />
 
         <meta http-equiv="content-language" content="en" />
 
         <meta name="robots" content="index, follow" />
 
-
         <link
           rel="canonical"
-          href={"https://xdefidev.com/services/"+post.slug}
+          href={`https://xdefidev.com/services/${post.slug}`}
           key="canonical"
         />
       </Head>
