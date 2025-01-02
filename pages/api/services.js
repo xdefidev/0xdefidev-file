@@ -1,49 +1,77 @@
 export default [
   {
-    "name": "PUMP.fun Clone on EVM and SOLANA",
-    "description": "Pump.Fun Clone development for Ethereum and Solana",
-    "image": "https://ik.imagekit.io/hp2oyifpf/pumpfun-clone.png?updatedAt=1727082514946",
-    "status": true,
-    "youtube": "",
-    "slug": "pump-fun-clone-development",
-    "p": {
-      "description": "We are offering the development of a customized Pump.Fun clone for both Ethereum or Solana, featuring advanced buy/sell functionalities, real-time charts, and enhanced security measures. Our highly customizable architecture allows easy feature upgrades and adjustments. Let us help you create a secure and user-friendly platform.",
-      "list": [
+    name: "Solana Volume Bot Telegram",
+    description:
+      "The Solana Volume Bot includes advanced tools to increase token trading volume, build trust among holders, and attract new investors. We can customize the bot to suit your specific project needs.",
+    image: "https://ik.imagekit.io/hp2oyifpf/SOLANA%20Volume%20Bot%20on%20Telegram.png?updatedAt=1735771535130",
+    status: true,
+    youtube: "",
+    slug: "solana-volume-bot-telegram",
+    p: {
+      description:
+        " A fully-featured volume-boosting bot for Solana tokens, designed to help projects enhance trading activity and engagement. This bot provides a user-friendly interface and essential features to manage, monitor, and boost token performance effectively.",
+      list: [
+        "Unlock usage for boosting token activity",
+        "Integrated wallet management for deposits and withdrawals",
+        "Boost token trading volume seamlessly",
+        "Boost token holders with advanced strategies",
+        "Referral system to promote your project",
+        "Refresh feature to keep data updated",
+        "Easy token address modification",
+      ],
+    },
+  },
+  {
+    name: "PUMP.fun Clone on EVM and SOLANA",
+    description: "Pump.Fun Clone development for Ethereum and Solana",
+    image:
+      "https://ik.imagekit.io/hp2oyifpf/pumpfun-clone.png?updatedAt=1727082514946",
+    status: true,
+    youtube: "",
+    slug: "pump-fun-clone-development",
+    p: {
+      description:
+        "We are offering the development of a customized Pump.Fun clone for both Ethereum or Solana, featuring advanced buy/sell functionalities, real-time charts, and enhanced security measures. Our highly customizable architecture allows easy feature upgrades and adjustments. Let us help you create a secure and user-friendly platform.",
+      list: [
         "Advanced buy/sell functionalities",
         "Integrated real-time charts for enhanced user experience",
         "User-friendly interface",
         "Secure transactions",
         "Multi-functional support",
         "Regular updates and support",
-        "Customization to fit your specific requirements"
-      ]
-    }
-  },  
+        "Customization to fit your specific requirements",
+      ],
+    },
+  },
   {
-    "name": "Telegram Mini App Development",
-    "description": "A versatile Telegram mini app similar to Hamster and TapSwap, offering quick and seamless access to a variety of features within the Telegram ecosystem.",
-    "image": "https://ik.imagekit.io/hp2oyifpf/Dark%20Blue%20Red%20White%20Generic%20News%20General%20News%20YouTube%20Banner.png?updatedAt=1724719432697",
-    "status": true,
-    "youtube": "jnL-70RXVII",
-    "slug": "telegram-mini-app",
-    "p": {
-      "description": "A powerful mini app for Telegram that integrates multiple functionalities, enabling users to access, use, and manage various services efficiently.",
-      "list": [
+    name: "Telegram Mini App Development",
+    description:
+      "A versatile Telegram mini app similar to Hamster and TapSwap, offering quick and seamless access to a variety of features within the Telegram ecosystem.",
+    image:
+      "https://ik.imagekit.io/hp2oyifpf/Dark%20Blue%20Red%20White%20Generic%20News%20General%20News%20YouTube%20Banner.png?updatedAt=1724719432697",
+    status: true,
+    youtube: "jnL-70RXVII",
+    slug: "telegram-mini-app",
+    p: {
+      description:
+        "A powerful mini app for Telegram that integrates multiple functionalities, enabling users to access, use, and manage various services efficiently.",
+      list: [
         "Quick access to services",
         "Seamless integration with Telegram",
         "User-friendly interface",
         "Secure transactions",
         "Multi-functional support",
         "Regular updates and support",
-        "Referral system"
-      ]
-    }
-  },  
+        "Referral system",
+      ],
+    },
+  },
   {
     name: "Pinksale - Presale Launchpad clone",
     description:
       "Secure launchpad protocol like Pinksale with presale list and fairlaunch.",
-    image: "https://ik.imagekit.io/hp2oyifpf/Copy%20of%20Black%20and%20Yellow%20Dark%20Gamer%20Survival%20YouTube%20Banner.png?updatedAt=1724719521891",
+    image:
+      "https://ik.imagekit.io/hp2oyifpf/Copy%20of%20Black%20and%20Yellow%20Dark%20Gamer%20Survival%20YouTube%20Banner.png?updatedAt=1724719521891",
     status: true,
     youtube: "M98xybTnuoY",
     slug: "pinksale-launchpad-clone",
@@ -61,33 +89,37 @@ export default [
     },
   },
   {
-    "name": "Solana Casino Platform",
-    "description": "A cutting-edge casino web platform built on the Solana blockchain, offering fast, secure, and transparent gaming experiences.",
-    "image": "",
-    "status": true,
-    "youtube": "",
-    "slug": "solana-casino-platform",
-    "p": {
-      "description": "Experience the thrill of casino gaming on the Solana blockchain. Our platform provides a wide range of games, secure transactions, and provably fair outcomes.",
-      "list": [
+    name: "Solana Casino Platform",
+    description:
+      "A cutting-edge casino web platform built on the Solana blockchain, offering fast, secure, and transparent gaming experiences.",
+    image: "",
+    status: true,
+    youtube: "",
+    slug: "solana-casino-platform",
+    p: {
+      description:
+        "Experience the thrill of casino gaming on the Solana blockchain. Our platform provides a wide range of games, secure transactions, and provably fair outcomes.",
+      list: [
         "Fast and secure transactions",
         "Wide range of casino games",
         "Provably fair gaming",
         "Transparent and decentralized",
         "User-friendly interface",
-        "24/7 customer support"
-      ]
-    }
-  },  
+        "24/7 customer support",
+      ],
+    },
+  },
   {
     name: "Telegram Crypto Sniper Bot",
-    description: "Fully working sniper bot on telegram with manual and auto trading.",
+    description:
+      "Fully working sniper bot on telegram with manual and auto trading.",
     image: "",
     status: true,
-    youtube:"",
+    youtube: "",
     slug: "telegram-sniper-bot-clone",
     p: {
-      description: "We have developed a fully working Sniper bot on telegram. This product allows your users to snipe tokens and trade crypto quickly within the bot.",
+      description:
+        "We have developed a fully working Sniper bot on telegram. This product allows your users to snipe tokens and trade crypto quickly within the bot.",
       list: [
         "Buy & Sell (Limit Orders, Auto Snipe)",
         "Buy & Sell (Manual)",
@@ -95,22 +127,23 @@ export default [
         "Create Wallet & Import Wallet",
         "Liquidity Snipe - Buys Token When Liquidity is added",
         "Deploy and Setup the bot on your server",
-        "3 Months Free Support"
-      ]
-    }
+        "3 Months Free Support",
+      ],
+    },
   },
   {
-    "name": "PoS Blockchain Development",
-    "description":
+    name: "PoS Blockchain Development",
+    description:
       "An efficient and eco-friendly EVM-compatible blockchain with a Proof of Stake (PoS) consensus mechanism. Supports ERC20 tokens, dApps, NFTs, with integrated wallet and explorer functionalities.",
-    "image": "https://ik.imagekit.io/hp2oyifpf/Layer%202%20blockchain%20(1).png?updatedAt=1724719658061",
-    "status": true,
-    "youtube": "Ynn_hBBORUY",
-    "slug": "pos-blockchain-development",
-    "p": {
-      "description":
+    image:
+      "https://ik.imagekit.io/hp2oyifpf/Layer%202%20blockchain%20(1).png?updatedAt=1724719658061",
+    status: true,
+    youtube: "Ynn_hBBORUY",
+    slug: "pos-blockchain-development",
+    p: {
+      description:
         "Are you interested in building a sustainable, energy-efficient blockchain with a Proof of Stake consensus mechanism? Launch your blockchain with support for tokens, dApps, NFTs, and a complete ecosystem to enhance your coin's value and usability.",
-      "list": [
+      list: [
         "Customized fork of Ethereum or Binance blockchain utilizing a PoS consensus algorithm for high efficiency and security.",
         "Web wallet support based on MyEtherWallet for secure, user-friendly transactions.",
         "Block Explorer to track transactions, wallets, blocks, and on-chain data with full transparency.",
@@ -118,22 +151,23 @@ export default [
         "EVM compatibility to deploy and execute Solidity-based smart contracts.",
         "Support for NFTs, DeFi, and GameFi applications to broaden your ecosystem.",
         "Developed using secure and scalable technologies like Go, Rust, and Go Ethereum.",
-        "Service includes a cross-chain bridge for interoperability with other blockchain networks."
-      ]
-    }
-  },  
+        "Service includes a cross-chain bridge for interoperability with other blockchain networks.",
+      ],
+    },
+  },
   {
-    "name": "PoA Blockchain Development",
-    "description":
+    name: "PoA Blockchain Development",
+    description:
       "A scalable, cost-effective EVM-compatible blockchain with a Proof of Authority (PoA) consensus mechanism. Supports ERC20 tokens, dApps, NFTs, with integrated wallet and explorer functionality.",
-    "image": "https://ik.imagekit.io/hp2oyifpf/Layer%202%20blockchain%20(1).png?updatedAt=1724719658061",
-    "status": true,
-    "youtube": "Ynn_hBBORUY",
-    "slug": "poa-blockchain-development",
-    "p": {
-      "description":
+    image:
+      "https://ik.imagekit.io/hp2oyifpf/Layer%202%20blockchain%20(1).png?updatedAt=1724719658061",
+    status: true,
+    youtube: "Ynn_hBBORUY",
+    slug: "poa-blockchain-development",
+    p: {
+      description:
         "Looking to create your own PoA blockchain with the flexibility for users to launch tokens, dApps, NFTs, and build an entire ecosystem? This tailored development can enhance the value and functionality of your coin and blockchain network.",
-      "list": [
+      list: [
         "Customized fork of Ethereum or Binance blockchain with a PoA consensus algorithm.",
         "Web wallet setup, forked from MyEtherWallet, to enable secure and seamless transactions.",
         "Block Explorer setup for transaction analysis, wallet management, smart contract tracking, and on-chain data visibility.",
@@ -141,29 +175,31 @@ export default [
         "EVM compatibility for deploying Solidity smart contracts.",
         "Support for NFTs and GameFi applications to expand your blockchain's functionality.",
         "Developed using robust technologies like Go, Elixir, and Go Ethereum for scalability and security.",
-        "Cross-chain bridge for seamless token transfers and interoperability with other blockchains."
-      ]
-    }
-  },  
+        "Cross-chain bridge for seamless token transfers and interoperability with other blockchains.",
+      ],
+    },
+  },
   {
-    "name": "Testnet (EVM) Blockchain Development",
-    "description": "A customizable EVM-compatible testnet blockchain with integrated faucet for seamless testing and development.",
-    "image": "https://ik.imagekit.io/hp2oyifpf/Layer%202%20blockchain%20(1).png?updatedAt=1724719658061",
-    "status": true,
-    "youtube": "",
-    "slug": "testnet-blockchain-development",
-    "p": {
-      "description":
+    name: "Testnet (EVM) Blockchain Development",
+    description:
+      "A customizable EVM-compatible testnet blockchain with integrated faucet for seamless testing and development.",
+    image:
+      "https://ik.imagekit.io/hp2oyifpf/Layer%202%20blockchain%20(1).png?updatedAt=1724719658061",
+    status: true,
+    youtube: "",
+    slug: "testnet-blockchain-development",
+    p: {
+      description:
         "Looking for a dedicated testnet blockchain with explorer and a faucet to allow users to claim testnet tokens? Our EVM Testnet Blockchain Development service equips you with a fully functional test environment for secure and efficient testing of your applications.",
-      "list": [
+      list: [
         "Block Explorer to monitor transactions, blocks, wallet addresses, smart contracts, and other on-chain data with complete transparency.",
         "Faucet dApp to distribute testnet tokens and allow developers to test transactions.",
         "Full Metamask integration for easy user access and seamless transactions.",
         "Supports EVM-compatible Solidity smart contracts for extensive testing and deployment.",
-        "Built using robust technologies like Go, Elixir, and Go Ethereum for reliable performance."
-      ]
-    }
-  },  
+        "Built using robust technologies like Go, Elixir, and Go Ethereum for reliable performance.",
+      ],
+    },
+  },
   // {
   //   name: "Launchpad like Pinksale",
   //   description:
@@ -189,7 +225,8 @@ export default [
     name: "Cryptocurrency Casino Development",
     description:
       "Online Gaming cryptoturrency casino with multiple games, ERC20 support as you want.",
-    image: "https://ik.imagekit.io/hp2oyifpf/create%20crypto%20gamble%20games%20website%20with%20blackjack%20dice%20crash.png?updatedAt=1724719749080",
+    image:
+      "https://ik.imagekit.io/hp2oyifpf/create%20crypto%20gamble%20games%20website%20with%20blackjack%20dice%20crash.png?updatedAt=1724719749080",
     status: true,
     youtube: "E4fIL4SjEXk",
     slug: "crypto-casino-development",
@@ -231,22 +268,24 @@ export default [
   {
     name: "Pinksale Token and Liquidity Lock Dapp Clone",
     description: "Exact pinksale style lock dapp, with same dynamic features. ",
-    image: "https://ik.imagekit.io/hp2oyifpf/Screenshot%202024-02-25%20at%2020.38.27.png?updatedAt=1708890304246",
+    image:
+      "https://ik.imagekit.io/hp2oyifpf/Screenshot%202024-02-25%20at%2020.38.27.png?updatedAt=1708890304246",
     status: true,
-    youtube:"",
+    youtube: "",
     slug: "pinksale-lock-dapp-clone",
     p: {
-      description: "Upon popular request we have developed an exact clone of the pinksale launchpad system, it comes equipped with the same features and can easily customise to your requirements.",
+      description:
+        "Upon popular request we have developed an exact clone of the pinksale launchpad system, it comes equipped with the same features and can easily customise to your requirements.",
       list: [
         "Token Lock",
         "Liquidity Lock",
         "Vesting",
         "Locked Token List",
-        "Locked LP List"
-      ]
-    }
+        "Locked LP List",
+      ],
+    },
   },
-  
+
   // {
   //   name: "IDO Launchpad Development | Pinksale Clone",
   //   description:
@@ -289,28 +328,30 @@ export default [
   },
 
   {
-    "name": "Crypto Token Development",
-    "description":
+    name: "Crypto Token Development",
+    description:
       "Develop custom Ethereum-compatible tokens using the ERC20 standard, with tailored tokenomics to fit your project needs.",
-    "image": "https://ik.imagekit.io/hp2oyifpf/Add%20a%20subheading%20(5).png?updatedAt=1724720607333",
-    "status": true,
-    "youtube": "",
-    "slug": "erc20-token-development",
-    "p": {
-      "description":
+    image:
+      "https://ik.imagekit.io/hp2oyifpf/Add%20a%20subheading%20(5).png?updatedAt=1724720607333",
+    status: true,
+    youtube: "",
+    slug: "erc20-token-development",
+    p: {
+      description:
         "Need a custom ERC20 token on an EVM-compatible blockchain? We can develop and deploy your token with Solidity, along with guidance for deploying your smart contract or transferring ownership to you.",
-      "list": [
+      list: [
         "Create and issue tokens using the ERC20 standard.",
         "Deploy to the mainnet and transfer contract ownership.",
-        "Provide a verified contract for transparency and trust."
-      ]
-    }
-  },  
+        "Provide a verified contract for transparency and trust.",
+      ],
+    },
+  },
   {
     name: "Pancakeswap Clone | DEX Development",
     description:
       "Clone Pancakeswap AMM Decentralised Exchange with customization. Swap, Farm, Prediction and Lottery.",
-    image: "https://ik.imagekit.io/hp2oyifpf/PANCAKESWAP%20CLONE.png?updatedAt=1724720493864",
+    image:
+      "https://ik.imagekit.io/hp2oyifpf/PANCAKESWAP%20CLONE.png?updatedAt=1724720493864",
     status: true,
     youtube: "",
     slug: "amm-dex-pancakeswap-clone",
@@ -360,9 +401,8 @@ export default [
         "Develop and deploy secure and efficient smart contracts",
         "Build optimized web application and API",
         "Enhanced Security Protocols",
-        "24/7 Support and Maintenance"
+        "24/7 Support and Maintenance",
       ],
     },
   },
- 
 ];

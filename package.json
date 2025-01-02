@@ -9,6 +9,9 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
+    "@nextui-org/modal": "^2.2.6",
+    "@nextui-org/react": "^2.6.10",
+    "framer-motion": "^11.15.0",
     "next": "13",
     "next-sitemap": "^4.2.3",
     "react": "18.2.0",
