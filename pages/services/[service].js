@@ -116,12 +116,12 @@ export default function Service({ post, onOpen }) {
         </div>
         <div className="antialiased grid gap-4 mb-24 sm:mt-12 -mt-24">
           <h2 className="text-2xl font-medium">Description</h2>
-          <p className="text-balance font-josefin">{post.description}</p>
+          <p className="text-balance font-josefin text-sm">{post.description}</p>
           {post.p.description}
           <h3 className="text-xl">Key Features / Benefits</h3>
           <ul className="grid gap-2 list-decimal pl-8 ">
             {post.p.list.map((item) => (
-              <li className="font-josefin text-balance">{item}</li>
+              <li className="font-josefin text-balance text-sm">{item}</li>
             ))}
             {/* {console.log(post.p.list.length)} */}
           </ul>
