@@ -9,7 +9,9 @@
 
 
 
-
+:root {
+  --font-josefin: 'Josefin Sans', sans-serif;
+}
 
 
 html,
@@ -128,10 +130,10 @@ li {
   letter-spacing: -1.5px;
 }
 
-.footer-list {
+/* .footer-list {
   display: inline-block;
   margin: 20px 0px !important;
-}
+} */
 
 .content-body {
   background-color: #212529;
@@ -147,6 +149,16 @@ li {
 .font1 {
   font-family: var(--font-josefin);
 }
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3; /* Number of lines to show */
+}
+
+
+
 
 @media (max-width: 600px) {
   .header {

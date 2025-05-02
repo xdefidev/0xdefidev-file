@@ -4,7 +4,7 @@ import styles from "/styles/Portfolio.module.css";
 import portfolio from "./api/portfolio";
 
 export default function Home() {
-  console.log(portfolio);
+  // console.log(portfolio);
   return (
     <div>
       <Head>
@@ -54,7 +54,7 @@ export default function Home() {
           key="canonical"
         />
       </Head>
-      <Navbar />
+      
       <div className="text-center text-5xl !mb-8 font-semibold antialiased ">
         <h1>Portfolio</h1>
       </div>

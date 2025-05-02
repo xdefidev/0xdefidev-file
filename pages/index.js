@@ -52,7 +52,7 @@ export default function Home() {
 
         {/* <html lang="en" /> */}
 
-        <meta http-equiv="Content-Language" content="en" />
+        <meta httpEquiv="Content-Language" content="en" />
         <meta
           name="google-site-verification"
           content="C7U3VQkY7WQDIkayBFDUf9CmlRoFm-jjUWTGRACRCig"
@@ -128,7 +128,7 @@ export default function Home() {
         />
       </Head>
 
-      <Navbar />
+
 
       <main className={styles.main}>
         <div className="grid sm:grid-cols-2 grid-cols-1 pt-4 sm:pt-1">
@@ -228,16 +228,16 @@ export default function Home() {
                     <h3 className="text-gray-900 font-semibold antialiased text-xl text-balance">
                       {item.name}
                     </h3>
-                    <p className="font-base text-xs antialiased text-balance !font-josefin">
+                    <p className="truncate line-clamp max-h-[75px] font-base text-xs antialiased text-balance !font-josefin">
                       {item.description}
                     </p>
                   </Link>
                 )
             )}
           </div>
-          <div className="flex w-full justify-end">
-            <Link href="/services">
-              <u>See All &rarr;</u>
+          <div className="flex w-full justify-center">
+            <Link href="/services" className="rounded border px-4 py-2 border-[#000]">
+              <text>View All</text>
             </Link>
           </div>
         </div>
@@ -247,7 +247,7 @@ export default function Home() {
             Why Hire Us?
           </h2>
 
-          <p className="sm:mx-24 mx-8 text-center antialiased text-balance">
+          <p className="sm:mx-24 mx-8 text-center text-xl antialiased text-balance pb-6">
             Since 2018, with 200+ successful projects the goal of Xdefidev
             has been to help project starters create innovative solutions in the
             cryptocurrency space. We have consistently strived to offer expert
@@ -258,7 +258,7 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 px-4 mt-6 mb-12 sm:mx-8 gap-6 antialiased">
             <div className="flex-wrap space-y-2 text-center">
               <h2 className="text-2xl font-bold ">Cost-Effective and Timely</h2>
-              <p className="">
+              <p className="text-xl">
                 We work with your budget and strive to provide high-quality
                 services that are affordable and accessible to businesses of all
                 sizes. we coordinate each project to ensure fast deliveries. You
@@ -268,7 +268,7 @@ export default function Home() {
             </div>
             <div className="flex-wrap space-y-2 text-center">
               <h2 className="text-2xl font-bold">Professional Expertise</h2>
-              <p className="">
+              <p className="text-xl">
                 Our hand picked Developers have the experience to build
                 high-quality, responsive, and user-friendly websites and
                 applications. They understand the latest technologies and design
@@ -280,7 +280,7 @@ export default function Home() {
               <h2 className="text-2xl font-bold">
                 Ongoing Support and Maintenance
               </h2>
-              <p className="">
+              <p className="text-xl">
                 We provide ongoing support and maintenance services after the
                 completion of your project. we also ensure long-term success of
                 each projects.
@@ -315,7 +315,7 @@ export default function Home() {
       <div className={`${styles.skill} items-center`}
       >
         <h2 className="text-5xl font-bold antialiased">Technology</h2>
-        <p className="my-4 !text-2xl antialiased">Blockchains</p>
+        <p className="my-4 !text-2xl antialiased">Blockchain Networks We Work With</p>
         <div>
           <div>
             <Image
@@ -390,7 +390,7 @@ export default function Home() {
             {/* <p>Fantom</p> */}
           </div>
         </div>
-        <p className="my-4 !text-2xl antialiased">Blockchain Technologies</p>
+        <p className="my-4 !text-2xl antialiased">Blockchain Tools</p>
         <div>
           <div>
             <Image

@@ -7,6 +7,7 @@ export default [
     status: true,
     youtube: "",
     slug: "solana-volume-bot-telegram",
+    category: "telegram bots",
     p: {
       description:
         " A fully-featured volume-boosting bot for Solana tokens, designed to help projects enhance trading activity and engagement. This bot provides a user-friendly interface and essential features to manage, monitor, and boost token performance effectively.",
@@ -29,6 +30,7 @@ export default [
     status: true,
     youtube: "",
     slug: "pump-fun-clone-development",
+    category: "dapps",
     p: {
       description:
         "We are offering the development of a customized Pump.Fun clone for both Ethereum or Solana, featuring advanced buy/sell functionalities, real-time charts, and enhanced security measures. Our highly customizable architecture allows easy feature upgrades and adjustments. Let us help you create a secure and user-friendly platform.",
@@ -52,6 +54,7 @@ export default [
     status: true,
     youtube: "jnL-70RXVII",
     slug: "telegram-mini-app",
+    category: "telegram bots",
     p: {
       description:
         "A powerful mini app for Telegram that integrates multiple functionalities, enabling users to access, use, and manage various services efficiently.",
@@ -75,6 +78,7 @@ export default [
     status: true,
     youtube: "M98xybTnuoY",
     slug: "pinksale-launchpad-clone",
+    category: "dapps",
     p: {
       description:
         "A platform to create, customize, lock, distribute and sell tokens on blockchain that aims to make it easy and affordable for anyone to launch and invest in crypto projects.",
@@ -89,13 +93,14 @@ export default [
     },
   },
   {
-    name: "Solana Casino Platform",
+    name: "Solana Casino Platform Development",
     description:
       "A cutting-edge casino web platform built on the Solana blockchain, offering fast, secure, and transparent gaming experiences.",
     image: "",
     status: true,
     youtube: "",
     slug: "solana-casino-platform",
+    category: "casino",
     p: {
       description:
         "Experience the thrill of casino gaming on the Solana blockchain. Our platform provides a wide range of games, secure transactions, and provably fair outcomes.",
@@ -117,6 +122,7 @@ export default [
     status: true,
     youtube: "",
     slug: "telegram-sniper-bot-clone",
+    category: "telegram bots",
     p: {
       description:
         "We have developed a fully working Sniper bot on telegram. This product allows your users to snipe tokens and trade crypto quickly within the bot.",
@@ -140,6 +146,7 @@ export default [
     status: true,
     youtube: "Ynn_hBBORUY",
     slug: "pos-blockchain-development",
+    category: "blockchain",
     p: {
       description:
         "Are you interested in building a sustainable, energy-efficient blockchain with a Proof of Stake consensus mechanism? Launch your blockchain with support for tokens, dApps, NFTs, and a complete ecosystem to enhance your coin's value and usability.",
@@ -164,6 +171,7 @@ export default [
     status: true,
     youtube: "Ynn_hBBORUY",
     slug: "poa-blockchain-development",
+    category: "blockchain",
     p: {
       description:
         "Looking to create your own PoA blockchain with the flexibility for users to launch tokens, dApps, NFTs, and build an entire ecosystem? This tailored development can enhance the value and functionality of your coin and blockchain network.",
@@ -188,6 +196,7 @@ export default [
     status: true,
     youtube: "",
     slug: "testnet-blockchain-development",
+    category: "blockchain",
     p: {
       description:
         "Looking for a dedicated testnet blockchain with explorer and a faucet to allow users to claim testnet tokens? Our EVM Testnet Blockchain Development service equips you with a fully functional test environment for secure and efficient testing of your applications.",
@@ -230,6 +239,7 @@ export default [
     status: true,
     youtube: "E4fIL4SjEXk",
     slug: "crypto-casino-development",
+    category: "casino",
     p: {
       description:
         "Real Crypto gaming casino with amazing games like Crash, Dice, Roulette, Slots and many more, uses an advanced backedn to ensure safe gameplay and scam free. ",
@@ -249,6 +259,7 @@ export default [
     status: true,
     youtube: "",
     slug: "nft-marketplace",
+    category: "nft",
     p: {
       description:
         "Trade all digital collectibles in multiple blockchains. it is 100% decetralised including the database.",
@@ -273,6 +284,7 @@ export default [
     status: true,
     youtube: "",
     slug: "pinksale-lock-dapp-clone",
+    category: "dapps",
     p: {
       description:
         "Upon popular request we have developed an exact clone of the pinksale launchpad system, it comes equipped with the same features and can easily customise to your requirements.",
@@ -314,6 +326,7 @@ export default [
     status: true,
     youtube: "sw2qGGsSmo4",
     slug: "auto-staking-token-and-dashboard-development",
+    category: "dapps",
     p: {
       description:
         "Auto staking token smart contract with rebase, buy/sell fees, Treasury/Marketing, RFV and more, with Dashoard Dapp to track Rewards/Rebases.",
@@ -336,6 +349,7 @@ export default [
     status: true,
     youtube: "",
     slug: "erc20-token-development",
+    category: "token",
     p: {
       description:
         "Need a custom ERC20 token on an EVM-compatible blockchain? We can develop and deploy your token with Solidity, along with guidance for deploying your smart contract or transferring ownership to you.",
@@ -355,6 +369,7 @@ export default [
     status: true,
     youtube: "",
     slug: "amm-dex-pancakeswap-clone",
+    category: "exchange",
     p: {
       description:
         "Pancakeswap clone with Swap, Staking pools, and Farm. Comes with full design customization and smart contracts for backend.",
@@ -369,6 +384,74 @@ export default [
     },
   },
   {
+    "name": "Crypto Exchange & Trading Platform CEX Development",
+    "description": "A fully-featured centralized cryptocurrency exchange with spot trading, futures, staking, and secure fiat integration.",
+    "image": "https://ik.imagekit.io/hp2oyifpf/Crypto.png?updatedAt=1745273269079",
+    "status": true,
+    "youtube": "",
+    "slug": "centralized-crypto-exchange",
+    "category": "exchange",
+    "p": {
+      "description": "A white-label centralized exchange platform with high liquidity, advanced security, and full customization. Supports spot trading, derivatives, staking, and fiat on/off ramps.",
+      "list": [
+        "Spot Trading (Limit/Market/Stop Orders)",
+        "Futures & Margin Trading (Up to 100x Leverage)",
+        "Advanced TradingView Integration",
+        "Multi-Currency Wallets (Hot & Cold Storage)",
+        "Fiat Gateway (Credit Card, Bank Transfer, PayPal)",
+        "KYC/AML & Identity Verification",
+        "Staking & Yield Farming",
+        "Admin Dashboard (User, Trading, & Revenue Management)",
+        "Referral & Affiliate Program",
+        "Multi-Language & Dark/Light Mode",
+        "Mobile-Friendly UI (PWA Support)",
+        "Two-Factor Authentication (2FA) & IP Whitelisting",
+        "High-Frequency Trading (HFT) Engine",
+        "API for Bots & Third-Party Integration",
+        "Real-Time Order Book & Trade History",
+        "Customizable Trading Fees & Revenue Model",
+        "Liquidity & Market-Making Tools",
+        "Secure Cloud Deployment (AWS, Google Cloud)",
+        "DDoS Protection & Anti-Fraud System",
+        "24/7 Customer Support System"
+      ]
+    }
+  },
+  {
+    "name": "Uniswap Clone | DEX Development",
+    "description": "Fully customizable Uniswap-like decentralized exchange with AMM, liquidity pools, and yield farming.",
+    "image": "https://ik.imagekit.io/hp2oyifpf/polywrap-uniswap-demo.png?updatedAt=1745273698271",
+    "status": true,
+    "youtube": "",
+    "slug": "amm-dex-uniswap-clone",
+    "category": "exchange",
+    "p": {
+      "description": "A white-label Uniswap V2/V3 clone with automated market-making (AMM), liquidity mining, and multi-chain support. Fully customizable UI and smart contracts.",
+      "list": [
+        "Uniswap V2/V3-style AMM DEX",
+        "Swap, Add/Remove Liquidity, and Pools",
+        "Multi-Chain Support (Ethereum, BSC, Polygon, etc.)",
+        "Custom Token Pair Creation",
+        "Liquidity Provider (LP) Fee Earnings",
+        "Yield Farming & Staking Pools",
+        "Impermanent Loss Calculator",
+        "Admin & Fee Management Dashboard",
+        "Mobile-Optimized Frontend",
+        "Fully Audited Smart Contracts",
+        "Flash Swap Support",
+        "Integration with Web3 Wallets (MetaMask, WalletConnect, etc.)",
+        "Custom UI/UX Design & Branding",
+        "Router & Factory Contract Customization",
+        "Gas Optimization for Cheaper Transactions",
+        "Multi-Signature Wallet Support",
+        "API for Price Oracles (Chainlink, etc.)",
+        "Bot & Arbitrage Protection",
+        "Multi-Language & Dark/Light Mode",
+        "Open-Source or White-Label Options"
+      ]
+    }
+  },
+  {
     name: "Fix WalletConnect Error | Update WalletConnect V2",
     description:
       "WalletConnect just updated to V2, does your dapp have an error connecting to walletconnect?. Send us a message and let us fix it.",
@@ -376,6 +459,7 @@ export default [
     status: true,
     youtube: "",
     slug: "fix-walletconnect-relay-error",
+    category: "dapps",
     p: {
       description:
         "Does your app have the Walletconnet websocket connection error? then you need our services. we will create a solution and if your project needs a more custom solution to force it to work, we will make that happen.",
@@ -393,6 +477,7 @@ export default [
     status: true,
     youtube: "",
     slug: "ai-cryptocurrency-application-development",
+    category: "ai",
     p: {
       description:
         "Unlock the future of digital finance with our cutting-edge AI Cryptocurrency Application Development services. We combine the power of artificial intelligence with the robustness of blockchain technology to create innovative, secure, and user-friendly cryptocurrency applications. Whether you are looking to launch a new cryptocurrency, develop a decentralized application (dApp), or enhance your existing crypto solutions, our expert team is here to turn your vision into reality. Embrace the next wave of financial technology with solutions that are designed to be efficient, scalable, and adaptive to the ever-evolving market.",

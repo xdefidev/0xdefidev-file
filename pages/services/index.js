@@ -31,7 +31,7 @@ export default function Service() {
           key="canonical"
         />
       </Head>
-      <Navbar />
+      
 
       <div className="!my-24 " id="grid-container ">
         <div className="text-center text-5xl !mb-8 font-semibold antialiased ">
