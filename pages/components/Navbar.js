@@ -397,7 +397,7 @@ export default function App({ onOpen }) {
             onPress={onOpen}
             size="md"
             variant="flat"
-            className="font-semibold"
+            className="font-semibold sm:inline-flex hidden"
           >
             Get in Touch
           </Button>
@@ -421,9 +421,20 @@ export default function App({ onOpen }) {
             >
               {item.title}
             </Link>
+            
           </NavbarMenuItem>
         )
       } )}
+       <Button
+            as={Link}
+            color="secondary"
+            onPress={onOpen}
+            size="md"
+            variant="flat"
+            className="font-semibold "
+          >
+            Get in Touch
+          </Button>
       </NavbarMenu>
     </Navbar>
   );
