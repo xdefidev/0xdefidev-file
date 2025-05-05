@@ -40,7 +40,7 @@ const Checkmark = () => {
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g
         id="SVGRepo_tracerCarrier"
-        stroke-linecap="round"
+        strokeLinecap="round"
         strokeLinejoin="round"
       ></g>
       <g id="SVGRepo_iconCarrier">
@@ -104,7 +104,7 @@ const Arrow = () => {
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g
         id="SVGRepo_tracerCarrier"
-        stroke-linecap="round"
+        strokeLinecap="round"
         strokeLinejoin="round"
       ></g>
       <g id="SVGRepo_iconCarrier">
@@ -113,7 +113,7 @@ const Arrow = () => {
           d="M5 12H19M19 12L13 6M19 12L13 18"
           stroke="#FFFFFF"
           stroke-width="2"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
         ></path>{" "}
       </g>
@@ -190,7 +190,7 @@ const BlockchainDevelopmentPage = () => {
           </p>
         </div>
         <div className="h-full flex justify-center items-center">
-          <Image src={hero1} width={600} height={600} className="py-8" />
+          <Image src={hero1} width={600} height={600} className="py-8" priority={true} loading="eager" quality={85} />
         </div>
       </div>
 
@@ -304,7 +304,7 @@ const BlockchainDevelopmentPage = () => {
               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
               <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
+                strokeLinecap="round"
                 strokeLinejoin="round"
               ></g>
               <g id="SVGRepo_iconCarrier">
