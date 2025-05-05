@@ -119,6 +119,21 @@ const BlockchainDevelopmentPage = () => {
 
   return (
     <div className="my-12 ">
+      <Head>
+  <title>DeFi & NFT Development Services | xDefiDev</title>
+  <meta property="og:title" content="Professional DeFi & NFT Development Services | xDefiDev" />
+  <meta property="og:description" content="Expert DeFi and NFT development services including smart contracts, dApps, marketplaces, and tokenomics design. We build secure, innovative decentralized finance solutions." />
+  <meta name="description" content="Expert DeFi and NFT development services including smart contracts, dApps, marketplaces, and tokenomics design. We build secure, innovative decentralized finance solutions." />
+  <meta property="og:url" content="https://xdefidev.com/categories/defi-nft-ecosystems" />
+  <meta property="og:image" content="hhttps://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584" />
+  <meta property="twitter:image" content="hhttps://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="DeFi & NFT Development Services | xDefiDev" />
+  <meta property="twitter:description" content="Professional DeFi and NFT development including smart contracts and marketplaces." />
+  <meta property="og:site_name" content="xDefiDev DeFi & NFT Development" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://xdefidev.com/categories/defi-nft-ecosystems" key="canonical" />
+</Head>
       <div className="sm:mx-16 mx-4 grid sm:grid-cols-2 ">
         <div className="h-full flex flex-col justify-center ">
           {" "}

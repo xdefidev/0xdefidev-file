@@ -123,6 +123,21 @@ const BlockchainDevelopmentPage = () => {
 
   return (
     <div className="my-12 ">
+      <Head>
+  <title>Telegram Bots & Mini Apps Development | xDefiDev</title>
+  <meta property="og:title" content="Telegram Bot & Mini App Development Services | xDefiDev" />
+  <meta property="og:description" content="Create powerful Telegram bots and mini apps to engage your audience. We develop custom Telegram solutions including payment bots, games, and business automation tools." />
+  <meta name="description" content="Create powerful Telegram bots and mini apps to engage your audience. We develop custom Telegram solutions including payment bots, games, and business automation tools." />
+  <meta property="og:url" content="https://xdefidev.com/categories/telegram-bots" />
+  <meta property="og:image" content="https://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584" />
+  <meta property="twitter:image" content="https://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Telegram Bot & Mini App Development | xDefiDev" />
+  <meta property="twitter:description" content="Custom Telegram solutions including bots, mini apps, and business automation." />
+  <meta property="og:site_name" content="xDefiDev Telegram Development" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://xdefidev.com/categories/telegram-bots" key="canonical" />
+</Head>
       <div className="sm:mx-16 mx-4 grid sm:grid-cols-2 ">
         <div className="h-full flex flex-col justify-center ">
           {" "}

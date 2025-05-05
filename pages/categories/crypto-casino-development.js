@@ -121,6 +121,21 @@ const BlockchainDevelopmentPage = () => {
 
   return (
     <div className="my-12 ">
+      <Head>
+  <title>Online Crypto Casino Development | xDefiDev</title>
+  <meta property="og:title" content="Professional Online Crypto Casino Development Services | xDefiDev" />
+  <meta property="og:description" content="Build your own secure, provably fair online casino platform with our expert development services. We create crypto and fiat casino solutions with games, payments, and admin systems." />
+  <meta name="description" content="Build your own secure, provably fair online casino platform with our expert development services. We create crypto and fiat casino solutions with games, payments, and admin systems." />
+  <meta property="og:url" content="https://xdefidev.com/categories/crypto-casino-development" />
+  <meta property="og:image" content="https://ik.imagekit.io/hp2oyifpf/create%20crypto%20gamble%20games%20website%20with%20blackjack%20dice%20crash.png?updatedAt=1724719749080" />
+  <meta property="twitter:image" content="https://ik.imagekit.io/hp2oyifpf/create%20crypto%20gamble%20games%20website%20with%20blackjack%20dice%20crash.png?updatedAt=1724719749080" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Online Casino Development Services | xDefiDev" />
+  <meta property="twitter:description" content="Professional online casino development with provably fair systems and payment integration." />
+  <meta property="og:site_name" content="xDefiDev Casino Development" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://xdefidev.com/categories/crypto-casino-development" key="canonical" />
+</Head>
       <div className="sm:mx-16 mx-4 grid sm:grid-cols-2 ">
         <div className="h-full flex flex-col justify-center ">
           {" "}

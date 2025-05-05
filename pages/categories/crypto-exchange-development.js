@@ -126,6 +126,52 @@ const BlockchainDevelopmentPage = () => {
 
   return (
     <div className="my-12 ">
+      <Head>
+        <title>Crypto Exchange Development | xDefiDev</title>
+        <meta
+          property="og:title"
+          content="Professional Crypto Exchange Development Services | xDefiDev"
+        />
+        <meta
+          property="og:description"
+          content="Build your own secure, scalable cryptocurrency exchange platform with our expert development services. We create spot, margin, and derivatives trading platforms with high liquidity."
+        />
+        <meta
+          name="description"
+          content="Build your own secure, scalable cryptocurrency exchange platform with our expert development services. We create spot, margin, and derivatives trading platforms with high liquidity."
+        />
+        <meta
+          property="og:url"
+          content="https://xdefidev.com/categories/crypto-exchange-development"
+        />
+        <meta
+          property="og:image"
+          content="https://ik.imagekit.io/hp2oyifpf/polywrap-uniswap-demo.png?updatedAt=1745273698271"
+        />
+        <meta
+          property="twitter:image"
+          content="https://ik.imagekit.io/hp2oyifpf/polywrap-uniswap-demo.png?updatedAt=1745273698271"
+        />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:title"
+          content="Crypto Exchange Development Services | xDefiDev"
+        />
+        <meta
+          property="twitter:description"
+          content="Professional crypto exchange development for spot, margin, and derivatives trading."
+        />
+        <meta
+          property="og:site_name"
+          content="xDefiDev Crypto Exchange Development"
+        />
+        <meta name="robots" content="index, follow" />
+        <link
+          rel="canonical"
+          href="https://xdefidev.com/categories/crypto-exchange-development"
+          key="canonical"
+        />
+      </Head>
       <div className="sm:mx-16 mx-4 grid sm:grid-cols-2 ">
         <div className="h-full flex flex-col justify-center ">
           {" "}
@@ -504,70 +550,71 @@ const BlockchainDevelopmentPage = () => {
       <div className="sm:mx-16 mx-4 my-24 grid sm:grid-cols-2">
         <h2 className="text-6xl font-semibold">Frequently Asked Questions</h2>
         <div className="my-6">
-        <Accordion variant="splitted">
-  <AccordionItem
-    key="1"
-    aria-label="Exchange Timeline"
-    title="How long does it take to develop a crypto exchange?"
-  >
-    Development timelines vary based on complexity:
-    <br />• Basic DEX with AMM: 4 days to a week
-    <br />• Feature-rich CEX: a week to a month
-    {/* <br />• Enterprise-grade hybrid exchange: 6+ months */}
-    <br />We use agile development with bi-weekly deliverables.
-  </AccordionItem>
-  
-  <AccordionItem
-    key="2"
-    aria-label="Exchange Cost"
-    title="What's the cost to build a cryptocurrency exchange?"
-  >
-    Costs scale with features and security requirements:
-    <br />• Basic DEX: $600 - $1000
-    <br />• Medium CEX: $2000 - $10,000
-    <br />• Institutional-grade exchange: $200,000+
-    {/* <br />Includes matching engine, liquidity solutions, and security audits. */}
-  </AccordionItem>
+          <Accordion variant="splitted">
+            <AccordionItem
+              key="1"
+              aria-label="Exchange Timeline"
+              title="How long does it take to develop a crypto exchange?"
+            >
+              Development timelines vary based on complexity:
+              <br />• Basic DEX with AMM: 4 days to a week
+              <br />• Feature-rich CEX: a week to a month
+              {/* <br />• Enterprise-grade hybrid exchange: 6+ months */}
+              <br />
+              We use agile development with bi-weekly deliverables.
+            </AccordionItem>
 
-  <AccordionItem
-    key="3"
-    aria-label="Support"
-    title="Do you provide ongoing exchange maintenance?"
-  >
-    Our premium support package includes:
-    <br />• 99.9% uptime monitoring
-    <br />• Hotfix deployment within 2 hours
-    <br />• Quarterly security upgrades
-    <br />• Liquidity provider coordination
-    <br />• Compliance updates (travel rule, KYC/AML)
-  </AccordionItem>
+            <AccordionItem
+              key="2"
+              aria-label="Exchange Cost"
+              title="What's the cost to build a cryptocurrency exchange?"
+            >
+              Costs scale with features and security requirements:
+              <br />• Basic DEX: $600 - $1000
+              <br />• Medium CEX: $2000 - $10,000
+              <br />• Institutional-grade exchange: $200,000+
+              {/* <br />Includes matching engine, liquidity solutions, and security audits. */}
+            </AccordionItem>
 
-  <AccordionItem
-    key="4"
-    aria-label="Customization"
-    title="Can you customize existing exchange software?"
-  >
-    We specialize in white-label solutions for:
-    <br />• Binance/KuCoin cex style clones
-    <br />• Uniswap/PancakeSwap forks
-    <br />• Adding derivatives/options modules
-    <br />• Cross-chain bridge integration
-    <br />• Custom tokenomics implementations
-  </AccordionItem>
+            <AccordionItem
+              key="3"
+              aria-label="Support"
+              title="Do you provide ongoing exchange maintenance?"
+            >
+              Our premium support package includes:
+              <br />• 99.9% uptime monitoring
+              <br />• Hotfix deployment within 2 hours
+              <br />• Quarterly security upgrades
+              <br />• Liquidity provider coordination
+              <br />• Compliance updates (travel rule, KYC/AML)
+            </AccordionItem>
 
-  <AccordionItem
-    key="5"
-    aria-label="Security"
-    title="What security measures do you implement?"
-  >
-    Enterprise-grade protection:
-    <br />• Penetration testing + CertiK audits
-    <br />• Multi-sig cold wallets
-    <br />• DDoS mitigation (10TB+ capacity)
-    <br />• Fraud detection AI
-    <br />• Insurance fund integration
-  </AccordionItem>
-</Accordion>
+            <AccordionItem
+              key="4"
+              aria-label="Customization"
+              title="Can you customize existing exchange software?"
+            >
+              We specialize in white-label solutions for:
+              <br />• Binance/KuCoin cex style clones
+              <br />• Uniswap/PancakeSwap forks
+              <br />• Adding derivatives/options modules
+              <br />• Cross-chain bridge integration
+              <br />• Custom tokenomics implementations
+            </AccordionItem>
+
+            <AccordionItem
+              key="5"
+              aria-label="Security"
+              title="What security measures do you implement?"
+            >
+              Enterprise-grade protection:
+              <br />• Penetration testing + CertiK audits
+              <br />• Multi-sig cold wallets
+              <br />• DDoS mitigation (10TB+ capacity)
+              <br />• Fraud detection AI
+              <br />• Insurance fund integration
+            </AccordionItem>
+          </Accordion>
         </div>
       </div>
 
