@@ -11,7 +11,7 @@ import Logo from "../../public/logo.png";
 export const AcmeLogo = () => {
   return (
     <Link href="/">
-      <Image src={Logo} width={150} height={100} className="invert " />
+      <Image src={Logo} width={150} height={100} className="invert " alt="xdefidev footer logo" />
     </Link>
   );
 };
