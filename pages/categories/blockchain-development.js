@@ -181,7 +181,7 @@ const BlockchainDevelopmentPage = () => {
           </p>
         </div>
         <div className="h-full flex justify-center items-center">
-          <Image src={hero1} width={600} height={600} className="" />
+          <Image src={hero1} width={600} height={600} className="" priority />
         </div>
       </div>
 
