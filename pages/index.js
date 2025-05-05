@@ -198,7 +198,8 @@ export default function Home() {
           width="100%"
           height="100%"
           alt="cryptocurrency logo header"
-          loading="lazy"
+          // loading="lazy"
+          priority={true} loading="eager" quality={85}
         />
 
         <div className="" id="grid-container">
