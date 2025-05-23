@@ -67,6 +67,8 @@ export default function Home() {
 
         <meta property="og:url" content="https://xdefidev.com" />
 
+        <meta name="msvalidate.01" content="31439297EBABC2B44C416D8F49DF775E" />
+
         <link rel="preconnect" href="https://ik.imagekit.io/" />
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
