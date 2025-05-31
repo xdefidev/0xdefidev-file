@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>xDefiDev Portfolio</title>
+        <title>xDefiDev Portfolio | Web3 Development services</title>
 
         <meta property="og:title" content="Portfolio | View our Our Blockchain & Fullstack Development Projects" />
 

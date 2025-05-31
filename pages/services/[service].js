@@ -50,7 +50,7 @@ export default function Service({ post, onOpen }) {
   return (
     <section>
       <Head>
-        <title>{`${post.name} | XDefiDev Services`}</title>
+        <title>{`${post.name} | XDefiDev Web3 Service`}</title>
 
         <meta property="og:title" content={`${post.name} Services`} />
 
