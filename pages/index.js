@@ -26,6 +26,9 @@ import trapix from "/public/clients/trapix.jpeg";
 import pattie from "/public/clients/pattie.png";
 import c12 from "/public/clients/c12.jpeg";
 import shine from "/public/clients/shine-blockchain.png";
+import neobinance from "/public/clients/neo-binance.png";
+import fortress from "/public/clients/fortress.svg"
+import midasforge from "/public/clients/midasforge.png";
 
 import Telegram from "/public/telegram.svg";
 import Discord from "/public/discord-round-black-icon.png";
@@ -483,7 +486,7 @@ export default function Home() {
 
       <div className="items-center flex flex-col justify-center my-4 space-y-4">
         <h2 className="text-5xl font-bold antialiased">Clients</h2>
-        <div className="grid grid-cols-3 gap-[1px]">
+        <div className="grid grid-cols-4 gap-[1px]">
           <div>
             <Image
               src={incaswap}
@@ -531,6 +534,36 @@ export default function Home() {
               height={100}
               loading="lazy"
               alt="Shine Blockchain"
+            />
+            {/* <p>NodeJS</p> */}
+          </div>
+          <div>
+            <Image
+              src={neobinance}
+              width={100}
+              height={100}
+              loading="lazy"
+              alt="Neo Binance"
+            />
+            {/* <p>NodeJS</p> */}
+          </div>
+          <div>
+            <Image
+              src={fortress}
+              width={100}
+              height={100}
+              loading="lazy"
+              alt="Fortress Blockchain"
+            />
+            {/* <p>NodeJS</p> */}
+          </div>
+          <div>
+            <Image
+              src={midasforge}
+              width={100}
+              height={100}
+              loading="lazy"
+              alt="Midas Forge"
             />
             {/* <p>NodeJS</p> */}
           </div>
