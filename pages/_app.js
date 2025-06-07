@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }) {
     <HeroUIProvider>
       <Navbar onOpen={onOpen} />
       <main className={`${josefin.variable} font-josefin my-4`}>
-        <Component {...pageProps} onOpen={onOpen} />;
+        <Component {...pageProps} onOpen={onOpen} />
       </main>
       <Footer />
 

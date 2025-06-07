@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from 'next/script';
 import styles from "../styles/Home.module.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -39,12 +40,23 @@ import Mail from "/public/mail.svg";
 import illus2 from "/public/illustration-2.png";
 
 
+
+
 export default function Home() {
   const imageLink =
     "https://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584";
 
+    function formatUSD(amount) {
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: 0, // Allow no decimal places
+        maximumFractionDigits: 2  // But show up to 2 if needed
+      }).format(amount);
+    }
+
   return (
-    <div>
+    <div className="mb-24">
       <Head>
         <title>xDefiDev | Blockchain and Web Development services</title>
 
@@ -113,12 +125,12 @@ export default function Home() {
 
         <meta name="robots" content="index, follow" />
 
-        <script
+        <Script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
           defer
         />
-        <script
+        <Script
           dangerouslySetInnerHTML={{
             __html: `
             window.dataLayer = window.dataLayer || [];
@@ -204,7 +216,7 @@ export default function Home() {
           height="100%"
           alt="cryptocurrency logo header"
           // loading="lazy"
-          priority={true} loading="eager" quality={85}
+          priority loading="eager" quality={85}
         />
 
         <div className="" id="grid-container">
@@ -229,7 +241,7 @@ export default function Home() {
                       loading="lazy"
                     />
                     <div className="text-black text-xs font-semibold antialiased">
-                      {item.status ? "active" : "out"}
+                    {formatUSD(item.price)}
                     </div>
                     <h3 className="text-gray-900 font-semibold antialiased text-xl text-balance">
                       {item.name}

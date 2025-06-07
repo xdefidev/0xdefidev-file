@@ -3,8 +3,10 @@ export default [
     name: "Solana Volume Bot Telegram",
     description:
       "The Solana Volume Bot includes advanced tools to increase token trading volume, build trust among holders, and attract new investors. We can customize the bot to suit your specific project needs.",
-    image: "https://ik.imagekit.io/hp2oyifpf/SOLANA%20Volume%20Bot%20on%20Telegram.png?updatedAt=1735771535130",
+    image:
+      "https://ik.imagekit.io/hp2oyifpf/SOLANA%20Volume%20Bot%20on%20Telegram.png?updatedAt=1735771535130",
     status: true,
+    price: "400",
     youtube: "",
     slug: "solana-volume-bot-telegram",
     category: "telegram bots",
@@ -24,10 +26,11 @@ export default [
   },
   {
     name: "PUMP.fun Clone on EVM and SOLANA",
-    description: "Pump.Fun Clone development for Ethereum and Solana",
+    description: " Ethereum and Solana Pump.Fun Clone website development.",
     image:
       "https://ik.imagekit.io/hp2oyifpf/pumpfun-clone.png?updatedAt=1727082514946",
     status: true,
+    price: "300",
     youtube: "",
     slug: "pump-fun-clone-development",
     category: "dapps",
@@ -52,6 +55,7 @@ export default [
     image:
       "https://ik.imagekit.io/hp2oyifpf/Dark%20Blue%20Red%20White%20Generic%20News%20General%20News%20YouTube%20Banner.png?updatedAt=1724719432697",
     status: true,
+    price: "300",
     youtube: "jnL-70RXVII",
     slug: "telegram-mini-app",
     category: "telegram bots",
@@ -76,6 +80,7 @@ export default [
     image:
       "https://ik.imagekit.io/hp2oyifpf/Copy%20of%20Black%20and%20Yellow%20Dark%20Gamer%20Survival%20YouTube%20Banner.png?updatedAt=1724719521891",
     status: true,
+    price: "500",
     youtube: "M98xybTnuoY",
     slug: "pinksale-launchpad-clone",
     category: "dapps",
@@ -98,6 +103,7 @@ export default [
       "A cutting-edge casino web platform built on the Solana blockchain, offering fast, secure, and transparent gaming experiences.",
     image: "",
     status: true,
+    price: "600",
     youtube: "",
     slug: "solana-casino-platform",
     category: "casino",
@@ -120,6 +126,7 @@ export default [
       "Fully working sniper bot on telegram with manual and auto trading.",
     image: "",
     status: true,
+    price: "600",
     youtube: "",
     slug: "telegram-sniper-bot-clone",
     category: "telegram bots",
@@ -144,6 +151,7 @@ export default [
     image:
       "https://ik.imagekit.io/hp2oyifpf/Layer%202%20blockchain%20(1).png?updatedAt=1724719658061",
     status: true,
+    price: "1500",
     youtube: "Ynn_hBBORUY",
     slug: "pos-blockchain-development",
     category: "blockchain",
@@ -169,6 +177,7 @@ export default [
     image:
       "https://ik.imagekit.io/hp2oyifpf/Layer%202%20blockchain%20(1).png?updatedAt=1724719658061",
     status: true,
+    price: "1500",
     youtube: "Ynn_hBBORUY",
     slug: "poa-blockchain-development",
     category: "blockchain",
@@ -194,6 +203,7 @@ export default [
     image:
       "https://ik.imagekit.io/hp2oyifpf/Layer%202%20blockchain%20(1).png?updatedAt=1724719658061",
     status: true,
+    price: "1000",
     youtube: "",
     slug: "testnet-blockchain-development",
     category: "blockchain",
@@ -215,6 +225,7 @@ export default [
   //     "Secure launchpad protocol like Pinksale with presale list and fairlaunch.",
   //   image: "",
   //   status: true,
+  //     price: "1000",
   //   youtube: "M98xybTnuoY",
   //   slug: "token-presale-dashboard-launch-development",
   //   p: {
@@ -237,6 +248,7 @@ export default [
     image:
       "https://ik.imagekit.io/hp2oyifpf/create%20crypto%20gamble%20games%20website%20with%20blackjack%20dice%20crash.png?updatedAt=1724719749080",
     status: true,
+    price: "400",
     youtube: "E4fIL4SjEXk",
     slug: "crypto-casino-development",
     category: "casino",
@@ -257,6 +269,7 @@ export default [
       "Fast, Reliable & Secure NFT Marketplace platform with advanced AI NFT Generation. ",
     image: "",
     status: true,
+    price: "600",
     youtube: "",
     slug: "nft-marketplace",
     category: "nft",
@@ -282,6 +295,7 @@ export default [
     image:
       "https://ik.imagekit.io/hp2oyifpf/Screenshot%202024-02-25%20at%2020.38.27.png?updatedAt=1708890304246",
     status: true,
+    price: "300",
     youtube: "",
     slug: "pinksale-lock-dapp-clone",
     category: "dapps",
@@ -304,6 +318,7 @@ export default [
   //     "We will develop your IDO Launchpad dashboard, Create tokens, Token sales, Token lock, and Liquidity Lock.",
   //   image: "",
   //   status: true,
+  //      price: "1000",
   //   youtube: "M98xybTnuoY",
   //   slug: "ido-launchpad-development",
   //   p: {
@@ -324,6 +339,7 @@ export default [
       "Auto-Staking Token smart contract and dApp on BSC, ETH, AVAX blockchain.",
     image: "",
     status: true,
+    price: "200",
     youtube: "sw2qGGsSmo4",
     slug: "auto-staking-token-and-dashboard-development",
     category: "dapps",
@@ -347,6 +363,7 @@ export default [
     image:
       "https://ik.imagekit.io/hp2oyifpf/Add%20a%20subheading%20(5).png?updatedAt=1724720607333",
     status: true,
+    price: "200",
     youtube: "",
     slug: "erc20-token-development",
     category: "token",
@@ -367,6 +384,7 @@ export default [
     image:
       "https://ik.imagekit.io/hp2oyifpf/PANCAKESWAP%20CLONE.png?updatedAt=1724720493864",
     status: true,
+    price: "300",
     youtube: "",
     slug: "amm-dex-pancakeswap-clone",
     category: "exchange",
@@ -384,16 +402,20 @@ export default [
     },
   },
   {
-    "name": "Crypto Exchange & Trading Platform CEX Development",
-    "description": "A fully-featured centralized cryptocurrency exchange with spot trading, futures, staking, and secure fiat integration.",
-    "image": "https://ik.imagekit.io/hp2oyifpf/Crypto.png?updatedAt=1745273269079",
-    "status": true,
-    "youtube": "",
-    "slug": "centralized-crypto-exchange",
-    "category": "exchange",
-    "p": {
-      "description": "A white-label centralized exchange platform with high liquidity, advanced security, and full customization. Supports spot trading, derivatives, staking, and fiat on/off ramps.",
-      "list": [
+    name: "Crypto Exchange & Trading Platform CEX Development",
+    description:
+      "A fully-featured centralized cryptocurrency exchange with spot trading, futures, staking, and secure fiat integration.",
+    image:
+      "https://ik.imagekit.io/hp2oyifpf/Crypto.png?updatedAt=1745273269079",
+    status: true,
+    price: "2000",
+    youtube: "",
+    slug: "centralized-crypto-exchange",
+    category: "exchange",
+    p: {
+      description:
+        "A white-label centralized exchange platform with high liquidity, advanced security, and full customization. Supports spot trading, derivatives, staking, and fiat on/off ramps.",
+      list: [
         "Spot Trading (Limit/Market/Stop Orders)",
         "Futures & Margin Trading (Up to 100x Leverage)",
         "Advanced TradingView Integration",
@@ -413,21 +435,25 @@ export default [
         "Liquidity & Market-Making Tools",
         "Secure Cloud Deployment (AWS, Google Cloud)",
         "DDoS Protection & Anti-Fraud System",
-        "24/7 Customer Support System"
-      ]
-    }
+        "24/7 Customer Support System",
+      ],
+    },
   },
   {
-    "name": "Uniswap Clone | DEX Development",
-    "description": "Fully customizable Uniswap-like decentralized exchange with AMM, liquidity pools, and yield farming.",
-    "image": "https://ik.imagekit.io/hp2oyifpf/polywrap-uniswap-demo.png?updatedAt=1745273698271",
-    "status": true,
-    "youtube": "",
-    "slug": "amm-dex-uniswap-clone",
-    "category": "exchange",
-    "p": {
-      "description": "A white-label Uniswap V2/V3 clone with automated market-making (AMM), liquidity mining, and multi-chain support. Fully customizable UI and smart contracts.",
-      "list": [
+    name: "Uniswap Clone | DEX Development",
+    description:
+      "Fully customizable Uniswap-like decentralized exchange with AMM, liquidity pools, and yield farming.",
+    image:
+      "https://ik.imagekit.io/hp2oyifpf/polywrap-uniswap-demo.png?updatedAt=1745273698271",
+    status: true,
+    price: "400",
+    youtube: "",
+    slug: "amm-dex-uniswap-clone",
+    category: "exchange",
+    p: {
+      description:
+        "A white-label Uniswap V2/V3 clone with automated market-making (AMM), liquidity mining, and multi-chain support. Fully customizable UI and smart contracts.",
+      list: [
         "Uniswap V2/V3-style AMM DEX",
         "Swap, Add/Remove Liquidity, and Pools",
         "Multi-Chain Support (Ethereum, BSC, Polygon, etc.)",
@@ -447,9 +473,9 @@ export default [
         "API for Price Oracles (Chainlink, etc.)",
         "Bot & Arbitrage Protection",
         "Multi-Language & Dark/Light Mode",
-        "Open-Source or White-Label Options"
-      ]
-    }
+        "Open-Source or White-Label Options",
+      ],
+    },
   },
   {
     name: "Fix WalletConnect Error | Update WalletConnect V2",
@@ -457,6 +483,7 @@ export default [
       "WalletConnect just updated to V2, does your dapp have an error connecting to walletconnect?. Send us a message and let us fix it.",
     image: "",
     status: true,
+    price: "100",
     youtube: "",
     slug: "fix-walletconnect-relay-error",
     category: "dapps",
@@ -475,6 +502,7 @@ export default [
       "Develop a solution using artificial intelligence and the blockchain. We integrate seamlessly.",
     image: "",
     status: true,
+    price: "1000",
     youtube: "",
     slug: "ai-cryptocurrency-application-development",
     category: "ai",

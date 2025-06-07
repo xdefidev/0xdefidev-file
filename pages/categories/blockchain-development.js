@@ -118,6 +118,17 @@ const BlockchainDevelopmentPage = () => {
   const imageLink =
     "https://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584";
 
+
+    function formatUSD(amount) {
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: 0, // Allow no decimal places
+        maximumFractionDigits: 2  // But show up to 2 if needed
+      }).format(amount);
+    }
+
+
   return (
     <div className="my-12 ">
       <Head>
@@ -243,7 +254,7 @@ const BlockchainDevelopmentPage = () => {
                     className="rounded h-[200px]"
                   />
                   <div className="text-black bg-white rounded-md p-1 text-xs font-semibold antialiased absolute top-7 left-8">
-                    {item.status ? "active" : "out"}
+                    {formatUSD(item.price)}
                   </div>
                   <h3 className="min-h-[50px] text-gray-900 font-semibold antialiased text-balance text-xl my-2">
                     {item.name} &rarr;

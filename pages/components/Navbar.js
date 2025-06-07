@@ -288,10 +288,15 @@ export default function App({ onOpen }) {
       title: "Portfolio",
       href: "/portfolio"
     },
+    
     {
       title: "Contact Us",
       href: "/contact-us"
-    }
+    },
+    {
+      title: "Our Services",
+      href: "/services"
+    },
   ];
   
 
@@ -315,6 +320,7 @@ export default function App({ onOpen }) {
             Portfolio
           </Link>
         </NavbarItem>
+        
         <Dropdown>
           <NavbarItem>
             <DropdownTrigger>
@@ -326,7 +332,7 @@ export default function App({ onOpen }) {
                 variant="flat"
                 size="lg"
               >
-                Services
+                Service Categories
               </Button>
             </DropdownTrigger>
           </NavbarItem>
@@ -383,6 +389,12 @@ export default function App({ onOpen }) {
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
+
+        <NavbarItem>
+          <Link color="foreground" href="/services" className="">
+            Services
+          </Link>
+        </NavbarItem>
         {/* <NavbarItem isActive>
           <Link aria-current="page" href="#">
             Customers
@@ -409,6 +421,7 @@ export default function App({ onOpen }) {
       </NavbarContent>
 
       <NavbarMenu>
+        {/* <h2>Categories</h2> */}
       {menuItems.map((item, index) =>{ const isActive = pathname === item.href; 
 
         return (
@@ -431,7 +444,7 @@ export default function App({ onOpen }) {
             onPress={onOpen}
             size="md"
             variant="flat"
-            className="font-semibold "
+            className="font-semibold mt-4"
           >
             Get in Touch
           </Button>

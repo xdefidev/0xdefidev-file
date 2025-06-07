@@ -47,6 +47,15 @@ export default function Service({ post, onOpen }) {
 
   // console.log(post, "hh");
 
+  function formatUSD(amount) {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0, // Allow no decimal places
+      maximumFractionDigits: 2  // But show up to 2 if needed
+    }).format(amount);
+  }
+
   return (
     <section>
       <Head>
@@ -76,23 +85,24 @@ export default function Service({ post, onOpen }) {
       </Head>
       
 
-      <div className="grid gap-4 sm:mx-24 mx-12">
+      <div className="grid gap-4 mx-auto w-[92%] max-w-[1200px]">
         <h1 className="text-4xl font-semibold">{post.name}</h1>
-        <div className={styles.firstDiv}>
+        <div className='sm:flex flex-row sm:space-x-4 '>
           {post.youtube ? (
             <iframe
               src={`https://www.youtube.com/embed/${post.youtube}`}
               title="Need a Blockchain Developer? Best......."
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              className="min-h-[400px]"
+              className="sm:w-[70%] sm:h-[400px]  rounded-lg"
             ></iframe>
           ) : (
-            <img src={post.image || imageLink} loading="lazy" />
+            <img src={post.image || imageLink} loading="lazy" className="sm:w-[70%] sm:h-[400px]  rounded-lg" />
           )}
 
-          <div className="max-w-max h-full flex flex-col gap-4 antialiased">
-            <h2 className="text-2xl">Your Custom Project</h2>
+          <div className="sm:w-[30%] h-full flex flex-col gap-4 antialiased pt-2 sm:pt-0">
+            <h2 className="text-3xl font-medium">Pricing</h2>
+            <h3>Starting From {formatUSD(post.price)}</h3>
             <p className="text-balance">
               Send us a custom request! Share details about your project,
               requirements, budget, and timeline, and let us help bring your
@@ -102,7 +112,7 @@ export default function Service({ post, onOpen }) {
               className="px-2 py-1.5 border border-zinc-700 rounded text-center text-white bg-black hover:text-black hover:bg-transparent"
               onPress={onOpen}
             >
-              Contact Us
+              Get Exact Quote
             </Button>
             {/* <a
               href="https://t.me/xdefideveloper"
@@ -114,19 +124,21 @@ export default function Service({ post, onOpen }) {
             </a> */}
           </div>
         </div>
-        <div className="antialiased grid gap-4 mb-24 sm:mt-12 -mt-24">
-          <h2 className="text-2xl font-medium">Description</h2>
-          <p className="text-balance font-josefin text-sm">{post.description}</p>
-          {post.p.description}
+        
+      </div>
+
+      <div className="antialiased grid gap-4 mx-auto w-[92%] max-w-[1200px] pt-4">
+          <h2 className="text-3xl font-medium">Description</h2>
+          <p className="text-balance font-josefin ">{post.description} <br/><br/> {post.p.description}</p>
+          
           <h3 className="text-xl">Key Features / Benefits</h3>
           <ul className="grid gap-2 list-decimal pl-8 ">
             {post.p.list.map((item) => (
-              <li className="font-josefin text-balance text-sm">{item}</li>
+              <li className="font-josefin text-balance ">{item}</li>
             ))}
             {/* {console.log(post.p.list.length)} */}
           </ul>
         </div>
-      </div>
 
       {/* <SocialModal /> */}
 
