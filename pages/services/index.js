@@ -51,7 +51,7 @@ export default function Service() {
           name="description"
           content="Discover our range of services, from blockchain development to fullstack web and mobile solutions. We offer tailored development, consulting, and implementation services to bring your digital ideas to life. Partner with us to elevate your business with innovative technology"
         />
-        <meta http-equiv="content-language" content="en" />
+        <meta httpEquiv="content-language" content="en" />
         <meta name="robots" content="index, follow" />
         <link
           rel="canonical"

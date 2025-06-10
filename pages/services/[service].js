@@ -73,7 +73,7 @@ export default function Service({ post, onOpen }) {
 
         <meta name="description" content={post.description} />
 
-        <meta http-equiv="content-language" content="en" />
+        <meta httpEquiv="content-language" content="en" />
 
         <meta name="robots" content="index, follow" />
 
