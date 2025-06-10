@@ -200,7 +200,7 @@ const BlockchainDevelopmentPage = () => {
           </p>
         </div>
         <div className="h-full flex justify-center items-center">
-          <Image src={hero1} width={600} height={600} className="py-8" priority={true} loading="eager" quality={85} />
+          <Image src={hero1} width={600} height={600} className="py-8" priority loading="eager" quality={85} />
         </div>
       </div>
 

@@ -100,7 +100,7 @@ export default function Service({ post, onOpen }) {
             <img src={post.image || imageLink} loading="lazy" className="sm:w-[70%] sm:h-[400px]  rounded-lg" />
           )}
 
-          <div className="sm:w-[30%] h-full flex flex-col gap-4 antialiased pt-2 sm:pt-0">
+          <div className="sm:w-[30%] h-full flex flex-col  antialiased pt-2 sm:pt-0 space-y-6 justify-center">
             <h2 className="text-3xl font-medium">Pricing</h2>
             <h3>Starting From {formatUSD(post.price)}</h3>
             <p className="text-balance">
@@ -127,11 +127,11 @@ export default function Service({ post, onOpen }) {
         
       </div>
 
-      <div className="antialiased grid gap-4 mx-auto w-[92%] max-w-[1200px] pt-4">
+      <div className="antialiased grid gap-4 mx-auto w-[92%] max-w-[1200px] pt-4 mb-16">
           <h2 className="text-3xl font-medium">Description</h2>
           <p className="text-balance font-josefin ">{post.description} <br/><br/> {post.p.description}</p>
           
-          <h3 className="text-xl">Key Features / Benefits</h3>
+          <h3 className="text-2xl">Key Features / Benefits</h3>
           <ul className="grid gap-2 list-decimal pl-8 ">
             {post.p.list.map((item) => (
               <li className="font-josefin text-balance ">{item}</li>
