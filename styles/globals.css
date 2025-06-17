@@ -192,3 +192,18 @@ li {
     margin-top: 40px;
   }
 }
+
+
+.carousel-container {
+  height: 110%;
+  width: 100%;
+  /* border-radius: 10px; */
+ }
+
+.react-multi-carousel-item {
+  border-radius: 10px !important;
+ }
+
+ .react-multi-carousel-item img {
+  border-radius: 10px !important;
+ }

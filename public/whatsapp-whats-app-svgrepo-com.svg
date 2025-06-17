@@ -36,7 +36,7 @@
 	.st29{fill:#F7981C;}
 	.st30{fill:#EE1B22;}
 	.st31{fill:#EF3561;}
-	.st32{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
+	.st32{fill:none;stroke:#FFFFFF;strokeWidth:2;stroke-miterlimit:10;}
 	.st33{fill:#0097D3;}
 	.st34{fill:#01308A;}
 	.st35{fill:#019CDE;}

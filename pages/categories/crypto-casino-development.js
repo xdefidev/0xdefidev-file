@@ -11,6 +11,8 @@ import services from "../api/services";
 
 import hero1 from "../../public/casino-hero-4.png";
 
+import hero2 from "../../public/categories/casino-development.jpg"
+
 const servicesList = [
 "White-Label Crypto Casino Solutions",
   "Web3 Casino Platform Development",
@@ -32,7 +34,7 @@ const Checkmark = () => {
       fill="#000000"
       width="25px"
     >
-      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g
         id="SVGRepo_tracerCarrier"
         strokeLinecap="round"
@@ -96,7 +98,7 @@ const Arrow = () => {
       xmlns="http://www.w3.org/2000/svg"
       height="50px"
     >
-      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g
         id="SVGRepo_tracerCarrier"
         strokeLinecap="round"
@@ -107,7 +109,7 @@ const Arrow = () => {
         <path
           d="M5 12H19M19 12L13 6M19 12L13 18"
           stroke="#FFFFFF"
-          stroke-width="2"
+          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         ></path>{" "}
@@ -159,12 +161,16 @@ const BlockchainDevelopmentPage = () => {
           </p>
         </div>
         <div className="h-full flex justify-center items-center">
-          <Image src={hero1} width={600} height={600} className="" priority loading="eager" quality={85} />
+          <Image src={hero1} width={600} height={600} className="" priority={true} loading="eager" quality={85} />
         </div>
       </div>
 
+      <div className="flex justify-center items-center w-full my-8">
+        <Image src={hero2} width={600} height={600} className="flex rounded-lg " priority={true} loading="eager" quality={85}  />
+      </div>
+
       <div>
-        <div className="sm:mx-16 mx-4 my-24 grid grid-flow-row justify-center items-center">
+        <div className="sm:mx-16 mx-4 my-16 grid grid-flow-row justify-center items-center">
           <h2 className="text-3xl font-bold text-center">
             Why Choose Our Cryptocurrency Casino Development Services
           </h2>

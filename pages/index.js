@@ -38,6 +38,7 @@ import contact from "/public/contact-us-filled-svgrepo-com.svg";
 import Mail from "/public/mail.svg";
 
 import illus2 from "/public/illustration-2.png";
+import CarouselFn from "./components/Carousel";
 
 
 
@@ -209,15 +210,21 @@ export default function Home() {
           </div>
         </div>
 
+        
+
         <img
           src="https://ik.imagekit.io/lzgpc48la/down-arrow_vkeVMp4_k.png?ik-sdk-version=javascript-1.4.3&updatedAt=1663634428959"
-          className="arrow-down"
+          className="arrow-down py-5"
           width="100%"
           height="100%"
           alt="cryptocurrency logo header"
           // loading="lazy"
-          priority loading="eager" quality={85}
+           loading="eager" quality={85}
         />
+
+<div className="block w-full h-full">
+          <CarouselFn />
+        </div>
 
         <div className="" id="grid-container">
           <div className="text-center text-5xl !mb-8 font-semibold antialiased ">
