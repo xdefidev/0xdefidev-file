@@ -100,7 +100,7 @@ export default function Service({ post, onOpen }) {
             <img src={post.image || imageLink} loading="lazy" className="sm:w-[70%] sm:h-[400px]  rounded-lg" />
           )}
 
-          <div className="sm:w-[30%] h-full flex flex-col  antialiased pt-2 sm:pt-0 space-y-6 justify-center">
+          <div className="sm:w-[30%] sm:h-full flex flex-col  antialiased pt-2 sm:pt-0 sm:space-y-6 space-y-2 justify-center">
             <h2 className="text-3xl font-medium">Pricing</h2>
             <h3>Starting From {formatUSD(post.price)}</h3>
             <p className="text-balance">
@@ -127,7 +127,7 @@ export default function Service({ post, onOpen }) {
         
       </div>
 
-      <div className="antialiased grid gap-4 mx-auto w-[92%] max-w-[1200px] pt-4 mb-16">
+      <div className="antialiased grid gap-4 mx-auto w-[92%] max-w-[1200px] pt-4 mb-16 mt-8 sm:mt-0">
           <h2 className="text-3xl font-medium">Description</h2>
           <p className="text-balance font-josefin ">{post.description} <br/><br/> {post.p.description}</p>
           
