@@ -17,8 +17,8 @@ export const AcmeLogo = () => {
 };
 
 export default function Footer() {
-  // const d = new Date();
-  // const year = d.getFullYear();
+  const d = new Date();
+  const year = d.getFullYear();
   return (
     <footer className="bg-[#212529] rounded-t-2xl p-4 text-gray-200 min-w-full">
       <div className="grid sm:grid-cols-3 grid-flow-row m-6">
@@ -112,7 +112,7 @@ export default function Footer() {
 
       <div></div>
       <div className="text-center text-sm">
-        <p>© Copyright xDefiDev 2023.</p>
+        <p>© Copyright xDefiDev 2023 - {year}.</p>
       </div>
     </footer>
   );
