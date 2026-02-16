@@ -8,6 +8,9 @@
     "start": "next start",
     "postbuild": "next-sitemap"
   },
+  "engines": {
+  "node": "22.x"
+  },
   "dependencies": {
     "@heroui/modal": "^2.2.8",
     "@heroui/react": "^2.6.14",
