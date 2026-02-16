@@ -227,9 +227,9 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Link
                   href="#contact"
-                  className="group relative px-10 py-5 bg-gradient-to-r from-blue-600 via-blue-500 to-purple-600 text-white font-bold rounded-2xl shadow-[0_0_40px_rgba(59,130,246,0.4)] hover:shadow-[0_0_60px_rgba(59,130,246,0.6)] transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 overflow-hidden"
+                  className="group relative px-10 py-5 bg-gradient-to-r from-cyan-500 via-teal-500 to-emerald-500 text-white font-bold rounded-2xl shadow-[0_0_40px_rgba(6,182,212,0.4)] hover:shadow-[0_0_60px_rgba(6,182,212,0.6)] transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 overflow-hidden"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <span className="relative z-10 flex items-center justify-center gap-2 text-lg">
                     Schedule Strategy Call
                     <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -340,7 +340,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-              Our <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Services</span>
+              Our <span className="bg-gradient-to-r from-emerald-600 to-cyan-600 bg-clip-text text-transparent">Services</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               From smart contracts to full-stack dApps, we deliver cutting-edge blockchain solutions
@@ -364,7 +364,7 @@ export default function Home() {
                         loading="lazy"
                       />
                       <div className="absolute top-4 left-4">
-                        <span className="inline-block px-3 py-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-semibold rounded-full shadow-lg">
+                        <span className="inline-block px-3 py-1 bg-gradient-to-r from-emerald-600 to-cyan-600 text-white text-sm font-semibold rounded-full shadow-lg">
                           {formatUSD(item.price)}
                         </span>
                       </div>
@@ -389,7 +389,7 @@ export default function Home() {
           <div className="text-center">
             <Link
               href="/services"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-600 to-cyan-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
             >
               View All Services
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -464,7 +464,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section id="contact" className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
+      <section id="contact" className="py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
