@@ -17,6 +17,11 @@ import {
 
 import Image from "next/image";
 import Link from "next/link";
+import { appWithTranslation } from 'next-i18next';
+import nextI18NextConfig from '../next-i18next.config';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+import { useTranslation } from 'next-i18next';
 
 const josefin = Josefin_Sans({
   weight: ["400", "700"],
@@ -26,11 +31,21 @@ const josefin = Josefin_Sans({
 
 function MyApp({ Component, pageProps }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const router = useRouter();
+  const { i18n } = useTranslation();
+
+  // Ensure client i18n language matches Next.js locale to prevent hydration mismatch
+  useEffect(() => {
+    if (router?.locale && i18n?.language !== router.locale) {
+      i18n.changeLanguage(router.locale);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [router?.locale]);
 
   return (
     <HeroUIProvider>
       <Navbar onOpen={onOpen} />
-      <main className={`${josefin.variable} font-josefin my-4`}>
+      <main className={`${josefin.variable} font-josefin mt-4`}>
         <Component {...pageProps} onOpen={onOpen} />
       </main>
       <Footer />
@@ -40,7 +55,7 @@ function MyApp({ Component, pageProps }) {
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-col gap-1 !font-josefin">
-                <h2 className="font-josefin font-bold text-2xl">Send Us a Message</h2>
+                <h2 className="font-josefin font-bold text-2xl">Send Us Message</h2>
               </ModalHeader>
               <ModalBody className="w-full grid grid-cols-4">
                 <Link
@@ -57,7 +72,6 @@ function MyApp({ Component, pageProps }) {
                       className="flex"
                     />
                   </div>
-
                   <text>Telegram</text>
                 </Link>
                 <Link
@@ -73,15 +87,13 @@ function MyApp({ Component, pageProps }) {
                     alt=""
                   />
                    </div>
-                   <text>Whatsapp</text>
-                  
+                   <text>WhatsApp</text>
                 </Link>
                 <Link
                   href="https://discord.com/users/839903148462178315/"
                   target="_blank"
                   className="grid grid-rows-2 items-center justify-center"
                 >
-                  {" "}
                   <div className="flex items-center justify-center"> <Image
                     src="/discord-icon-svgrepo-com.svg"
                     width={40}
@@ -89,7 +101,6 @@ function MyApp({ Component, pageProps }) {
                     alt=""
                   /></div>
                    <text>Discord</text>
-                 
                 </Link>
                 <Link
                   href="mailto:xdefidev@gmail.com"
@@ -97,16 +108,14 @@ function MyApp({ Component, pageProps }) {
                   className="grid grid-rows-2 items-center justify-center"
                 >
                    <div className="flex items-center justify-center">
-                   
                    <Image
                     src="/email-mail-web-svgrepo-com.svg"
                     width={40}
                     height={40}
                     alt=""
                   />
-
                    </div>
-                   <text>E-mail</text>
+                   <text>Email</text>
                 </Link>
               </ModalBody>
               <ModalFooter>
@@ -130,4 +139,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp, nextI18NextConfig);

@@ -1,0 +1,232 @@
+{
+  "home": "Home",
+  "portfolio": "Portfolio",
+  "serviceCategories": "Service Categories",
+  "blockchainDevelopment": "Blockchain Development",
+  "cryptoExchangeDevelopment": "Crypto Exchange Development",
+  "telegramBots": "Telegram Bots & Mini Apps",
+  "cryptoCasino": "Crypto Casino & Game Development",
+  "defiNft": "DeFi & NFT Ecosystems",
+  "services": "Services",
+  "getInTouch": "Get In Touch",
+  "contactUs": "Contact Us",
+  "ourServices": "Our Services",
+  "sendUsMessage": "Send Us a Message",
+  "close": "Close",
+  "telegram": "Telegram",
+  "whatsapp": "WhatsApp",
+  "discord": "Discord",
+  "email": "Email",
+  "pricing": "Pricing",
+  "startingFrom": "Starting from {{price}}",
+  "customRequest": "Send a custom request! Share your project, requirements, budget, and timeline, and let us help bring your personalized project to life.",
+  "getExactQuote": "Get Exact Quote",
+  "description": "Description",
+  "keyFeatures": "Key Features / Advantages",
+  "categories": "Categories",
+  "navbar": {
+    "categories": "Categories",
+    "services": "Services",
+    "blockchainDevelopment": "Blockchain Development",
+    "cryptoExchangeDevelopment": "Crypto Exchange Development",
+    "telegramBots": "Telegram Bots & Mini Apps",
+    "cryptoCasino": "Crypto Casino Development",
+    "defiNft": "DeFi & NFT Ecosystems"
+  },
+  "service": {
+    "solana-volume-bot-telegram": {
+      "name": "Solana Volume Bot Telegram",
+      "description": "The Solana Volume Bot includes advanced tools to increase token trading volume, build trust among holders, and attract new investors. We can customize the bot to suit your specific project needs.",
+      "p": {
+        "description": "A fully-featured volume-boosting bot for Solana tokens, designed to help projects enhance trading activity and engagement. This bot provides a user-friendly interface and essential features to manage, monitor, and boost token performance effectively.",
+        "list": [
+          "Unlock usage for boosting token activity",
+          "Integrated wallet management for deposits and withdrawals",
+          "Boost token trading volume seamlessly",
+          "Boost token holders with advanced strategies",
+          "Referral system to promote your project",
+          "Refresh feature to keep data updated",
+          "Easy token address modification"
+        ]
+      }
+    },
+    "pump-fun-clone-development": {
+      "name": "PUMP.fun Clone on EVM and SOLANA",
+      "description": "Ethereum and Solana Pump.Fun Clone website development.",
+      "p": {
+        "description": "We are offering the development of a customized Pump.Fun clone for both Ethereum or Solana, featuring advanced buy/sell functionalities, real-time charts, and enhanced security measures. Our highly customizable architecture allows easy feature upgrades and adjustments. Let us help you create a secure and user-friendly platform.",
+        "list": [
+          "Advanced buy/sell functionalities",
+          "Integrated real-time charts for enhanced user experience",
+          "User-friendly interface",
+          "Secure transactions",
+          "Multi-functional support",
+          "Regular updates and support",
+          "Customization to fit your specific requirements"
+        ]
+      }
+    },
+    "telegram-mini-app": {
+      "name": "Telegram Mini App Development",
+      "description": "A versatile Telegram mini app similar to Hamster and TapSwap, offering quick and seamless access to a variety of features within the Telegram ecosystem.",
+      "p": {
+        "description": "A powerful mini app for Telegram that integrates multiple functionalities, enabling users to access, use, and manage various services efficiently.",
+        "list": [
+          "Quick access to services",
+          "Seamless integration with Telegram",
+          "User-friendly interface",
+          "Secure transactions",
+          "Multi-functional support",
+          "Regular updates and support",
+          "Referral system"
+        ]
+      }
+    },
+    "pinksale-launchpad-clone": {
+      "name": "Pinksale - Presale Launchpad clone",
+      "description": "Secure launchpad protocol like Pinksale with presale list and fairlaunch.",
+      "p": {
+        "description": "A platform to create, customize, lock, distribute and sell tokens on blockchain that aims to make it easy and affordable for anyone to launch and invest in crypto projects.",
+        "list": [
+          "Create Presale & Fairlaunch",
+          "Launchpad List",
+          "Connect Wallet & buy tokens",
+          "Token Locker",
+          "Multi Send",
+          "KYC & Audit"
+        ]
+      }
+    },
+    "solana-casino-platform": {
+      "name": "Solana Casino Platform Development",
+      "description": "A cutting-edge casino web platform built on the Solana blockchain, offering fast, secure, and transparent gaming experiences.",
+      "p": {
+        "description": "Experience the thrill of casino gaming on the Solana blockchain. Our platform provides a wide range of games, secure transactions, and provably fair outcomes.",
+        "list": [
+          "Fast and secure transactions",
+          "Wide range of casino games",
+          "Provably fair gaming",
+          "Transparent and decentralized",
+          "User-friendly interface",
+          "24/7 customer support"
+        ]
+      }
+    },
+    "telegram-sniper-bot-clone": {
+      "name": "Telegram Sniper Bot Clone",
+      "description": "Description for Telegram Sniper Bot Clone",
+      "p": {
+        "description": "Detailed description for Telegram Sniper Bot Clone.",
+        "list": []
+      }
+    },
+    "pos-blockchain-development": {
+      "name": "POS Blockchain Development",
+      "description": "Description for POS Blockchain Development",
+      "p": {
+        "description": "Detailed description for POS Blockchain Development.",
+        "list": []
+      }
+    },
+    "poa-blockchain-development": {
+      "name": "POA Blockchain Development",
+      "description": "Description for POA Blockchain Development",
+      "p": {
+        "description": "Detailed description for POA Blockchain Development.",
+        "list": []
+      }
+    },
+    "testnet-evm-blockchain-development": {
+      "name": "Testnet EVM Blockchain Development",
+      "description": "Description for Testnet EVM Blockchain Development",
+      "p": {
+        "description": "Detailed description for Testnet EVM Blockchain Development.",
+        "list": []
+      }
+    },
+    "cryptocurrency-casino-development": {
+      "name": "Cryptocurrency Casino Development",
+      "description": "Description for Cryptocurrency Casino Development",
+      "p": {
+        "description": "Detailed description for Cryptocurrency Casino Development.",
+        "list": []
+      }
+    },
+    "centralized-crypto-exchange-development": {
+      "name": "Centralized Crypto Exchange Development",
+      "description": "Description for Centralized Crypto Exchange Development",
+      "p": {
+        "description": "Detailed description for Centralized Crypto Exchange Development.",
+        "list": []
+      }
+    },
+    "decentralized-crypto-exchange-development": {
+      "name": "Decentralized Crypto Exchange Development",
+      "description": "Description for Decentralized Crypto Exchange Development",
+      "p": {
+        "description": "Detailed description for Decentralized Crypto Exchange Development.",
+        "list": []
+      }
+    },
+    "token-development": {
+      "name": "Token Development",
+      "description": "Description for Token Development",
+      "p": {
+        "description": "Detailed description for Token Development.",
+        "list": []
+      }
+    },
+    "nft-marketplace-development": {
+      "name": "NFT Marketplace Development",
+      "description": "Description for NFT Marketplace Development",
+      "p": {
+        "description": "Detailed description for NFT Marketplace Development.",
+        "list": []
+      }
+    },
+    "nft-minting-website-development": {
+      "name": "NFT Minting Website Development",
+      "description": "Description for NFT Minting Website Development",
+      "p": {
+        "description": "Detailed description for NFT Minting Website Development.",
+        "list": []
+      }
+    },
+    "white-label-crypto-wallet-development": {
+      "name": "White-Label Crypto Wallet Development",
+      "description": "Description for White-Label Crypto Wallet Development",
+      "p": {
+        "description": "Detailed description for White-Label Crypto Wallet Development.",
+        "list": []
+      }
+    },
+    "amm-dex-uniswap-clone": {
+      "name": "AMM DEX Uniswap Clone",
+      "description": "Description for AMM DEX Uniswap Clone",
+      "p": {
+        "description": "Detailed description for AMM DEX Uniswap Clone.",
+        "list": []
+      }
+    },
+    "fix-walletconnect-relay-error": {
+      "name": "Fix WalletConnect Relay Error",
+      "description": "Description for Fix WalletConnect Relay Error",
+      "p": {
+        "description": "Detailed description for Fix WalletConnect Relay Error.",
+        "list": []
+      }
+    },
+    "ai-cryptocurrency-application-development": {
+      "name": "AI Cryptocurrency Application Development",
+      "description": "Description for AI Cryptocurrency Application Development",
+      "p": {
+        "description": "Detailed description for AI Cryptocurrency Application Development.",
+        "list": []
+      }
+    },
+    "custom_request": "Send us a custom request! Share details about your project, requirements, budget, and timeline, and let us help bring your personalized project to life.",
+    "get_exact_quote": "Get Exact Quote",
+    "description": "Description",
+    "key_features": "Key Features / Benefits"
+  }
+}

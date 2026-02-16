@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import Navbar from "../components/Navbar";
 import Link from "next/link";
@@ -5,6 +6,9 @@ import Footer from "../components/Footer";
 import styles from "/styles/Home.module.css";
 import services from "../api/services";
 import Head from "next/head";
+
+// import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+// import { useTranslation } from 'next-i18next';
 
 export default function Service() {
   const imageLink = "https://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584";
@@ -42,6 +46,8 @@ export default function Service() {
       maximumFractionDigits: 2  // But show up to 2 if needed
     }).format(amount);
   }
+
+
 
   return (
     <section>

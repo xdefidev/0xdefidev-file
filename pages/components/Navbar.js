@@ -16,6 +16,8 @@ import {
 } from "@heroui/react";
 
 import { usePathname } from 'next/navigation';
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 
 import Image from "next/image";
 // import Link from "next/link";x
@@ -249,6 +251,9 @@ export const Scale = ({
 };
 
 export default function App({ onOpen }) {
+  const { t, i18n } = useTranslation('common');
+  const router = useRouter();
+
   const icons = {
     chevron: <ChevronDown fill="currentColor" size={16} />,
     scale: <Scale className="text-warning" fill="currentColor" size={30} />,
@@ -288,7 +293,7 @@ export default function App({ onOpen }) {
       title: "Portfolio",
       href: "/portfolio"
     },
-    
+
     {
       title: "Contact Us",
       href: "/contact-us"
@@ -298,7 +303,24 @@ export default function App({ onOpen }) {
       href: "/services"
     },
   ];
-  
+
+  const languages = [
+    { code: 'en', label: 'English' },
+    { code: 'zh', label: '中文' },
+    { code: 'es', label: 'Español' },
+    { code: 'hi', label: 'हिन्दी' },
+    { code: 'ar', label: 'العربية' },
+    { code: 'pt', label: 'Português' },
+    { code: 'ru', label: 'Русский' },
+    { code: 'ja', label: '日本語' },
+    { code: 'de', label: 'Deutsch' },
+    { code: 'fr', label: 'Français' },
+  ];
+
+  const handleLanguageChange = async (lang) => {
+    await i18n.changeLanguage(lang);
+    router.push(router.asPath, router.asPath, { locale: lang });
+  };
 
   return (
     <Navbar
@@ -309,145 +331,218 @@ export default function App({ onOpen }) {
       <NavbarBrand>
         <AcmeLogo />
       </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-6 " justify="center">
+      <NavbarContent className="hidden sm:flex gap-8" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="/" className="!font-josefin">
-            Home
+          <Link
+            color="foreground"
+            href="/"
+            className="font-medium text-gray-700 hover:text-blue-600 transition-colors duration-300"
+          >
+            {t('home')}
           </Link>
         </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="/portfolio" className="">
-            Portfolio
-          </Link>
-        </NavbarItem>
-        
         <Dropdown>
           <NavbarItem>
             <DropdownTrigger>
               <Button
                 disableRipple
-                className="p-0 bg-transparent data-[hover=true]:bg-transparent "
+                className="p-0 bg-transparent data-[hover=true]:bg-transparent font-medium text-gray-700 hover:text-blue-600 transition-colors duration-300"
                 endContent={icons.chevron}
                 radius="sm"
-                variant="flat"
-                size="lg"
+                variant="light"
               >
-                Service Categories
+                {t('categories')}
               </Button>
             </DropdownTrigger>
           </NavbarItem>
           <DropdownMenu
-            aria-label=" features"
-            className="w-[700px] !font-josefin "
+            aria-label="Service Categories"
+            className="w-160 p-3 bg-white/95 backdrop-blur-xl border border-gray-100 shadow-2xl rounded-2xl"
             itemClasses={{
-              base: "gap-4",
+              base: "gap-4 p-4 rounded-xl hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-purple-50/80 hover:shadow-md transition-all duration-300 border border-transparent hover:border-blue-100/50",
+              title: "text-gray-900 font-semibold text-base",
+              description: "text-gray-600 text-sm leading-relaxed",
             }}
           >
             <DropdownItem
-              key="autoscaling"
-              description="EVM blockchain fork, Explorer, Uptime monitor. POA, POS, PoW, DPOS. Smart contract development and auditing."
-              startContent={icons.scale}
+              key="blockchain-dev"
+              description="Smart contracts, dApps, DeFi protocols, NFT marketplaces, tokenomics, Web3 integrations & auditing."
+              startContent={
+                <div className="p-3 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl shadow-lg group-hover:shadow-blue-200 transition-shadow duration-300">
+                  {icons.scale}
+                </div>
+              }
               href="/categories/blockchain-development"
-             className="font1"
+              className="group"
             >
-              
-                Blockchain Development{" "}
-              
+              <div className="flex flex-col">
+                <span className="text-gray-900 font-semibold text-base group-hover:text-blue-600 transition-colors duration-300">{t('navbar.blockchainDevelopment')}</span>
+              </div>
             </DropdownItem>
 
             <DropdownItem
-              key="usage_metrics"
+              key="crypto-exchange"
               description="Centralised (CEX) & decentralised (DEX) crypto exchanges. Liquidity solutions, KYC/AML integration, OTC trading."
-              startContent={icons.activity}
+              startContent={
+                <div className="p-3 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl shadow-lg group-hover:shadow-purple-200 transition-shadow duration-300">
+                  {icons.activity}
+                </div>
+              }
               href="/categories/crypto-exchange-development"
+              className="group"
             >
-              Crypto Exchange Development
+              <div className="flex flex-col">
+                <span className="text-gray-900 font-semibold text-base group-hover:text-purple-600 transition-colors duration-300">{t('navbar.cryptoExchangeDevelopment')}</span>
+              </div>
             </DropdownItem>
+
             <DropdownItem
-              key="production_ready"
-              description="Trading & Volume Bots, Price alert, Mini Apps, Customer support chatbots & Group/Channnel management tools."
-              startContent={icons.flash}
+              key="telegram-bots"
+              description="Trading & Volume Bots, Price alert, Mini Apps, Customer support chatbots & Group/Channel management tools."
+              startContent={
+                <div className="p-3 bg-gradient-to-br from-green-500 to-green-600 rounded-xl shadow-lg group-hover:shadow-green-200 transition-shadow duration-300">
+                  {icons.flash}
+                </div>
+              }
               href="/categories/telegram-bots"
+              className="group"
             >
-              Telegram Bots and Mini Apps
+              <div className="flex flex-col">
+                <span className="text-gray-900 font-semibold text-base group-hover:text-green-600 transition-colors duration-300">{t('navbar.telegramBots')}</span>
+              </div>
             </DropdownItem>
+
             <DropdownItem
-              key="99_uptime"
+              key="crypto-casino"
               description="Crypto enabled casino & gambling website, bot, mini app solutions. Play to Earn(P2E)."
-              startContent={icons.server}
+              startContent={
+                <div className="p-3 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl shadow-lg group-hover:shadow-orange-200 transition-shadow duration-300">
+                  {icons.server}
+                </div>
+              }
               href="/categories/crypto-casino-development"
+              className="group"
             >
-              Crypto Casino and Game Development
+              <div className="flex flex-col">
+                <span className="text-gray-900 font-semibold text-base group-hover:text-orange-600 transition-colors duration-300">{t('navbar.cryptoCasino')}</span>
+              </div>
             </DropdownItem>
+
             <DropdownItem
-              key="supreme_support"
+              key="defi-nft"
               description="Staking, Farming, Lending, Borrowing, NFT marketplace, NFT Staking, Launchpad, meme coins, tokenomics."
-              startContent={icons.user}
+              startContent={
+                <div className="p-3 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl shadow-lg group-hover:shadow-pink-200 transition-shadow duration-300">
+                  {icons.user}
+                </div>
+              }
               href="/categories/defi-nft-ecosystems"
+              className="group"
             >
-              DeFi & NFT Ecosystems
+              <div className="flex flex-col">
+                <span className="text-gray-900 font-semibold text-base group-hover:text-pink-600 transition-colors duration-300">{t('navbar.defiNft')}</span>
+              </div>
             </DropdownItem>
+
           </DropdownMenu>
         </Dropdown>
 
         <NavbarItem>
-          <Link color="foreground" href="/services" className="">
-            Services
+          <Link
+            color="foreground"
+            href="/services"
+            className="font-medium text-gray-700 hover:text-blue-600 transition-colors duration-300"
+          >
+            {t('services')}
           </Link>
         </NavbarItem>
-        {/* <NavbarItem isActive>
-          <Link aria-current="page" href="#">
-            Customers
+        <NavbarItem>
+          <Link
+            color="foreground"
+            href="/portfolio"
+            className="font-medium text-gray-700 hover:text-blue-600 transition-colors duration-300"
+          >
+            {t('portfolio')}
           </Link>
-        </NavbarItem> */}
+        </NavbarItem>
       </NavbarContent>
+
       <NavbarContent justify="end">
+        <NavbarItem>
+          <Dropdown>
+            <DropdownTrigger>
+              <Button
+                variant="bordered"
+                size="sm"
+                className="border-gray-200 text-gray-700 hover:border-blue-500 hover:text-blue-600 transition-all duration-300"
+              >
+                {languages.find(l => l.code === i18n.language)?.label || 'Language'}
+              </Button>
+            </DropdownTrigger>
+            <DropdownMenu
+              aria-label="Language Selector"
+              className="p-2"
+              itemClasses={{
+                base: "rounded-lg hover:bg-blue-50 transition-colors duration-300",
+              }}
+            >
+              {languages.map(lang => (
+                <DropdownItem
+                  key={lang.code}
+                  onClick={() => handleLanguageChange(lang.code)}
+                  className="font-medium"
+                >
+                  {lang.label}
+                </DropdownItem>
+              ))}
+            </DropdownMenu>
+          </Dropdown>
+        </NavbarItem>
+
         <NavbarItem>
           <Button
             as={Link}
-            color="secondary"
             onPress={onOpen}
             size="md"
-            variant="flat"
-            className="font-semibold sm:inline-flex hidden"
+            className="font-semibold sm:inline-flex hidden bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300"
           >
-            Get in Touch
+            {t('getInTouch')}
           </Button>
         </NavbarItem>
       </NavbarContent>
 
       <NavbarContent className="sm:hidden p-0 m-0 w-full" justify="end">
-        <NavbarMenuToggle className="p-0 m-0" />
+        <NavbarMenuToggle className="p-0 m-0 text-gray-700" />
       </NavbarContent>
 
-      <NavbarMenu>
-        {/* <h2>Categories</h2> */}
-      {menuItems.map((item, index) =>{ const isActive = pathname === item.href; 
+      <NavbarMenu className="bg-white/95 backdrop-blur-md">
+        {menuItems.map((item, index) => {
+          const isActive = pathname === item.href;
+          return (
+            <NavbarMenuItem key={`${item.title}-${index}`} className="pt-6">
+              <Link
+                className="w-full text-center font-medium text-lg"
+                color={isActive ? "primary" : "foreground"}
+                href={item.href}
+              >
+                <span className={`${isActive ? 'text-blue-600 font-semibold' : 'text-gray-700'} hover:text-blue-600 transition-colors duration-300`}>
+                  {item.title}
+                </span>
+              </Link>
+            </NavbarMenuItem>
+          )
+        })}
 
-        return (
-          <NavbarMenuItem key={`${item.title}-${index}`} className="pt-5">
-            <Link
-              className="w-full text-center "
-              color={isActive ? "primary" : "foreground"}
-              href={item.href}
-              size="lg"
-            >
-              {item.title}
-            </Link>
-            
-          </NavbarMenuItem>
-        )
-      } )}
-       <Button
+        <NavbarMenuItem className="pt-6">
+          <Button
             as={Link}
-            color="secondary"
             onPress={onOpen}
             size="md"
-            variant="flat"
-            className="font-semibold mt-4"
+            className="font-semibold w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg"
           >
-            Get in Touch
+            {t('getInTouch')}
           </Button>
+        </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
   );

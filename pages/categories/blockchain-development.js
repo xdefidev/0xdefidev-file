@@ -12,6 +12,7 @@ import services from "../api/services";
 import hero1 from "../../public/blockchain-hero-1.png";
 
 import hero2 from "../../public/categories/blockchain-development.png"
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const servicesList = [
   "Blockchain Ecosystem Development",
@@ -656,3 +657,12 @@ const BlockchainDevelopmentPage = () => {
 };
 
 export default BlockchainDevelopmentPage;
+
+// Ensure navbar translations are available on this page to avoid hydration mismatch
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en', ['common'])),
+    },
+  };
+}
