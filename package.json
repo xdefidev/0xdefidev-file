@@ -9,7 +9,7 @@
     "postbuild": "next-sitemap"
   },
   "engines": {
-  "node": "22.x"
+    "node": "22.x"
   },
   "dependencies": {
     "@heroui/modal": "^2.2.8",
