@@ -13,7 +13,7 @@ module.exports = {
       'de', // German
       'fr'  // French
     ],
-    localeDetection: true,
+    localeDetection: false,
     fallbackLng: 'en',
     ns: ['common'],
     defaultNS: 'common',

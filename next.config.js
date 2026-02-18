@@ -17,6 +17,6 @@ module.exports = {
       "fr"  // French
     ],
     defaultLocale: "en",
-    localeDetection: true
+    localeDetection: false
   }
 };
