@@ -79,10 +79,10 @@ export default function Home() {
         {/* <html lang="en" /> */}
 
         <meta httpEquiv="Content-Language" content="en" />
-        <meta
+        {/* <meta
           name="google-site-verification"
           content="C7U3VQkY7WQDIkayBFDUf9CmlRoFm-jjUWTGRACRCig"
-        />
+        /> */}
 
         <meta property="og:title" content="Xdefidev Crypto Services" />
 
