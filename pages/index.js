@@ -84,7 +84,7 @@ export default function Home() {
           content="C7U3VQkY7WQDIkayBFDUf9CmlRoFm-jjUWTGRACRCig"
         /> */}
 
-        <meta name="google-site-verification" content="scXQ4_yUa5lV7shunl2tB2FkxqUq1v6pD6nu2mVYpKw" />
+        {/* <meta name="google-site-verification" content="scXQ4_yUa5lV7shunl2tB2FkxqUq1v6pD6nu2mVYpKw" /> */}
 
         <meta property="og:title" content="Xdefidev Crypto Services" />
 
