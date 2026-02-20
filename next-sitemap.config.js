@@ -1,6 +1,6 @@
 module.exports = {
-    siteUrl: 'https://xdefidev.com',
-    generateRobotsTxt: true,
-    exclude: ['/api/*', '/components/*'],
+  siteUrl: 'https://xdefidev.xyz',
+  generateRobotsTxt: true,
+  exclude: ['/api/*', '/components/*'],
 
-  }
+}
