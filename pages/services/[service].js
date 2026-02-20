@@ -47,7 +47,7 @@ export async function getStaticProps({ params, locale }) {
   return {
     props: {
       post,
-      ...(await serverSideTranslations(locale, ['common'])),
+      ...(await serverSideTranslations(locale ?? 'en', ['common'])),
     },
   };
 }
@@ -99,14 +99,14 @@ export default function Service({ post, onOpen }) {
           key="canonical"
         />
       </Head>
-      
+
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-purple-600/5 to-pink-600/5"></div>
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
@@ -132,9 +132,9 @@ export default function Service({ post, onOpen }) {
                     ></iframe>
                   </div>
                 ) : (
-                  <img 
-                    src={post.image || imageLink} 
-                    loading="lazy" 
+                  <img
+                    src={post.image || imageLink}
+                    loading="lazy"
                     className="w-full h-80 object-cover"
                     alt={t(`service.${post.slug}.name`)}
                   />
@@ -152,18 +152,18 @@ export default function Service({ post, onOpen }) {
                   </div>
                   <p className="text-sm text-gray-500">Starting from</p>
                 </div>
-                
+
                 <p className="text-gray-600 text-center mb-6 leading-relaxed">
                   {t('service.custom_request')}
                 </p>
-                
+
                 <Button
                   className="w-full py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
                   onPress={onOpen}
                 >
                   {t('service.get_exact_quote')}
                 </Button>
-                
+
                 {/* Features Preview */}
                 <div className="mt-4 md:mt-6 pt-4 md:pt-6 border-t border-gray-100">
                   <h3 className="font-semibold text-gray-900 mb-3 text-base md:text-lg">What's Included:</h3>
@@ -199,7 +199,7 @@ export default function Service({ post, onOpen }) {
                 <p>{t(`service.${post.slug}.p.description`)}</p>
               </div>
             </div>
-            
+
             {/* Key Features */}
             <div>
               <h3 className="text-3xl font-bold text-gray-900 mb-6">

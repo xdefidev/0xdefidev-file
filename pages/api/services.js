@@ -162,4 +162,34 @@ export default [
     slug: "ai-cryptocurrency-application-development",
     category: "ai",
   },
+  {
+    image: "",
+    status: true,
+    price: "0",
+    youtube: "",
+    slug: "solana-volume-bot",
+    category: "free tools",
+    name: "Solana Volume Bot",
+    description: "Advanced tools to increase token trading volume, build trust among holders, and attract new investors. Boost your token's activity on the Solana blockchain."
+  },
+  {
+    image: "",
+    status: true,
+    price: "0",
+    youtube: "",
+    slug: "wallet-tracker-analytics",
+    category: "free tools",
+    name: "Wallet Tracker & Analytics",
+    description: "Monitor any wallet address across multiple EVM chains and Solana. Get real-time alerts for large transactions and comprehensive portfolio analysis."
+  },
+  {
+    image: "",
+    status: true,
+    price: "0",
+    youtube: "",
+    slug: "impermanent-loss-calculator",
+    category: "free tools",
+    name: "Impermanent Loss Calculator",
+    description: "Accurately calculate potential impermanent loss for liquidity providers across different AMM protocols (Uniswap, PancakeSwap, etc.)."
+  }
 ];

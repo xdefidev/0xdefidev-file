@@ -297,6 +297,10 @@ export default function App({ onOpen }) {
       title: "Free Tools",
       href: "/free-tools"
     },
+    {
+      title: "Blog",
+      href: "/blog"
+    },
 
     {
       title: "Contact Us",
@@ -476,6 +480,15 @@ export default function App({ onOpen }) {
             className="font-medium text-gray-700 hover:text-blue-600 transition-colors duration-300"
           >
             {t('freeTools')}
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link
+            color="foreground"
+            href="/blog"
+            className="font-medium text-gray-700 hover:text-blue-600 transition-colors duration-300"
+          >
+            {t('blog')}
           </Link>
         </NavbarItem>
       </NavbarContent>
