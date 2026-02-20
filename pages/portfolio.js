@@ -2,6 +2,7 @@ import Head from "next/head";
 import Navbar from "./components/Navbar";
 import styles from "/styles/Portfolio.module.css";
 import portfolio from "./api/portfolio";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export default function Home() {
   // console.log(portfolio);
@@ -54,7 +55,7 @@ export default function Home() {
           key="canonical"
         />
       </Head>
-      
+
       <div className="text-center text-5xl !mb-8 font-semibold antialiased ">
         <h1>Portfolio</h1>
       </div>
@@ -73,4 +74,12 @@ export default function Home() {
       </div>
     </div>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en', ['common'])),
+    },
+  };
 }

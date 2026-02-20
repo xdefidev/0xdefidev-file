@@ -7,12 +7,12 @@ import styles from "/styles/Home.module.css";
 import services from "../api/services";
 import Head from "next/head";
 
-// import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 // import { useTranslation } from 'next-i18next';
 
 export default function Service() {
   const imageLink = "https://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584";
-  
+
   // State for search, pagination, and filtered services
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
@@ -21,7 +21,7 @@ export default function Service() {
 
   // Filter services based on search term
   useEffect(() => {
-    const filtered = services.filter(service => 
+    const filtered = services.filter(service =>
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase())
     );
@@ -70,7 +70,7 @@ export default function Service() {
         <div className="text-center text-5xl !mb-8 font-semibold antialiased">
           <h1>Services</h1>
         </div>
-        
+
         {/* Search Bar */}
         <div className="flex justify-center mb-8 mx-4 sm:mx-0">
           <input
@@ -81,7 +81,7 @@ export default function Service() {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
-        
+
         {/* Services Grid */}
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 my-4 sm:mx-5">
           {currentServices.map((item, index) => (
@@ -109,7 +109,7 @@ export default function Service() {
             </Link>
           ))}
         </div>
-        
+
         {/* Pagination Controls */}
         {filteredServices.length > servicesPerPage && (
           <div className="flex justify-center mt-8">
@@ -121,7 +121,7 @@ export default function Service() {
               >
                 Previous
               </button>
-              
+
               {Array.from({ length: totalPages }, (_, i) => i + 1).map(number => (
                 <button
                   key={number}
@@ -131,7 +131,7 @@ export default function Service() {
                   {number}
                 </button>
               ))}
-              
+
               <button
                 onClick={() => paginate(currentPage < totalPages ? currentPage + 1 : totalPages)}
                 disabled={currentPage === totalPages}
@@ -142,7 +142,7 @@ export default function Service() {
             </nav>
           </div>
         )}
-        
+
         {/* Display search results count */}
         <div className="text-center mt-4 text-gray-600">
           Showing {currentServices.length} of {filteredServices.length} services
@@ -151,4 +151,12 @@ export default function Service() {
       </div>
     </section>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en', ['common'])),
+    },
+  };
 }
