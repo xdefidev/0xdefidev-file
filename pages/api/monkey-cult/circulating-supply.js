@@ -5,7 +5,7 @@ const LOCKED_WALLETS = [
     "1nc1nerator11111111111111111111111111111111"
 ];
 
-export async function GET() {
+export default async function handler(req, res) {
     try {
         const connection = new Connection("https://go.getblock.us/f4ae7e4f1e984adcbb518d69f9c5faba");
         const mint = new PublicKey("HyLXondhNhGkvWPXr8z4EPSgZNRRs4j8BHdyqMdVpump");
@@ -27,8 +27,8 @@ export async function GET() {
             }
         }
 
-        return Response.json(circulating);
+        res.status(200).json(circulating);
     } catch (error) {
-        return new Response("Error fetching circulating supply", { status: 500 });
+        res.status(500).send("Error fetching circulating supply");
     }
 }
