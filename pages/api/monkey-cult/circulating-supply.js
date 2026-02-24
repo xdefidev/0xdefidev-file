@@ -16,7 +16,7 @@ export default async function handler(req, res) {
 
         // Subtract locked balances
         for (const wallet of LOCKED_WALLETS) {
-            const accounts = await connection.getTokenAccountsByOwner(
+            const accounts = await connection.getParsedTokenAccountsByOwner(
                 new PublicKey(wallet),
                 { mint }
             );
@@ -29,6 +29,7 @@ export default async function handler(req, res) {
 
         res.status(200).json(circulating);
     } catch (error) {
-        res.status(500).send("Error fetching circulating supply");
+        console.error("API Error:", error);
+        res.status(500).json({ error: error.message, stack: error.stack });
     }
 }
