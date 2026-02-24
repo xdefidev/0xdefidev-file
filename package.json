@@ -14,6 +14,8 @@
   "dependencies": {
     "@heroui/modal": "^2.2.8",
     "@heroui/react": "^2.6.14",
+    "@solana/spl-token": "^0.4.14",
+    "@solana/web3.js": "^1.98.4",
     "framer-motion": "^11.15.0",
     "i18next": "^25.3.2",
     "next": "13",
