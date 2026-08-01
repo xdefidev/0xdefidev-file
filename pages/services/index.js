@@ -43,17 +43,17 @@ export default function Service() {
   return (
     <section>
       <SeoHead
-        title="Services | Blockchain, Smart Contract & Web3 Development Solutions | XDefiDev"
-        description="Explore XDefiDev's blockchain development services: smart contract development, DeFi protocols, dApps, NFT marketplaces, crypto exchanges, blockchain infrastructure, and Web3 consulting. Tailored solutions for startups and enterprises."
+        title="Services | Custom Software, AI & Blockchain Development | XDefiDev"
+        description="Explore XDefiDev's development services: custom software, AI and LLM applications, n8n automation, cloud and DevOps, APIs, web and mobile apps, plus smart contracts, DeFi protocols, dApps, and crypto exchanges. Fixed pricing for startups and enterprises."
         path="/services"
       />
 
       <div className="!my-24" id="grid-container">
         <div className="text-center text-5xl !mb-8 font-semibold antialiased">
-          <h1>Blockchain & Web3 Development Services</h1>
+          <h1>Software, AI & Blockchain Development Services</h1>
         </div>
         <p className="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-          From token and smart contract development to full dApps, custom blockchains, and crypto exchanges, our engineers deliver production-ready Web3 solutions at transparent, fixed pricing.
+          From custom software, AI applications, and workflow automation to smart contracts, dApps, and crypto exchanges, our engineers deliver production-ready solutions at transparent, fixed pricing.
         </p>
 
         <div className="flex justify-center mb-8 mx-4 sm:mx-0">

@@ -88,14 +88,14 @@ export default function Service({ post, onOpen }) {
       "@type": "Offer",
       price: post.price,
       priceCurrency: "USD",
-      description: "Starting price for this Web3 development service",
+      description: "Starting price for this development service",
     },
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
       <SeoHead
-        title={`${serviceName} | XDefiDev Web3 Development Service`}
+        title={`${serviceName} | XDefiDev`}
         description={serviceDescription}
         path={`/services/${post.slug}`}
         image={post.image || imageLink}

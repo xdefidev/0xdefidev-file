@@ -18,7 +18,7 @@ export default function Document({ locale = 'en' }) {
                   "name": "XDefiDev",
                   "legalName": "XDefiDev",
                   "description":
-                    "Premium Blockchain, Crypto Exchange, and Web3 Development Services. Smart contract development, DeFi protocols, dApps, and blockchain consulting.",
+                    "Full-stack software engineering agency: custom software, AI and LLM applications, workflow automation, cloud and DevOps, APIs, web and mobile apps, and blockchain and Web3 development.",
                   "logo": {
                     "@type": "ImageObject",
                     "url": "https://xdefidev.xyz/logo.png",
@@ -47,7 +47,7 @@ export default function Document({ locale = 'en' }) {
                   "url": "https://xdefidev.xyz/",
                   "name": "XDefiDev",
                   "description":
-                    "Premium Blockchain, Crypto Exchange, and Web3 Development Services",
+                    "Software, AI, Automation and Blockchain Engineering",
                   "publisher": { "@id": "https://xdefidev.xyz/#organization" },
                   "inLanguage": "en"
                 }

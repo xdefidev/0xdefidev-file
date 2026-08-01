@@ -47,7 +47,7 @@ export default [
     price: "600",
     youtube: "",
     slug: "solana-casino-platform",
-    category: "dapps",
+    category: "casino",
   },
   {
     image: "",
@@ -91,7 +91,7 @@ export default [
     price: "1000",
     youtube: "E4fIL4SjEXk",
     slug: "cryptocurrency-casino-development",
-    category: "dapps",
+    category: "casino",
   },
   {
     image:
@@ -197,5 +197,85 @@ export default [
     category: "free tools",
     name: "Impermanent Loss Calculator",
     description: "Accurately calculate potential impermanent loss for liquidity providers across different AMM protocols (Uniswap, PancakeSwap, etc.)."
+  },
+  {
+    image: "",
+    status: true,
+    price: "2500",
+    youtube: "",
+    slug: "custom-software-development",
+    category: "software",
+    name: "Custom Software Development",
+    description: "End-to-end custom software development: architecture, backend, frontend, databases, and deployment of production-grade web and cloud applications built for scale."
+  },
+  {
+    image: "",
+    status: true,
+    price: "1000",
+    youtube: "",
+    slug: "web-application-development",
+    category: "software",
+    name: "Web Application Development",
+    description: "Fast, secure, and accessible web applications with modern stacks like Next.js and React, complete with authentication, payments, dashboards, and admin panels."
+  },
+  {
+    image: "",
+    status: true,
+    price: "1200",
+    youtube: "",
+    slug: "mobile-application-development",
+    category: "software",
+    name: "Mobile Application Development",
+    description: "Cross-platform iOS and Android apps using React Native and Flutter, from UI design to app store deployment, including in-app payments and push notifications."
+  },
+  {
+    image: "",
+    status: true,
+    price: "2000",
+    youtube: "",
+    slug: "ai-llm-application-development",
+    category: "ai",
+    name: "AI & LLM Application Development",
+    description: "Production-ready AI applications powered by LLMs: custom AI agents, RAG pipelines, semantic search, fine-tuned models, and integration into your product workflows."
+  },
+  {
+    image: "",
+    status: true,
+    price: "1000",
+    youtube: "",
+    slug: "ai-chatbot-agents-development",
+    category: "ai",
+    name: "AI Chatbots & Agents Development",
+    description: "Intelligent AI chatbots and autonomous agents trained on your data, deployed across websites, WhatsApp, Telegram, and Slack to automate support and sales."
+  },
+  {
+    image: "",
+    status: true,
+    price: "500",
+    youtube: "",
+    slug: "n8n-workflow-automation",
+    category: "automation",
+    name: "n8n Workflow Automation",
+    description: "Custom n8n workflows and business process automation that connect your apps, sync data, and eliminate manual work with reliable error handling and logging."
+  },
+  {
+    image: "",
+    status: true,
+    price: "1000",
+    youtube: "",
+    slug: "cloud-devops-engineering",
+    category: "cloud",
+    name: "Cloud & DevOps Engineering",
+    description: "Cloud architecture, CI/CD pipelines, containerization with Docker and Kubernetes, infrastructure-as-code, monitoring, and cost optimization on AWS, GCP, and Azure."
+  },
+  {
+    image: "",
+    status: true,
+    price: "600",
+    youtube: "",
+    slug: "api-development-integration",
+    category: "apis",
+    name: "API Development & Integration",
+    description: "Design, build, and document REST and GraphQL APIs, plus integration with third-party services, payment gateways, and payment providers like Stripe."
   }
 ];

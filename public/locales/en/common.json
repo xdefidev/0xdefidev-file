@@ -33,7 +33,12 @@
     "cryptoExchangeDevelopment": "Crypto Exchange Development",
     "telegramBots": "Telegram Bots & Mini Apps",
     "cryptoCasino": "Crypto Casino Development",
-    "defiNft": "DeFi & NFT Ecosystems"
+    "defiNft": "DeFi & NFT Ecosystems",
+    "softwareDevelopment": "Software Development",
+    "aiDevelopment": "AI & LLM Solutions",
+    "automation": "Automation & n8n",
+    "cloudDevops": "Cloud & DevOps",
+    "apiIntegrations": "APIs & Integrations"
   },
   "service": {
     "solana-volume-bot-telegram": {
@@ -224,6 +229,126 @@
       "p": {
         "description": "Detailed description for AI Cryptocurrency Application Development.",
         "list": []
+      }
+    },
+    "custom-software-development": {
+      "name": "Custom Software Development",
+      "description": "End-to-end custom software development: architecture, backend, frontend, databases, and deployment of production-grade web and cloud applications built for scale.",
+      "p": {
+        "description": "We design and build custom software tailored to your business: from architecture and database design to backend APIs, frontend interfaces, and cloud deployment. Our engineers follow best practices for testing, security, and observability so your product is stable from day one and easy to extend as you grow.",
+        "list": [
+          "Custom architecture, database, and cloud design",
+          "Backend, frontend, and API development",
+          "Authentication, payments, and admin panels",
+          "Automated testing and CI/CD pipelines",
+          "Performance tuning and security hardening",
+          "Ongoing maintenance and feature development"
+        ]
+      }
+    },
+    "web-application-development": {
+      "name": "Web Application Development",
+      "description": "Fast, secure, and accessible web applications with modern stacks like Next.js and React, complete with authentication, payments, dashboards, and admin panels.",
+      "p": {
+        "description": "We build fast, secure, and accessible web applications using modern stacks like Next.js and React. Whether you need a customer-facing SaaS product, an internal tool, or a marketing site with booking and payments, we handle the full lifecycle from design to deployment and analytics.",
+        "list": [
+          "Next.js and React frontend development",
+          "User authentication and authorization",
+          "Stripe and PayPal payment integration",
+          "Dashboards, admin panels, and reporting",
+          "SEO, performance, and accessibility optimization",
+          "Deployment on Vercel, Netlify, or your own server"
+        ]
+      }
+    },
+    "mobile-application-development": {
+      "name": "Mobile Application Development",
+      "description": "Cross-platform iOS and Android apps using React Native and Flutter, from UI design to app store deployment, including in-app payments and push notifications.",
+      "p": {
+        "description": "We build cross-platform iOS and Android applications with React Native and Flutter, shipping to both app stores from a single codebase. From UI/UX design and backend APIs to in-app payments and push notifications, we deliver apps users love to use.",
+        "list": [
+          "React Native and Flutter development",
+          "UI/UX design and prototyping",
+          "In-app purchases and subscriptions",
+          "Push notifications and deep linking",
+          "App Store and Google Play deployment",
+          "Backend APIs and cloud sync"
+        ]
+      }
+    },
+    "ai-llm-application-development": {
+      "name": "AI & LLM Application Development",
+      "description": "Production-ready AI applications powered by LLMs: custom AI agents, RAG pipelines, semantic search, fine-tuned models, and integration into your product workflows.",
+      "p": {
+        "description": "We build production-ready AI applications on top of large language models. Using OpenAI, Anthropic, and open-source models, we design retrieval-augmented generation (RAG) pipelines, custom AI agents, semantic search, and fine-tuned models that are grounded in your data and safe for real-world use.",
+        "list": [
+          "Custom AI agents and assistants",
+          "RAG pipelines grounded in your data",
+          "Semantic search and embeddings",
+          "Prompt engineering and model fine-tuning",
+          "Evaluation, guardrails, and cost controls",
+          "Integration into your product workflows"
+        ]
+      }
+    },
+    "ai-chatbot-agents-development": {
+      "name": "AI Chatbots & Agents Development",
+      "description": "Intelligent AI chatbots and autonomous agents trained on your data, deployed across websites, WhatsApp, Telegram, and Slack to automate support and sales.",
+      "p": {
+        "description": "We build intelligent AI chatbots and autonomous agents trained on your documents, FAQs, and knowledge base. Deploy them across your website, WhatsApp, Telegram, Slack, and email to automate support, qualify leads, and handle repetitive work 24/7 with human handoff when needed.",
+        "list": [
+          "Chatbots trained on your knowledge base",
+          "Website, WhatsApp, Telegram, and Slack deployment",
+          "Lead qualification and sales automation",
+          "24/7 support with human handoff",
+          "Analytics and conversation insights",
+          "Escalation and admin workflows"
+        ]
+      }
+    },
+    "n8n-workflow-automation": {
+      "name": "n8n Workflow Automation",
+      "description": "Custom n8n workflows and business process automation that connect your apps, sync data, and eliminate manual work with reliable error handling and logging.",
+      "p": {
+        "description": "We build custom n8n workflows that connect your apps and eliminate manual, repetitive work. From CRM and email automation to invoicing, lead routing, and data syncing between systems, our workflows include error handling, retries, and logging so you can trust automation with real business processes.",
+        "list": [
+          "Custom n8n workflow design and build",
+          "CRM, email, and calendar integrations",
+          "Lead routing and notification automation",
+          "Invoicing and reporting automation",
+          "Data sync between your systems",
+          "Error handling, retries, and logging"
+        ]
+      }
+    },
+    "cloud-devops-engineering": {
+      "name": "Cloud & DevOps Engineering",
+      "description": "Cloud architecture, CI/CD pipelines, containerization with Docker and Kubernetes, infrastructure-as-code, monitoring, and cost optimization on AWS, GCP, and Azure.",
+      "p": {
+        "description": "We design and operate cloud infrastructure on AWS, GCP, and Azure. From architecture review and migration to CI/CD pipelines, Docker and Kubernetes containerization, infrastructure-as-code, monitoring, and cost optimization, we keep your systems reliable, secure, and fast.",
+        "list": [
+          "Cloud architecture design and migration",
+          "CI/CD pipelines and automated deployments",
+          "Docker and Kubernetes containerization",
+          "Infrastructure-as-code with Terraform",
+          "Monitoring, alerting, and logging",
+          "Security and cost optimization"
+        ]
+      }
+    },
+    "api-development-integration": {
+      "name": "API Development & Integration",
+      "description": "Design, build, and document REST and GraphQL APIs, plus integration with third-party services, payment gateways, and payment providers like Stripe.",
+      "p": {
+        "description": "We design, build, and document clean REST and GraphQL APIs that your team and partners can rely on. We also handle third-party integrations with payment gateways like Stripe, messaging platforms, CRMs, and external services, with versioning, rate limiting, and detailed documentation included.",
+        "list": [
+          "REST and GraphQL API design and build",
+          "Authentication and rate limiting",
+          "Stripe and payment gateway integration",
+          "Third-party service integrations",
+          "API documentation and versioning",
+          "Monitoring and error tracking"
+        ]
       }
     },
     "custom_request": "Send us a custom request! Share details about your project, requirements, budget, and timeline, and let us help bring your personalized project to life.",

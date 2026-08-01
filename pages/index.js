@@ -96,7 +96,7 @@ const faqs = [
   {
     question: "What does XDefiDev do?",
     answer:
-      "XDefiDev is a Web3 development agency that designs, builds, and secures decentralized applications. We specialize in smart contract engineering, DeFi protocol development, dApps, NFT marketplaces, blockchain infrastructure, and crypto exchange platforms for founders, startups, DAOs, and enterprises.",
+      "XDefiDev is a full-stack software engineering agency. We build custom software, AI and LLM applications, n8n workflow automations, cloud and DevOps infrastructure, APIs, and web and mobile apps — plus smart contracts, DeFi protocols, dApps, and blockchain platforms for founders, startups, DAOs, and enterprises.",
   },
   {
     question: "What blockchain networks are supported?",
@@ -150,19 +150,22 @@ const professionalServiceSchema = {
   telephone: "+1-706-228-9620",
   priceRange: "$100 - $50,000+",
   description:
-    "Web3 development agency offering smart contract development, smart contract auditing, DeFi protocol development, dApp and NFT marketplace engineering, blockchain infrastructure, and Web3 consulting.",
+    "Full-stack software engineering agency offering custom software development, AI and LLM applications, n8n workflow automation, cloud and DevOps engineering, API integrations, web and mobile applications, plus blockchain and Web3 development.",
   areaServed: "Worldwide",
   sameAs: [
     "https://t.me/xdefideveloper",
     "https://discord.com/users/839903148462178315/",
   ],
   makesOffer: [
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Custom Software Development" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "AI & LLM Application Development" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "n8n Workflow Automation" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Cloud & DevOps Engineering" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "API Development & Integration" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Web & Mobile Application Development" } },
     { "@type": "Offer", itemOffered: { "@type": "Service", name: "Smart Contract Development" } },
-    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Smart Contract Auditing" } },
     { "@type": "Offer", itemOffered: { "@type": "Service", name: "DeFi Protocol Development" } },
     { "@type": "Offer", itemOffered: { "@type": "Service", name: "Blockchain Infrastructure" } },
-    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Web3 Consulting" } },
-    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Crypto Exchange Development" } },
   ],
 };
 
@@ -186,8 +189,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
       <SeoHead
-        title="XDefiDev | Web3 & Smart Contract Development"
-        description="XDefiDev: Web3 development, smart contracts, DeFi protocols, dApps, and blockchain consulting for startups, DAOs, and enterprises since 2018."
+        title="XDefiDev | AI, Software, Automation & Blockchain Solutions"
+        description="Custom software, AI applications, n8n automation, cloud infrastructure, APIs, mobile apps, and blockchain solutions for startups and enterprises."
         path="/"
         image="https://ik.imagekit.io/lzgpc48la/Yellow_Bright_Business_Idea_Tutorial_Youtube_Thumbnail_n186Tgza0.png?ik-sdk-version=javascript-1.4.3&updatedAt=1665836822605"
         schema={[professionalServiceSchema, faqSchema]}
@@ -383,13 +386,13 @@ export default function Home() {
                 About <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">XDefiDev</span>
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                XDefiDev is a full-service Web3 development agency founded in 2018. We design, build, secure, and scale decentralized applications for founders, startups, DAOs, protocol teams, and enterprises exploring blockchain technology.
+                XDefiDev is a full-service software engineering agency founded in 2018. We design, build, secure, and scale products for founders, startups, DAOs, and enterprises — from custom software and AI applications to cloud infrastructure and blockchain platforms.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Our engineers specialize in Solidity smart contract development, DeFi protocol engineering, NFT marketplaces, crypto exchange platforms, and custom EVM-compatible networks. With more than 200 projects delivered and over $50 million secured for clients, we combine deep technical expertise with a practical, product-first approach.
+                Our engineers specialize in custom software development, AI and LLM applications, n8n workflow automation, cloud and DevOps engineering, API integrations, and web and mobile apps — alongside Solidity smart contracts, DeFi protocols, NFT marketplaces, crypto exchanges, and custom EVM-compatible networks. With more than 200 projects delivered and over $50 million secured for clients, we combine deep technical expertise with a practical, product-first approach.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Whether you need a token launched, a decentralized exchange built, or an existing Web3 product audited and optimized, XDefiDev provides the engineering capacity of a large studio with the responsiveness of a dedicated partner.
+                Whether you need a web or mobile app built, an AI workflow automated, or a token and decentralized exchange launched, XDefiDev provides the engineering capacity of a large studio with the responsiveness of a dedicated partner.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-6">
@@ -422,7 +425,7 @@ export default function Home() {
               Our <span className="bg-gradient-to-r from-emerald-600 to-cyan-600 bg-clip-text text-transparent">Services</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From smart contracts to full-stack dApps, we deliver cutting-edge blockchain solutions
+              From custom software, AI, and automation to smart contracts and blockchain platforms, we deliver production-grade technology across every layer.
             </p>
           </div>
 
@@ -461,6 +464,36 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-gray-900 mb-3">dApp & NFT Development</h3>
               <p className="text-gray-600 leading-relaxed">
                 We build responsive Web3 frontends, NFT marketplaces, minting sites, and Telegram mini-apps with wallet login, real-time data, and a user experience that attracts non-technical users.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">Custom Software Development</h3>
+              <p className="text-gray-600 leading-relaxed">
+                End-to-end custom software: architecture, backend, frontend, and databases for production-grade web and cloud applications built for scale, with automated testing and CI/CD included.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">AI & LLM Solutions</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Production-ready AI applications powered by LLMs: custom AI agents, RAG pipelines, semantic search, fine-tuned models, and AI chatbots deployed on websites, WhatsApp, Telegram, and Slack.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">n8n Workflow Automation</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Custom n8n workflows and business process automation that connect your apps, sync data, route leads, and eliminate manual work — with error handling, retries, and logging you can trust.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">Cloud & DevOps Engineering</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Cloud architecture, CI/CD pipelines, Docker and Kubernetes, infrastructure-as-code, monitoring, and cost optimization on AWS, GCP, and Azure to keep your systems reliable and fast.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">APIs, Web & Mobile Apps</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Clean REST and GraphQL APIs, Stripe and third-party integrations, and cross-platform iOS and Android apps with React Native and Flutter — from design to app store deployment.
               </p>
             </div>
           </div>

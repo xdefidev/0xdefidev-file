@@ -452,6 +452,86 @@ export default function App({ onOpen }) {
               </div>
             </DropdownItem>
 
+            <DropdownItem
+              key="software"
+              description="Custom software, web & mobile applications, and full product builds with modern stacks."
+              startContent={
+                <div className="p-3 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl shadow-lg group-hover:shadow-blue-200 transition-shadow duration-300">
+                  {icons.lock}
+                </div>
+              }
+              href="/categories/software-development"
+              className="group"
+            >
+              <div className="flex flex-col">
+                <span className="text-gray-900 font-semibold text-base group-hover:text-blue-600 transition-colors duration-300">{t('navbar.softwareDevelopment')}</span>
+              </div>
+            </DropdownItem>
+
+            <DropdownItem
+              key="ai-llm"
+              description="AI agents, chatbots, RAG applications, and LLM integrations for your product workflows."
+              startContent={
+                <div className="p-3 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl shadow-lg group-hover:shadow-cyan-200 transition-shadow duration-300">
+                  {icons.flash}
+                </div>
+              }
+              href="/categories/ai-development"
+              className="group"
+            >
+              <div className="flex flex-col">
+                <span className="text-gray-900 font-semibold text-base group-hover:text-cyan-600 transition-colors duration-300">{t('navbar.aiDevelopment')}</span>
+              </div>
+            </DropdownItem>
+
+            <DropdownItem
+              key="automation"
+              description="n8n workflows and business process automation that connect your apps and save hours."
+              startContent={
+                <div className="p-3 bg-gradient-to-br from-violet-500 to-violet-600 rounded-xl shadow-lg group-hover:shadow-violet-200 transition-shadow duration-300">
+                  {icons.server}
+                </div>
+              }
+              href="/categories/automation"
+              className="group"
+            >
+              <div className="flex flex-col">
+                <span className="text-gray-900 font-semibold text-base group-hover:text-violet-600 transition-colors duration-300">{t('navbar.automation')}</span>
+              </div>
+            </DropdownItem>
+
+            <DropdownItem
+              key="cloud-devops"
+              description="Cloud architecture, CI/CD, Kubernetes, infrastructure-as-code, monitoring, and cost optimization."
+              startContent={
+                <div className="p-3 bg-gradient-to-br from-sky-500 to-sky-600 rounded-xl shadow-lg group-hover:shadow-sky-200 transition-shadow duration-300">
+                  {icons.activity}
+                </div>
+              }
+              href="/categories/cloud-devops"
+              className="group"
+            >
+              <div className="flex flex-col">
+                <span className="text-gray-900 font-semibold text-base group-hover:text-sky-600 transition-colors duration-300">{t('navbar.cloudDevops')}</span>
+              </div>
+            </DropdownItem>
+
+            <DropdownItem
+              key="api-integrations"
+              description="REST & GraphQL APIs, payment gateways, and third-party integrations with documentation."
+              startContent={
+                <div className="p-3 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl shadow-lg group-hover:shadow-emerald-200 transition-shadow duration-300">
+                  {icons.scale}
+                </div>
+              }
+              href="/categories/api-integrations"
+              className="group"
+            >
+              <div className="flex flex-col">
+                <span className="text-gray-900 font-semibold text-base group-hover:text-emerald-600 transition-colors duration-300">{t('navbar.apiIntegrations')}</span>
+              </div>
+            </DropdownItem>
+
           </DropdownMenu>
         </Dropdown>
 
