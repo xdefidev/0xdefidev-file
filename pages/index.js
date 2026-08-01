@@ -186,8 +186,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
       <SeoHead
-        title="XDefiDev | Web3 Developer, Smart Contract & DeFi Development Agency"
-        description="XDefiDev is a Web3 development agency building production-ready smart contracts, DeFi protocols, dApps, NFT marketplaces, and blockchain infrastructure. 200+ projects, $50M+ secured since 2018."
+        title="XDefiDev | Web3 & Smart Contract Development"
+        description="XDefiDev: Web3 development, smart contracts, DeFi protocols, dApps, and blockchain consulting for startups, DAOs, and enterprises since 2018."
         path="/"
         image="https://ik.imagekit.io/lzgpc48la/Yellow_Bright_Business_Idea_Tutorial_Youtube_Thumbnail_n186Tgza0.png?ik-sdk-version=javascript-1.4.3&updatedAt=1665836822605"
         schema={[professionalServiceSchema, faqSchema]}
