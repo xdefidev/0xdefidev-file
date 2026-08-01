@@ -1,17 +1,17 @@
 import React from "react";
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 
 import { motion } from "framer-motion";
 
 import { Accordion, AccordionItem } from "@heroui/react";
 
-import services from "../api/services";
+import services, { serviceName } from "../api/services";
 
 import hero1 from "../../public/exchange-hero.png";
 
 import hero2 from "../../public/categories/crypto-exchange-development.jpg"
+import SeoHead, { SITE_URL } from "../components/Seo";
 
 const servicesList = [
   "Centralized Exchange (CEX) Development",
@@ -127,6 +127,67 @@ const BlockchainDevelopmentPage = () => {
   const imageLink =
     "https://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584";
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "How long does it take to develop a crypto exchange?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Development timelines vary based on complexity: a basic DEX with AMM takes 4 days to a week, and a feature-rich CEX takes a week to a month. We use agile development with bi-weekly deliverables.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What's the cost to build a cryptocurrency exchange?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Costs scale with features and security requirements: a basic DEX costs $600-$1000, a medium CEX costs $2000-$10,000, and an institutional-grade exchange can cost $200,000 or more.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you provide ongoing exchange maintenance?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Our premium support package includes 99.9% uptime monitoring, hotfix deployment within 2 hours, quarterly security upgrades, liquidity provider coordination, and compliance updates.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can you customize existing exchange software?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We specialize in white-label solutions including CEX clones, Uniswap and PancakeSwap forks, derivatives and options modules, cross-chain bridge integration, and custom tokenomics implementations.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What security measures do you implement?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We implement penetration testing and CertiK audits, multi-sig cold wallets, DDoS mitigation, fraud detection AI, and insurance fund integration.",
+        },
+      },
+    ],
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Crypto Exchange Development",
+        item: `${SITE_URL}/categories/crypto-exchange-development`,
+      },
+    ],
+  };
+
 
     function formatUSD(amount) {
       return new Intl.NumberFormat('en-US', {
@@ -139,52 +200,14 @@ const BlockchainDevelopmentPage = () => {
 
   return (
     <div className="my-12 ">
-      <Head>
-        <title>Crypto Exchange Development | xDefiDev</title>
-        <meta
-          property="og:title"
-          content="Professional Crypto Exchange Development Services | xDefiDev"
-        />
-        <meta
-          property="og:description"
-          content="Build your own secure, scalable cryptocurrency exchange platform with our expert development services. We create spot, margin, and derivatives trading platforms with high liquidity."
-        />
-        <meta
-          name="description"
-          content="Build your own secure, scalable cryptocurrency exchange platform with our expert development services. We create spot, margin, and derivatives trading platforms with high liquidity."
-        />
-        <meta
-          property="og:url"
-          content="https://xdefidev.com/categories/crypto-exchange-development"
-        />
-        <meta
-          property="og:image"
-          content="https://ik.imagekit.io/hp2oyifpf/polywrap-uniswap-demo.png?updatedAt=1745273698271"
-        />
-        <meta
-          property="twitter:image"
-          content="https://ik.imagekit.io/hp2oyifpf/polywrap-uniswap-demo.png?updatedAt=1745273698271"
-        />
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:title"
-          content="Crypto Exchange Development Services | xDefiDev"
-        />
-        <meta
-          property="twitter:description"
-          content="Professional crypto exchange development for spot, margin, and derivatives trading."
-        />
-        <meta
-          property="og:site_name"
-          content="xDefiDev Crypto Exchange Development"
-        />
-        <meta name="robots" content="index, follow" />
-        <link
-          rel="canonical"
-          href="https://xdefidev.com/categories/crypto-exchange-development"
-          key="canonical"
-        />
-      </Head>
+      <SeoHead
+        title="Crypto Exchange Development Services | CEX & DEX Platforms | XDefiDev"
+        description="Build your own secure, scalable cryptocurrency exchange platform with XDefiDev. We create spot, margin, and derivatives CEX and DEX trading platforms with high liquidity and cross-chain support."
+        path="/categories/crypto-exchange-development"
+        image="https://ik.imagekit.io/hp2oyifpf/polywrap-uniswap-demo.png?updatedAt=1745273698271"
+        hreflang={["en"]}
+        schema={[faqSchema, breadcrumbSchema]}
+      />
       <div className="sm:mx-16 mx-4 grid sm:grid-cols-2 ">
         <div className="h-full flex flex-col justify-center ">
           {" "}
@@ -202,12 +225,12 @@ const BlockchainDevelopmentPage = () => {
           </p>
         </div>
         <div className="h-full flex justify-center items-center">
-          <Image src={hero1} width={600} height={600} className="py-8" priority={true} loading="eager" quality={85} />
+          <Image src={hero1} width={600} height={600} className="py-8" priority={true} loading="eager" quality={85} alt="Crypto exchange trading platform interface illustration showing charts and order book" />
         </div>
       </div>
 
       <div className="flex justify-center items-center w-full my-8">
-        <Image src={hero2} width={600} height={600} className="flex rounded-lg " priority={true} loading="eager" quality={85}  />
+        <Image src={hero2} width={600} height={600} className="flex rounded-lg " priority={true} loading="eager" quality={85} alt="Centralized and decentralized crypto exchange development services illustration" />
       </div>
 
       <div>
@@ -265,7 +288,7 @@ const BlockchainDevelopmentPage = () => {
                 >
                   <img
                     src={item.image || imageLink}
-                    alt={item.name}
+                    alt={serviceName(item)}
                     width="100%"
                     loading="lazy"
                     className="rounded h-[200px]"

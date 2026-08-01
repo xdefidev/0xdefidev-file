@@ -1,7 +1,8 @@
 module.exports = {
-  optimizeFonts: false,
+  optimizeFonts: true,
   images: {
-    domains: ["https://ik.imagekit.io/"]
+    domains: ["ik.imagekit.io"],
+    formats: ["image/avif", "image/webp"],
   },
   i18n: {
     locales: [

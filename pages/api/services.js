@@ -1,3 +1,9 @@
+export const humanizeSlug = (slug = "") =>
+  slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+
+export const serviceName = (item) =>
+  item.name || humanizeSlug(item.slug);
+
 export default [
   {
     image:

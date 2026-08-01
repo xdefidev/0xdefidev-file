@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "/styles/Service.module.css";
 import services from "../api/services";
-import Head from "next/head";
+import SeoHead, { SITE_URL } from "../components/Seo";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -72,33 +72,36 @@ export default function Service({ post, onOpen }) {
 
   const featureList = t(`service.${post.slug}.p.list`, { returnObjects: true }) || [];
 
+  const serviceName = t(`service.${post.slug}.name`);
+  const serviceDescription = t(`service.${post.slug}.description`);
+
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${SITE_URL}/services/${post.slug}#service`,
+    name: serviceName,
+    description: serviceDescription,
+    provider: { "@id": `${SITE_URL}/#organization` },
+    serviceType: serviceName,
+    areaServed: "Worldwide",
+    offers: {
+      "@type": "Offer",
+      price: post.price,
+      priceCurrency: "USD",
+      description: "Starting price for this Web3 development service",
+    },
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
-      <Head>
-        <title>{`${t(`service.${post.slug}.name`)} | XDefiDev Web3 Service`}</title>
-
-        <meta property="og:title" content={`${t(`service.${post.slug}.name`)} Services`} />
-
-        <meta property="og:description" content={t(`service.${post.slug}.description`)} />
-
-        <meta property="og:image" content={post.image || imageLink} />
-        <meta
-          property="og:url"
-          content={`https://xdefidev.com/services/${post.slug}`}
-        />
-
-        <meta name="description" content={t(`service.${post.slug}.description`)} />
-
-        <meta httpEquiv="content-language" content="en" />
-
-        <meta name="robots" content="index, follow" />
-
-        <link
-          rel="canonical"
-          href={`https://xdefidev.com/services/${post.slug}`}
-          key="canonical"
-        />
-      </Head>
+      <SeoHead
+        title={`${serviceName} | XDefiDev Web3 Development Service`}
+        description={serviceDescription}
+        path={`/services/${post.slug}`}
+        image={post.image || imageLink}
+        type="website"
+        schema={[productSchema]}
+      />
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">

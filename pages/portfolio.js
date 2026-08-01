@@ -1,70 +1,38 @@
-import Head from "next/head";
-import Navbar from "./components/Navbar";
 import styles from "/styles/Portfolio.module.css";
 import portfolio from "./api/portfolio";
+import SeoHead from "./components/Seo";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export default function Home() {
-  // console.log(portfolio);
   return (
     <div>
-      <Head>
-        <title>xDefiDev Portfolio | Web3 Development services</title>
-
-        <meta property="og:title" content="Portfolio | View our Our Blockchain & Fullstack Development Projects" />
-
-        <meta
-          property="og:description"
-          content="Explore our portfolio of innovative blockchain and fullstack development projects. See how we've helped businesses achieve their goals with cutting-edge web and mobile applications. Discover our success stories and find inspiration for your next project."
-        />
-
-        <meta name="description" content="Explore our portfolio of innovative blockchain and fullstack development projects. See how we've helped businesses achieve their goals with cutting-edge web and mobile applications. Discover our success stories and find inspiration for your next project." />
-
-        <meta property="og:url" content="https://xdefidev.com/portfolio" />
-
-        <meta
-          property="og:image"
-          content="https://ik.imagekit.io/lzgpc48la/Yellow_Bright_Business_Idea_Tutorial_Youtube_Thumbnail_n186Tgza0.png?ik-sdk-version=javascript-1.4.3&updatedAt=1665836822605"
-        />
-
-        <meta
-          property="twitter:image"
-          content="https://ik.imagekit.io/lzgpc48la/Yellow_Bright_Business_Idea_Tutorial_Youtube_Thumbnail_n186Tgza0.png?ik-sdk-version=javascript-1.4.3&updatedAt=1665836822605"
-        />
-
-        <meta property="twitter:card" content="summary_large_image" />
-
-        <meta
-          property="twitter:title"
-          content="Check our Portfolio | Blockchain and Fullstack Development services"
-        />
-
-        <meta
-          property="twitter:description"
-          content="Need Web3 Development Services? Let's take it out of your hands."
-        />
-
-        <meta property="og:site_name" content="Xdefidev Portfolio" />
-
-        <meta name="robots" content="index, follow" />
-
-
-        <link
-          rel="canonical"
-          href="https://xdefidev.com/portfolio"
-          key="canonical"
-        />
-      </Head>
+      <SeoHead
+        title="Portfolio | Web3, DeFi & Blockchain Development Projects | XDefiDev"
+        description="Explore XDefiDev's portfolio of blockchain and fullstack development projects: DeFi dApps, DEXs, staking platforms, NFT marketplaces, and custom EVM blockchains we've built for clients."
+        path="/portfolio"
+      />
 
       <div className="text-center text-5xl !mb-8 font-semibold antialiased ">
-        <h1>Portfolio</h1>
+        <h1>Web3 & Blockchain Development Portfolio</h1>
       </div>
+      <p className="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+        A selection of DeFi, NFT, exchange, and blockchain infrastructure projects delivered by the XDefiDev team.
+      </p>
       <div className={styles.body}>
         <div className={styles.container}>
-          {portfolio.map((item) => (
-            <a href={item.link} alt={item.description}>
+          {portfolio.map((item, index) => (
+            <a
+              href={item.link}
+              key={index}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className={styles.box}>
-                <img src={item.image} alt={item.description} loading="lazy" />
+                <img
+                  src={item.image}
+                  alt={`${item.name} - ${item.description.split('.')[0]} project screenshot`}
+                  loading="lazy"
+                />
                 <h2 className="!text-xl !font-semibold">{item.name}</h2>
                 <p>{item.description}</p>
               </div>

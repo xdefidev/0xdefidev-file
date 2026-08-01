@@ -1,17 +1,17 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Head from "next/head";
 
 import { motion } from "framer-motion";
 
 import { Accordion, AccordionItem } from "@heroui/react";
 
-import services from "../api/services";
+import services, { serviceName } from "../api/services";
 
 import hero1 from "../../public/nftdapps-hero.png";
 
 import hero2 from "../../public/categories/defi-nft-development.jpg"
+import SeoHead, { SITE_URL } from "../components/Seo";
 
 const servicesList = [
   "NFT Marketplace Development",
@@ -120,6 +120,58 @@ const BlockchainDevelopmentPage = () => {
   const imageLink =
     "https://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584";
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "How long does it take to develop an NFT or DApp project?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Development timelines vary based on project complexity. A basic NFT collection can take 1-2 weeks, while a full-featured DApp with smart contracts typically requires 3-8 weeks. We use agile methodologies to ensure efficient delivery while maintaining quality standards.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What's the cost structure for NFT and DApp development?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Basic NFT projects start at $1,500, intermediate DApps range from $5,000-$15,000, and complex DeFi or GameFi projects can exceed $25,000 depending on smart contracts, UI, wallet integration, and advanced tokenomics.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Which blockchain platforms do you specialize in for NFT/DApp development?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We develop cross-chain solutions with expertise in Ethereum and Layer 2s (Polygon, Arbitrum, Optimism), Solana and its ecosystem, BNB Chain and other EVM-compatible networks, and emerging platforms like Immutable X for gaming NFTs.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you handle tokenomics design and smart contract security?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. Our full-service offering includes custom tokenomics modeling, ERC-20/721/1155 smart contract development, third-party audit coordination, staking and yield farming mechanisms, and multi-signature wallet setups for treasury management.",
+        },
+      },
+    ],
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "DeFi & NFT Ecosystems",
+        item: `${SITE_URL}/categories/defi-nft-ecosystems`,
+      },
+    ],
+  };
 
     function formatUSD(amount) {
       return new Intl.NumberFormat('en-US', {
@@ -132,21 +184,14 @@ const BlockchainDevelopmentPage = () => {
 
   return (
     <div className="my-12 ">
-      <Head>
-  <title>DeFi & NFT Development Services | xDefiDev</title>
-  <meta property="og:title" content="Professional DeFi & NFT Development Services | xDefiDev" />
-  <meta property="og:description" content="Expert DeFi and NFT development services including smart contracts, dApps, marketplaces, and tokenomics design. We build secure, innovative decentralized finance solutions." />
-  <meta name="description" content="Expert DeFi and NFT development services including smart contracts, dApps, marketplaces, and tokenomics design. We build secure, innovative decentralized finance solutions." />
-  <meta property="og:url" content="https://xdefidev.com/categories/defi-nft-ecosystems" />
-  <meta property="og:image" content="hhttps://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584" />
-  <meta property="twitter:image" content="hhttps://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584" />
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:title" content="DeFi & NFT Development Services | xDefiDev" />
-  <meta property="twitter:description" content="Professional DeFi and NFT development including smart contracts and marketplaces." />
-  <meta property="og:site_name" content="xDefiDev DeFi & NFT Development" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://xdefidev.com/categories/defi-nft-ecosystems" key="canonical" />
-</Head>
+      <SeoHead
+        title="DeFi & NFT Development Services | dApps, Marketplaces & Tokenomics | XDefiDev"
+        description="Expert DeFi and NFT development services including smart contracts, dApps, marketplaces, staking, and tokenomics design. We build secure, innovative decentralized finance solutions."
+        path="/categories/defi-nft-ecosystems"
+        image="https://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584"
+        hreflang={["en"]}
+        schema={[faqSchema, breadcrumbSchema]}
+      />
       <div className="sm:mx-16 mx-4 grid sm:grid-cols-2 ">
         <div className="h-full flex flex-col justify-center ">
           {" "}
@@ -163,12 +208,12 @@ const BlockchainDevelopmentPage = () => {
           </p>
         </div>
         <div className="h-full flex justify-center items-center">
-          <Image src={hero1} width={600} height={600} className="py-8" priority={true} loading="eager" quality={85} />
+          <Image src={hero1} width={600} height={600} className="py-8" priority={true} loading="eager" quality={85} alt="DeFi and NFT dApp development illustration showing digital assets and blockchain network" />
         </div>
       </div>
 
       <div className="flex justify-center items-center w-full my-8">
-        <Image src={hero2} width={600} height={600} className="flex rounded-lg " priority={true} loading="eager" quality={85}  />
+        <Image src={hero2} width={600} height={600} className="flex rounded-lg " priority={true} loading="eager" quality={85} alt="NFT marketplace and DeFi ecosystem development services illustration" />
       </div>
 
       <div>
@@ -225,7 +270,7 @@ const BlockchainDevelopmentPage = () => {
                 >
                   <img
                     src={item.image || imageLink}
-                    alt={item.name}
+                    alt={serviceName(item)}
                     width="100%"
                     loading="lazy"
                     className="rounded h-[200px]"

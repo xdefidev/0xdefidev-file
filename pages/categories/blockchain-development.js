@@ -1,17 +1,17 @@
 import React from "react";
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 
 import { motion } from "framer-motion";
 
 import { Accordion, AccordionItem } from "@heroui/react";
 
-import services from "../api/services";
+import services, { serviceName } from "../api/services";
 
 import hero1 from "../../public/blockchain-hero-1.png";
 
 import hero2 from "../../public/categories/blockchain-development.png"
+import SeoHead, { SITE_URL } from "../components/Seo";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const servicesList = [
@@ -121,6 +121,58 @@ const BlockchainDevelopmentPage = () => {
   const imageLink =
     "https://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584";
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "How long does it take to develop a blockchain solution?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The timeline depends on the scope of the project. Each project can take 1-4 weeks or more. We follow an agile development process to ensure timely delivery without compromising quality.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is the cost of blockchain development?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The cost of blockchain development varies depending on complexity, features, and the blockchain platform used. Simple projects like smart contract development start from $500 while complex projects like custom blockchain test and main networks can cost upwards of $1000.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you provide post-development support?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, we offer comprehensive post-development support including regular maintenance and updates, bug fixes and troubleshooting, performance optimization, and 24/7 technical support.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What industries benefit most from blockchain?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We cater to industries such as Finance and Banking, Healthcare, Supply Chain and Logistics, Real Estate, Gaming and Entertainment, and E-commerce.",
+        },
+      },
+    ],
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blockchain Development",
+        item: `${SITE_URL}/categories/blockchain-development`,
+      },
+    ],
+  };
 
     function formatUSD(amount) {
       return new Intl.NumberFormat('en-US', {
@@ -134,52 +186,14 @@ const BlockchainDevelopmentPage = () => {
 
   return (
     <div className="my-12 ">
-      <Head>
-        <title>Blockchain Development Services | xDefiDev</title>
-        <meta
-          property="og:title"
-          content="Professional Blockchain Development Services | xDefiDev"
-        />
-        <meta
-          property="og:description"
-          content="Expert blockchain development services including smart contracts, dApps, and custom blockchain solutions. We build secure, scalable decentralized applications for your business needs."
-        />
-        <meta
-          name="description"
-          content="Expert blockchain development services including smart contracts, dApps, and custom blockchain solutions. We build secure, scalable decentralized applications for your business needs."
-        />
-        <meta
-          property="og:url"
-          content="https://xdefidev.com/categories/blockchain-development"
-        />
-        <meta
-          property="og:image"
-          content="https://ik.imagekit.io/hp2oyifpf/Layer%202%20blockchain%20(1).png?updatedAt=1724719658061"
-        />
-        <meta
-          property="twitter:image"
-          content="https://ik.imagekit.io/hp2oyifpf/Layer%202%20blockchain%20(1).png?updatedAt=1724719658061"
-        />
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:title"
-          content="Blockchain Development Services | xDefiDev"
-        />
-        <meta
-          property="twitter:description"
-          content="Professional blockchain development for your business needs. Smart contracts, dApps, and custom solutions."
-        />
-        <meta
-          property="og:site_name"
-          content="xDefiDev Blockchain Development"
-        />
-        <meta name="robots" content="index, follow" />
-        <link
-          rel="canonical"
-          href="https://xdefidev.com/categories/blockchain-development"
-          key="canonical"
-        />
-      </Head>
+      <SeoHead
+        title="Blockchain Development Services | Smart Contracts, dApps & Custom Networks | XDefiDev"
+        description="Expert blockchain development services including smart contract development, dApps, DeFi protocols, and custom EVM blockchain solutions. We build secure, scalable decentralized applications for your business."
+        path="/categories/blockchain-development"
+        image="https://ik.imagekit.io/hp2oyifpf/Layer%202%20blockchain%20(1).png?updatedAt=1724719658061"
+        hreflang={["en"]}
+        schema={[faqSchema, breadcrumbSchema]}
+      />
       <div className="sm:mx-16 mx-4 grid sm:grid-cols-2 ">
         <div className="h-full flex flex-col justify-center ">
           {" "}
@@ -195,12 +209,12 @@ const BlockchainDevelopmentPage = () => {
           </p>
         </div>
         <div className="h-full flex justify-center items-center">
-          <Image src={hero1} width={600} height={600} className="" priority={true} loading="eager" quality={85}  />
+          <Image src={hero1} width={600} height={600} className="" priority={true} loading="eager" quality={85} alt="Blockchain development services overview illustration showing a connected network" />
         </div>
       </div>
       
       <div className="flex justify-center items-center w-full my-8">
-        <Image src={hero2} width={600} height={600} className="flex rounded-lg " priority={true} loading="eager" quality={85}  />
+        <Image src={hero2} width={600} height={600} className="flex rounded-lg " priority={true} loading="eager" quality={85} alt="Smart contract and blockchain ecosystem development illustration" />
       </div>
 
       <div>
@@ -255,7 +269,7 @@ const BlockchainDevelopmentPage = () => {
                 >
                   <img
                     src={item.image || imageLink}
-                    alt={item.name}
+                    alt={serviceName(item)}
                     width="100%"
                     loading="lazy"
                     className="rounded h-[200px]"

@@ -1,17 +1,17 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Head from "next/head";
 
 import { motion } from "framer-motion";
 
 import { Accordion, AccordionItem } from "@heroui/react";
 
-import services from "../api/services";
+import services, { serviceName } from "../api/services";
 
 import hero1 from "../../public/casino-hero-4.png";
 
 import hero2 from "../../public/categories/casino-development.jpg"
+import SeoHead, { SITE_URL } from "../components/Seo";
 
 const servicesList = [
 "White-Label Crypto Casino Solutions",
@@ -122,6 +122,67 @@ const BlockchainDevelopmentPage = () => {
   const imageLink =
     "https://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584";
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "How long does it take to build an online crypto casino?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Development timelines depend on the scope: a white-label casino with standard games can launch in 1-2 weeks, a custom platform with bespoke games and multi-currency support typically takes 3-8 weeks.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What does a crypto casino cost to develop?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Costs vary by feature set: a basic white-label solution starts around $1,000, a custom platform with proprietary games ranges from $5,000 to $25,000, and institutional-grade casinos with sportsbook can exceed $50,000.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How do you ensure provably fair gameplay?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We implement verifiable random number generation (RNG), on-chain hash-based provably fair systems, and smart contract-based game logic that players can independently audit.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Which payment methods and currencies do you support?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We integrate major cryptocurrencies including BTC, ETH, USDT, and SOL, along with fiat gateways, and support multi-chain deposits and withdrawals with instant settlement.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you handle casino licensing and compliance?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We provide guidance and integrations for gambling licensing requirements, KYC/AML compliance tooling, geolocation restrictions, and responsible gaming features to help you operate legally.",
+        },
+      },
+    ],
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Crypto Casino Development",
+        item: `${SITE_URL}/categories/crypto-casino-development`,
+      },
+    ],
+  };
+
 
     function formatUSD(amount) {
       return new Intl.NumberFormat('en-US', {
@@ -135,21 +196,14 @@ const BlockchainDevelopmentPage = () => {
 
   return (
     <div className="my-12 ">
-      <Head>
-  <title>Online Crypto Casino Development | xDefiDev</title>
-  <meta property="og:title" content="Professional Online Crypto Casino Development Services | xDefiDev" />
-  <meta property="og:description" content="Build your own secure, provably fair online casino platform with our expert development services. We create crypto and fiat casino solutions with games, payments, and admin systems." />
-  <meta name="description" content="Build your own secure, provably fair online casino platform with our expert development services. We create crypto and fiat casino solutions with games, payments, and admin systems." />
-  <meta property="og:url" content="https://xdefidev.com/categories/crypto-casino-development" />
-  <meta property="og:image" content="https://ik.imagekit.io/hp2oyifpf/create%20crypto%20gamble%20games%20website%20with%20blackjack%20dice%20crash.png?updatedAt=1724719749080" />
-  <meta property="twitter:image" content="https://ik.imagekit.io/hp2oyifpf/create%20crypto%20gamble%20games%20website%20with%20blackjack%20dice%20crash.png?updatedAt=1724719749080" />
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:title" content="Online Casino Development Services | xDefiDev" />
-  <meta property="twitter:description" content="Professional online casino development with provably fair systems and payment integration." />
-  <meta property="og:site_name" content="xDefiDev Casino Development" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://xdefidev.com/categories/crypto-casino-development" key="canonical" />
-</Head>
+      <SeoHead
+        title="Online Crypto Casino Development Services | Provably Fair Platforms | XDefiDev"
+        description="Build your own secure, provably fair online crypto casino with XDefiDev. We create white-label and custom casino platforms with crypto payments, smart contract games, and admin systems."
+        path="/categories/crypto-casino-development"
+        image="https://ik.imagekit.io/hp2oyifpf/create%20crypto%20gamble%20games%20website%20with%20blackjack%20dice%20crash.png?updatedAt=1724719749080"
+        hreflang={["en"]}
+        schema={[faqSchema, breadcrumbSchema]}
+      />
       <div className="sm:mx-16 mx-4 grid sm:grid-cols-2 ">
         <div className="h-full flex flex-col justify-center ">
           {" "}
@@ -161,12 +215,12 @@ const BlockchainDevelopmentPage = () => {
           </p>
         </div>
         <div className="h-full flex justify-center items-center">
-          <Image src={hero1} width={600} height={600} className="" priority={true} loading="eager" quality={85} />
+          <Image src={hero1} width={600} height={600} className="" priority={true} loading="eager" quality={85} alt="Online crypto casino platform illustration showing casino games and payment interface" />
         </div>
       </div>
 
       <div className="flex justify-center items-center w-full my-8">
-        <Image src={hero2} width={600} height={600} className="flex rounded-lg " priority={true} loading="eager" quality={85}  />
+        <Image src={hero2} width={600} height={600} className="flex rounded-lg " priority={true} loading="eager" quality={85} alt="Crypto casino development services illustration featuring games, blockchain, and fair play" />
       </div>
 
       <div>
@@ -217,7 +271,7 @@ const BlockchainDevelopmentPage = () => {
                 >
                   <img
                     src={item.image || imageLink}
-                    alt={item.name}
+                    alt={serviceName(item)}
                     width="100%"
                     loading="lazy"
                     className="rounded h-[200px]"

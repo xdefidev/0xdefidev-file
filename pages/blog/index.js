@@ -1,17 +1,16 @@
-import Head from "next/head";
 import Link from "next/link";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import blogs from "../api/blogs";
+import SeoHead from "../components/Seo";
 
 export default function Blog() {
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 py-12">
-            <Head>
-                <title>Crypto & Web3 Blog | xDefiDev</title>
-                <meta name="description" content="Read the latest insights and guides on Web3 development, Crypto Casinos, Telegram Bots, and Blockchain technology from the experts at xDefiDev." />
-                <meta property="og:title" content="Crypto & Web3 Blog | xDefiDev" />
-                <meta property="og:description" content="Insights and guides on Web3 development, crypto casinos, and Telegram bots." />
-            </Head>
+            <SeoHead
+                title="Crypto & Web3 Blog | xDefiDev"
+                description="Read the latest insights and guides on Web3 development, Crypto Casinos, Telegram Bots, and Blockchain technology from the experts at xDefiDev."
+                path="/blog"
+            />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8">
                 <div className="text-center mb-16">

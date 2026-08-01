@@ -1,7 +1,7 @@
-import Head from "next/head";
 import Link from "next/link";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import blogs from "../api/blogs";
+import SeoHead, { SITE_URL } from "../components/Seo";
 
 export async function getStaticPaths() {
     const paths = blogs.map((post) => ({
@@ -27,6 +27,28 @@ export async function getStaticProps({ params, locale }) {
 }
 
 export default function BlogPost({ post }) {
+    const articleSchema = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: post.title,
+        description: post.excerpt,
+        image: post.image,
+        datePublished: post.date,
+        author: {
+            "@type": "Organization",
+            name: "XDefiDev",
+        },
+        publisher: {
+            "@type": "Organization",
+            name: "XDefiDev",
+            url: SITE_URL,
+        },
+        mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": `${SITE_URL}/blog/${post.slug}`,
+        },
+    };
+
     // Simple markdown parser for the demo content
     const renderContent = (content) => {
         return content.split('\n').map((line, index) => {
@@ -43,13 +65,13 @@ export default function BlogPost({ post }) {
 
     return (
         <div className="min-h-screen bg-slate-50 py-12">
-            <Head>
-                <title>{`${post.title} | xDefiDev Blog`}</title>
-                <meta name="description" content={post.excerpt} />
-                <meta property="og:title" content={post.title} />
-                <meta property="og:description" content={post.excerpt} />
-                {post.image && <meta property="og:image" content={post.image} />}
-            </Head>
+            <SeoHead
+                title={`${post.title} | xDefiDev Blog`}
+                description={post.excerpt}
+                path={`/blog/${post.slug}`}
+                image={post.image}
+                schema={[articleSchema]}
+            />
 
             <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8">
                 <div className="mb-10 text-center">

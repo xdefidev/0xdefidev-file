@@ -44,9 +44,8 @@ export default function CarouselFn() {
         <Link href="/categories/blockchain-development">
           <div>
             <Image
-              alt="Blockchain Technology"
+              alt="Blockchain development services: smart contracts, dApps, and custom networks"
               src={blockchainImage}
-              priority={true}
               quality={50}
               layout="responsive"
               width={60}
@@ -58,9 +57,8 @@ export default function CarouselFn() {
         <Link href="/categories/crypto-exchange-development">
           <div>
             <Image
-              alt="Crypto Exchange"
+              alt="Crypto exchange development services: CEX and DEX platforms"
               src={cryptoImage}
-              priority={true}
               quality={50}
               layout="responsive"
               width={60}
@@ -72,9 +70,8 @@ export default function CarouselFn() {
         <Link href="/categories/telegram-bots">
           <div>
             <Image
-              alt="Telegram Bot Development"
+              alt="Telegram bot and mini app development for crypto projects"
               src={telegramBotImage}
-              priority={true}
               quality={50}
               layout="responsive"
               width={60}
@@ -86,9 +83,8 @@ export default function CarouselFn() {
         <Link href="/categories/crypto-casino-development">
           <div>
             <Image
-              alt="Casino Gaming"
+              alt="Crypto casino and gambling platform development with provably fair games"
               src={casinoImage}
-              priority={true}
               quality={50}
               layout="responsive"
               width={60}
@@ -100,9 +96,8 @@ export default function CarouselFn() {
         <Link href="/categories/defi-nft-ecosystems">
           <div>
             <Image
-              alt="Defi and NFT develpment"
+              alt="DeFi and NFT ecosystem development: staking, marketplaces, and dApps"
               src={definftImage}
-              priority={true}
               quality={50}
               layout="responsive"
               width={60}

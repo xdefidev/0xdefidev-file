@@ -1,16 +1,16 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Head from "next/head";
 
 import { motion } from "framer-motion";
 
 import { Accordion, AccordionItem } from "@heroui/react";
 
-import services from "../api/services";
+import services, { serviceName } from "../api/services";
 
 import hero1 from "../../public/icons8-telegram-750-min.png";
 import hero2 from "../../public/categories/Telegram-Bots-mini-apps-development.jpg"
+import SeoHead, { SITE_URL } from "../components/Seo";
 const servicesList = [
 "AI-Powered Telegram Chatbots",
 "Automated Customer Support Bots",
@@ -122,6 +122,59 @@ const BlockchainDevelopmentPage = () => {
   const imageLink =
     "https://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584";
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "How long does it take to develop a Telegram bot?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "A simple command-based bot takes 2-5 days, a business automation bot with payment integration takes 1-2 weeks, and a complex mini app or trading bot with CEX/DEX integration can take 3-6 weeks.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How much does Telegram bot development cost?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Basic bots start at $300-$800, advanced bots with admin panels and payment systems range from $1,500-$5,000, and sophisticated mini apps or AI-powered solutions can cost $10,000 or more.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What can Telegram bots automate for my business?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We build AI-powered chatbots, customer support automation, order and payment processing, crypto trading and signal bots, community management, games, and Telegram mini apps.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you provide hosting and maintenance for bots?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, we offer ongoing maintenance packages covering hosting, monitoring, bug fixes, feature updates, and scaling to handle growing user bases.",
+        },
+      },
+    ],
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Telegram Bots & Mini Apps",
+        item: `${SITE_URL}/categories/telegram-bots`,
+      },
+    ],
+  };
+
 
     function formatUSD(amount) {
       return new Intl.NumberFormat('en-US', {
@@ -135,21 +188,14 @@ const BlockchainDevelopmentPage = () => {
 
   return (
     <div className="my-12 ">
-      <Head>
-  <title>Telegram Bots & Mini Apps Development | xDefiDev</title>
-  <meta property="og:title" content="Telegram Bot & Mini App Development Services | xDefiDev" />
-  <meta property="og:description" content="Create powerful Telegram bots and mini apps to engage your audience. We develop custom Telegram solutions including payment bots, games, and business automation tools." />
-  <meta name="description" content="Create powerful Telegram bots and mini apps to engage your audience. We develop custom Telegram solutions including payment bots, games, and business automation tools." />
-  <meta property="og:url" content="https://xdefidev.com/categories/telegram-bots" />
-  <meta property="og:image" content="https://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584" />
-  <meta property="twitter:image" content="https://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584" />
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:title" content="Telegram Bot & Mini App Development | xDefiDev" />
-  <meta property="twitter:description" content="Custom Telegram solutions including bots, mini apps, and business automation." />
-  <meta property="og:site_name" content="xDefiDev Telegram Development" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://xdefidev.com/categories/telegram-bots" key="canonical" />
-</Head>
+      <SeoHead
+        title="Telegram Bots & Mini Apps Development Services | XDefiDev"
+        description="Create powerful Telegram bots and mini apps to engage your audience. We develop custom Telegram solutions including payment bots, crypto trading bots, games, and business automation tools."
+        path="/categories/telegram-bots"
+        image="https://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584"
+        hreflang={["en"]}
+        schema={[faqSchema, breadcrumbSchema]}
+      />
       <div className="sm:mx-16 mx-4 grid sm:grid-cols-2 ">
         <div className="h-full flex flex-col justify-center ">
           {" "}
@@ -161,12 +207,12 @@ const BlockchainDevelopmentPage = () => {
           </p>
         </div>
         <div className="h-full flex justify-center items-center">
-          <Image src={hero1} width={600} height={600} className="py-8" priority={true} loading="eager" quality={85} />
+          <Image src={hero1} width={600} height={600} className="py-8" priority={true} loading="eager" quality={85} alt="Telegram bot and mini app development services illustration with chat automation icons" />
         </div>
       </div>
 
       <div className="flex justify-center items-center w-full my-8">
-        <Image src={hero2} width={600} height={600} className="flex rounded-lg " priority={true} loading="eager" quality={85}  />
+        <Image src={hero2} width={600} height={600} className="flex rounded-lg " priority={true} loading="eager" quality={85} alt="Telegram bots and mini apps development illustration showing messaging automation and crypto trading" />
       </div>
 
       <div>
@@ -217,7 +263,7 @@ const BlockchainDevelopmentPage = () => {
                 >
                   <img
                     src={item.image || imageLink}
-                    alt={item.name}
+                    alt={serviceName(item)}
                     width="100%"
                     loading="lazy"
                     className="rounded h-[200px]"

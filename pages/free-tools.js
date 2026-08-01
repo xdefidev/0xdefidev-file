@@ -1,7 +1,7 @@
-import Head from "next/head";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
+import SeoHead from "./components/Seo";
 
 export default function FreeTools() {
     const { t } = useTranslation('common');
@@ -29,10 +29,11 @@ export default function FreeTools() {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 py-12">
-            <Head>
-                <title>Free Tools | xDefiDev</title>
-                <meta name="description" content="Use our free tools designed for the crypto community. Explore calculators, generators, and analytics tools." />
-            </Head>
+            <SeoHead
+                title="Free Tools | xDefiDev"
+                description="Use our free tools designed for the crypto community. Explore calculators, generators, and analytics tools."
+                path="/free-tools"
+            />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
                 <div className="text-center mb-16">

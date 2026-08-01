@@ -32,37 +32,37 @@ export default function SocialModal(props) {
                 <h2 className="font-sans font-bold text-2xl">Contact</h2>
               </ModalHeader>
               <ModalBody className="w-full grid grid-cols-4">
-                <Link href="https://t.me/xdefideveloper" target="_blank" className="flex justify-center">
+                <Link href="https://t.me/xdefideveloper" target="_blank" aria-label="Contact XDefiDev on Telegram" className="flex justify-center">
                   <Image
                     src="/telegram-svgrepo-com (2).svg"
                     width={40}
                     height={40}
-                    alt=""
+                    alt="Telegram icon"
                   />
                 </Link>
-                <Link href="https://wa.me/+17062289620" target="_blank" className="flex justify-center">
+                <Link href="https://wa.me/+17062289620" target="_blank" aria-label="Contact XDefiDev on WhatsApp" className="flex justify-center">
                   <Image
                     src="/whatsapp-whats-app-svgrepo-com.svg"
                     width={40}
                     height={40}
-                    alt=""
+                    alt="WhatsApp icon"
                   />
                 </Link>
-                <Link href="https://discord.com/users/839903148462178315/" target="_blank" className="flex justify-center">
+                <Link href="https://discord.com/users/839903148462178315/" target="_blank" aria-label="Contact XDefiDev on Discord" className="flex justify-center">
                   {" "}
                   <Image
                     src="/discord-icon-svgrepo-com.svg"
                     width={40}
                     height={40}
-                    alt=""
+                    alt="Discord icon"
                   />
                 </Link>
-                <Link href="mailto:xdefidev@gmail.com" target="_blank" className="flex justify-center">
+                <Link href="mailto:xdefidev@gmail.com" target="_blank" aria-label="Email XDefiDev at xdefidev@gmail.com" className="flex justify-center">
                   <Image
                     src="/email-mail-web-svgrepo-com.svg"
                     width={40}
                     height={40}
-                    alt=""
+                    alt="Email icon"
                   />
                 </Link>
 

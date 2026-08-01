@@ -72,7 +72,7 @@ function MyApp({ Component, pageProps }) {
                       className="flex"
                     />
                   </div>
-                  <text>Telegram</text>
+                  <span>Telegram</span>
                 </Link>
                 <Link
                   href="https://wa.me/+17062289620"
@@ -87,7 +87,7 @@ function MyApp({ Component, pageProps }) {
                     alt=""
                   />
                    </div>
-                   <text>WhatsApp</text>
+                   <span>WhatsApp</span>
                 </Link>
                 <Link
                   href="https://discord.com/users/839903148462178315/"
@@ -100,7 +100,7 @@ function MyApp({ Component, pageProps }) {
                     height={40}
                     alt=""
                   /></div>
-                   <text>Discord</text>
+                   <span>Discord</span>
                 </Link>
                 <Link
                   href="mailto:xdefidev@gmail.com"
@@ -115,7 +115,7 @@ function MyApp({ Component, pageProps }) {
                     alt=""
                   />
                    </div>
-                   <text>Email</text>
+                   <span>Email</span>
                 </Link>
               </ModalBody>
               <ModalFooter>
