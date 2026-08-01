@@ -38,7 +38,7 @@ export default function FreeTools() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
                 <div className="text-center mb-16">
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-gray-900 mb-6">
-                        Free <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Tools</span>
+                        Free <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">Tools</span>
                     </h1>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                         A collection of free, open-source, and highly useful tools for crypto developers, traders, and project founders. Built by xDefiDev.
@@ -63,7 +63,7 @@ export default function FreeTools() {
                                         Coming Soon
                                     </span>
                                 ) : (
-                                    <Link href={tool.link} className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+                                    <Link href={tool.link} className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-emerald-600 text-white font-semibold rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
                                         Use Tool
                                         <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />

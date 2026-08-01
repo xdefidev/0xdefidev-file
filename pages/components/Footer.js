@@ -22,9 +22,9 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-purple-600/5 to-pink-600/5"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-emerald-600/5 to-teal-600/5"></div>
       <div className="absolute top-10 right-10 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-10 left-10 w-48 h-48 bg-purple-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-10 left-10 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
@@ -57,7 +57,7 @@ export default function Footer() {
               <a
                 href="mailto:xdefidev@gmail.com"
                 alt="mail us xdefidev@gmail.com"
-                className="p-3 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-purple-500/20 hover:scale-110 transition-all duration-300 group"
+                className="p-3 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-emerald-500/20 hover:scale-110 transition-all duration-300 group"
               >
                 <Image
                   src={Mail}
@@ -86,7 +86,7 @@ export default function Footer() {
 
           {/* Services Categories */}
           <div className="space-y-6">
-            <h3 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <h3 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
               Service Categories
             </h3>
             <div className="space-y-3">
@@ -106,7 +106,7 @@ export default function Footer() {
                 className="block text-gray-300 hover:text-white hover:translate-x-2 transition-all duration-300"
               >
                 <span className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                   Crypto Exchange Development
@@ -139,7 +139,7 @@ export default function Footer() {
                 className="block text-gray-300 hover:text-white hover:translate-x-2 transition-all duration-300"
               >
                 <span className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                   DeFi & NFT Development
@@ -150,7 +150,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="space-y-6">
-            <h3 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <h3 className="text-xl font-bold bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
               Quick Links
             </h3>
             <div className="space-y-3">
@@ -170,7 +170,7 @@ export default function Footer() {
                 className="block text-gray-300 hover:text-white hover:translate-x-2 transition-all duration-300"
               >
                 <span className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                   Portfolio
@@ -214,7 +214,7 @@ export default function Footer() {
                 <span>+1 (706) 228-9620</span>
               </div>
               
-              <div className="p-4 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl border border-blue-500/20">
+              <div className="p-4 bg-gradient-to-r from-blue-500/10 to-emerald-500/10 rounded-xl border border-blue-500/20">
                 <p className="text-sm text-gray-300 leading-relaxed">
                   <span className="font-semibold text-white">200+ Projects Delivered</span>
                   <br />

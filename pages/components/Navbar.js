@@ -367,7 +367,7 @@ export default function App({ onOpen }) {
             aria-label="Service Categories"
             className="w-160 p-3 bg-white/95 backdrop-blur-xl border border-gray-100 shadow-2xl rounded-2xl"
             itemClasses={{
-              base: "gap-4 p-4 rounded-xl hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-purple-50/80 hover:shadow-md transition-all duration-300 border border-transparent hover:border-blue-100/50",
+              base: "gap-4 p-4 rounded-xl hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-emerald-50/80 hover:shadow-md transition-all duration-300 border border-transparent hover:border-blue-100/50",
               title: "text-gray-900 font-semibold text-base",
               description: "text-gray-600 text-sm leading-relaxed",
             }}
@@ -392,7 +392,7 @@ export default function App({ onOpen }) {
               key="crypto-exchange"
               description="Centralised (CEX) & decentralised (DEX) crypto exchanges. Liquidity solutions, KYC/AML integration, OTC trading."
               startContent={
-                <div className="p-3 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl shadow-lg group-hover:shadow-purple-200 transition-shadow duration-300">
+                <div className="p-3 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl shadow-lg group-hover:shadow-emerald-200 transition-shadow duration-300">
                   {icons.activity}
                 </div>
               }
@@ -400,7 +400,7 @@ export default function App({ onOpen }) {
               className="group"
             >
               <div className="flex flex-col">
-                <span className="text-gray-900 font-semibold text-base group-hover:text-purple-600 transition-colors duration-300">{t('navbar.cryptoExchangeDevelopment')}</span>
+                <span className="text-gray-900 font-semibold text-base group-hover:text-emerald-600 transition-colors duration-300">{t('navbar.cryptoExchangeDevelopment')}</span>
               </div>
             </DropdownItem>
 
@@ -440,7 +440,7 @@ export default function App({ onOpen }) {
               key="defi-nft"
               description="Staking, Farming, Lending, Borrowing, NFT marketplace, NFT Staking, Launchpad, meme coins, tokenomics."
               startContent={
-                <div className="p-3 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl shadow-lg group-hover:shadow-pink-200 transition-shadow duration-300">
+                <div className="p-3 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl shadow-lg group-hover:shadow-teal-200 transition-shadow duration-300">
                   {icons.user}
                 </div>
               }
@@ -448,7 +448,7 @@ export default function App({ onOpen }) {
               className="group"
             >
               <div className="flex flex-col">
-                <span className="text-gray-900 font-semibold text-base group-hover:text-pink-600 transition-colors duration-300">{t('navbar.defiNft')}</span>
+                <span className="text-gray-900 font-semibold text-base group-hover:text-teal-600 transition-colors duration-300">{t('navbar.defiNft')}</span>
               </div>
             </DropdownItem>
 
@@ -530,7 +530,7 @@ export default function App({ onOpen }) {
             as={Link}
             onPress={onOpen}
             size="md"
-            className="font-semibold sm:inline-flex hidden bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300"
+            className="font-semibold sm:inline-flex hidden bg-gradient-to-r from-blue-600 to-emerald-600 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300"
           >
             {t('getInTouch')}
           </Button>
@@ -564,7 +564,7 @@ export default function App({ onOpen }) {
             as={Link}
             onPress={onOpen}
             size="md"
-            className="font-semibold w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg"
+            className="font-semibold w-full bg-gradient-to-r from-blue-600 to-emerald-600 text-white shadow-lg"
           >
             {t('getInTouch')}
           </Button>

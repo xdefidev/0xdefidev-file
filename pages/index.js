@@ -212,20 +212,20 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 opacity-95"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-emerald-900 opacity-95"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.15),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.15),transparent_50%)]"></div>
 
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]"></div>
 
         <div className="absolute top-20 left-10 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-pink-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-emerald-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-teal-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
 
         <main className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-10">
-              <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-xl border border-blue-400/30 rounded-full shadow-lg">
+              <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-gradient-to-r from-blue-500/10 to-emerald-500/10 backdrop-blur-xl border border-blue-400/30 rounded-full shadow-lg">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                   <span className="text-blue-100 font-semibold text-sm tracking-wide">ELITE DEVELOPMENT AGENCY</span>
@@ -238,7 +238,7 @@ export default function Home() {
                 <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black leading-[1.1] tracking-tight">
                   <span className="text-white">Your Crypto</span>
                   <br />
-                  <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.5)]">
+                  <span className="bg-gradient-to-r from-blue-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.5)]">
                     Development
                   </span>
                   <br />
@@ -256,11 +256,11 @@ export default function Home() {
                   <div className="text-blue-200/80 text-xs sm:text-sm font-semibold mt-1">Projects</div>
                 </div>
                 <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-purple-400 to-purple-300 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">$50M+</div>
+                  <div className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-emerald-400 to-emerald-300 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">$50M+</div>
                   <div className="text-blue-200/80 text-xs sm:text-sm font-semibold mt-1">Secured</div>
                 </div>
                 <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-pink-400 to-pink-300 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">99.9%</div>
+                  <div className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-teal-400 to-teal-300 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">99.9%</div>
                   <div className="text-blue-200/80 text-xs sm:text-sm font-semibold mt-1">Uptime</div>
                 </div>
                 <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 hover:bg-white/10 transition-all duration-300 group">
@@ -320,7 +320,7 @@ export default function Home() {
                   <span className="text-blue-200 text-sm font-medium">Trusted by Industry Leaders</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <svg className="w-6 h-6 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-6 h-6 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span className="text-blue-200 text-sm font-medium">Audited Smart Contracts</span>
@@ -330,7 +330,7 @@ export default function Home() {
 
             <div className="relative lg:block hidden">
               <div className="relative z-10">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-3xl blur-2xl opacity-40 animate-pulse"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-emerald-500 to-teal-500 rounded-3xl blur-2xl opacity-40 animate-pulse"></div>
 
                 <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-3xl p-8 shadow-2xl">
                   <Image
@@ -349,7 +349,7 @@ export default function Home() {
                     Verified Secure
                   </div>
 
-                  <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-blue-500 to-purple-600 text-white px-6 py-3 rounded-2xl shadow-2xl font-bold text-sm flex items-center gap-2" style={{ animation: 'bounce 2s infinite', animationDelay: '0.5s' }}>
+                  <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-blue-500 to-emerald-600 text-white px-6 py-3 rounded-2xl shadow-2xl font-bold text-sm flex items-center gap-2" style={{ animation: 'bounce 2s infinite', animationDelay: '0.5s' }}>
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
                       <path fillRule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -360,8 +360,8 @@ export default function Home() {
               </div>
 
               <div className="absolute -top-8 -right-8 w-32 h-32 bg-blue-500/30 rounded-full blur-2xl animate-pulse"></div>
-              <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-purple-500/30 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-              <div className="absolute top-1/2 -right-12 w-20 h-20 bg-pink-500/30 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+              <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-emerald-500/30 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+              <div className="absolute top-1/2 -right-12 w-20 h-20 bg-teal-500/30 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
             </div>
           </div>
         </main>
@@ -380,7 +380,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-                About <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">XDefiDev</span>
+                About <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">XDefiDev</span>
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
                 XDefiDev is a full-service Web3 development agency founded in 2018. We design, build, secure, and scale decentralized applications for founders, startups, DAOs, protocol teams, and enterprises exploring blockchain technology.
@@ -393,12 +393,12 @@ export default function Home() {
               </p>
             </div>
             <div className="grid grid-cols-2 gap-6">
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border border-blue-100 text-center">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-50 p-8 rounded-2xl border border-blue-100 text-center">
                 <div className="text-4xl font-black text-blue-600">2018</div>
                 <p className="text-gray-600 font-medium mt-2">Founded</p>
               </div>
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl border border-purple-100 text-center">
-                <div className="text-4xl font-black text-purple-600">200+</div>
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-2xl border border-emerald-100 text-center">
+                <div className="text-4xl font-black text-emerald-600">200+</div>
                 <p className="text-gray-600 font-medium mt-2">Projects Shipped</p>
               </div>
               <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border border-green-100 text-center">
@@ -522,7 +522,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-              Why Choose <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">xDefiDev?</span>
+              Why Choose <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">xDefiDev?</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Since 2018, with <span className="font-bold text-blue-600">200+ successful projects</span>,
@@ -532,7 +532,7 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="group relative bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
+            <div className="group relative bg-gradient-to-br from-blue-50 to-blue-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
               <div className="absolute top-6 left-6 w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
@@ -547,8 +547,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="group relative bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-100">
-              <div className="absolute top-6 left-6 w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl flex items-center justify-center">
+            <div className="group relative bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-emerald-100">
+              <div className="absolute top-6 left-6 w-12 h-12 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
@@ -585,7 +585,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-              Our <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Development Process</span>
+              Our <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">Development Process</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               A transparent, agile workflow that takes your Web3 product from idea to launch.
@@ -594,7 +594,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
             {developmentProcess.map((step, index) => (
               <div key={index} className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl flex items-center justify-center font-bold text-xl mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-emerald-600 text-white rounded-xl flex items-center justify-center font-bold text-xl mb-4">
                   {index + 1}
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{step.title}</h3>
@@ -632,7 +632,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-              Frequently Asked <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Questions</span>
+              Frequently Asked <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">Questions</span>
             </h2>
             <p className="text-xl text-gray-600">
               Everything founders and teams ask before starting a Web3 project with XDefiDev.
@@ -653,7 +653,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section id="contact" className="py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-600">
+      <section id="contact" className="py-20 bg-gradient-to-r from-blue-600 via-emerald-600 to-teal-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -672,7 +672,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <Link
                   href="/contact-us"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-indigo-700 font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-700 font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
                 >
                   Contact Our Team
                 </Link>
@@ -707,7 +707,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-              Our <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Technology</span> Stack
+              Our <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">Technology</span> Stack
             </h2>
             <p className="text-xl text-gray-600">Blockchain Networks We Work With</p>
           </div>
@@ -768,9 +768,9 @@ export default function Home() {
                   alt="Polygon logo - Ethereum Layer 2 scaling solution"
                   className="group-hover:scale-110 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-purple-500/20 rounded-full opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-emerald-500/20 rounded-full opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-300"></div>
               </div>
-              <span className="text-sm font-medium text-gray-700 group-hover:text-purple-600 transition-colors duration-300">Polygon</span>
+              <span className="text-sm font-medium text-gray-700 group-hover:text-emerald-600 transition-colors duration-300">Polygon</span>
             </div>
 
             <div className="group flex flex-col items-center space-y-3 p-4 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300">
@@ -826,7 +826,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-              Trusted by <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Industry Leaders</span>
+              Trusted by <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">Industry Leaders</span>
             </h2>
             <p className="text-xl text-gray-600">Join 200+ successful projects and growing</p>
           </div>

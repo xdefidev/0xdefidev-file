@@ -15,7 +15,7 @@ export default function Blog() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8">
                 <div className="text-center mb-16">
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-gray-900 mb-6">
-                        xDefiDev <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Blog</span>
+                        xDefiDev <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">Blog</span>
                     </h1>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                         Expert insights, guides, and news about Web3 development, decentralized applications, and the crypto ecosystem.
@@ -45,7 +45,7 @@ export default function Blog() {
                                     {post.excerpt}
                                 </p>
                                 <div className="mt-auto pt-4 border-t border-gray-100">
-                                    <span className="font-semibold text-blue-600 group-hover:text-purple-600 transition-colors duration-300 flex items-center">
+                                    <span className="font-semibold text-blue-600 group-hover:text-emerald-600 transition-colors duration-300 flex items-center">
                                         Read Article
                                         <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />

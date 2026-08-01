@@ -106,9 +106,9 @@ export default function Service({ post, onOpen }) {
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-purple-600/5 to-pink-600/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-emerald-600/5 to-teal-600/5"></div>
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -150,7 +150,7 @@ export default function Service({ post, onOpen }) {
               <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-gray-100 md:sticky md:top-8">
                 <div className="text-center mb-6">
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">Pricing</h2>
-                  <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent mb-2">
                     {formatUSD(post.price)}
                   </div>
                   <p className="text-sm text-gray-500">Starting from</p>
@@ -161,7 +161,7 @@ export default function Service({ post, onOpen }) {
                 </p>
 
                 <Button
-                  className="w-full py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+                  className="w-full py-4 bg-gradient-to-r from-blue-600 to-emerald-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
                   onPress={onOpen}
                 >
                   {t('service.get_exact_quote')}
@@ -210,8 +210,8 @@ export default function Service({ post, onOpen }) {
               </h3>
               <div className="space-y-4">
                 {Array.isArray(featureList) && featureList.map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-4 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-blue-100">
-                    <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
+                  <div key={idx} className="flex items-start gap-4 p-4 bg-gradient-to-r from-blue-50 to-emerald-50 rounded-xl border border-blue-100">
+                    <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-blue-600 to-emerald-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
                       {idx + 1}
                     </div>
                     <p className="text-gray-700 leading-relaxed">{item}</p>
@@ -224,7 +224,7 @@ export default function Service({ post, onOpen }) {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
+      <section className="py-20 bg-gradient-to-r from-blue-600 via-emerald-600 to-teal-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Ready to Get Started?
