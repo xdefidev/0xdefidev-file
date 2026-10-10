@@ -6,7 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap && node scripts/check-seo.mjs",
+    "lint": "next lint",
+    "test": "node --test \"tests/*.test.mjs\"",
+    "i18n:seed": "node scripts/sync-locales.mjs --seed",
+    "i18n:check": "node scripts/verify-translations.mjs",
+    "i18n:check:strict": "node scripts/verify-translations.mjs --strict",
+    "seo:check": "node scripts/check-seo.mjs"
   },
   "engines": {
     "node": "22.x"
@@ -16,6 +22,7 @@
     "@heroui/react": "^2.6.14",
     "@solana/spl-token": "^0.4.14",
     "@solana/web3.js": "^1.98.4",
+    "@supabase/supabase-js": "^2.117.3",
     "framer-motion": "^11.15.0",
     "i18next": "^25.3.2",
     "next": "13",
@@ -25,10 +32,13 @@
     "react-dom": "18.2.0",
     "react-i18next": "^15.6.0",
     "react-icons": "^4.12.0",
-    "react-multi-carousel": "^2.8.6"
+    "react-multi-carousel": "^2.8.6",
+    "sharp": "^0.35.5"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.15",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^13.5.11",
     "postcss": "^8.4.29",
     "tailwindcss": "^3.3.3"
   }

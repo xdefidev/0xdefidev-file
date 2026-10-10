@@ -1,70 +1,140 @@
+import Image from "next/image";
 import Link from "next/link";
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import blogs from "../api/blogs";
-import SeoHead from "../components/Seo";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
+import SeoHead, { ogImageFor } from "../../components/Seo";
+import Breadcrumbs, { breadcrumbSchema } from "../../components/Breadcrumbs";
+import { FadeIn, Stagger, StaggerItem } from "../../components/motion";
+import blogs from "../../data/blogs";
+import { siteConfig } from "../../site.config";
+
+const formatDate = (value) =>
+  new Date(value).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 
 export default function Blog() {
-    return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 py-12">
-            <SeoHead
-                title="Crypto & Web3 Blog | xDefiDev"
-                description="Read the latest insights and guides on Web3 development, Crypto Casinos, Telegram Bots, and Blockchain technology from the experts at xDefiDev."
-                path="/blog"
-            />
+  return (
+    <>
+      <SeoHead
+        title={`Blog | Web3, Blockchain & AI Development Insights | ${siteConfig.name}`}
+        description="Practical writing on Web3 development, blockchain infrastructure, AI applications and the engineering decisions behind shipping them."
+        path="/blog"
+        image={ogImageFor({
+          title: "Blog",
+          subtitle: "Web3, blockchain and AI engineering, written by the people doing the work",
+        })}
+        schema={[
+          breadcrumbSchema([{ name: "Home", href: "/" }, { name: "Blog" }]),
+          {
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "@id": `${siteConfig.url}/blog#blog`,
+            name: `${siteConfig.name} Blog`,
+            url: `${siteConfig.url}/blog`,
+            publisher: { "@id": `${siteConfig.url}/#organization` },
+            blogPost: blogs.map((post) => ({
+              "@type": "BlogPosting",
+              headline: post.title,
+              url: `${siteConfig.url}/blog/${post.slug}`,
+              datePublished: post.date,
+            })),
+          },
+        ]}
+      />
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8">
-                <div className="text-center mb-16">
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-gray-900 mb-6">
-                        xDefiDev <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">Blog</span>
-                    </h1>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                        Expert insights, guides, and news about Web3 development, decentralized applications, and the crypto ecosystem.
-                    </p>
+      <div className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+        <Breadcrumbs
+          trail={[
+            { name: "Home", href: "/" },
+            { name: "Blog" },
+          ]}
+        />
+
+        <FadeIn className="max-w-3xl">
+          <p className="text-sm font-semibold uppercase tracking-wide text-brand-600">
+            Notes from the build
+          </p>
+          <h1 className="mt-3 text-display font-bold text-ink text-balance">Blog</h1>
+          <p className="mt-5 text-lg leading-relaxed text-ink-subtle text-pretty">
+            Practical writing on Web3 development, blockchain infrastructure and
+            AI applications &mdash; the decisions, the trade-offs, and what
+            actually broke.
+          </p>
+        </FadeIn>
+
+        <Stagger className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {blogs.map((post, index) => (
+            <StaggerItem key={post.slug ?? index}>
+              <Link
+                href={`/blog/${post.slug}`}
+                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-surface-border bg-white transition-all duration-300 ease-smooth hover:-translate-y-1 hover:border-brand-200 hover:shadow-card-hover"
+              >
+                <div className="relative aspect-[16/9] w-full overflow-hidden bg-surface-sunken">
+                  {post.image ? (
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-500 ease-smooth group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="flex h-full w-full items-center justify-center bg-surface-sunken">
+                      <span className="text-sm font-semibold text-slate-400">
+                        {siteConfig.name}
+                      </span>
+                    </div>
+                  )}
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {blogs.map((post, index) => (
-                        <Link key={index} href={`/blog/${post.slug}`} className="group flex flex-col bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden transform hover:-translate-y-2">
-                            <div className="relative h-48 w-full overflow-hidden bg-gray-200">
-                                {post.image ? (
-                                    <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                                ) : (
-                                    <div className="w-full h-full flex items-center justify-center text-gray-400 font-semibold bg-gradient-to-br from-gray-100 to-gray-200">
-                                        xDefiDev
-                                    </div>
-                                )}
-                            </div>
-                            <div className="p-8 flex flex-col flex-grow">
-                                <div className="flex items-center text-sm text-gray-500 mb-4">
-                                    <span>{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-                                </div>
-                                <h3 className="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300 mb-4 line-clamp-2">
-                                    {post.title}
-                                </h3>
-                                <p className="text-gray-600 leading-relaxed mb-6 line-clamp-3 flex-grow">
-                                    {post.excerpt}
-                                </p>
-                                <div className="mt-auto pt-4 border-t border-gray-100">
-                                    <span className="font-semibold text-blue-600 group-hover:text-emerald-600 transition-colors duration-300 flex items-center">
-                                        Read Article
-                                        <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                        </svg>
-                                    </span>
-                                </div>
-                            </div>
-                        </Link>
-                    ))}
+                <div className="flex flex-1 flex-col p-6">
+                  <time
+                    dateTime={post.date}
+                    className="text-sm text-ink-subtle"
+                  >
+                    {formatDate(post.date)}
+                  </time>
+
+                  <h2 className="mt-2 text-lg font-bold leading-snug text-ink text-balance group-hover:text-brand-700">
+                    {post.title}
+                  </h2>
+
+                  <p className="mt-2.5 line-clamp-3 flex-1 text-sm leading-relaxed text-ink-subtle">
+                    {post.excerpt}
+                  </p>
+
+                  <span className="mt-5 inline-flex items-center gap-1.5 border-t border-surface-border pt-4 text-sm font-semibold text-brand-600">
+                    Read article
+                    <svg
+                      className="rtl-flip h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                  </span>
                 </div>
-            </div>
-        </div>
-    );
+              </Link>
+            </StaggerItem>
+          ))}
+        </Stagger>
+      </div>
+    </>
+  );
 }
 
 export async function getStaticProps({ locale }) {
-    return {
-        props: {
-            ...(await serverSideTranslations(locale ?? 'en', ['common'])),
-        },
-    };
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? "en", ["common"])),
+    },
+  };
 }

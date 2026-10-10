@@ -1,245 +1,293 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import styles from "/styles/Service.module.css";
-import services from "../api/services";
-import SeoHead, { SITE_URL } from "../components/Seo";
-
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-import SocialModal from "../components/SocialModal";
+import SeoHead, { SITE_URL, ogImageFor } from "../../components/Seo";
+import Breadcrumbs, { breadcrumbSchema } from "../../components/Breadcrumbs";
+import AddToCart from "../../components/AddToCart";
+import { FadeIn } from "../../components/motion";
+import { useContact } from "../../components/Contact";
+import services, { getService } from "../../data/services";
+import { categories } from "../../data/categories";
+import { resolveCopy } from "../../lib/service-copy";
+import { formatUSD } from "../../lib/format";
+import { siteConfig } from "../../site.config";
 
-import {
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Button,
-  useDisclosure,
-} from "@heroui/react";
-
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useTranslation } from 'next-i18next';
-
-export async function getStaticPaths({ locales }) {
-  const paths = [];
-  for (const locale of locales) {
-    for (const item of services) {
-      paths.push({
-        params: { service: item.slug },
-        locale,
-      });
-    }
-  }
-  return { paths, fallback: false };
+export async function getStaticPaths() {
+  return {
+    paths: services.map((service) => ({
+      params: { service: service.slug },
+      locale: "en",
+    })),
+    fallback: false,
+  };
 }
 
 export async function getStaticProps({ params, locale }) {
-  const selected = [];
+  const currentLocale = locale ?? "en";
+  const service = getService(params.service);
 
-  const select = await services.map(
-    (item) => params.service == item.slug && selected.push(item)
-  );
+  if (!service) return { notFound: true };
 
-  const post = await selected[0];
+  const copy = resolveCopy(currentLocale, service.slug);
 
   return {
     props: {
-      post,
-      ...(await serverSideTranslations(locale ?? 'en', ['common'])),
+      service,
+      copy,
+      translated: copy.translated,
+      category: categories.find((c) => c.serviceCategory === service.category) ?? null,
+      ...(await serverSideTranslations(currentLocale, ["common"])),
     },
   };
 }
 
-export default function Service({ post, onOpen }) {
-  const { t } = useTranslation();
-  // const { isOpen, onOpen, onOpenChange } = useDisclosure();
+export default function ServicePage({ service, copy, translated, category }) {
+  const { open } = useContact();
 
-  const imageLink =
-    "https://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584";
+  const name = service.name || copy.name || service.slug;
+  const description = copy.usedFallback ? service.description : copy.description;
+  const path = `/services/${service.slug}`;
 
-  // console.log(post, "hh");
+  // Only index a locale that actually has copy. Otherwise Google lands on a
+  // page whose <title> is the raw key `service.<slug>.name`.
+  const noindex = !translated;
 
-  function formatUSD(amount) {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: 0, // Allow no decimal places
-      maximumFractionDigits: 2  // But show up to 2 if needed
-    }).format(amount);
-  }
-
-  const featureList = t(`service.${post.slug}.p.list`, { returnObjects: true }) || [];
-
-  const serviceName = t(`service.${post.slug}.name`);
-  const serviceDescription = t(`service.${post.slug}.description`);
-
-  const productSchema = {
+  const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": `${SITE_URL}/services/${post.slug}#service`,
-    name: serviceName,
-    description: serviceDescription,
+    "@id": `${SITE_URL}${path}#service`,
+    name,
+    description,
+    url: `${SITE_URL}${path}`,
+    serviceType: name,
     provider: { "@id": `${SITE_URL}/#organization` },
-    serviceType: serviceName,
     areaServed: "Worldwide",
-    offers: {
-      "@type": "Offer",
-      price: post.price,
-      priceCurrency: "USD",
-      description: "Starting price for this development service",
-    },
+    ...(service.price > 0 && {
+      offers: {
+        "@type": "Offer",
+        price: service.price,
+        priceCurrency: "USD",
+        availability: "https://schema.org/InStock",
+        url: `${SITE_URL}${path}`,
+        priceValidUntil: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000)
+          .toISOString()
+          .slice(0, 10),
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          minPrice: service.price,
+          priceCurrency: "USD",
+          valueAddedTaxIncluded: false,
+        },
+      },
+    }),
   };
 
+  const faqSchema =
+    copy.features.length > 0 && description
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: copy.features.slice(0, 5).map((feature) => ({
+            "@type": "Question",
+            name: feature,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: `Included as standard in our ${name} engagement.`,
+            },
+          })),
+        }
+      : null;
+
+  const breadcrumbs = [
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    ...(category ? [{ name: category.label, href: `/categories/${category.slug}` }] : []),
+    { name },
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
+    <>
       <SeoHead
-        title={`${serviceName} | XDefiDev`}
-        description={serviceDescription}
-        path={`/services/${post.slug}`}
-        image={post.image || imageLink}
-        type="website"
-        schema={[productSchema]}
+        title={`${name} | ${siteConfig.name}`}
+        description={description?.slice(0, 300)}
+        path={path}
+        image={ogImageFor({ title: name, subtitle: description?.slice(0, 150), badge: category?.label })}
+        locale="en"
+        hreflang={["en"]}
+        noindex={noindex}
+        schema={[serviceSchema, breadcrumbSchema(breadcrumbs), faqSchema]}
       />
 
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-emerald-600/5 to-teal-600/5"></div>
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <Breadcrumbs trail={breadcrumbs} />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              {t(`service.${post.slug}.name`)}
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              {t(`service.${post.slug}.description`)}
-            </p>
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-14">
+          <div>
+            <FadeIn>
+              <p className="text-sm font-semibold uppercase tracking-wide text-brand-600">
+                {category?.label ?? "Service"}
+              </p>
+              <h1 className="mt-3 text-headline font-bold text-ink text-balance">{name}</h1>
+              <p className="mt-5 text-lg leading-relaxed text-ink-subtle text-pretty">
+                {description}
+              </p>
+            </FadeIn>
+
+            {service.youtube && (
+              <FadeIn delay={0.05} className="mt-8">
+                <div className="aspect-video w-full overflow-hidden rounded-2xl border border-surface-border bg-surface-sunken shadow-card">
+                  <iframe
+                    src={`https://www.youtube-nocookie.com/embed/${service.youtube}`}
+                    title={`${name} walkthrough`}
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="h-full w-full"
+                  />
+                </div>
+              </FadeIn>
+            )}
+
+            {copy.longDescription && copy.longDescription !== description && (
+              <FadeIn delay={0.08} className="mt-10">
+                <h2 className="text-xl font-semibold text-ink">About this service</h2>
+                <p className="mt-4 leading-relaxed text-ink-subtle">
+                  {copy.longDescription}
+                </p>
+              </FadeIn>
+            )}
+
+            {copy.features.length > 0 && (
+              <FadeIn delay={0.1} className="mt-10">
+                <h2 className="text-xl font-semibold text-ink">What&apos;s included</h2>
+                <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+                  {copy.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="flex items-start gap-3 rounded-xl border border-surface-border bg-white p-4"
+                    >
+                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent-100">
+                        <svg
+                          className="h-3 w-3 text-accent-700"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          aria-hidden="true"
+                        >
+                          <path d="M20 6 9 17l-5-5" />
+                        </svg>
+                      </span>
+                      <span className="text-sm leading-relaxed text-ink">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </FadeIn>
+            )}
+
+            <FadeIn delay={0.12} className="mt-12 rounded-2xl bg-surface-sunken p-6 sm:p-8">
+              <h2 className="text-xl font-semibold text-ink">
+                Need something different?
+              </h2>
+              <p className="mt-2 leading-relaxed text-ink-subtle">
+                Every engagement starts with a scope conversation. Tell us what
+                you&apos;re building and we&apos;ll come back with a fixed quote.
+              </p>
+              <button
+                type="button"
+                onClick={open}
+                className="mt-5 inline-flex items-center gap-2 rounded-xl bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700"
+              >
+                Talk to us
+              </button>
+            </FadeIn>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {/* Media Content */}
-            <div className="md:col-span-2 lg:col-span-2">
-              <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden">
-                {post.youtube ? (
-                  <div className="relative pb-[56.25%] h-0">
-                    <iframe
-                      src={`https://www.youtube.com/embed/${post.youtube}`}
-                      title="Service Video"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      className="absolute top-0 left-0 w-full h-full rounded-2xl"
-                    ></iframe>
-                  </div>
+          <aside className="lg:sticky lg:top-24 lg:h-fit">
+            <div className="rounded-2xl border border-surface-border bg-white p-6 shadow-card">
+              <p className="text-sm font-medium text-ink-subtle">Starting from</p>
+              <p className="mt-1 text-4xl font-bold tracking-tight text-ink">
+                {service.price > 0 ? formatUSD(service.price) : "Free"}
+              </p>
+
+              {service.price > 0 && (
+                <p className="mt-3 text-sm leading-relaxed text-ink-subtle">
+                  Fixed starting price. Final quote after a short scope call.
+                </p>
+              )}
+
+              <div className="mt-6 space-y-2.5">
+                {service.purchasable && service.price > 0 ? (
+                  <>
+                    <AddToCart
+                      item={service}
+                      label="Buy now with crypto"
+                      className="w-full"
+                    />
+                    <button
+                      type="button"
+                      onClick={open}
+                      className="w-full rounded-xl border border-surface-border px-5 py-3 text-sm font-semibold text-ink transition-colors duration-300 hover:border-brand-300 hover:text-brand-700"
+                    >
+                      Request a quote instead
+                    </button>
+                  </>
+                ) : service.price === 0 ? (
+                  <Link
+                    href="/free-tools"
+                    className="block w-full rounded-xl bg-brand-600 px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-brand-700"
+                  >
+                    Open this tool
+                  </Link>
                 ) : (
-                  <img
-                    src={post.image || imageLink}
-                    loading="lazy"
-                    className="w-full h-80 object-cover"
-                    alt={t(`service.${post.slug}.name`)}
-                  />
+                  <button
+                    type="button"
+                    onClick={open}
+                    className="w-full rounded-xl bg-brand-600 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-700"
+                  >
+                    Get a quote
+                  </button>
                 )}
               </div>
+
+              <ul className="mt-6 space-y-2.5 border-t border-surface-border pt-5 text-sm text-ink-subtle">
+                <li className="flex items-center gap-2">
+                  <Check />
+                  Crypto checkout, no account needed
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check />
+                  Source code and full ownership
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check />
+                  Post-launch support included
+                </li>
+              </ul>
             </div>
-
-            {/* Pricing Card */}
-            <div className="md:col-span-1 lg:col-span-1">
-              <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-gray-100 md:sticky md:top-8">
-                <div className="text-center mb-6">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">Pricing</h2>
-                  <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent mb-2">
-                    {formatUSD(post.price)}
-                  </div>
-                  <p className="text-sm text-gray-500">Starting from</p>
-                </div>
-
-                <p className="text-gray-600 text-center mb-6 leading-relaxed">
-                  {t('service.custom_request')}
-                </p>
-
-                <Button
-                  className="w-full py-4 bg-gradient-to-r from-blue-600 to-emerald-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
-                  onPress={onOpen}
-                >
-                  {t('service.get_exact_quote')}
-                </Button>
-
-                {/* Features Preview */}
-                <div className="mt-4 md:mt-6 pt-4 md:pt-6 border-t border-gray-100">
-                  <h3 className="font-semibold text-gray-900 mb-3 text-base md:text-lg">What's Included:</h3>
-                  <ul className="grid grid-rows-3 space-y-2 md:space-y-1">
-                    {Array.isArray(featureList) && featureList.slice(0, 3).map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-2 md:gap-3 text-sm md:text-base text-gray-600">
-                        <svg className="w-4 h-4 md:w-5 md:h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="leading-relaxed">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+          </aside>
         </div>
-      </section>
+      </div>
+    </>
+  );
+}
 
-      {/* Service Details Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Description */}
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                {t('service.description')}
-              </h2>
-              <div className="prose prose-lg text-gray-600 leading-relaxed">
-                <p>{t(`service.${post.slug}.description`)}</p>
-                <br />
-                <p>{t(`service.${post.slug}.p.description`)}</p>
-              </div>
-            </div>
-
-            {/* Key Features */}
-            <div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                {t('service.key_features')}
-              </h3>
-              <div className="space-y-4">
-                {Array.isArray(featureList) && featureList.map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-4 p-4 bg-gradient-to-r from-blue-50 to-emerald-50 rounded-xl border border-blue-100">
-                    <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-blue-600 to-emerald-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
-                      {idx + 1}
-                    </div>
-                    <p className="text-gray-700 leading-relaxed">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 via-emerald-600 to-teal-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-            Let's discuss your project requirements and provide you with a custom quote.
-          </p>
-          <Button
-            className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
-            onPress={onOpen}
-          >
-            Get Your Custom Quote
-          </Button>
-        </div>
-      </section>
-    </div>
+function Check() {
+  return (
+    <svg
+      className="h-4 w-4 shrink-0 text-accent-600"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M20 6 9 17l-5-5" />
+    </svg>
   );
 }

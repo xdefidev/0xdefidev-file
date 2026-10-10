@@ -1,10 +1,19 @@
-import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
+import NextDocument, { Html, Head, Main, NextScript } from "next/document";
+import { siteConfig, isRtl } from "../site.config";
 
-export default function Document({ locale = 'en' }) {
+export default function Document({ locale = "en" }) {
+  const rtl = isRtl(locale);
+
   return (
-    <Html lang={locale}>
+    <Html lang={locale} dir={rtl ? "rtl" : "ltr"}>
       <Head>
-        <meta name="theme-color" content="#1e3a8a" />
+        <meta name="theme-color" content="#2563eb" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+        {/* Social profile handles referenced by the Organization node. */}
+        <meta name="twitter:site" content="@xdefideveloper" />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -13,46 +22,56 @@ export default function Document({ locale = 'en' }) {
               "@graph": [
                 {
                   "@type": "Organization",
-                  "@id": "https://xdefidev.xyz/#organization",
-                  "url": "https://xdefidev.xyz/",
-                  "name": "XDefiDev",
-                  "legalName": "XDefiDev",
-                  "description":
-                    "Full-stack software engineering agency: custom software, AI and LLM applications, workflow automation, cloud and DevOps, APIs, web and mobile apps, and blockchain and Web3 development.",
-                  "logo": {
+                  "@id": `${siteConfig.url}/#organization`,
+                  url: `${siteConfig.url}/`,
+                  name: siteConfig.name,
+                  legalName: siteConfig.name,
+                  description:
+                    "Full-stack software engineering studio: custom software, AI and LLM applications, workflow automation, cloud and DevOps, APIs, web and mobile apps, and blockchain and Web3 development.",
+                  logo: {
                     "@type": "ImageObject",
-                    "url": "https://xdefidev.xyz/logo.png",
-                    "width": 150,
-                    "height": 100
+                    url: `${siteConfig.url}/logo.png`,
                   },
-                  "image": "https://xdefidev.xyz/logo.png",
-                  "email": "xdefidev@gmail.com",
-                  "telephone": "+1-706-228-9620",
-                  "contactPoint": [
+                  image: `${siteConfig.url}/og-default.png`,
+                  email: siteConfig.contact.email,
+                  telephone: siteConfig.contact.phone,
+                  foundingDate: String(siteConfig.founded),
+                  address: {
+                    "@type": "PostalAddress",
+                    addressCountry: "US",
+                  },
+                  contactPoint: [
                     {
                       "@type": "ContactPoint",
-                      "telephone": "+1-706-228-9620",
-                      "contactType": "sales",
-                      "availableLanguage": ["en", "zh", "es", "hi", "ar", "pt", "ru", "ja", "de", "fr"]
-                    }
+                      telephone: siteConfig.contact.phone,
+                      contactType: "sales",
+                      email: siteConfig.contact.email,
+                      availableLanguage: siteConfig.locales.map((l) => l.code),
+                    },
+                    {
+                      "@type": "ContactPoint",
+                      contactType: "customer support",
+                      email: siteConfig.contact.email,
+                      availableLanguage: ["en"],
+                    },
                   ],
-                  "sameAs": [
-                    "https://t.me/xdefideveloper",
-                    "https://discord.com/users/839903148462178315/"
-                  ]
+                  sameAs: [
+                    siteConfig.contact.telegram,
+                    siteConfig.contact.discord,
+                  ],
                 },
                 {
                   "@type": "WebSite",
-                  "@id": "https://xdefidev.xyz/#website",
-                  "url": "https://xdefidev.xyz/",
-                  "name": "XDefiDev",
-                  "description":
-                    "Software, AI, Automation and Blockchain Engineering",
-                  "publisher": { "@id": "https://xdefidev.xyz/#organization" },
-                  "inLanguage": "en"
-                }
-              ]
-            })
+                  "@id": `${siteConfig.url}/#website`,
+                  url: `${siteConfig.url}/`,
+                  name: siteConfig.name,
+                  description:
+                    "Software, AI, automation and blockchain engineering",
+                  publisher: { "@id": `${siteConfig.url}/#organization` },
+                  inLanguage: locale,
+                },
+              ],
+            }),
           }}
         />
       </Head>
@@ -65,7 +84,6 @@ export default function Document({ locale = 'en' }) {
 }
 
 Document.getInitialProps = async (ctx) => {
-  const { locale } = ctx;
   const originalRenderPage = ctx.renderPage;
 
   ctx.renderPage = () =>
@@ -77,6 +95,6 @@ Document.getInitialProps = async (ctx) => {
 
   return {
     ...initialProps,
-    locale: locale || "en",
+    locale: ctx.locale || siteConfig.defaultLocale,
   };
 };

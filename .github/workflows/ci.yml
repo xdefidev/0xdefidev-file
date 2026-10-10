@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Unit tests (webhook signature verification)
+        run: npm test
+
+      - name: Check translation coverage
+        # Reports only: pages with missing copy ship a noindex tag, so this
+        # does not block the build. Flip to i18n:check:strict once the
+        # locales are filled in.
+        run: npm run i18n:check
+
+      - name: Build
+        run: npm run build
+        env:
+          NEXT_PUBLIC_GOOGLE_ANALYTICS: ${{ vars.NEXT_PUBLIC_GOOGLE_ANALYTICS }}

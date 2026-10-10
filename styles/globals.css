@@ -2,28 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
-
-
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
-
-
+/* Font is loaded via next/font in pages/_app.js, which injects
+   --font-josefin. Do not add a Google Fonts @import here: it would be
+   placed after the @tailwind directives (invalid ordering), render-block,
+   and duplicate the download. */
 
 :root {
-  --font-josefin: 'Josefin Sans', sans-serif;
+  --font-josefin: 'Josefin Sans', system-ui, -apple-system, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
 
-html,
 body {
-  padding: 0;
   margin: 0;
+  padding: 0;
   font-family: var(--font-josefin);
   font-weight: 400;
-  scroll-behavior: smooth;
-  background-color: #fff !important;
+  color: #0f172a;
+  background-color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 a {
@@ -31,179 +39,49 @@ a {
   text-decoration: none;
 }
 
-nav {
-  display: flex;
-  margin: 0 5rem;
-}
-
-.home {
-  margin-right: auto;
-}
-
-.logo {
-  font-family: 'Josefin Sans', sans-serif;
-}
-
-ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  align-items: center;
-}
-
-li {
-  font-family: 'Josefin Sans', sans-serif;
-}
-
-.menu li:nth-child(3) {
-  background-color: #e9ecef;
-  color: #023e8a;
-  padding: 8px 12px;
-  border-radius: 8px;
-  border: solid 1px #023e8a;
-  cursor: pointer;
-}
-
-.menu li:nth-child(3):hover {
-  background-color: #023e8a;
-  color: #e9ecef;
-}
-
-.header {
-  /* background: url('https://ik.imagekit.io/lzgpc48la/Frame_1__2__76og5TXSU.png?ik-sdk-version=javascript-1.4.3&updatedAt=1663645145941'); */
-  background-repeat: no-repeat;
-  background-size: 100%;
-  min-height: 85vh;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  margin: 0rem 5rem;
-}
-
-.header>div:nth-child(3) {
-  /* background-color: #000; */
-}
-
-#grid-container {
-  margin-top: 2rem;
+/* RTL: flip the handful of directional utilities that Tailwind's logical
+   properties do not cover on their own. */
+[dir='rtl'] .rtl-flip {
+  transform: scaleX(-1);
 }
 
 .text-balance {
   text-wrap: balance;
 }
 
-.arrow-down {
-  width: 1rem;
-  position: relative;
-  animation: mymove 5s infinite;
-  margin: 0 0 30px 0;
+.text-pretty {
+  text-wrap: pretty;
 }
 
-@keyframes mymove {
-  from {
-    top: 0px;
-  }
-
-  50% {
-    top: 20px;
-  }
-
-  to {
-    top: 0px;
-  }
-}
-
-.bg-img {
-  flex-shrink: 0;
-  background-image: url(/bg.png);
-  background-position: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-}
-
-.services h2 {
-  margin: 0;
-  font-size: 56px;
-  text-align: center;
-  font-family: 'Josefin Sans', sans-serif;
-  letter-spacing: -1.5px;
-}
-
-/* .footer-list {
-  display: inline-block;
-  margin: 20px 0px !important;
-} */
-
-.content-body {
-  background-color: #212529;
-  color: #e9ecef;
-  justify-content: center;
-  font-size: 10px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.font1 {
-  font-family: var(--font-josefin);
-}
-
-.line-clamp {
+.line-clamp-3 {
   display: -webkit-box;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  -webkit-line-clamp: 3; /* Number of lines to show */
 }
 
-
-
-
-@media (max-width: 600px) {
-  .header {
-    /* grid-template-columns: 1fr;
-    grid-template-rows: 1fr; */
-    /* margin: 0rem 5rem; */
-    display: flex;
-    flex-direction: column-reverse;
-
-  }
-
-  .header div:nth-child(3) {
-    display: none;
-  }
-
-  nav {
-    margin: 0 1rem;
-  }
-
-  ul {
-    padding: 0 10px;
-    gap: 5px;
-    font-size: 13px;
-  }
-
-  .menu {
-    padding: 0;
-  }
-
-  .arrow-down {
-    margin-top: 40px;
-  }
-}
-
-
+/* react-multi-carousel overrides */
 .carousel-container {
-  height: 110%;
+  height: 100%;
   width: 100%;
-  border-radius: 10px;
- }
+  border-radius: 0.75rem;
+}
 
-.react-multi-carousel-item {
-  border-radius: 10px !important;
- }
+.react-multi-carousel-item img {
+  border-radius: 0.75rem !important;
+}
 
- .react-multi-carousel-item img {
-  border-radius: 10px !important;
- }
+/* Respect users who ask the OS to reduce motion. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

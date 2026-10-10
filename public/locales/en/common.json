@@ -43,192 +43,306 @@
   "service": {
     "solana-volume-bot-telegram": {
       "name": "Solana Volume Bot Telegram",
-      "description": "The Solana Volume Bot includes advanced tools to increase token trading volume, build trust among holders, and attract new investors. We can customize the bot to suit your specific project needs.",
+      "description": "A Telegram volume bot for Solana that trades your token automatically to build real volume and holder trust, without you watching charts all day.",
       "p": {
-        "description": "A fully-featured volume-boosting bot for Solana tokens, designed to help projects enhance trading activity and engagement. This bot provides a user-friendly interface and essential features to manage, monitor, and boost token performance effectively.",
+        "description": "Volume is the first thing buyers check. Our Solana volume bot runs from a dedicated VPS, executes configurable trade cycles against your liquidity pool, and spreads activity across many time windows so the pattern looks organic rather than scripted. You control trade size, frequency, wallets used and the target volume per day, and every wallet is funded from your own pool so no capital leaves your ecosystem. A live dashboard shows each cycle as it runs, and you can pause or retune the bot at any time.",
         "list": [
-          "Unlock usage for boosting token activity",
-          "Integrated wallet management for deposits and withdrawals",
-          "Boost token trading volume seamlessly",
-          "Boost token holders with advanced strategies",
-          "Referral system to promote your project",
-          "Refresh feature to keep data updated",
-          "Easy token address modification"
+          "Runs 24/7 from a dedicated VPS or your own server",
+          "Configurable trade size, frequency and daily volume target",
+          "Spread across multiple funded wallets for natural-looking activity",
+          "Live dashboard with per-cycle history and P&L tracking",
+          "Supports Raydium, Orca and Meteora pools",
+          "Anti-detection timing jitter so cycles do not look machine-identical",
+          "Emergency stop and adjustable slippage guard"
         ]
       }
     },
     "pump-fun-clone-development": {
       "name": "PUMP.fun Clone on EVM and SOLANA",
-      "description": "Ethereum and Solana Pump.Fun Clone website development.",
+      "description": "A production-ready Pump.fun-style launchpad with fair-launch mechanics, bonding curve trading, and creator fee automation.",
       "p": {
-        "description": "We are offering the development of a customized Pump.Fun clone for both Ethereum or Solana, featuring advanced buy/sell functionalities, real-time charts, and enhanced security measures. Our highly customizable architecture allows easy feature upgrades and adjustments. Let us help you create a secure and user-friendly platform.",
+        "description": "We build Pump.fun clones that keep the mechanics that made the original work: a fair launch, a bonding curve that prices each token, and automatic creator fee distribution, without copying any trademarked branding. The launch flow, anti-bot protections and liquidity migration are all implemented from scratch so you can operate it on your own infrastructure and your own domain. You receive the full codebase plus a deployment walkthrough, and we can additionally host and maintain it for you.",
         "list": [
-          "Advanced buy/sell functionalities",
-          "Integrated real-time charts for enhanced user experience",
-          "User-friendly interface",
-          "Secure transactions",
-          "Multi-functional support",
-          "Regular updates and support",
-          "Customization to fit your specific requirements"
+          "Fair launch with bonding curve pricing",
+          "Automatic liquidity migration at curve completion",
+          "Creator fee distribution wired to your wallet",
+          "Anti-bot and sniper protections built in",
+          "Creator dashboard with live token analytics",
+          "Solana native, built on Anchor programs",
+          "Full source code and deployment walkthrough"
         ]
       }
     },
     "telegram-mini-app": {
       "name": "Telegram Mini App Development",
-      "description": "A versatile Telegram mini app similar to Hamster and TapSwap, offering quick and seamless access to a variety of features within the Telegram ecosystem.",
+      "description": "Telegram Mini Apps that open inside the chat, with wallet connection, TON and Solana support, and Telegram-native payments.",
       "p": {
-        "description": "A powerful mini app for Telegram that integrates multiple functionalities, enabling users to access, use, and manage various services efficiently.",
+        "description": "A Mini App loads inside Telegram with no install and no app-store review, which makes it the fastest route to a crypto product in front of an existing Telegram audience. We build Mini Apps with Web3 wallet connection through Telegram's in-app wallet, TON and Solana payment support, Stars and crypto payments, referral tracking, and a responsive interface that works on both mobile and desktop Telegram. Because everything runs inside Telegram, the friction between tapping a link and completing a payment is close to zero.",
         "list": [
-          "Quick access to services",
-          "Seamless integration with Telegram",
-          "User-friendly interface",
-          "Secure transactions",
-          "Multi-functional support",
-          "Regular updates and support",
-          "Referral system"
+          "Runs inside Telegram with no install or app-store review",
+          "Wallet connection through Telegram's in-app wallet",
+          "TON and Solana support with Telegram Stars payments",
+          "Referral and affiliate tracking built in",
+          "Responsive from phone to desktop Telegram",
+          "Bot back-end with admin panel and user analytics",
+          "Smooth back-button and close-button handling"
         ]
       }
     },
     "pinksale-launchpad-clone": {
       "name": "Pinksale - Presale Launchpad clone",
-      "description": "Secure launchpad protocol like Pinksale with presale list and fairlaunch.",
+      "description": "A complete launchpad platform with fair launches, presales, vesting, and automated liquidity handling for token launches.",
       "p": {
-        "description": "A platform to create, customize, lock, distribute and sell tokens on blockchain that aims to make it easy and affordable for anyone to launch and invest in crypto projects.",
+        "description": "Launchpads are how most new tokens find their first liquidity. We build Pinksale-style platforms covering the whole launch lifecycle: fair launches that deny bots, presales with tiered allocation, vesting schedules that release tokens over time, and liquidity locking so buyers can verify funds are not pulled. The admin side handles fees, pools and user management, and the buyer side stays deliberately simple so conversion does not suffer.",
         "list": [
-          "Create Presale & Fairlaunch",
-          "Launchpad List",
-          "Connect Wallet & buy tokens",
-          "Token Locker",
-          "Multi Send",
-          "KYC & Audit"
+          "Fair launch and presale flows with anti-bot protection",
+          "Tiered allocation and whitelist support",
+          "Vesting schedules with automated releases",
+          "Liquidity locking with a verifiable proof",
+          "Fee distribution between creator, platform and treasury",
+          "Admin dashboard for pools, users and reporting",
+          "Deployed to your own infrastructure and domain"
         ]
       }
     },
     "solana-casino-platform": {
       "name": "Solana Casino Platform Development",
-      "description": "A cutting-edge casino web platform built on the Solana blockchain, offering fast, secure, and transparent gaming experiences.",
+      "description": "A white-label crypto casino built on Solana with instant deposits, automated withdrawals, provably fair games and a full admin back-office.",
       "p": {
-        "description": "Experience the thrill of casino gaming on the Solana blockchain. Our platform provides a wide range of games, secure transactions, and provably fair outcomes.",
+        "description": "A complete casino platform running on Solana settlement: deposits credit automatically within seconds, withdrawals process without manual approval, and every game outcome is provably fair so players can verify results independently. The white-label build means your branding, your edge percentage and your game list, running on our battle-tested engine. The admin back-office covers players, wallets, withdrawals, bonuses and reporting, and responsible gaming controls such as deposit limits and self-exclusion are included by default.",
         "list": [
-          "Fast and secure transactions",
-          "Wide range of casino games",
-          "Provably fair gaming",
-          "Transparent and decentralized",
-          "User-friendly interface",
-          "24/7 customer support"
+          "Instant automated deposits and withdrawals on Solana",
+          "Provably fair games with on-chain verification",
+          "Full white-label theming: your brand, your edge, your colours",
+          "Admin back-office for players, wallets and reporting",
+          "Responsible gaming tools: limits, self-exclusion, audit logs",
+          "Multi-currency support including SPL tokens",
+          "Anti-fraud monitoring and withdrawal risk scoring"
         ]
       }
     },
     "telegram-sniper-bot-clone": {
       "name": "Telegram Sniper Bot Clone",
-      "description": "Description for Telegram Sniper Bot Clone",
+      "description": "A Telegram sniper bot that detects new liquidity pool launches within seconds and fires your configured trade the moment the pool opens.",
       "p": {
-        "description": "Detailed description for Telegram Sniper Bot Clone.",
-        "list": []
+        "description": "Sniper bots exist because the first seconds of a new pool determine the entire trade. Ours monitors new pool creation across Solana, Ethereum and Base, confirms the pool is initialised and not a honeypot, then executes your configured buy within seconds. You set the amount, slippage, wallet and the conditions that trigger a trade, and every execution is logged with the realised entry price so you can measure whether the strategy is working.",
+        "list": [
+          "Detects new pool launches within seconds",
+          "Honeypot and rug-pull checks before every entry",
+          "Configurable buy amount, slippage and wallet",
+          "Multi-chain support: Solana, Ethereum and Base",
+          "TP/SL and partial take-profit automation",
+          "Trade log with realised entry price and P&L",
+          "Telegram alerts on entry, exit and pool events"
+        ]
       }
     },
     "pos-blockchain-development": {
       "name": "POS Blockchain Development",
-      "description": "Description for POS Blockchain Development",
+      "description": "Proof-of-Stake blockchain development: consensus implementation, validator tooling, staking economics and network deployment.",
       "p": {
-        "description": "Detailed description for POS Blockchain Development.",
-        "list": []
+        "description": "Building a proof-of-stake chain means getting the hard parts right: slashing rules that discourage downtime without punishing honest restarts, stake unbonding that resists long-range attacks, and checkpointing that finalises history. We implement the consensus layer, validator and node tooling, wallet integration, and the staking reward economics, then deploy and monitor a live network. You receive the full node and validator source, deployment automation and monitoring, and documentation your own team can operate from.",
+        "list": [
+          "PoS consensus with slashing and downtime penalties",
+          "Unbonding periods resistant to long-range attacks",
+          "Validator node tooling with metrics and alerting",
+          "Staking, delegation and reward distribution",
+          "Wallet integration with address and staking screens",
+          "Genesis configuration and chain deployment automation",
+          "Monitoring, alerting and fork-ready upgrade path"
+        ]
       }
     },
     "poa-blockchain-development": {
       "name": "POA Blockchain Development",
-      "description": "Description for POA Blockchain Development",
+      "description": "Proof-of-Authority blockchain development with fast finality, validator governance and permissioned network controls.",
       "p": {
-        "description": "Detailed description for POA Blockchain Development.",
-        "list": []
+        "description": "Proof-of-Authority suits consortium and permissioned networks where a known set of validators should make the fast decisions rather than an open economic auction. We implement the authority rotation and staking logic, the block production schedule, and the permissioning layer, then deploy the network with the tooling your operators need. The result is sub-second finality with an audit trail that maps cleanly to real-world governance, which is why it is common in supply chain, trade finance and institutional settlement.",
+        "list": [
+          "Sub-second block finality",
+          "Authority set management and rotation",
+          "Permissioned accounts with role-based network access",
+          "Validator governance and on-chain voting",
+          "Full node and validator source code",
+          "Genesis, deployment and network upgrade tooling",
+          "Integrations for existing enterprise systems"
+        ]
       }
     },
     "testnet-evm-blockchain-development": {
       "name": "Testnet EVM Blockchain Development",
-      "description": "Description for Testnet EVM Blockchain Development",
+      "description": "A private EVM testnet for development and QA: Solidity deployment, low-latency RPC, block explorers and CI integration.",
       "p": {
-        "description": "Detailed description for Testnet EVM Blockchain Development.",
-        "list": []
+        "description": "A shared public testnet is slow to get transactions into and unsuitable for repeatable automated testing. We deploy a private EVM testnet inside your infrastructure so your team controls block time, chain state and reset behaviour. It comes with fast RPC endpoints, an explorer for transaction debugging, pre-funded test accounts, and a CI hook so tests can deploy contracts against a fresh chain on every run.",
+        "list": [
+          "Private EVM-compatible chain inside your infrastructure",
+          "Low-latency RPC with automatic instamine for tests",
+          "Block explorer for transaction and event debugging",
+          "Pre-funded test accounts and faucet",
+          "One-command chain reset for repeatable test runs",
+          "CI integration for automated contract test suites",
+          "Foundry and Hardhat compatible"
+        ]
       }
     },
     "cryptocurrency-casino-development": {
       "name": "Cryptocurrency Casino Development",
-      "description": "Description for Cryptocurrency Casino Development",
+      "description": "Provably fair crypto casino development: slots, crash, dice, blackjack and roulette with crypto deposits, withdrawals and a sportsbook module.",
       "p": {
-        "description": "Detailed description for Cryptocurrency Casino Development.",
-        "list": []
+        "description": "A casino platform has to satisfy two audiences at once. Players need to trust that outcomes are not manipulated, which means verifiable randomness committed before the round and revealed after. Operators need real-time control over balances, withdrawals and risk, which means a serious admin back-office. We build both sides: a game engine covering slots, crash, dice, blackjack, roulette and live dealer tables, provably fair commit-reveal randomness, multi-currency crypto settlement, fraud detection and withdrawal risk scoring, plus an affiliate and bonus system.",
+        "list": [
+          "Provably fair commit-reveal randomness players can verify",
+          "Slots, crash, dice, blackjack, roulette and live dealer tables",
+          "Multi-currency crypto deposits and automated withdrawals",
+          "Admin back-office with real-time player and balance management",
+          "Fraud detection, withdrawal risk scoring and audit logs",
+          "Sportsbook module with odds and settlement engine",
+          "Affiliate system, bonuses and loyalty tiers"
+        ]
       }
     },
     "centralized-crypto-exchange-development": {
       "name": "Centralized Crypto Exchange Development",
-      "description": "Description for Centralized Crypto Exchange Development",
+      "description": "Centralised exchange development with a matching engine, custody wallets, KYC/AML, liquidity tools and a full trading front-end.",
       "p": {
-        "description": "Detailed description for Centralized Crypto Exchange Development.",
-        "list": []
+        "description": "A central exchange is two systems that must never disagree: a matching engine that is deterministic and fast, and a custody layer that holds customer funds safely. We build a high-throughput matching engine with price-time priority and self-trade prevention, cold and hot wallet architecture with automated rebalancing, a complete KYC/AML and sanctions-screening pipeline, maker-taker fee tiers, and the trading front-end with charts, order books and position management. Designed for launch and scale, not a demo.",
+        "list": [
+          "High-throughput matching engine with price-time priority",
+          "Cold/hot custody wallets with automated rebalancing",
+          "KYC/AML onboarding and sanctions screening",
+          "Spot and margin trading with maker-taker fee tiers",
+          "Liquidity pools, market making and OTC desk support",
+          "Trading front-end with charts, order book and positions",
+          "Admin console with risk, compliance and reporting"
+        ]
       }
     },
     "decentralized-crypto-exchange-development": {
       "name": "Decentralized Crypto Exchange Development",
-      "description": "Description for Decentralized Crypto Exchange Development",
+      "description": "DEX development with AMM pools, liquidity provision, yield farming and non-custodial trading across EVM chains.",
       "p": {
-        "description": "Detailed description for Decentralized Crypto Exchange Development.",
-        "list": []
+        "description": "A DEX puts the risk and the reward with the user, which changes the engineering entirely. Liquidity has to be safe against impermanent loss and sandwich attacks, the routing needs to find the best path across pools, and the contracts need to be auditable by the community. We build concentrated and constant-product AMMs, router and aggregator logic, liquidity provision and staking positions, farming and rewards distribution, and the front-end for swaps, pools and analytics, deployed on the chain you choose.",
+        "list": [
+          "Constant-product and concentrated liquidity AMMs",
+          "Router with multi-hop and best-path routing",
+          "Liquidity provision positions with fee and IL analytics",
+          "Yield farming and rewards distribution",
+          "Anti-sandwich and slippage protections",
+          "Non-custodial swaps across the supported chain",
+          "Swap, pool and analytics front-end"
+        ]
       }
     },
     "token-development": {
       "name": "Token Development",
-      "description": "Description for Token Development",
+      "description": "Token development: ERC-20, BEP-20, SPL and other standards with safe deployment, vesting, tax controls and liquidity setup.",
       "p": {
-        "description": "Detailed description for Token Development.",
-        "list": []
+        "description": "A token is small in code and large in consequence. A bug in the transfer logic, or an owner key that can mint without limit, destroys trust permanently. We implement the standard you need with the security properties that matter: capped or renounced minting, pausable transfers, optional transfer taxes with hard caps, liquidity lock, and vesting for team and treasury allocations. You get the audited contract source, deployment on your chosen chain, and liquidity setup with the burn or lock addresses published so buyers can verify.",
+        "list": [
+          "ERC-20, BEP-20, SPL and chain-native token standards",
+          "Capped supply or renounced mint authority",
+          "Pausable transfers with optional tax controls",
+          "Team and treasury vesting schedules",
+          "Liquidity lock or burn with a published, verifiable address",
+          "Deployment to your chosen chain with verified source",
+          "Audit-ready contract source and tests"
+        ]
       }
     },
     "nft-marketplace-development": {
       "name": "NFT Marketplace Development",
-      "description": "Description for NFT Marketplace Development",
+      "description": "NFT marketplace development with minting, listings, auctions, royalties enforcement and creator royalty splits.",
       "p": {
-        "description": "Detailed description for NFT Marketplace Development.",
-        "list": []
+        "description": "An NFT marketplace has to handle the unglamorous parts well: creator royalty enforcement that cannot be bypassed, gas-efficient batch operations, metadata storage that does not rot, and fraud filtering for stolen art. We build minting with allowlists and supply limits, fixed-price and auction sales, bidding and offers, royalty splitting and enforcement, IPFS-backed metadata, and the browsing, filtering and profile surfaces buyers expect. Creator dashboards and collection analytics included.",
+        "list": [
+          "Minting with allowlists, caps and public sale phases",
+          "Fixed-price listings, auctions, bids and offers",
+          "Creator royalties with enforcement and splitting",
+          "Gas-efficient batch minting and transfers",
+          "IPFS-backed metadata with pinning",
+          "Fraud and stolen-art filtering",
+          "Creator dashboard with collection analytics"
+        ]
       }
     },
     "nft-minting-website-development": {
       "name": "NFT Minting Website Development",
-      "description": "Description for NFT Minting Website Development",
+      "description": "A dedicated NFT minting site with wallet connect, allowlists, live mint progress and on-chain verification.",
       "p": {
-        "description": "Detailed description for NFT Minting Website Development.",
-        "list": []
+        "description": "A minting page has one job: take a buyer from landing to a successful mint as fast and as reliably as possible, without a failed transaction that costs them gas and loses the sale. We build responsive minting pages with wallet connection, allowlist gating, live supply and mint progress, multi-phase sale structure, quantity limits per wallet, and clear confirmation states. On-chain verification lets buyers confirm they received what they paid for.",
+        "list": [
+          "Wallet connection across injected and mobile wallets",
+          "Allowlist and allowlist-plus-public sale phases",
+          "Live mint progress and remaining supply",
+          "Per-wallet quantity limits",
+          "On-chain verification of mint results",
+          "Mobile-first responsive design with low-friction UX",
+          "Gas-aware UX that avoids failed transactions"
+        ]
       }
     },
     "white-label-crypto-wallet-development": {
       "name": "White-Label Crypto Wallet Development",
-      "description": "Description for White-Label Crypto Wallet Development",
+      "description": "White-label multi-chain crypto wallet development: secure key management, transaction signing, swaps, staking and push notifications.",
       "p": {
-        "description": "Detailed description for White-Label Crypto Wallet Development.",
-        "list": []
+        "description": "A wallet handles the highest-value operations in the product and has the smallest margin for error. We build white-label multi-chain wallets with secure key generation and encrypted storage, transaction signing with clear human-readable confirmation, fee estimation, token balances across chains, swaps and staking, biometric app-lock, and push notifications for inbound and outbound activity. The white-label layer means it carries your brand throughout while the custody and signing core stays hardened.",
+        "list": [
+          "Secure key generation with encrypted local storage",
+          "Multi-chain support with unified balance view",
+          "Transaction signing with human-readable confirmation",
+          "Built-in swaps, staking and token issuance screens",
+          "Biometric app lock and PIN protection",
+          "Push notifications for inbound and outbound activity",
+          "White-label theming throughout the wallet experience"
+        ]
       }
     },
     "amm-dex-uniswap-clone": {
       "name": "AMM DEX Uniswap Clone",
-      "description": "Description for AMM DEX Uniswap Clone",
+      "description": "Uniswap-style AMM DEX development with liquidity pools, swap routing, fee tiers and analytics.",
       "p": {
-        "description": "Detailed description for AMM DEX Uniswap Clone.",
-        "list": []
+        "description": "An AMM DEX needs correct pricing under arbitrage pressure and acceptable slippage for ordinary swaps. We implement constant-product swap logic, multi-hop routing, fee tiers, liquidity provision and position management, and front-end interfaces for swaps, pools, positions and analytics. Contracts are written for auditability and follow established interface patterns so wallets and tooling interoperate, which matters more than novelty when you are competing for liquidity.",
+        "list": [
+          "Constant-product AMM with configurable fee tiers",
+          "Multi-hop routing for best execution",
+          "Liquidity provision and position management",
+          "Slippage protection and price-impact warnings",
+          "Analytics for pools, volume and fees",
+          "Standard interfaces for wallet and aggregator compatibility",
+          "Auditable, well-documented contract source"
+        ]
       }
     },
     "fix-walletconnect-relay-error": {
       "name": "Fix WalletConnect Relay Error",
-      "description": "Description for Fix WalletConnect Relay Error",
+      "description": "Diagnose and fix WalletConnect relay errors: session pairing failures, unsupported chain mismatches and connection timeouts.",
       "p": {
-        "description": "Detailed description for Fix WalletConnect Relay Error.",
-        "list": []
+        "description": "WalletConnect is the single largest source of 'the wallet does not connect' support tickets, and the cause is usually one of a narrow set of misconfigurations. We trace the actual session lifecycle to find whether the failure is an expired relay, a project-id or chain mismatch, an unsupported chain on the wallet side, or a stale persisted session. We fix it and add the guards that stop it recurring, usually in a day, with a written explanation of what was wrong.",
+        "list": [
+          "Full session lifecycle tracing to isolate the root cause",
+          "Relay endpoint and project-id configuration fixes",
+          "Chain allowlist mismatch correction",
+          "Stale session and cached pairing cleanup",
+          "Connection timeout and retry handling",
+          "Wallet-side support matrix verification",
+          "Written explanation and prevention guards"
+        ]
       }
     },
     "ai-cryptocurrency-application-development": {
       "name": "AI Cryptocurrency Application Development",
-      "description": "Description for AI Cryptocurrency Application Development",
+      "description": "AI-powered crypto applications: on-chain data indexing, market analysis, anomaly detection and trading assistants.",
       "p": {
-        "description": "Detailed description for AI Cryptocurrency Application Development.",
-        "list": []
+        "description": "AI earns its place in crypto products where there is too much unstructured data for a human to read: millions of transactions, thousands of wallets, or a market moving faster than anyone can analyse. We build the indexing layer that makes that data usable, then the models on top: wallet behaviour clustering, wash-trading and anomaly detection, risk scoring, and LLM assistants that explain on-chain activity in plain language. Delivered with evaluation so you can see how it performs on your data, not just a demo.",
+        "list": [
+          "On-chain data ingestion and normalised indexing",
+          "Wallet behaviour clustering and entity resolution",
+          "Wash-trading, anomaly and fraud detection",
+          "Risk scoring models with explainable signals",
+          "LLM assistants that summarise on-chain activity",
+          "Market analysis and alerting pipelines",
+          "Evaluation harness with real-data benchmarks"
+        ]
       }
     },
     "custom-software-development": {
@@ -354,6 +468,69 @@
     "custom_request": "Send us a custom request! Share details about your project, requirements, budget, and timeline, and let us help bring your personalized project to life.",
     "get_exact_quote": "Get Exact Quote",
     "description": "Description",
-    "key_features": "Key Features / Benefits"
+    "key_features": "Key Features / Benefits",
+    "solana-volume-bot": {
+      "name": "Solana Volume Bot",
+      "description": "Free browser tool that models volume strategies for Solana tokens and shows the expected cost of running them before you commit.",
+      "p": {
+        "description": "Volume strategies fail for predictable reasons: trade size that moves the pool, cycles that run so often the pattern is obvious, and wallets funded from a single source. This tool lets you model a strategy first. Set a target daily volume, pool liquidity, trade size and cycle count, and see the projected cost, the wallet count you would need, and whether the pattern would read as organic. Nothing is executed; it is a planning tool you can run before paying anyone to build it.",
+        "list": [
+          "Model daily volume targets against real pool liquidity",
+          "Project wallet funding requirements before you build",
+          "Detect cycle patterns that look machine-generated",
+          "Estimate slippage impact of trade size on thin pools",
+          "Compare strategies across Raydium, Orca and Meteora",
+          "Runs entirely in your browser, no signup required"
+        ]
+      }
+    },
+    "wallet-tracker-analytics": {
+      "description": "Track any wallet across Solana and the major EVM chains, with balance history, token holdings and activity summaries.",
+      "p": {
+        "description": "Paste an address and get a readable picture of who owns it: current balances, how those balances changed, which tokens they hold and how actively they trade. It covers Solana and the main EVM chains, and summarises activity rather than dumping raw rows, so you can answer the question you actually have — is this wallet an operator, a whale, a bot cluster member, or an unrelated retail holder — in under a minute.",
+        "list": [
+          "Supports Solana and the major EVM chains",
+          "Balance history over time, not just a current snapshot",
+          "Token holdings with liquidity and concentration breakdown",
+          "Activity summary: trading frequency, counterparties, timing patterns",
+          "Flags linked wallets that move together",
+          "No account or signup required"
+        ]
+      },
+      "name": "Wallet Tracker & Analytics"
+    },
+    "impermanent-loss-calculator": {
+      "description": "Calculate impermanent loss for Uniswap v2, v3 and concentrated positions before you provide liquidity.",
+      "p": {
+        "description": "Impermanent loss is only a useful number if it accounts for the fees you actually earned. This calculator takes your deposit, your range, the price at deposit and a price path, and returns the IL percentage alongside the fee income needed to break even. It handles concentrated liquidity ranges properly, which most simple calculators get wrong, and compares Uniswap, PancakeSwap, Aerodrome and other major AMMs side by side.",
+        "list": [
+          "Correct maths for Uniswap v2 and concentrated v3 ranges",
+          "Compares Uniswap, PancakeSwap, Aerodrome and Curve side by side",
+          "Break-even calculation including fee income, not just IL",
+          "Models a price range rather than a single price move",
+          "Fee tier impact at different volume levels",
+          "Runs entirely in your browser"
+        ]
+      },
+      "name": "Impermanent Loss Calculator"
+    },
+    "volume-holder-rank-bot-solana-robinhood": {
+      "name": "Volume, Holder & Rank Bot — Solana and Robinhood Chain",
+      "description": "Grow volume, holder count and unique-wallet rank on Solana and Robinhood Chain. Three independent boosters, atomic execution, and one-tap recovery from every wallet.",
+      "p": {
+        "description": "A single bot that runs three independent boosters so you can shape the metrics your token needs at any moment. Volume runs atomic buy/buy/sell cycles for depth and turnover. Holders funds fresh wallets to grow the holder count. Rank fires micro-buys to build a unique-wallet footprint that reads as organic adoption rather than a single cluster. Each booster runs on its own schedule and its own wallet pool, so you can lean on one without touching the others. Solana executes through atomic Jito bundles with anti-MEV protection; Robinhood Chain routes across Uniswap v2, v3 and v4 with the pool auto-detected for you. Every run reports live metrics, and every puppet wallet can be swept back to your main wallet in one tap.",
+        "list": [
+          "Volume booster — atomic buy/buy/sell cycles across configurable intervals",
+          "Holder booster — grows holder count with freshly funded wallets",
+          "Rank booster — builds unique-wallet count with micro-buys that read as organic",
+          "Solana execution via atomic Jito bundles with anti-MEV protection",
+          "Robinhood Chain routing across Uniswap v2, v3 and v4 with automatic pool detection",
+          "Variable speed control and configurable wallet counts per booster",
+          "Live results and metrics reported after every run",
+          "One-tap fund recovery from every puppet wallet back to your main wallet",
+          "Each customer gets a dedicated wallet — funds never mix between users"
+        ]
+      }
+    }
   }
 }

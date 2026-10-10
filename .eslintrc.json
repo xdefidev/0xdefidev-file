@@ -1,0 +1,18 @@
+{
+  "root": true,
+  "extends": ["next/core-web-vitals"],
+  "rules": {
+    "@next/next/no-img-element": "warn",
+    "react/no-unescaped-entities": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "warn",
+      { "aspects": ["noHref", "invalidHref"] }
+    ]
+  },
+  "ignorePatterns": [
+    "node_modules/",
+    ".next/",
+    "public/",
+    "scripts/"
+  ]
+}

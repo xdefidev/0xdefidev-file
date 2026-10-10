@@ -1,112 +1,221 @@
+import Image from "next/image";
 import Link from "next/link";
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import blogs from "../api/blogs";
-import SeoHead, { SITE_URL } from "../components/Seo";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
+import SeoHead, { SITE_URL, ogImageFor } from "../../components/Seo";
+import Breadcrumbs, { breadcrumbSchema } from "../../components/Breadcrumbs";
+import blogs from "../../data/blogs";
+import { siteConfig } from "../../site.config";
 
 export async function getStaticPaths() {
-    const paths = blogs.map((post) => ({
-        params: { slug: post.slug },
-    }));
-
-    return { paths, fallback: false };
+  return {
+    paths: blogs.map((post) => ({ params: { slug: post.slug }, locale: "en" })),
+    fallback: false,
+  };
 }
 
 export async function getStaticProps({ params, locale }) {
-    const post = blogs.find((b) => b.slug === params.slug);
+  const post = blogs.find((b) => b.slug === params.slug);
+  if (!post) return { notFound: true };
 
-    if (!post) {
-        return { notFound: true };
+  return {
+    props: {
+      post,
+      ...(await serverSideTranslations(locale ?? "en", ["common"])),
+    },
+  };
+}
+
+/**
+ * Minimal inline renderer for the stored post bodies. Handles headings,
+ * unordered lists and paragraphs — enough for the current content without
+ * pulling in a markdown dependency or dangerouslySetInnerHTML.
+ */
+function renderContent(content = "") {
+  const blocks = [];
+  let list = null;
+
+  const flushList = () => {
+    if (!list) return;
+    blocks.push(
+      <ul key={`ul-${blocks.length}`} className="mb-6 list-disc space-y-2 ps-6">
+        {list.map((item, i) => (
+          <li key={i} className="leading-relaxed">
+            {item}
+          </li>
+        ))}
+      </ul>,
+    );
+    list = null;
+  };
+
+  for (const raw of content.split("\n")) {
+    const line = raw.trim();
+
+    if (!line) {
+      flushList();
+    } else if (line.startsWith("## ")) {
+      flushList();
+      blocks.push(
+        <h2
+          key={`h2-${blocks.length}`}
+          className="mb-4 mt-10 text-2xl font-bold text-ink"
+        >
+          {line.slice(3)}
+        </h2>,
+      );
+    } else if (line.startsWith("# ")) {
+      flushList();
+      blocks.push(
+        <h1
+          key={`h1-${blocks.length}`}
+          className="mb-4 mt-8 text-3xl font-bold text-ink"
+        >
+          {line.slice(2)}
+        </h1>,
+      );
+    } else if (/^[-*]\s+/.test(line)) {
+      list = list ?? [];
+      list.push(line.replace(/^[-*]\s+/, ""));
+    } else {
+      flushList();
+      blocks.push(
+        <p
+          key={`p-${blocks.length}`}
+          className="mb-5 text-[1.05rem] leading-relaxed text-ink-subtle"
+        >
+          {line}
+        </p>,
+      );
     }
+  }
 
-    return {
-        props: {
-            post,
-            ...(await serverSideTranslations(locale ?? 'en', ['common'])),
-        },
-    };
+  flushList();
+  return blocks;
 }
 
 export default function BlogPost({ post }) {
-    const articleSchema = {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        headline: post.title,
-        description: post.excerpt,
-        image: post.image,
-        datePublished: post.date,
-        author: {
-            "@type": "Organization",
-            name: "XDefiDev",
-        },
-        publisher: {
-            "@type": "Organization",
-            name: "XDefiDev",
-            url: SITE_URL,
-        },
-        mainEntityOfPage: {
-            "@type": "WebPage",
-            "@id": `${SITE_URL}/blog/${post.slug}`,
-        },
-    };
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${SITE_URL}/blog/${post.slug}#article`,
+    headline: post.title,
+    description: post.excerpt,
+    image: post.image ?? `${SITE_URL}/og-default.png`,
+    datePublished: post.date,
+    dateModified: post.updatedDate ?? post.date,
+    author: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: SITE_URL,
+    },
+    publisher: {
+      "@id": `${SITE_URL}/#organization`,
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/blog/${post.slug}`,
+    },
+  };
 
-    // Simple markdown parser for the demo content
-    const renderContent = (content) => {
-        return content.split('\n').map((line, index) => {
-            if (line.startsWith('## ')) {
-                return <h2 key={index} className="text-3xl font-bold text-gray-900 mt-12 mb-6">{line.replace('## ', '')}</h2>;
-            } else if (line.startsWith('# ')) {
-                return <h1 key={index} className="text-4xl font-extrabold text-gray-900 mt-8 mb-8">{line.replace('# ', '')}</h1>;
-            } else if (line.trim() !== '') {
-                return <p key={index} className="text-lg text-gray-700 leading-relaxed mb-6">{line}</p>;
-            }
-            return null;
-        });
-    };
+  const breadcrumbs = [
+    { name: "Home", href: "/" },
+    { name: "Blog", href: "/blog" },
+    { name: post.title },
+  ];
 
-    return (
-        <div className="min-h-screen bg-slate-50 py-12">
-            <SeoHead
-                title={`${post.title} | xDefiDev Blog`}
-                description={post.excerpt}
-                path={`/blog/${post.slug}`}
-                image={post.image}
-                schema={[articleSchema]}
+  return (
+    <>
+      <SeoHead
+        title={`${post.title} | ${siteConfig.name}`}
+        description={post.excerpt}
+        path={`/blog/${post.slug}`}
+        locale="en"
+        hreflang={["en"]}
+        image={ogImageFor({ title: post.title, subtitle: post.excerpt?.slice(0, 150), badge: "Blog" })}
+        schema={[articleSchema, breadcrumbSchema(breadcrumbs)]}
+      />
+
+      <article className="mx-auto w-full max-w-3xl px-4 py-12 sm:px-6 lg:py-16">
+        <Breadcrumbs trail={breadcrumbs} />
+
+        <Link
+          href="/blog"
+          className="mb-8 inline-flex items-center gap-2 text-sm font-semibold text-brand-700 hover:underline"
+        >
+          <svg
+            className="rtl-flip h-4 w-4"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M19 12H5M11 18l-6-6 6-6" />
+          </svg>
+          Back to blog
+        </Link>
+
+        <header>
+          <time
+            dateTime={post.date}
+            className="inline-block rounded-full border border-surface-border bg-surface-sunken px-3 py-1 text-sm text-ink-subtle"
+          >
+            {new Date(post.date).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+          </time>
+
+          <h1 className="mt-5 text-display font-bold text-ink text-balance">
+            {post.title}
+          </h1>
+        </header>
+
+        {post.image && (
+          <div className="relative mt-10 aspect-[16/9] w-full overflow-hidden rounded-2xl border border-surface-border bg-surface-sunken">
+            <Image
+              src={post.image}
+              alt={post.title}
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 768px"
+              className="object-cover"
             />
+          </div>
+        )}
 
-            <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8">
-                <div className="mb-10 text-center">
-                    <Link href="/blog" className="inline-flex items-center text-blue-600 hover:text-emerald-600 font-semibold mb-8 transition-colors duration-300">
-                        <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                        </svg>
-                        Back to Blog
-                    </Link>
-                    <div className="flex items-center justify-center text-sm text-gray-500 mb-6 font-medium">
-                        <span className="px-3 py-1 bg-white rounded-full border border-gray-200 shadow-sm">
-                            {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-                        </span>
-                    </div>
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-gray-900 mb-8 max-w-3xl mx-auto">
-                        {post.title}
-                    </h1>
-                </div>
-
-                {post.image && (
-                    <div className="rounded-3xl shadow-2xl overflow-hidden mb-16 border border-gray-200 max-h-[500px] flex items-center justify-center bg-gray-100">
-                        <img
-                            src={post.image}
-                            alt={post.title}
-                            className="w-full object-cover shadow-inner"
-                        />
-                    </div>
-                )}
-
-                <div className="bg-white rounded-3xl shadow-xl p-8 sm:p-12 border border-gray-100 mb-24">
-                    <div className="prose prose-lg prose-blue max-w-none">
-                        {renderContent(post.content)}
-                    </div>
-                </div>
-            </article>
+        <div className="mt-12 rounded-2xl border border-surface-border bg-white p-6 sm:p-10">
+          {renderContent(post.content)}
         </div>
-    );
+
+        <div className="mt-12 rounded-2xl bg-surface-sunken p-8 text-center">
+          <h2 className="text-xl font-bold text-ink">
+            Building something similar?
+          </h2>
+          <p className="mx-auto mt-2 max-w-md text-ink-subtle">
+            We&apos;ve shipped {siteConfig.founded && "200+"} projects since{" "}
+            {siteConfig.founded}. Tell us what you&apos;re working on.
+          </p>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            <Link
+              href="/contact-us"
+              className="rounded-xl bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-700"
+            >
+              Talk to us
+            </Link>
+            <Link
+              href="/services"
+              className="rounded-xl border border-surface-border bg-white px-5 py-2.5 text-sm font-semibold text-ink hover:border-brand-300"
+            >
+              Browse services
+            </Link>
+          </div>
+        </div>
+      </article>
+    </>
+  );
 }

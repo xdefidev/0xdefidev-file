@@ -1,2 +1,26 @@
 /node_modules
 .next
+out
+build
+
+# Environment
+.env
+.env.local
+.env*.local
+
+# OS
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log
+*.log
+
+# Vercel
+.vercel
+
+# Generated at build time by next-sitemap (postbuild)
+public/sitemap.xml
+public/sitemap-0.xml
+public/robots.txt

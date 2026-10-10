@@ -22,5 +22,287 @@
   "customRequest": "हमें एक कस्टम अनुरोध भेजें! अपने प्रोजेक्ट, आवश्यकताओं, बजट और समयसीमा के बारे में विवरण साझा करें, और हम आपकी व्यक्तिगत परियोजना को साकार करने में मदद करेंगे।",
   "getExactQuote": "सटीक मूल्य प्राप्त करें",
   "description": "विवरण",
-  "keyFeatures": "मुख्य विशेषताएँ / लाभ"
-} 
+  "keyFeatures": "मुख्य विशेषताएँ / लाभ",
+  "service": {
+    "solana-volume-bot-telegram": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "pump-fun-clone-development": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "telegram-mini-app": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "pinksale-launchpad-clone": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "solana-casino-platform": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "telegram-sniper-bot-clone": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "pos-blockchain-development": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "poa-blockchain-development": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "testnet-evm-blockchain-development": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "cryptocurrency-casino-development": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "centralized-crypto-exchange-development": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "decentralized-crypto-exchange-development": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "token-development": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "nft-marketplace-development": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "nft-minting-website-development": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "white-label-crypto-wallet-development": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "amm-dex-uniswap-clone": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "fix-walletconnect-relay-error": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "ai-cryptocurrency-application-development": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "custom-software-development": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "web-application-development": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "mobile-application-development": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "ai-llm-application-development": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "ai-chatbot-agents-development": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "n8n-workflow-automation": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "cloud-devops-engineering": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "api-development-integration": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "custom_request": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "get_exact_quote": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "description": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "key_features": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "solana-volume-bot": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "wallet-tracker-analytics": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "impermanent-loss-calculator": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    },
+    "volume-holder-rank-bot-solana-robinhood": {
+      "name": "",
+      "description": "",
+      "p": {
+        "description": "",
+        "list": []
+      }
+    }
+  }
+}

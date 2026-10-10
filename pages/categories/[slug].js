@@ -1,56 +1,58 @@
-import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-import { motion } from "framer-motion";
+import SeoHead, { ogImageFor } from "../../components/Seo";
+import Breadcrumbs, { breadcrumbSchema } from "../../components/Breadcrumbs";
+import ServiceCard from "../../components/ServiceCard";
+import { FadeIn, Stagger, StaggerItem } from "../../components/motion";
+import { useContact } from "../../components/Contact";
+import services from "../../data/services";
+import { categories } from "../../data/categories";
+import { resolveCopy } from "../../lib/service-copy";
+import { siteConfig } from "../../site.config";
 
-import { Accordion, AccordionItem } from "@heroui/react";
-
-import services, { serviceName } from "../api/services";
-import { categories } from "../api/categories";
-import SeoHead, { SITE_URL } from "../components/Seo";
-
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-
-export async function getStaticPaths({ locales }) {
-  const paths = [];
-  for (const locale of locales) {
-    for (const category of categories) {
-      paths.push({ params: { slug: category.slug }, locale });
-    }
-  }
-  return { paths, fallback: false };
+export async function getStaticPaths() {
+  return {
+    paths: categories.map((category) => ({
+      params: { slug: category.slug },
+      locale: "en",
+    })),
+    fallback: false,
+  };
 }
 
 export async function getStaticProps({ params, locale }) {
   const category = categories.find((c) => c.slug === params.slug);
-  if (!category) {
-    return { notFound: true };
-  }
+  if (!category) return { notFound: true };
+
+  const currentLocale = locale ?? "en";
+
+  const categoryServices = services
+    .filter((item) => item.category === category.serviceCategory)
+    .map((service) => {
+      const copy = resolveCopy(currentLocale, service.slug);
+      return {
+        ...service,
+        name: service.name || copy.name || service.slug,
+        description: copy.usedFallback
+          ? service.description || copy.description
+          : copy.description || service.description,
+        translated: copy.translated,
+      };
+    });
+
   return {
     props: {
       category,
-      ...(await serverSideTranslations(locale ?? 'en', ['common'])),
+      categoryServices,
+      ...(await serverSideTranslations(currentLocale, ["common"])),
     },
   };
 }
 
-const CategoryPage = ({ category }) => {
-  const imageLink =
-    "https://ik.imagekit.io/lzgpc48la/pexels-pixabay-265129_6m3A9XfLh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663654325584";
-
-  const categoryServices = services.filter(
-    (item) => item.category == category.serviceCategory
-  );
-
-  function formatUSD(amount) {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 2
-    }).format(amount);
-  }
+export default function CategoryPage({ category, categoryServices }) {
+  const { open } = useContact();
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -62,200 +64,203 @@ const CategoryPage = ({ category }) => {
     })),
   };
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: category.label,
-        item: `${SITE_URL}/categories/${category.slug}`,
-      },
-    ],
-  };
+  const breadcrumbs = [
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    { name: category.label },
+  ];
 
   return (
-    <div className="my-12">
+    <>
       <SeoHead
         title={category.metaTitle}
         description={category.metaDescription}
         path={`/categories/${category.slug}`}
-        image={category.ogImage}
+        locale="en"
         hreflang={["en"]}
-        schema={[faqSchema, breadcrumbSchema]}
+        image={ogImageFor({
+          title: category.label,
+          subtitle: category.metaDescription?.slice(0, 150),
+          badge: "Practice area",
+        })}
+        schema={[faqSchema, breadcrumbSchema(breadcrumbs)]}
       />
 
       {/* Hero */}
-      <section className="sm:mx-16 mx-4 grid sm:grid-cols-2 items-center gap-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="h-full flex flex-col justify-center"
-        >
-          <p className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-600/10 border border-blue-600/20 text-blue-700 text-sm font-semibold mb-4 w-fit">
-            {category.label}
-          </p>
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            {category.h1}
-          </h1>
-          {category.intro.map((paragraph, i) => (
-            <p key={i} className="text-lg text-gray-600 leading-relaxed mb-4">
-              {paragraph}
-            </p>
-          ))}
-          <div className="flex flex-wrap gap-4 mt-4">
-            <a
-              href="#services"
-              className="inline-flex items-center px-8 py-3.5 bg-gradient-to-r from-blue-600 to-emerald-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300"
-            >
-              Explore Services
-            </a>
-            <a
-              href="#faq"
-              className="inline-flex items-center px-8 py-3.5 border-2 border-blue-400/40 text-blue-700 font-semibold rounded-xl hover:bg-blue-50 transition-all duration-300"
-            >
-              FAQ
-            </a>
-          </div>
-        </motion.div>
+      <section className="border-b border-surface-border bg-surface-sunken">
+        <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+          <Breadcrumbs trail={breadcrumbs} />
 
-        <div className="h-full flex justify-center items-center">
-          <Image
-            src={category.heroImage1}
-            width={600}
-            height={600}
-            priority={true}
-            loading="eager"
-            quality={85}
-            alt={`${category.label} services overview illustration`}
-          />
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+            <FadeIn>
+              <span className="inline-block rounded-full border border-brand-200 bg-brand-50 px-3.5 py-1.5 text-xs font-semibold text-brand-700">
+                {category.label}
+              </span>
+              <h1 className="mt-6 text-display font-bold text-ink text-balance">
+                {category.h1}
+              </h1>
+
+              <div className="mt-6 space-y-4">
+                {category.intro.map((paragraph) => (
+                  <p key={paragraph.slice(0, 32)} className="text-lg leading-relaxed text-ink-subtle text-pretty">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a
+                  href="#services"
+                  className="rounded-xl bg-brand-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-700"
+                >
+                  Explore services
+                </a>
+                <a
+                  href="#faq"
+                  className="rounded-xl border border-surface-border bg-white px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-brand-300 hover:text-brand-700"
+                >
+                  FAQ
+                </a>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.1} className="flex justify-center">
+              <Image
+                src={category.heroImage1}
+                width={560}
+                height={560}
+                priority
+                quality={85}
+                alt={`${category.label} services overview`}
+                className="w-full max-w-md rounded-2xl"
+              />
+            </FadeIn>
+          </div>
         </div>
       </section>
 
-      <div className="flex justify-center items-center w-full my-8">
-        <Image
-          src={category.heroImage2}
-          width={600}
-          height={600}
-          priority={true}
-          loading="eager"
-          quality={85}
-          className="flex rounded-lg"
-          alt={`${category.label} services illustration`}
-        />
-      </div>
-
-      {/* Services Grid */}
-      <section id="services" className="sm:mx-16 mx-4 my-24 scroll-mt-24">
-        <h2 className="text-4xl text-center font-semibold">Services</h2>
-        {categoryServices.length > 0 ? (
-          <div className="grid sm:grid-cols-3 gap-4 my-6">
-            {categoryServices.map((item, index) => (
-              <Link
-                href={`/services/${item.slug}`}
-                className="rounded-lg shadow-md p-4 relative"
-                key={index}
-              >
-                <img
-                  src={item.image || imageLink}
-                  alt={serviceName(item)}
-                  width="100%"
-                  loading="lazy"
-                  className="rounded h-[200px]"
-                />
-                <div className="text-black bg-white rounded-md p-1 text-xs font-semibold antialiased absolute top-7 left-8">
-                  {formatUSD(item.price)}
-                </div>
-                <h3 className="text-gray-900 font-semibold antialiased text-balance mt-3">
-                  {serviceName(item)} &rarr;
-                </h3>
-                <p className="text-xs text-gray-600 antialiased text-balance mt-1">
-                  {item.description}
-                </p>
-              </Link>
-            ))}
-          </div>
-        ) : (
-          <p className="text-center text-gray-600 mt-8">
-            We take custom projects in this area.{" "}
-            <a
-              href="mailto:xdefidev@gmail.com"
-              className="text-blue-600 font-semibold underline"
+      {/* Services */}
+      <section id="services" className="scroll-mt-24 border-b border-surface-border bg-white">
+        <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+          <FadeIn className="flex flex-wrap items-end justify-between gap-6">
+            <div>
+              <h2 className="text-headline font-bold text-ink">
+                Services in this area
+              </h2>
+              <p className="mt-2 text-ink-subtle">
+                Fixed starting prices. Pay with crypto or request a quote.
+              </p>
+            </div>
+            <Link
+              href="/services"
+              className="text-sm font-semibold text-brand-700 hover:underline"
             >
-              Contact us
-            </a>{" "}
-            to discuss your requirements.
-          </p>
-        )}
+              View all services →
+            </Link>
+          </FadeIn>
 
-        <div className="text-center mt-8">
-          <Link
-            href="/services"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-emerald-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
-          >
-            View All Services
-          </Link>
+          {categoryServices.length > 0 ? (
+            <Stagger className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {categoryServices.map((service) => (
+                <StaggerItem key={service.slug}>
+                  <ServiceCard
+                    service={service}
+                    name={service.name}
+                    description={service.description}
+                  />
+                </StaggerItem>
+              ))}
+            </Stagger>
+          ) : (
+            <FadeIn className="mt-10 rounded-2xl border border-dashed border-surface-border bg-surface-sunken px-6 py-16 text-center">
+              <p className="text-lg font-semibold text-ink">
+                We take custom projects in this area
+              </p>
+              <p className="mt-2 text-sm text-ink-subtle">
+                Tell us what you&apos;re building and we&apos;ll scope it.
+              </p>
+              <button
+                type="button"
+                onClick={open}
+                className="mt-6 rounded-xl bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-700"
+              >
+                Contact us
+              </button>
+            </FadeIn>
+          )}
         </div>
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="sm:mx-16 mx-4 my-24 grid sm:grid-cols-2 gap-8 scroll-mt-24">
-        <h2 className="text-4xl sm:text-6xl font-semibold">Frequently Asked Questions</h2>
-        <div className="my-6">
-          <Accordion variant="splitted">
-            {category.faqs.map((faq, index) => (
-              <AccordionItem
-                key={index}
-                aria-label={`FAQ ${index + 1}`}
-                title={faq.q}
-              >
-                {faq.a}
-              </AccordionItem>
+      <section id="faq" className="scroll-mt-24 border-b border-surface-border bg-surface-sunken">
+        <div className="mx-auto w-full max-w-3xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+          <FadeIn>
+            <h2 className="text-headline font-bold text-ink">
+              Frequently asked questions
+            </h2>
+          </FadeIn>
+
+          <FadeIn delay={0.06} className="mt-8 divide-y divide-surface-border overflow-hidden rounded-2xl border border-surface-border bg-white">
+            {category.faqs.map((faq) => (
+              <details key={faq.q} className="group px-6 py-5">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-ink marker:hidden">
+                  {faq.q}
+                  <svg className="h-4 w-4 shrink-0 text-ink-subtle transition-transform duration-300 group-open:rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+                    <path d="M12 5v14M5 12h14" />
+                  </svg>
+                </summary>
+                <p className="mt-3 leading-relaxed text-ink-subtle">{faq.a}</p>
+              </details>
             ))}
-          </Accordion>
+          </FadeIn>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 via-emerald-600 to-teal-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Ready to Build the Future?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-            Let's discuss your project and get you a custom quote within 24 hours.
-          </p>
-          <a
-            href="mailto:xdefidev@gmail.com"
-            className="inline-flex items-center px-8 py-4 bg-white text-blue-700 font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
-          >
-            Get Your Custom Quote
-          </a>
+      <section className="bg-brand-600">
+        <div className="mx-auto w-full max-w-4xl px-4 py-16 text-center sm:px-6 lg:px-8 lg:py-20">
+          <FadeIn>
+            <h2 className="text-3xl font-bold text-white text-balance sm:text-4xl">
+              Ready to build?
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-lg text-brand-50 text-pretty">
+              Send us the brief and we&apos;ll come back with scope and a fixed
+              quote within 24 hours.
+            </p>
+            <button
+              type="button"
+              onClick={open}
+              className="mt-8 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-brand-700 transition-colors hover:bg-brand-50"
+            >
+              Get your custom quote
+            </button>
+          </FadeIn>
         </div>
       </section>
 
-      {/* Other Categories */}
-      <section className="sm:mx-16 mx-4 my-24">
-        <h2 className="text-3xl font-semibold text-center mb-8">Explore Other Services</h2>
-        <div className="flex flex-wrap justify-center gap-4">
-          {categories
-            .filter((c) => c.slug !== category.slug)
-            .map((c) => (
-              <Link
-                key={c.slug}
-                href={`/categories/${c.slug}`}
-                className="px-5 py-2.5 rounded-full border border-gray-200 bg-white text-gray-700 font-medium hover:border-blue-400 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300"
-              >
-                {c.label}
-              </Link>
-            ))}
+      {/* Other categories */}
+      <section className="bg-white">
+        <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <FadeIn>
+            <h2 className="text-center text-xl font-bold text-ink">
+              Explore other practice areas
+            </h2>
+            <div className="mt-6 flex flex-wrap justify-center gap-2.5">
+              {categories
+                .filter((c) => c.slug !== category.slug)
+                .map((c) => (
+                  <Link
+                    key={c.slug}
+                    href={`/categories/${c.slug}`}
+                    className="rounded-lg border border-surface-border bg-surface-sunken px-4 py-2 text-sm font-medium text-ink-subtle transition-colors duration-200 hover:border-brand-300 hover:text-brand-700"
+                  >
+                    {c.label}
+                  </Link>
+                ))}
+            </div>
+          </FadeIn>
         </div>
       </section>
-    </div>
+    </>
   );
-};
-
-export default CategoryPage;
+}
