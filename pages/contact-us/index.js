@@ -21,7 +21,7 @@ const CHANNELS = [
   },
   {
     label: "Discord",
-    hint: "Community and support channels",
+    hint: "Join our server for support and updates",
     href: siteConfig.contact.discord,
     accent: "hover:border-indigo-300 hover:bg-indigo-50/60",
     badge: "bg-indigo-100 text-indigo-700",

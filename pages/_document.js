@@ -12,7 +12,7 @@ export default function Document({ locale = "en" }) {
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
         {/* Social profile handles referenced by the Organization node. */}
-        <meta name="twitter:site" content="@xdefideveloper" />
+        <meta name="twitter:site" content="@xdefidev0" />
 
         <script
           type="application/ld+json"

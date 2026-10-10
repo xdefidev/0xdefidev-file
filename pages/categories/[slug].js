@@ -5,9 +5,11 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import SeoHead, { ogImageFor } from "../../components/Seo";
 import Breadcrumbs, { breadcrumbSchema } from "../../components/Breadcrumbs";
 import ServiceCard from "../../components/ServiceCard";
+import ProductCard from "../../components/ProductCard";
 import { FadeIn, Stagger, StaggerItem } from "../../components/motion";
 import { useContact } from "../../components/Contact";
 import services from "../../data/services";
+import { products } from "../../data/products";
 import { categories } from "../../data/categories";
 import { resolveCopy } from "../../lib/service-copy";
 import { siteConfig } from "../../site.config";
@@ -42,16 +44,21 @@ export async function getStaticProps({ params, locale }) {
       };
     });
 
+  const categoryProducts = products.filter(
+    (item) => item.category === category.serviceCategory,
+  );
+
   return {
     props: {
       category,
       categoryServices,
+      categoryProducts,
       ...(await serverSideTranslations(currentLocale, ["common"])),
     },
   };
 }
 
-export default function CategoryPage({ category, categoryServices }) {
+export default function CategoryPage({ category, categoryServices, categoryProducts }) {
   const { open } = useContact();
 
   const faqSchema = {
@@ -145,10 +152,15 @@ export default function CategoryPage({ category, categoryServices }) {
           <FadeIn className="flex flex-wrap items-end justify-between gap-6">
             <div>
               <h2 className="text-headline font-bold text-ink">
-                Services in this area
+                {categoryProducts.length > 0 && categoryServices.length > 0
+                  ? "Services and source code"
+                  : categoryProducts.length > 0
+                    ? "Source code in this area"
+                    : "Services in this area"}
               </h2>
               <p className="mt-2 text-ink-subtle">
-                Fixed starting prices. Pay with crypto or request a quote.
+                Fixed price for products, starting prices for services. Pay with
+                crypto or request a quote.
               </p>
             </div>
             <Link
@@ -159,8 +171,13 @@ export default function CategoryPage({ category, categoryServices }) {
             </Link>
           </FadeIn>
 
-          {categoryServices.length > 0 ? (
+          {categoryServices.length + categoryProducts.length > 0 ? (
             <Stagger className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {categoryProducts.map((product) => (
+                <StaggerItem key={`p-${product.slug}`}>
+                  <ProductCard product={product} />
+                </StaggerItem>
+              ))}
               {categoryServices.map((service) => (
                 <StaggerItem key={service.slug}>
                   <ServiceCard

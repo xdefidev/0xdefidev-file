@@ -18,26 +18,6 @@ export const serviceName = (item) => item.name || humanizeSlug(item.slug);
 const services = [
   {
     image:
-      "https://ik.imagekit.io/hp2oyifpf/SOLANA%20Volume%20Bot%20on%20Telegram.png?updatedAt=1735771535130",
-    status: true,
-    price: 400,
-    youtube: "",
-    slug: "solana-volume-bot-telegram",
-    category: "telegram bots",
-    purchasable: true,
-  },
-  {
-    image:
-      "https://ik.imagekit.io/hp2oyifpf/pumpfun-clone.png?updatedAt=1727082514946",
-    status: true,
-    price: 300,
-    youtube: "",
-    slug: "pump-fun-clone-development",
-    category: "dapps",
-    purchasable: true,
-  },
-  {
-    image:
       "https://ik.imagekit.io/hp2oyifpf/Dark%20Blue%20Red%20White%20Generic%20News%20General%20News%20YouTube%20Banner.png?updatedAt=1724719432697",
     status: true,
     price: 300,
@@ -47,31 +27,12 @@ const services = [
     purchasable: true,
   },
   {
-    image:
-      "https://ik.imagekit.io/hp2oyifpf/Copy%20of_Black%20and_Yellow%20Dark%20Gamer%20Survival%20YouTube%20Banner.png?updatedAt=1724719521891",
-    status: true,
-    price: 500,
-    youtube: "M98xybTnuoY",
-    slug: "pinksale-launchpad-clone",
-    category: "dapps",
-    purchasable: true,
-  },
-  {
     image: "",
     status: true,
     price: 600,
     youtube: "",
     slug: "solana-casino-platform",
     category: "casino",
-    purchasable: true,
-  },
-  {
-    image: "",
-    status: true,
-    price: 600,
-    youtube: "",
-    slug: "telegram-sniper-bot-clone",
-    category: "telegram bots",
     purchasable: true,
   },
   {
@@ -168,16 +129,6 @@ const services = [
     youtube: "",
     slug: "white-label-crypto-wallet-development",
     category: "wallet",
-    purchasable: true,
-  },
-  {
-    image:
-      "https://ik.imagekit.io/hp2oyifpf/polywrap-uniswap-demo.png?updatedAt=1745273698271",
-    status: true,
-    price: 400,
-    youtube: "",
-    slug: "amm-dex-uniswap-clone",
-    category: "exchange",
     purchasable: true,
   },
   {
@@ -328,15 +279,6 @@ const services = [
     name: "API Development & Integration",
     description:
       "Design, build, and document REST and GraphQL APIs, plus integration with third-party services, payment gateways, and payment providers like Stripe.",
-    purchasable: true,
-  },
-  {
-    image: "",
-    status: true,
-    price: 1500,
-    youtube: "",
-    slug: "volume-holder-rank-bot-solana-robinhood",
-    category: "trading bots",
     purchasable: true,
   },
 ];

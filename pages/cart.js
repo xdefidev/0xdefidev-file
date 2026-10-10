@@ -32,7 +32,10 @@ function hydrate(line) {
     name: entry.name ?? line.slug,
     description: entry.tagline ?? entry.description ?? "",
     price: entry.price,
-    image: entry.image || FALLBACK_IMAGE,
+    // Products without artwork fall back to a brand plate rather than a
+    // stock illustration, so the line never implies a screenshot the buyer
+    // is not getting.
+    image: entry.image || (line.kind === "product" ? null : FALLBACK_IMAGE),
     href: line.kind === "product" ? `/products/${line.slug}` : `/services/${line.slug}`,
   };
 }
@@ -115,14 +118,24 @@ export default function CartPage() {
                   key={`${line.kind}-${line.slug}`}
                   className="flex gap-4 rounded-2xl border border-surface-border bg-white p-4"
                 >
-                  <div className="relative h-20 w-24 shrink-0 overflow-hidden rounded-xl bg-surface-sunken">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={line.image}
-                      alt=""
-                      loading="lazy"
-                      className="h-full w-full object-cover"
-                    />
+                  <div className="relative h-20 w-24 shrink-0 overflow-hidden rounded-xl bg-black">
+                    {line.image ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={line.image}
+                        alt=""
+                        loading="lazy"
+                        className="h-full w-full object-cover"
+                      />
+                    ) : (
+                      <span
+                        role="img"
+                        aria-label={`${siteConfig.name} product preview`}
+                        className="absolute inset-0 flex items-center justify-center text-[9px] font-bold uppercase tracking-[0.15em] text-white"
+                      >
+                        {siteConfig.name}
+                      </span>
+                    )}
                   </div>
 
                   <div className="min-w-0 flex-1">

@@ -43,7 +43,7 @@ const CHANNELS = [
   {
     id: "discord",
     label: "Discord",
-    hint: "Community",
+    hint: "Join our server",
     icon: "/discord-icon-svgrepo-com.svg",
     build: () => siteConfig.contact.discord,
     accent: "hover:border-indigo-300 hover:bg-indigo-50",

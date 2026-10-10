@@ -10,15 +10,15 @@ export const siteConfig = {
     email: "xdefidev@gmail.com",
     phone: "+1 (706) 228-9620",
     phoneE164: "+17062289620",
-    telegram: "https://t.me/xdefideveloper",
+    telegram: "https://t.me/xdefidev0",
     whatsapp: "https://wa.me/+17062289620",
-    discord: "https://discord.com/users/839903148462178315/",
+    discord: "https://discord.gg/nkNKHNyhk",
   },
 
   social: [
-    { label: "Telegram", href: "https://t.me/xdefideveloper" },
+    { label: "Telegram", href: "https://t.me/xdefidev0" },
+    { label: "Discord", href: "https://discord.gg/nkNKHNyhk" },
     { label: "WhatsApp", href: "https://wa.me/+17062289620" },
-    { label: "Discord", href: "https://discord.com/users/839903148462178315/" },
     { label: "Email", href: "mailto:xdefidev@gmail.com" },
   ],
 

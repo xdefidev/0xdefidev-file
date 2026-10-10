@@ -1,11 +1,13 @@
 import Script from "next/script";
 import Link from "next/link";
+import Image from "next/image";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
 import SeoHead from "../components/Seo";
 import CarouselFn from "../components/Carousel";
 import AddToCart from "../components/AddToCart";
+import ServiceCard from "../components/ServiceCard";
 import { FadeIn, Stagger, StaggerItem } from "../components/motion";
 import { useContact } from "../components/Contact";
 import { categories } from "../data/categories";
@@ -298,20 +300,41 @@ export default function Home({ featured }) {
               <StaggerItem key={category.slug}>
                 <Link
                   href={`/categories/${category.slug}`}
-                  className="group flex h-full flex-col rounded-2xl border border-surface-border bg-white p-6 transition-all duration-300 ease-smooth hover:-translate-y-1 hover:border-brand-200 hover:shadow-card-hover"
+                  className="group flex h-full flex-col overflow-hidden rounded-2xl border border-surface-border bg-white transition-all duration-300 ease-smooth hover:-translate-y-1 hover:border-brand-200 hover:shadow-card-hover"
                 >
-                  <h3 className="font-semibold text-ink group-hover:text-brand-700">
-                    {category.label}
-                  </h3>
-                  <p className="mt-2.5 flex-1 text-sm leading-relaxed text-ink-subtle">
-                    {category.navDescription}
-                  </p>
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-brand-600">
-                    Learn more
-                    <svg className="rtl-flip h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      <path d="M5 12h14M13 6l6 6-6 6" />
-                    </svg>
-                  </span>
+                  <div className="relative aspect-[16/9] w-full overflow-hidden bg-surface-sunken">
+                    <Image
+                      src={category.heroImage1}
+                      alt={`${category.label} overview`}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-500 ease-smooth group-hover:scale-105"
+                    />
+                  </div>
+
+                  <div className="flex flex-1 flex-col p-6">
+                    <h3 className="font-semibold text-ink group-hover:text-brand-700">
+                      {category.label}
+                    </h3>
+                    <p className="mt-2.5 flex-1 text-sm leading-relaxed text-ink-subtle">
+                      {category.navDescription}
+                    </p>
+                    <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-brand-600">
+                      Learn more
+                      <svg
+                        className="rtl-flip h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M5 12h14M13 6l6 6-6 6" />
+                      </svg>
+                    </span>
+                  </div>
                 </Link>
               </StaggerItem>
             ))}
@@ -342,22 +365,11 @@ export default function Home({ featured }) {
           <Stagger className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {featured.map((service) => (
               <StaggerItem key={service.slug}>
-                <Link
-                  href={`/services/${service.slug}`}
-                  className="group flex h-full flex-col rounded-2xl border border-surface-border bg-white p-6 transition-all duration-300 ease-smooth hover:-translate-y-1 hover:border-brand-200 hover:shadow-card-hover"
-                >
-                  <div className="flex items-start justify-between gap-3">
-                    <h3 className="font-semibold text-ink text-balance group-hover:text-brand-700">
-                      {service.displayName}
-                    </h3>
-                    <span className="shrink-0 text-sm font-bold text-brand-700">
-                      {formatUSD(service.price)}
-                    </span>
-                  </div>
-                  <p className="mt-2.5 line-clamp-3 flex-1 text-sm leading-relaxed text-ink-subtle">
-                    {service.displayDescription}
-                  </p>
-                </Link>
+                <ServiceCard
+                  service={service}
+                  name={service.displayName}
+                  description={service.displayDescription}
+                />
               </StaggerItem>
             ))}
           </Stagger>
@@ -399,10 +411,11 @@ export default function Home({ featured }) {
         <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
           <FadeIn className="max-w-2xl">
             <h2 className="text-headline font-bold text-ink text-balance">
-              Recent work
+              Explore our categories
             </h2>
             <p className="mt-3 text-lg leading-relaxed text-ink-subtle">
-              A sample of the platforms we&apos;ve built and run.
+              Jump straight to the area you need — every banner opens a
+              category with its services and source-code products.
             </p>
           </FadeIn>
           <div className="mt-10">
@@ -490,8 +503,7 @@ export async function getStaticProps({ locale }) {
   const featured = picks.map((service) => {
     const copy = resolveCopy(currentLocale, service.slug);
     return {
-      slug: service.slug,
-      price: service.price,
+      ...service,
       displayName: service.name || copy.name || service.slug,
       displayDescription:
         (copy.usedFallback ? service.description : copy.description) || "",

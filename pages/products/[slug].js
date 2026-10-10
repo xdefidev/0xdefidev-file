@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import ProductThumb from "../../components/ProductThumb";
 import { useContact } from "../../components/Contact";
 import AddToCart from "../../components/AddToCart";
 import { FadeIn } from "../../components/motion";
@@ -24,7 +24,6 @@ export async function getStaticProps({ params }) {
 export default function ProductPage({ product }) {
   const { open } = useContact();
   const productUrl = `${siteConfig.url}/products/${product.slug}`;
-  const heroImage = product.image ?? null;
   const socialImage = product.ogImage
     ? `${siteConfig.url}${product.ogImage}`
     : ogImageFor({ title: product.name, subtitle: product.tagline, badge: "Source code product" });
@@ -74,20 +73,16 @@ export default function ProductPage({ product }) {
 
       <div className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         {/* Hero banner */}
-        {heroImage && (
-          <FadeIn className="mb-12">
-            <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl border border-surface-border bg-surface-sunken shadow-card sm:aspect-[2/1] lg:aspect-[21/9]">
-              <Image
-                src={heroImage}
-                alt={product.imageAlt ?? product.name}
-                fill
-                priority
-                sizes="(max-width: 1280px) 100vw, 1280px"
-                className="object-cover"
-              />
-            </div>
-          </FadeIn>
-        )}
+        <FadeIn className="mb-12">
+          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl border border-surface-border bg-black shadow-card sm:aspect-[2/1] lg:aspect-[21/9]">
+            <ProductThumb
+              src={product.image}
+              alt={product.imageAlt ?? product.name}
+              priority
+              sizes="(max-width: 1280px) 100vw, 1280px"
+            />
+          </div>
+        </FadeIn>
 
         {/* Hero */}
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_380px] lg:gap-14">
@@ -179,22 +174,24 @@ export default function ProductPage({ product }) {
         </div>
 
         {/* Walkthrough video */}
-        <FadeIn delay={0.1} className="mt-16">
-          <h2 className="text-headline font-bold text-ink">Walkthrough</h2>
-          <p className="mt-2 text-ink-subtle">
-            A full tour of the platform you receive, exactly as it runs.
-          </p>
-          <div className="mt-6 aspect-video w-full overflow-hidden rounded-2xl border border-surface-border bg-surface-sunken shadow-card">
-            <iframe
-              src={`https://www.youtube-nocookie.com/embed/${product.heroVideoId}`}
-              title={`${product.name} walkthrough`}
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="h-full w-full"
-            />
-          </div>
-        </FadeIn>
+        {product.heroVideoId && (
+          <FadeIn delay={0.1} className="mt-16">
+            <h2 className="text-headline font-bold text-ink">Walkthrough</h2>
+            <p className="mt-2 text-ink-subtle">
+              A full tour of the platform you receive, exactly as it runs.
+            </p>
+            <div className="mt-6 aspect-video w-full overflow-hidden rounded-2xl border border-surface-border bg-surface-sunken shadow-card">
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${product.heroVideoId}`}
+                title={`${product.name} walkthrough`}
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="h-full w-full"
+              />
+            </div>
+          </FadeIn>
+        )}
 
         {/* Features */}
         <FadeIn delay={0.12} className="mt-16">

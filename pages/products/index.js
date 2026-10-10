@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import SeoHead from "../../components/Seo";
+import ProductThumb from "../../components/ProductThumb";
 import Breadcrumbs, { breadcrumbSchema } from "../../components/Breadcrumbs";
 import { FadeIn, Stagger, StaggerItem } from "../../components/motion";
 import { useContact } from "../../components/Contact";
@@ -66,17 +66,14 @@ export default function ProductsPage() {
                 href={`/products/${product.slug}`}
                 className="group flex h-full flex-col overflow-hidden rounded-2xl border border-surface-border bg-white transition-all duration-300 ease-smooth hover:-translate-y-1 hover:border-brand-200 hover:shadow-card-hover"
               >
-                {product.image && (
-                  <div className="relative aspect-[16/9] w-full overflow-hidden bg-surface-sunken">
-                    <Image
-                      src={product.image}
-                      alt={product.imageAlt ?? product.name}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-cover transition-transform duration-500 ease-smooth group-hover:scale-105"
-                    />
-                  </div>
-                )}
+                <div className="relative aspect-[16/9] w-full overflow-hidden bg-black">
+                  <ProductThumb
+                    src={product.image}
+                    alt={product.imageAlt ?? product.name}
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="transition-transform duration-500 ease-smooth group-hover:scale-105"
+                  />
+                </div>
 
                 <div className="flex flex-1 flex-col p-7">
                   <div className="flex items-start justify-between gap-4">

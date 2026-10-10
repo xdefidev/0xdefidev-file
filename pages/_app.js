@@ -1,5 +1,6 @@
 import { Josefin_Sans } from "next/font/google";
 import Navbar from "../components/Navbar";
+import NoticeBar from "../components/NoticeBar";
 import Footer from "../components/Footer";
 import "../styles/globals.css";
 
@@ -46,6 +47,7 @@ function MyApp({ Component, pageProps }) {
             dir={isRtl(router?.locale) ? "rtl" : "ltr"}
             className={`${josefin.variable} font-josefin flex min-h-screen flex-col bg-white text-ink`}
           >
+            <NoticeBar />
             <Navbar />
             <main className="flex-1">
               <Component {...pageProps} />
