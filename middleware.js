@@ -1,9 +1,20 @@
 import { NextResponse } from 'next/server';
 
-// Service and category pages only exist in English. Category content is
-// authored in `data/categories.js` and services fall back to slug-derived
-// names, so serving them under another locale produces raw i18n keys.
-const ENGLISH_ONLY = [/^\/services\/?$/, /^\/services\//, /^\/categories\/?$/, /^\/categories\//];
+// Pages that only exist in English. Category content is authored in
+// `data/categories.js`, services fall back to slug-derived names, products
+// have no translation layer, and legal/cart/checkout are EN-only — serving
+// them under another locale produces either raw i18n keys or a soft
+// duplicate with a wrong canonical.
+const ENGLISH_ONLY = [
+  /^\/services\/?$/, /^\/services\//,
+  /^\/categories\/?$/, /^\/categories\//,
+  /^\/products\/?$/, /^\/products\//,
+  /^\/blog\//, // blog posts are EN-only; the /blog index stays localized
+  /^\/privacy-policy\/?$/,
+  /^\/terms-of-service\/?$/,
+  /^\/cart\/?$/, /^\/cart\//,
+  /^\/checkout\/?$/, /^\/checkout\//,
+];
 
 export function middleware(req) {
   const { nextUrl } = req;

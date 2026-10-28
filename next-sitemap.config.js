@@ -1,5 +1,28 @@
 const { siteConfig } = require("./site.config");
 
+// Locale prefixes that are not the default English locale.
+const NON_EN_LOCALE = /^\/(?:zh|es|hi|ar|pt|ru|ja|de|fr)(\/|$)/;
+
+// Paths that only exist in English (mirrors middleware.js ENGLISH_ONLY).
+// Localized variants of these redirect via middleware, so they must not
+// appear in the sitemap as soft-404s.
+const ENGLISH_ONLY_PREFIXES = [
+  /^\/services(\/|$)/,
+  /^\/categories(\/|$)/,
+  /^\/products(\/|$)/,
+  /^\/blog\//, // blog posts only; the /blog index stays localized
+  /^\/privacy-policy(\/|$)/,
+  /^\/terms-of-service(\/|$)/,
+  /^\/cart(\/|$)/,
+  /^\/checkout(\/|$)/,
+];
+
+function isEnglishOnlyPath(path) {
+  // Strip the locale prefix to get the "logical" path.
+  const logical = path.replace(NON_EN_LOCALE, "/") || "/";
+  return ENGLISH_ONLY_PREFIXES.some((re) => re.test(logical));
+}
+
 module.exports = {
   siteUrl: siteConfig.url,
   generateRobotsTxt: true,
@@ -36,6 +59,11 @@ module.exports = {
   },
 
   transform: async (config, path) => {
+    // Drop localized variants of English-only pages (they 30x-redirect).
+    if (NON_EN_LOCALE.test(path) && isEnglishOnlyPath(path)) {
+      return null;
+    }
+
     let priority = 0.7;
 
     if (path === "/" || path === "/en") priority = 1.0;
