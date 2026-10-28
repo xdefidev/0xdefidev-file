@@ -1,6 +1,6 @@
-import Script from "next/script";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
@@ -126,6 +126,8 @@ const serviceSchema = {
 export default function Home({ featured }) {
   const { t } = useTranslation("common");
   const { open } = useContact();
+  const router = useRouter();
+  const locale = router?.locale || siteConfig.defaultLocale;
 
   const product = products[0];
 
@@ -133,20 +135,10 @@ export default function Home({ featured }) {
     <>
       <SeoHead
         title={`${siteConfig.name} | AI, Software, Automation & Blockchain Development`}
-        description="Custom software, AI applications, workflow automation, cloud infrastructure, APIs, mobile apps, and blockchain solutions for startups and enterprises. Buy source code or hire our engineers."
+        description="AI, software, automation & blockchain development for startups and enterprises. Buy production-ready source code or hire our expert engineers."
         path="/"
+        locale={locale}
         schema={[serviceSchema, faqSchema]}
-      />
-
-      <Script
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-      />
-      <Script
-        id="ga-init"
-        dangerouslySetInnerHTML={{
-          __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}',{page_path:window.location.pathname});`,
-        }}
       />
 
       {/* Hero */}
@@ -163,13 +155,14 @@ export default function Home({ featured }) {
             </span>
 
             <h1 className="mt-7 text-display-lg font-bold text-ink text-balance">
-              Engineering for the next decade of the internet
+              AI, Web3 &amp; Blockchain Development Studio
             </h1>
 
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink-subtle text-pretty">
-              Smart contracts, AI applications, workflow automation and cloud
-              infrastructure &mdash; built by engineers who have shipped in
-              production since {siteConfig.founded}.
+              Engineering for the next decade of the internet &mdash; smart
+              contracts, AI applications, workflow automation and cloud
+              infrastructure built by engineers who have shipped in production
+              since {siteConfig.founded}.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">

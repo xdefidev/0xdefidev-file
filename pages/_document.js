@@ -11,6 +11,12 @@ export default function Document({ locale = "en" }) {
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
+        {/* Preconnect to third-party origins used on the page. */}
+        <link rel="preconnect" href="https://ik.imagekit.io" />
+        <link rel="dns-prefetch" href="https://ik.imagekit.io" />
+        <link rel="preconnect" href="https://www.youtube-nocookie.com" />
+        <link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />
+
         {/* Social profile handles referenced by the Organization node. */}
         <meta name="twitter:site" content="@xdefidev0" />
 

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { siteConfig, ogLocale } from "../site.config";
 
 export const SITE_URL = siteConfig.url;
@@ -36,16 +37,26 @@ export default function SeoHead({
   path = "/",
   image = DEFAULT_OG_IMAGE,
   type = "website",
-  locale = "en",
+  locale,
   hreflang,
   noindex = false,
   schema = [],
 }) {
-  const canonical = `${SITE_URL}${path}`;
-  const isDefaultLocale = locale === siteConfig.defaultLocale;
+  // Fall back to the route locale so pages that omit the prop still emit
+  // correct self-referencing canonicals and og:locale on /zh, /de, etc.
+  const router = useRouter();
+  const activeLocale = locale || router?.locale || siteConfig.defaultLocale;
+  const isDefaultLocale = activeLocale === siteConfig.defaultLocale;
 
+  // Canonical must be self-referencing per locale. Without the /{locale}
+  // prefix, every localized homepage canonicalizes to the English root and
+  // Google deindexes the whole locale cluster as duplicates.
   const localeHref = (code) =>
-    code === siteConfig.defaultLocale ? `${SITE_URL}${path}` : `${SITE_URL}/${code}${path}`;
+    code === siteConfig.defaultLocale
+      ? `${SITE_URL}${path}`
+      : `${SITE_URL}/${code}${path}`;
+
+  const canonical = localeHref(activeLocale);
 
   // When the page is untranslated we advertise only English plus x-default,
   // rather than claiming alternates that do not exist.
@@ -71,10 +82,10 @@ export default function SeoHead({
       <meta property="og:image:height" content={String(siteConfig.ogImage.height)} />
       <meta property="og:image:alt" content={siteConfig.ogImage.alt} />
       <meta property="og:site_name" content={SITE_NAME} />
-      <meta property="og:locale" content={ogLocale(locale)} />
+      <meta property="og:locale" content={ogLocale(activeLocale)} />
 
       {activeLocales
-        .filter((code) => code !== locale)
+        .filter((code) => code !== activeLocale)
         .map((code) => (
           <meta
             key={`og-alt-${code}`}
@@ -104,11 +115,6 @@ export default function SeoHead({
           href={localeHref(code)}
         />
       ))}
-
-      {/* Keep the URL visible as /en/... rather than dropping the prefix. */}
-      {!isDefaultLocale && (
-        <link rel="alternate" hrefLang={locale} href={localeHref(locale)} />
-      )}
 
       {schema.map((item, index) =>
         item ? (

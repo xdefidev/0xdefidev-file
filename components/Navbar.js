@@ -79,7 +79,7 @@ export function AcmeLogo() {
         src="/logo.png"
         width={132}
         height={44}
-        alt=""
+        alt={`${siteConfig.name} logo`}
         priority
         className="h-9 w-auto"
       />

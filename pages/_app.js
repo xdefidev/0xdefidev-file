@@ -1,4 +1,5 @@
 import { Josefin_Sans } from "next/font/google";
+import Script from "next/script";
 import Navbar from "../components/Navbar";
 import NoticeBar from "../components/NoticeBar";
 import Footer from "../components/Footer";
@@ -43,6 +44,21 @@ function MyApp({ Component, pageProps }) {
     <HeroUIProvider theme={herouiTheme}>
       <ContactProvider>
         <CartProvider>
+          {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS && (
+            <>
+              <Script
+                async
+                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+              />
+              <Script
+                id="ga-init"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                  __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}',{page_path:window.location.pathname});`,
+                }}
+              />
+            </>
+          )}
           <div
             dir={isRtl(router?.locale) ? "rtl" : "ltr"}
             className={`${josefin.variable} font-josefin flex min-h-screen flex-col bg-white text-ink`}

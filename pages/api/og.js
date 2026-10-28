@@ -1,5 +1,3 @@
-import sharp from "sharp";
-
 /**
  * GET /api/og?title=...&subtitle=...&badge=...
  *
@@ -7,10 +5,13 @@ import sharp from "sharp";
  * stock YouTube thumbnail, which is a poor brand signal when a link is
  * shared on social.
  *
- * sharp is used rather than @vercel/og because the latter pulls node
- * built-ins in through a dynamic require that Next 13's Pages Router API
- * bundler rejects at runtime.
+ * sharp is loaded dynamically so a missing native binary (e.g. Linux deploy
+ * without @img/sharp-linux-x64) does not crash the module at import time.
+ * When rendering fails we redirect to the static /og-default.png so social
+ * crawlers always receive a valid 200 image instead of a 500.
  */
+
+const STATIC_OG = "/og-default.png";
 
 const W = 1200;
 const H = 630;
@@ -124,24 +125,43 @@ function renderSvg({ title, subtitle, badge }) {
 export default async function handler(req, res) {
   const { searchParams } = new URL(req.url, "http://localhost");
 
-  const title = (searchParams.get("title") ?? "XDefiDev").slice(0, 120);
-  const subtitle = (
-    searchParams.get("subtitle") ??
-    "AI, software, automation & blockchain development"
-  ).slice(0, 180);
-  const badge = searchParams.get("badge")?.slice(0, 40);
+  const title = searchParams.get("title");
+  const subtitle = searchParams.get("subtitle");
+  const badge = searchParams.get("badge");
+
+  // Default (no custom text): serve the pre-rendered static card — no
+  // native deps, always a fast 200.
+  if (!title && !subtitle && !badge) {
+    res.setHeader("Cache-Control", "public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800");
+    return res.redirect(302, STATIC_OG);
+  }
 
   try {
-    const png = await sharp(Buffer.from(renderSvg({ title, subtitle, badge })))
+    const { default: sharp } = await import("sharp");
+    const png = await sharp(
+      Buffer.from(
+        renderSvg({
+          title: (title ?? "XDefiDev").slice(0, 120),
+          subtitle: (
+            subtitle ?? "AI, software, automation & blockchain development"
+          ).slice(0, 180),
+          badge: badge?.slice(0, 40),
+        }),
+      ),
+    )
       .png({ compressionLevel: 9 })
       .toBuffer();
 
     res.setHeader("Content-Type", "image/png");
-    res.setHeader("Cache-Control", "public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800");
+    res.setHeader(
+      "Cache-Control",
+      "public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800",
+    );
     return res.status(200).send(png);
   } catch (err) {
-    console.error("[og] render failed", err);
-    res.setHeader("Content-Type", "text/plain");
-    return res.status(500).send("OG image generation failed");
+    // sharp missing or SVG render failed — never surface a 500 to crawlers.
+    console.error("[og] render failed, falling back to static", err);
+    res.setHeader("Cache-Control", "public, max-age=300, s-maxage=3600");
+    return res.redirect(302, STATIC_OG);
   }
 }
