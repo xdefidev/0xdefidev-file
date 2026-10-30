@@ -29,7 +29,7 @@ const CHANNELS = [
     label: "Telegram",
     hint: "Fastest reply",
     icon: "/telegram-svgrepo-com (2).svg",
-    build: (msg) => `https://t.me/share/url?url=${encodeURIComponent(siteConfig.url)}&text=${encodeURIComponent(msg)}`,
+    build: (msg) => `${siteConfig.contact.telegram}?text=${encodeURIComponent(msg)}`,
     accent: "hover:border-sky-300 hover:bg-sky-50",
   },
   {
