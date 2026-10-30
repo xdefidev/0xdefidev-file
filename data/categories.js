@@ -415,6 +415,10 @@ export const categories = [
         a: "Yes. Every user is provisioned a dedicated wallet, funds never mix between accounts, and you can recover funds from every wallet in the cluster back to your main wallet in one tap.",
       },
       {
+        q: "Can I airdrop to real fomo holders instead of farming wallets?",
+        a: "Yes. FOMO Holders Boost is our Telegram bot that airdrops your Solana token to verified fomo.family wallets — deduplicated across campaigns, batch-sent, with on-chain reporting. Packs start at 500 wallets. See fomoboost.app.",
+      },
+      {
         q: "Can I control the speed and wallet count?",
         a: "Yes. Both speed and wallet count are configurable per booster, so you can run an aggressive schedule or a slow, conservative one and change it at any time.",
       },

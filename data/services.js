@@ -281,6 +281,19 @@ const services = [
       "Design, build, and document REST and GraphQL APIs, plus integration with third-party services, payment gateways, and payment providers like Stripe.",
     purchasable: true,
   },
+  {
+    image: "",
+    status: true,
+    price: 147,
+    youtube: "",
+    slug: "fomo-holders-boost",
+    category: "trading bots",
+    name: "FOMO Holders Boost",
+    description:
+      "Airdrop your Solana token to fresh fomo wallets via Telegram. Verified holders, deduplicated across campaigns, batch sends with on-chain reporting. Packs from 500 wallets.",
+    externalUrl: "https://fomoboost.app",
+    purchasable: false,
+  },
 ];
 
 export const getService = (slug) => services.find((s) => s.slug === slug);

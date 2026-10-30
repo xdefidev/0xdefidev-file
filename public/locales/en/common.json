@@ -531,6 +531,23 @@
           "Each customer gets a dedicated wallet — funds never mix between users"
         ]
       }
+    },
+    "fomo-holders-boost": {
+      "name": "FOMO Holders Boost",
+      "description": "Airdrop your Solana token to fresh fomo wallets via Telegram. Verified holders, deduplicated across campaigns, batch sends with on-chain reporting. Packs from 500 wallets.",
+      "p": {
+        "description": "FomoBoost is a Telegram bot that airdrops your Solana token to verified fomo.family wallets. It creates your campaign wallet on first use, prices the drop from live on-chain data, batches the sends, and records every wallet so nothing is paid twice. You deposit SOL plus your token, pick a pack or a custom size, and the bot handles verification, deduplication and delivery. Remaining balances can be withdrawn anytime with your PIN. Live at fomoboost.app.",
+        "list": [
+          "Verified fresh fomo wallets — active fomo.family users, on-curve, never double-paid",
+          "Deduplicated across all your past campaigns for the same mint",
+          "Packs from 500 to 10,000 wallets, or any custom size",
+          "Dynamic tiers (e.g. 5:100000, 15:20000, *:1000) with USD values shown before confirm",
+          "Token-2022 transfer-fee detection with automatic gross-up so recipients net the target amount",
+          "Batch sends of 8 with adaptive pacing — about 25–40 minutes for 1,000 wallets",
+          "Dev fee charged once before sending; payable in SOL or your token",
+          "On-chain reporting for every wallet; withdraw remaining balances anytime with your PIN"
+        ]
+      }
     }
   }
 }

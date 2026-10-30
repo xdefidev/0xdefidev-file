@@ -116,6 +116,8 @@ const serviceSchema = {
     "Smart Contract Development",
     "DeFi Protocol Development",
     "Crypto Exchange Development",
+    "Solana Volume, Holder & Rank Bots",
+    "FOMO Holders Boost (Solana Airdrops)",
     "Source Code Products",
   ].map((name) => ({
     "@type": "Offer",

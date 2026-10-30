@@ -215,7 +215,9 @@ export default function ServicePage({ service, copy, translated, category }) {
 
               {service.price > 0 && (
                 <p className="mt-3 text-sm leading-relaxed text-ink-subtle">
-                  Fixed starting price. Final quote after a short scope call.
+                  {service.externalUrl
+                    ? "Starting pack price. Larger packs and custom sizes available."
+                    : "Fixed starting price. Final quote after a short scope call."}
                 </p>
               )}
 
@@ -235,6 +237,15 @@ export default function ServicePage({ service, copy, translated, category }) {
                       Request a quote instead
                     </button>
                   </>
+                ) : service.externalUrl ? (
+                  <a
+                    href={service.externalUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full rounded-xl bg-brand-600 px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-brand-700"
+                  >
+                    Open {service.externalUrl.replace(/^https?:\/\//, "").replace(/\/$/, "")} &rarr;
+                  </a>
                 ) : service.price === 0 ? (
                   <Link
                     href="/free-tools"
@@ -254,18 +265,37 @@ export default function ServicePage({ service, copy, translated, category }) {
               </div>
 
               <ul className="mt-6 space-y-2.5 border-t border-surface-border pt-5 text-sm text-ink-subtle">
-                <li className="flex items-center gap-2">
-                  <Check />
-                  Crypto checkout, no account needed
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check />
-                  Source code and full ownership
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check />
-                  Post-launch support included
-                </li>
+                {service.externalUrl ? (
+                  <>
+                    <li className="flex items-center gap-2">
+                      <Check />
+                      Self-serve via Telegram bot
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check />
+                      Verified fomo holders, no double sends
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check />
+                      Withdraw remaining balances anytime
+                    </li>
+                  </>
+                ) : (
+                  <>
+                    <li className="flex items-center gap-2">
+                      <Check />
+                      Crypto checkout, no account needed
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check />
+                      Source code and full ownership
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check />
+                      Post-launch support included
+                    </li>
+                  </>
+                )}
               </ul>
             </div>
           </aside>
